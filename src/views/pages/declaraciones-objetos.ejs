@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Declaraciones</h2>
+
+					<!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Los objetos representan cosas de la vida real a los que
+						se les pueda asignar atributos y valores que son los que
+						finalmente permiten crear un <strong>objeto</strong> A
+						continuacion veremos como podemos trabajar con estos.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Variables dentro objetos</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/objetos/obje1.png"
+								alt="variables dentro objetos"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Arreglos dentro objetos</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/objetos/obje2.png"
+								alt="arreglos dentro objetos"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Objetos dentro objetos</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/objetos/obje3.png"
+								alt="objetos dentro objetos"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Funciones dentro objetos</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/objetos/obje4.png"
+								alt="funciones dentro objetos"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. Uso de this</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/objetos/obje5.png"
+								alt="uso de this"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">End Declaraciones</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

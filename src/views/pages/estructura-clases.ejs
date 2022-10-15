@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Estructura</h2>
+
+					<!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Su estructura inicia con la definicion de la clase,
+						seguido... el constructor recibe los parametros del
+						objeto y los instancia, tambien podemos definir metodos
+						que se conocen como las acciones que puede realizar el
+						objeto. Finalmente creamos el nuevo objeto para definir
+						los valores correspondientes.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Estructura de una clase</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases1.png"
+								alt="estructura de una clase"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Instanciando los parametros del constructor</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases2.png"
+								alt="instanciando los parametros del constructor"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Creando un nuevo objeto vehiculo</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases3.png"
+								alt="Creando un nuevo objeto vehiculo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Conociendo los valores del objeto vehiculo</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases4.png"
+								alt="conociendo los valores del objeto vehiculo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. Creando multiples objetos vehiculos</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases5.png"
+								alt="creando multiples objetos vehiculos"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Definiendo un metodo</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases6.png"
+								alt="definiendo un metodo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>07. Ejecucion del metodo</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases7.png"
+								alt="ejecucion del metodo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>08. Variables como valores</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/clases/clases8.png"
+								alt="variables como valores"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">End Estructura</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
