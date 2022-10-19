@@ -591,6 +591,15 @@ body {
 						box-shadow: 0 2px 6px 0 #ccc;
 					}
 				}
+
+				p {
+					margin-bottom: 8px;
+
+					strong {
+						color: $colorOne;
+						font-size: 18px;
+					}
+				}
 			}
 
 			/*

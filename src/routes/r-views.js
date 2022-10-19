@@ -243,6 +243,15 @@ router.get("/switch-pro-condicionales", (req, res) => {
 });
 
 /* 
+	______________________ condicionales ______________________
+*/
+router.get("/glosario-javascript", (req, res) => {
+	res.render("pages/glosario-javascript", {
+		title: "glosario javascript",
+	});
+});
+
+/* 
 	finalmente realizamos una exportacion del modulo
 */
 module.exports = router;

@@ -567,6 +567,13 @@ body {
      object-fit: cover;
   box-shadow: 0 2px 6px 0 #ccc;
 }
+.components_container .main_components .sections_container .sect_content p {
+  margin-bottom: 8px;
+}
+.components_container .main_components .sections_container .sect_content p strong {
+  color: #f0db4f;
+  font-size: 18px;
+}
 .components_container .main_components .sections_container .division_line {
   text-align: center;
   color: #ccc;
