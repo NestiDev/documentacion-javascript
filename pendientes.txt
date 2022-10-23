@@ -1,0 +1,9 @@
+definir que es javascript en la vista home
+
+por documentar 
+arreglos
+promesas
+fetch
+propedades de los numbers y strings
+
+aplicar responsive a los titulos de las vistas
