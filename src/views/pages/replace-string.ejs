@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Replace</h2>
+
+					<!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Nos permite reemplazar el valor de una cadena de
+						caracteres por otra, se debe tener presente que este
+						metodo reemplaza la primer coincidencia y que distingue
+						caracteres especiales como tildes, simbolos, mayusculas,
+						minusculas etc.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Reemplazando caracteres especiales</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/rep1.png"
+								alt="reemplazando caracteres especiales"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Reemplazando la primer coincidencia</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/rep2.png"
+								alt="reemplazando la primer coincidencia"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Reemplazando todas las coincidencias - g</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/rep3.png"
+								alt="reemplazando todas las coincidencias"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Normalizando las mayusculas - i</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/rep4.png"
+								alt="normalizando las mayusculas"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">Replace - String</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

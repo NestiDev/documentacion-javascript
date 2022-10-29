@@ -243,7 +243,40 @@ router.get("/switch-pro-condicionales", (req, res) => {
 });
 
 /* 
-	______________________ condicionales ______________________
+	______________________ string ______________________
+*/
+router.get("/generales-string", (req, res) => {
+	res.render("pages/generales-string", {
+		title: "generales properties",
+	});
+});
+
+router.get("/slice-string", (req, res) => {
+	res.render("pages/slice-string", {
+		title: "slice properties",
+	});
+});
+
+router.get("/replace-string", (req, res) => {
+	res.render("pages/replace-string", {
+		title: "replace properties",
+	});
+});
+
+router.get("/includes-string", (req, res) => {
+	res.render("pages/includes-string", {
+		title: "includes properties",
+	});
+});
+
+router.get("/indexof-string", (req, res) => {
+	res.render("pages/indexof-string", {
+		title: "index of properties",
+	});
+});
+
+/* 
+	______________________ glosario ______________________
 */
 router.get("/glosario-javascript", (req, res) => {
 	res.render("pages/glosario-javascript", {

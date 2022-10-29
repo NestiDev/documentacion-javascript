@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Generales</h2>
+
+					<!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						En este aparatado definiremos las propiedades de las
+						cadenas de caracteres <strong>string</strong> de una
+						sola implementacion.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Conociendo la longitud - lenght</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/mix1.png"
+								alt="conociendo la longitud"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Conociendo el tipo - typeof</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/mix1.png"
+								alt="conociendo el tipo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Convirtiendo a tipo string - toString()</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/tos1.png"
+								alt="convirtiendo a tipo string"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. De minus a mayus - toUpperCase()</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/upe1.png"
+								alt="de minus a mayus"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. De mayus a minus - toLowerCase()</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/low1.png"
+								alt="de mayus a minus"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Reduccion de espacios - trim()</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/string/tri1.png"
+								alt="reduccion de espacios"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">Generales - String</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

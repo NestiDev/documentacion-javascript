@@ -530,10 +530,6 @@ body {
   /*
   	sect_content
   */
-  /*
-  	division_line: definimos un margen en la parte
-  	inferior para este elemento
-  */
 }
 .components_container .main_components .sections_container .sect_content {
   /*
@@ -573,11 +569,6 @@ body {
 .components_container .main_components .sections_container .sect_content p strong {
   color: #f0db4f;
   font-size: 18px;
-}
-.components_container .main_components .sections_container .division_line {
-  text-align: center;
-  color: #ccc;
-  margin-bottom: 90px;
 }
 .components_container .main_components .section_footer {
   text-align: center;
