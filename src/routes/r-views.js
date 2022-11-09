@@ -269,9 +269,33 @@ router.get("/includes-string", (req, res) => {
 	});
 });
 
-router.get("/indexof-string", (req, res) => {
-	res.render("pages/indexof-string", {
+router.get("/index-string", (req, res) => {
+	res.render("pages/index-string", {
 		title: "index of properties",
+	});
+});
+
+router.get("/match-string", (req, res) => {
+	res.render("pages/match-string", {
+		title: "match properties",
+	});
+});
+
+router.get("/split-string", (req, res) => {
+	res.render("pages/split-string", {
+		title: "split properties",
+	});
+});
+
+router.get("/search-string", (req, res) => {
+	res.render("pages/search-string", {
+		title: "search properties",
+	});
+});
+
+router.get("/start-end-string", (req, res) => {
+	res.render("pages/start-end-string", {
+		title: "start-end properties",
 	});
 });
 

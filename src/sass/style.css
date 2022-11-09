@@ -10,6 +10,9 @@
 	variables para definir bordes
 */
 /*
+	variables para definir sombras
+*/
+/*
 	formatiamos las margenes y espaciados que definen los
 	navegadores por defecto
 */
@@ -165,13 +168,14 @@ body {
   	para desplazar el menu de navegacion ocultandolo de la vista
   */
   /*
-  	search_box: definimos flexbox con su propiedad
-  	align-items y una altura para centrar de manera vertical 
-  	los elementos que este contiene, finalmente definimos 
+  	search_box: definimos position: relative debido a que uno de sus 
+            elementos hijos tiene definido position: absolute, finalmente definimos 
   	un margen en la parte superior 
   */
   /*
-  	nav_menu: definimos un espaciado en el eje-Y para este elemento 
+  	nav_menu: definimos un espaciado personalizado en el eje-Y para este elemento 
+  	el espaciado inferior permite solucionar un error que se presenta 
+  	impidiendo que el ultimo item del menu se vea correctamente
   */
 }
 .components_container .nav_component::-webkit-scrollbar {
@@ -201,46 +205,57 @@ body {
   }
 }
 .components_container .nav_component .search_box {
-  display: flex;
-  height: 35px;
-  align-items: center;
-  border: 1px solid #eaecef;
-  border-radius: 50px;
+  position: relative;
   margin-top: 30px;
   /*
-  	tag-input: definimos border: none y outline: none 
-  	para remover un borde que generan los navegadores 
-  	en los inputs, finalmente definimos un espaciado 
-  	en el eje-Y para este elemento 
+  	tag-input: definimos outline: none  para remover el borde que 
+  	generan los navegadores en los inputs, finalmente definimos 
+  	un espaciado en el eje-Y para este elemento 
   */
   /*
   	search_btn
   */
 }
 .components_container .nav_component .search_box input {
-  border: none;
   outline: none;
   background-color: transparent;
   color: #5c5b5b;
+  border: 1px solid #eaecef;
+  border-radius: 50px;
   font-size: 17px;
   letter-spacing: 0.5px;
-  width: 158px;
-  padding: 0 8px 0 13px;
+  width: 100%;
+  height: 35px;
+  padding: 0 8px 0 14px;
+  transition: box-shadow 0.2s;
+  /*
+  	cuando tag-input tiene el foco, modificamos 
+  	el color del borde y añadimos una sombra
+  */
+}
+.components_container .nav_component .search_box input:focus {
+  border: 1px solid rgba(240, 218, 79, 0.6235294118);
+  box-shadow: 0 0 8px 0 rgba(179, 177, 177, 0.3019607843);
 }
 .components_container .nav_component .search_box .search_btn {
   /*
   	tag-svg: definimos vertical-align: top para remover un 
-  	espaciado que generan los navegadores en los iconos 
+  	espaciado que generan los navegadores en los iconos, 
+  	finalmente con position: absolute y sus propiedades top
+  	y right posicionamos el icono dentro del input
   */
 }
 .components_container .nav_component .search_box .search_btn svg {
   vertical-align: top;
+  position: absolute;
+  top: 6px;
+  right: 12px;
   fill: #f0db4f;
   width: 24px;
   height: 24px;
 }
 .components_container .nav_component .nav_menu {
-  padding: 30px 0;
+  padding: 30px 0 70px;
   /*
   	li_dropdown: definimos un margen en la parte inferior de este 
   	elemento
@@ -510,6 +525,24 @@ body {
 .components_container .main_components .section_banner h2 {
   font-size: 2.8rem;
   margin-top: 30px;
+  /*
+  	dispositivos menores a 381px: modificamos el tamaño de
+  	fuente para este elemento
+  */
+  /*
+  	dispositivos menores a 333px: modificamos el tamaño de
+  	fuente para este elemento
+  */
+}
+@media (max-width: 381px) {
+  .components_container .main_components .section_banner h2 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 333px) {
+  .components_container .main_components .section_banner h2 {
+    font-size: 2.1rem;
+  }
 }
 .components_container .main_components .section_banner .banner_line_titles {
   border: 2px solid #f0db4f;
@@ -545,6 +578,15 @@ body {
   font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 40px;
+  /*
+  	dispositivos menores a 336px: modificamos el tamaño de
+  	fuente de este elemento
+  */
+}
+@media (max-width: 336px) {
+  .components_container .main_components .sections_container .sect_content h3 {
+    font-size: 1.7rem;
+  }
 }
 .components_container .main_components .sections_container .sect_content .sect_box_img {
   text-align: center;
