@@ -9,303 +9,267 @@ let router = require("express").Router();
 	el requermiento del usuario y retorna una respuesta
 */
 router.get("/", (req, res) => {
-	/* 
+    /* 
 		con el metodo render() definimos que vista va a
 		renderizarse una vez el usuarrio haga un requerimiento
 		a este enpoint, finalmente por medio de un objeto 
 		pasamos el nombre de la vista
 	*/
-	res.render("pages/index", {
-		title: "home",
-	});
+    res.render("pages/index", {
+        title: "home",
+    });
 });
 
 /* 
 	______________________ variables ______________________
 */
-router.get("/var-variable", (req, res) => {
-	res.render("pages/var-variable", {
-		title: "var variable",
-	});
+router.get("/variable-var", (req, res) => {
+    res.render("pages/variable-var", {
+        title: "variable var",
+    });
 });
 
-router.get("/let-variable", (req, res) => {
-	res.render("pages/let-variable", {
-		title: "let variable",
-	});
+router.get("/variable-let", (req, res) => {
+    res.render("pages/variable-let", {
+        title: "variable let",
+    });
 });
 
-router.get("/const-variable", (req, res) => {
-	res.render("pages/const-variable", {
-		title: "const variable",
-	});
+router.get("/variable-const", (req, res) => {
+    res.render("pages/variable-const", {
+        title: "variable const",
+    });
 });
 
 /* 
 	______________________ funciones ______________________
 */
-router.get("/declaradas-function", (req, res) => {
-	res.render("pages/declaradas-function", {
-		title: "declaradas function",
-	});
+router.get("/funciones-declaradas", (req, res) => {
+    res.render("pages/funciones-declaradas", {
+        title: "funciones declaradas",
+    });
 });
 
-router.get("/expresadas-function", (req, res) => {
-	res.render("pages/expresadas-function", {
-		title: "expresadas function",
-	});
+router.get("/funciones-expresadas", (req, res) => {
+    res.render("pages/funciones-expresadas", {
+        title: "funciones expresadas",
+    });
 });
 
-router.get("/callback-function", (req, res) => {
-	res.render("pages/callback-function", {
-		title: "callback function",
-	});
+router.get("/funciones-callback", (req, res) => {
+    res.render("pages/funciones-callback", {
+        title: "funciones callback",
+    });
 });
 
-router.get("/events-function", (req, res) => {
-	res.render("pages/events-function", {
-		title: "events function",
-	});
+router.get("/funciones-events", (req, res) => {
+    res.render("pages/funciones-events", {
+        title: "funciones events",
+    });
 });
 
-router.get("/rest-operator-function", (req, res) => {
-	res.render("pages/rest-operator-function", {
-		title: "rest-operator function",
-	});
+router.get("/funciones-rest-operator", (req, res) => {
+    res.render("pages/funciones-rest-operator", {
+        title: "funciones rest-operator",
+    });
 });
 
 /* 
 	______________________ ciclos ______________________
 */
-router.get("/while-ciclos", (req, res) => {
-	res.render("pages/while-ciclos", {
-		title: "while ciclos",
-	});
+router.get("/ciclos-while", (req, res) => {
+    res.render("pages/ciclos-while", {
+        title: "ciclos while",
+    });
 });
 
-router.get("/do-while-ciclos", (req, res) => {
-	res.render("pages/do-while-ciclos", {
-		title: "dowhile ciclos",
-	});
+router.get("/ciclos-do-while", (req, res) => {
+    res.render("pages/ciclos-do-while", {
+        title: "ciclos dowhile",
+    });
 });
 
-router.get("/for-ciclos", (req, res) => {
-	res.render("pages/for-ciclos", {
-		title: "for ciclos",
-	});
+router.get("/ciclos-for", (req, res) => {
+    res.render("pages/ciclos-for", {
+        title: "ciclos for",
+    });
 });
 
-router.get("/for-of-ciclos", (req, res) => {
-	res.render("pages/for-of-ciclos", {
-		title: "forof ciclos",
-	});
+router.get("/ciclos-for-of", (req, res) => {
+    res.render("pages/ciclos-for-of", {
+        title: "ciclos forof",
+    });
 });
 
-router.get("/for-in-ciclos", (req, res) => {
-	res.render("pages/for-in-ciclos", {
-		title: "forin ciclos",
-	});
+router.get("/ciclos-for-in", (req, res) => {
+    res.render("pages/ciclos-for-in", {
+        title: "ciclos forin",
+    });
 });
 
-router.get("/for-each-ciclos", (req, res) => {
-	res.render("pages/for-each-ciclos", {
-		title: "foreach ciclos",
-	});
+router.get("/ciclos-forEach", (req, res) => {
+    res.render("pages/ciclos-forEach", {
+        title: "ciclos forEach",
+    });
 });
 
-router.get("/break-continue-ciclos", (req, res) => {
-	res.render("pages/break-continue-ciclos", {
-		title: "break - continue ciclos",
-	});
+router.get("/ciclos-break-continue", (req, res) => {
+    res.render("pages/ciclos-break-continue", {
+        title: "ciclos break - continue",
+    });
 });
 
 /* 
 	______________________ clases ______________________
 */
-router.get("/estructura-clases", (req, res) => {
-	res.render("pages/estructura-clases", {
-		title: "estructura clases",
-	});
+router.get("/clases-estructura", (req, res) => {
+    res.render("pages/clases-estructura", {
+        title: "clases estructura",
+    });
 });
 
-router.get("/herencia-clases", (req, res) => {
-	res.render("pages/herencia-clases", {
-		title: "herencia clases",
-	});
+router.get("/clases-herencia", (req, res) => {
+    res.render("pages/clases-herencia", {
+        title: "clases herencia",
+    });
 });
 
-router.get("/consola-clases", (req, res) => {
-	res.render("pages/consola-clases", {
-		title: "consola clases",
-	});
+router.get("/clases-consola", (req, res) => {
+    res.render("pages/clases-consola", {
+        title: "clases consola",
+    });
 });
 
 /* 
 	______________________ objetos ______________________
 */
-router.get("/declaraciones-objetos", (req, res) => {
-	res.render("pages/declaraciones-objetos", {
-		title: "declaraciones objetos",
-	});
+router.get("/objetos-declaraciones", (req, res) => {
+    res.render("pages/objetos-declaraciones", {
+        title: "objetos declaraciones",
+    });
 });
 
-router.get("/operaciones-objetos", (req, res) => {
-	res.render("pages/operaciones-objetos", {
-		title: "operaciones objetos",
-	});
+router.get("/objetos-operaciones", (req, res) => {
+    res.render("pages/objetos-operaciones", {
+        title: "objetos operaciones",
+    });
 });
 
-router.get("/constructor-objetos", (req, res) => {
-	res.render("pages/constructor-objetos", {
-		title: "constructor objetos",
-	});
+router.get("/objetos-constructor", (req, res) => {
+    res.render("pages/objetos-constructor", {
+        title: "objetos constructor",
+    });
 });
 
-router.get("/destructuracion-objetos", (req, res) => {
-	res.render("pages/destructuracion-objetos", {
-		title: "destructuracion objetos",
-	});
+router.get("/objetos-destructuracion", (req, res) => {
+    res.render("pages/objetos-destructuracion", {
+        title: "objetos destructuracion",
+    });
 });
 
-router.get("/metodos-objetos", (req, res) => {
-	res.render("pages/metodos-objetos", {
-		title: "metodos objetos",
-	});
+router.get("/objetos-metodos", (req, res) => {
+    res.render("pages/objetos-metodos", {
+        title: "objetos metodos",
+    });
 });
 
-router.get("/consola-objetos", (req, res) => {
-	res.render("pages/consola-objetos", {
-		title: "consola objetos",
-	});
+router.get("/objetos-consola", (req, res) => {
+    res.render("pages/objetos-consola", {
+        title: "objetos consola",
+    });
 });
 
 /* 
 	______________________ condicionales ______________________
 */
-router.get("/if-condicionales", (req, res) => {
-	res.render("pages/if-condicionales", {
-		title: "if condicionales",
-	});
+router.get("/condicionales-if-else", (req, res) => {
+    res.render("pages/condicionales-if-else", {
+        title: "condicionales if - else",
+    });
 });
 
-router.get("/if-anidado-condicionales", (req, res) => {
-	res.render("pages/if-anidado-condicionales", {
-		title: "if anidado condicionales",
-	});
+router.get("/condicionales-switch", (req, res) => {
+    res.render("pages/condicionales-switch", {
+        title: "condicionales switch",
+    });
 });
 
-router.get("/else-if-condicionales", (req, res) => {
-	res.render("pages/else-if-condicionales", {
-		title: "elseif condicionales",
-	});
-});
-
-router.get("/else-condicionales", (req, res) => {
-	res.render("pages/else-condicionales", {
-		title: "else condicionales",
-	});
-});
-
-router.get("/ternario-condicionales", (req, res) => {
-	res.render("pages/ternario-condicionales", {
-		title: "ternario condicionales",
-	});
-});
-
-router.get("/operador-&-condicionales", (req, res) => {
-	res.render("pages/operador-&-condicionales", {
-		title: "operador-& condicionales",
-	});
-});
-
-router.get("/operador-O-condicionales", (req, res) => {
-	res.render("pages/operador-O-condicionales", {
-		title: "operador-O condicionales",
-	});
-});
-
-router.get("/switch-case-condicionales", (req, res) => {
-	res.render("pages/switch-case-condicionales", {
-		title: "switch-case condicionales",
-	});
-});
-
-router.get("/switch-default-condicionales", (req, res) => {
-	res.render("pages/switch-default-condicionales", {
-		title: "switch-default condicionales",
-	});
-});
-
-router.get("/switch-pro-condicionales", (req, res) => {
-	res.render("pages/switch-pro-condicionales", {
-		title: "switch-pro condicionales",
-	});
+router.get("/condicionales-operadores", (req, res) => {
+    res.render("pages/condicionales-operadores", {
+        title: "condicionales operadores",
+    });
 });
 
 /* 
 	______________________ string ______________________
 */
-router.get("/generales-string", (req, res) => {
-	res.render("pages/generales-string", {
-		title: "generales properties",
-	});
+router.get("/strings-generales", (req, res) => {
+    res.render("pages/strings-generales", {
+        title: "strings generales",
+    });
 });
 
-router.get("/slice-string", (req, res) => {
-	res.render("pages/slice-string", {
-		title: "slice properties",
-	});
+router.get("/strings-slice", (req, res) => {
+    res.render("pages/strings-slice", {
+        title: "strings slice",
+    });
 });
 
-router.get("/replace-string", (req, res) => {
-	res.render("pages/replace-string", {
-		title: "replace properties",
-	});
+router.get("/strings-replace", (req, res) => {
+    res.render("pages/strings-replace", {
+        title: "strings replace",
+    });
 });
 
-router.get("/includes-string", (req, res) => {
-	res.render("pages/includes-string", {
-		title: "includes properties",
-	});
+router.get("/strings-includes", (req, res) => {
+    res.render("pages/strings-includes", {
+        title: "strings includes",
+    });
 });
 
-router.get("/index-string", (req, res) => {
-	res.render("pages/index-string", {
-		title: "index of properties",
-	});
+router.get("/strings-index", (req, res) => {
+    res.render("pages/strings-index", {
+        title: "strings index of",
+    });
 });
 
-router.get("/match-string", (req, res) => {
-	res.render("pages/match-string", {
-		title: "match properties",
-	});
+router.get("/strings-match", (req, res) => {
+    res.render("pages/strings-match", {
+        title: "strings match",
+    });
 });
 
-router.get("/split-string", (req, res) => {
-	res.render("pages/split-string", {
-		title: "split properties",
-	});
+router.get("/strings-split", (req, res) => {
+    res.render("pages/strings-split", {
+        title: "strings split",
+    });
 });
 
-router.get("/search-string", (req, res) => {
-	res.render("pages/search-string", {
-		title: "search properties",
-	});
+router.get("/strings-search", (req, res) => {
+    res.render("pages/strings-search", {
+        title: "strings search",
+    });
 });
 
-router.get("/start-end-string", (req, res) => {
-	res.render("pages/start-end-string", {
-		title: "start-end properties",
-	});
+router.get("/strings-start-end", (req, res) => {
+    res.render("pages/strings-start-end", {
+        title: "strings start-end",
+    });
 });
 
 /* 
-	______________________ glosario ______________________
+	______________________ numbers ______________________
 */
-router.get("/glosario-javascript", (req, res) => {
-	res.render("pages/glosario-javascript", {
-		title: "glosario javascript",
-	});
+router.get("/numbers-generales", (req, res) => {
+    res.render("pages/numbers-generales", {
+        title: "numbers generales",
+    });
+});
+
+router.get("/numbers-math", (req, res) => {
+    res.render("pages/numbers-math", {
+        title: "numbers math",
+    });
 });
 
 /* 
