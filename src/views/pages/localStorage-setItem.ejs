@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>SetItem</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Este metodo permite el almacenado local de valores, para ello requiere de dos parametros. EL primer parametro, hace referencia al nombre de la clave con la que se desea
+                        realizar el almacenado y el segundo parametro seria el valor a almacenar.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Definicion del almacenado local - setItem</h3>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/localStorage/setItem/s01.png" alt="definicion del almacenado local - setItem" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Validacion del almacenado</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/localStorage/setItem/s02.png" alt="validacion del almacenado" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Almacenamiento de arreglos</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/localStorage/setItem/a01.png" alt="almacenamiento de arreglos" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Validacion del almacenado</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/localStorage/setItem/a02.png" alt="validacion del almacenado" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Almacenamiento de objetos</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/localStorage/setItem/o01.png" alt="almacenamiento de objetos" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Validacion del almacenado</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/localStorage/setItem/o02.png" alt="validacion del almacenado" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">SetItem - LocalStorage</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

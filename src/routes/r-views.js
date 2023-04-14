@@ -42,35 +42,23 @@ router.get("/variable-const", (req, res) => {
 });
 
 /* 
-	______________________ funciones ______________________
+	______________________ condicionales ______________________
 */
-router.get("/funciones-declaradas", (req, res) => {
-    res.render("pages/funciones-declaradas", {
-        title: "funciones declaradas",
+router.get("/condicionales-if-else", (req, res) => {
+    res.render("pages/condicionales-if-else", {
+        title: "condicionales if - else",
     });
 });
 
-router.get("/funciones-expresadas", (req, res) => {
-    res.render("pages/funciones-expresadas", {
-        title: "funciones expresadas",
+router.get("/condicionales-switch", (req, res) => {
+    res.render("pages/condicionales-switch", {
+        title: "condicionales switch",
     });
 });
 
-router.get("/funciones-callback", (req, res) => {
-    res.render("pages/funciones-callback", {
-        title: "funciones callback",
-    });
-});
-
-router.get("/funciones-events", (req, res) => {
-    res.render("pages/funciones-events", {
-        title: "funciones events",
-    });
-});
-
-router.get("/funciones-rest-operator", (req, res) => {
-    res.render("pages/funciones-rest-operator", {
-        title: "funciones rest-operator",
+router.get("/condicionales-operadores", (req, res) => {
+    res.render("pages/condicionales-operadores", {
+        title: "condicionales operadores",
     });
 });
 
@@ -120,6 +108,39 @@ router.get("/ciclos-break-continue", (req, res) => {
 });
 
 /* 
+	______________________ funciones ______________________
+*/
+router.get("/funciones-declaradas", (req, res) => {
+    res.render("pages/funciones-declaradas", {
+        title: "funciones declaradas",
+    });
+});
+
+router.get("/funciones-expresadas", (req, res) => {
+    res.render("pages/funciones-expresadas", {
+        title: "funciones expresadas",
+    });
+});
+
+router.get("/funciones-callback", (req, res) => {
+    res.render("pages/funciones-callback", {
+        title: "funciones callback",
+    });
+});
+
+router.get("/funciones-events", (req, res) => {
+    res.render("pages/funciones-events", {
+        title: "funciones events",
+    });
+});
+
+router.get("/funciones-rest-operator", (req, res) => {
+    res.render("pages/funciones-rest-operator", {
+        title: "funciones rest-operator",
+    });
+});
+
+/* 
 	______________________ clases ______________________
 */
 router.get("/clases-estructura", (req, res) => {
@@ -143,15 +164,15 @@ router.get("/clases-consola", (req, res) => {
 /* 
 	______________________ objetos ______________________
 */
-router.get("/objetos-declaraciones", (req, res) => {
-    res.render("pages/objetos-declaraciones", {
-        title: "objetos declaraciones",
+router.get("/objetos-declaracion", (req, res) => {
+    res.render("pages/objetos-declaracion", {
+        title: "objetos declaracion",
     });
 });
 
-router.get("/objetos-operaciones", (req, res) => {
-    res.render("pages/objetos-operaciones", {
-        title: "objetos operaciones",
+router.get("/objetos-manipulacion", (req, res) => {
+    res.render("pages/objetos-manipulacion", {
+        title: "objetos manipulacion",
     });
 });
 
@@ -173,30 +194,33 @@ router.get("/objetos-metodos", (req, res) => {
     });
 });
 
-router.get("/objetos-consola", (req, res) => {
-    res.render("pages/objetos-consola", {
-        title: "objetos consola",
+/* 
+	______________________ json ______________________
+*/
+router.get("/json-declaracion", (req, res) => {
+    res.render("pages/json-declaracion", {
+        title: "json declaracion",
+    });
+});
+
+router.get("/json-manipulacion", (req, res) => {
+    res.render("pages/json-manipulacion", {
+        title: "json manipulacion",
+    });
+});
+
+router.get("/json-metodos", (req, res) => {
+    res.render("pages/json-metodos", {
+        title: "json metodos",
     });
 });
 
 /* 
-	______________________ condicionales ______________________
+	______________________ try - catch ______________________
 */
-router.get("/condicionales-if-else", (req, res) => {
-    res.render("pages/condicionales-if-else", {
-        title: "condicionales if - else",
-    });
-});
-
-router.get("/condicionales-switch", (req, res) => {
-    res.render("pages/condicionales-switch", {
-        title: "condicionales switch",
-    });
-});
-
-router.get("/condicionales-operadores", (req, res) => {
-    res.render("pages/condicionales-operadores", {
-        title: "condicionales operadores",
+router.get("/try-catch", (req, res) => {
+    res.render("pages/try-catch", {
+        title: "try-catch",
     });
 });
 
@@ -269,6 +293,99 @@ router.get("/numbers-generales", (req, res) => {
 router.get("/numbers-math", (req, res) => {
     res.render("pages/numbers-math", {
         title: "numbers math",
+    });
+});
+
+/* 
+	______________________ DOM ______________________
+*/
+router.get("/dom-window", (req, res) => {
+    res.render("pages/dom-window", {
+        title: "DOM window",
+    });
+});
+
+router.get("/dom-document", (req, res) => {
+    res.render("pages/dom-document", {
+        title: "DOM document",
+    });
+});
+
+/* 
+	______________________ localStorage ______________________
+*/
+router.get("/localStorage-setItem", (req, res) => {
+    res.render("pages/localStorage-setItem", {
+        title: "localStorage setItem",
+    });
+});
+
+router.get("/localStorage-getItem", (req, res) => {
+    res.render("pages/localStorage-getItem", {
+        title: "localStorage getItem",
+    });
+});
+
+router.get("/localStorage-removeItem", (req, res) => {
+    res.render("pages/localStorage-removeItem", {
+        title: "localStorage removeItem",
+    });
+});
+
+router.get("/localStorage-clear", (req, res) => {
+    res.render("pages/localStorage-clear", {
+        title: "localStorage clear",
+    });
+});
+
+router.get("/localStorage-propiedades", (req, res) => {
+    res.render("pages/localStorage-propiedades", {
+        title: "localStorage propiedades",
+    });
+});
+
+/* 
+	______________________ new date ______________________
+*/
+router.get("/new-date", (req, res) => {
+    res.render("pages/new-date", {
+        title: "new Date",
+    });
+});
+
+/* 
+	______________________ temporizadores ______________________
+*/
+router.get("/temporizadores", (req, res) => {
+    res.render("pages/temporizadores", {
+        title: "temporizadores",
+    });
+});
+
+/* 
+	______________________ regexp ______________________
+*/
+router.get("/regexp-flags", (req, res) => {
+    res.render("pages/regexp-flags", {
+        title: "regexp flags",
+    });
+});
+
+router.get("/regexp-indicadores", (req, res) => {
+    res.render("pages/regexp-indicadores", {
+        title: "regexp indicadores",
+    });
+});
+
+router.get("/regexp-metodos", (req, res) => {
+    res.render("pages/regexp-metodos", {
+        title: "regexp metodos",
+    });
+});
+
+router.get("/regexp-patrones", (req, res) => {
+    res.render("pages/regexp-patrones", {
+        title: "regexp patrones",
     });
 });
 

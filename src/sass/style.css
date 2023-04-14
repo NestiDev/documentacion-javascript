@@ -7,6 +7,10 @@
 	variables para definir colores
 */
 /*
+	variables para definir el color
+    de los iconos
+*/
+/*
 	variables para definir bordes
 */
 /*
@@ -37,6 +41,16 @@ a {
   text-decoration: none;
 }
 
+/*
+    tag-img y tag-svg: definimos vertical-align: top para remover 
+    un espaciado que generan los navegadores en las imagenes y 
+    los iconos 
+*/
+img,
+svg {
+  vertical-align: top;
+}
+
 /*  
     header_component: definimos position: fixed junto con sus 
 	propiedades top, left, right y z-index para fijar el menu
@@ -56,11 +70,10 @@ a {
   	definimos una sombra cuando inicia el scroll
   */
   /*
-  	header_container: definimos display flex junto con sus 
-  	propiedades justify-content y align-items mas una altura 
-  	para centrar de manera vertical y horizontal los elementos 
-  	que este contiene, finalmente definimos un espaciado en 
-         el eje-X para generar separacion
+  	header_container: definimos flexbox con su propiedad
+         justify-content para generar un espaciado entre
+         el logo y el menu y align-items para centrar de manera
+         vertical los elementos que este contiene 
   */
 }
 .header_component.js_header_scroll {
@@ -69,56 +82,167 @@ a {
 .header_component .header_container {
   display: flex;
   justify-content: space-between;
-  height: 70px;
+  height: 60px;
   align-items: center;
   padding: 0 6%;
+  /*
+      nitlogo_box
+  */
+  /*
+      menu_box: definimos flexbox con su propiedad align-items 
+      para centrar de manera vertical los elementos que este contiene 
+  */
+}
+.header_component .header_container .nitlogo_box {
+  /*
+      tag-a
+  */
+}
+.header_component .header_container .nitlogo_box a {
   /*  
       tag-h4
-  */
-  /*
-      tag-span
-  */
-  /*
-  	header_box_menu_icon
   */
 }
 .header_component .header_container .nitlogo_box a h4 {
   color: #5c5b5b;
-  font-size: 30px;
+  font-size: 27px;
+  /*
+      tag-span
+  */
 }
 .header_component .header_container .nitlogo_box a h4 span {
   color: #f0db4f;
 }
-.header_component .header_container .header_box_menu_icon {
-  cursor: pointer;
+.header_component .header_container .menu_box {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
   /*
-  	tag-span: definimos la propiedad display: block para hacer 
-  	visible las lineas del menu hamburgesa, finalmente definimos
-  	un ancho y alto para darles tamaño	
+      search_box
+  */
+  /*  
+      tag-li
   */
 }
-.header_component .header_container .header_box_menu_icon span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  background-color: #5c5b5b;
-  border-radius: 10px;
+.header_component .header_container .menu_box li.search_box {
   /*
-  	seleccionamos el segundo elemento tag-span y generamos
-  	un margen en el eje-Y
+      dispositivos menores a 719px: definimos display: none 
+      para ocultar el buscador de la vista en esta medida
   */
   /*
-  	dispositivos mayores a 720px: definimos display: none 
-  	para ocultar el icono de menu de la vista
+      dispositivos mayores a 720px: definimos flexbox con su 
+      propiedad align-items para centrar de manera vertical 
+      los elementos que este contiene
   */
 }
-.header_component .header_container .header_box_menu_icon span:nth-child(2) {
-  margin: 4px 0;
-}
-@media (min-width: 720px) {
-  .header_component .header_container .header_box_menu_icon span {
+@media (max-width: 719px) {
+  .header_component .header_container .menu_box li.search_box {
     display: none;
   }
+}
+@media (min-width: 720px) {
+  .header_component .header_container .menu_box li.search_box {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    /*
+        tag-input: definimos outline: none  para remover el borde que 
+        generan los navegadores en los inputs, tambien un espaciado en
+        el eje-Y para este elemento, finalmente definimos la propiedad
+        display: none para remover este elemento de la vista
+    */
+    /*
+        tag-svg: definimos un margen superior para generar 
+        separacion frente a otros elementos 
+    */
+  }
+  .header_component .header_container .menu_box li.search_box input {
+    outline: none;
+    background-color: transparent;
+    color: #5c5b5b;
+    border: 1px solid #eaecef;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    height: 35px;
+    padding: 0 10px;
+    transition: box-shadow 0.2s;
+    display: none;
+    /*
+        js_input_hidden: clase añadida con javascript en "./src/js/main.js"
+        modificamos la propiedad display a block para hacer visible este 
+        elemento
+    */
+    /*
+        cuando tag-input tiene el foco añadimos una sombra
+    */
+  }
+  .header_component .header_container .menu_box li.search_box input.js_input_hidden {
+    display: block;
+  }
+  .header_component .header_container .menu_box li.search_box input:focus {
+    box-shadow: 0 0 8px 0 rgba(179, 177, 177, 0.3019607843);
+  }
+  .header_component .header_container .menu_box li.search_box svg {
+    margin-top: 2px;
+  }
+}
+.header_component .header_container .menu_box li {
+  list-style: none;
+  cursor: pointer;
+  /*  
+      tag-li
+  */
+  /*  
+      tag-svg
+  */
+  /*
+      hacemos uso del :pseudo elemento last-child para 
+      seleccionar la ultima tag-svg dentro de la tag-li 
+      y le definimos propiedades personalizadas
+  */
+}
+.header_component .header_container .menu_box li a {
+  /*
+      dispositivos menores a 719px: definimos display: none 
+      para ocultar el buscador de la vista en esta medida
+  */
+  /*
+      dispositivos mayores a 720px: definimos un padding derecho 
+      para generar espaciado en referencia a su contenedor
+  */
+}
+@media (max-width: 719px) {
+  .header_component .header_container .menu_box li a {
+    display: none;
+  }
+}
+@media (min-width: 720px) {
+  .header_component .header_container .menu_box li a {
+    color: #c3c3c3;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    padding-right: 24px;
+    /*
+        cuando la tag-a tiene el pseudo elemento :hover modificamos 
+        su color
+    */
+  }
+  .header_component .header_container .menu_box li a:hover {
+    color: #f0db4f;
+  }
+}
+.header_component .header_container .menu_box li svg {
+  fill: #c3c3c3;
+  width: 24px;
+  height: 24px;
+}
+.header_component .header_container .menu_box li:last-child svg {
+  fill: #f0db4f;
+  width: 32px;
+  height: 32px;
 }
 
 /*  
@@ -143,7 +267,7 @@ a {
 }
 .components_container .nav_component {
   position: fixed;
-  top: 70px;
+  top: 60px;
   left: 0;
   z-index: 8;
   border-right: 1px solid #eaecef;
@@ -156,23 +280,14 @@ a {
   	scrollbar
   */
   /*
-  	::-webkit-scrollbar-thumb: definimos display: none
-  	para ocultar el scrollbar
-  */
-  /*
-  	cuando hacemos :hover sobre nav_component 
-  	seleccionamos el pseudo elemento 
-  	::-webkit-scrollbar-thumb y definimos display: block
-  	para hacer visible el scrollbar
+  	::-webkit-scrollbar-thumb
   */
   /*
   	dispositivos menores a 719px: definimos transform: translateX() 
   	para desplazar el menu de navegacion ocultandolo de la vista
   */
   /*
-  	search_box: definimos position: relative debido a que uno de sus 
-            elementos hijos tiene definido position: absolute, finalmente definimos 
-  	un margen en la parte superior 
+  	dispositivos mayores a 720px
   */
   /*
   	nav_menu: definimos un espaciado personalizado en el eje-Y para este elemento 
@@ -185,11 +300,6 @@ a {
 }
 .components_container .nav_component::-webkit-scrollbar-thumb {
   background-color: #c1c1c1;
-  border-radius: 4px;
-  display: none;
-}
-.components_container .nav_component:hover::-webkit-scrollbar-thumb {
-  display: block;
 }
 @media (max-width: 719px) {
   .components_container .nav_component {
@@ -206,54 +316,24 @@ a {
     transform: translateX(0px);
   }
 }
-.components_container .nav_component .search_box {
-  position: relative;
-  margin-top: 30px;
-  /*
-  	tag-input: definimos outline: none  para remover el borde que 
-  	generan los navegadores en los inputs, finalmente definimos 
-  	un espaciado en el eje-Y para este elemento 
-  */
-  /*
-  	search_btn
-  */
-}
-.components_container .nav_component .search_box input {
-  outline: none;
-  background-color: transparent;
-  color: #5c5b5b;
-  border: 1px solid #eaecef;
-  font-size: 17px;
-  letter-spacing: 0.5px;
-  width: 100%;
-  height: 35px;
-  padding: 0 8px 0 14px;
-  transition: box-shadow 0.2s;
-  /*
-  	cuando tag-input tiene el foco, modificamos 
-  	el color del borde y añadimos una sombra
-  */
-}
-.components_container .nav_component .search_box input:focus {
-  border: 1px solid rgba(240, 218, 79, 0.6235294118);
-  box-shadow: 0 0 8px 0 rgba(179, 177, 177, 0.3019607843);
-}
-.components_container .nav_component .search_box .search_btn {
-  /*
-  	tag-svg: definimos vertical-align: top para remover un 
-  	espaciado que generan los navegadores en los iconos, 
-  	finalmente con position: absolute y sus propiedades top
-  	y right posicionamos el icono dentro del input
-  */
-}
-.components_container .nav_component .search_box .search_btn svg {
-  vertical-align: top;
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  fill: #f0db4f;
-  width: 24px;
-  height: 24px;
+@media (min-width: 720px) {
+  .components_container .nav_component {
+    /*
+    	js_show_navbar: clase añadida con javascript en "./src/js/main.js"
+    	definimos transform: translateX() para desplazar el menu de 
+                 navegacion ocultandolo de la vista
+    */
+    /*
+    	cuando nav_component tiene esta clase seleccionamos a main_component 
+                 y modificamos su ancho
+    */
+  }
+  .components_container .nav_component.js_show_navbar {
+    transform: translateX(-1000px);
+  }
+  .components_container .nav_component.js_show_navbar ~ .main_components {
+    width: 100%;
+  }
 }
 .components_container .nav_component .nav_menu {
   padding: 30px 0 70px;
@@ -320,10 +400,7 @@ a {
   font-size: 1.1rem;
   font-weight: 600;
   /*
-  	tag-svg: definimos vertical-align: top para remover un 
-  	espaciado que generan los navegadores en los iconos, 
-  	finalmente definimos una transicion para cuando el 
-  	icono gira al momento de hacer click li_dropdown
+  	tag-svg
   */
 }
 .components_container .nav_component .nav_menu .li_dropdown a.js_active_link {
@@ -333,7 +410,6 @@ a {
   fill: #f0db4f;
 }
 .components_container .nav_component .nav_menu .li_dropdown a svg {
-  vertical-align: top;
   fill: #5c5b5b;
   width: 12px;
   height: 12px;
@@ -366,9 +442,9 @@ a {
 }
 .components_container .main_components {
   position: absolute;
-  top: 70px;
+  top: 60px;
   color: #5c5b5b;
-  min-height: calc(100% - 70px);
+  min-height: calc(100% - 60px);
   padding: 0 6%;
   /*
   	dispositivos mayores a 720px: definimos right: 0 para
@@ -385,7 +461,8 @@ a {
   	100% para que tome el ancho total de la pantalla 
   */
   /*
-  	banner_component
+  	banner_component: definimos un margen personalizado en el eje-Y 
+            para generar separacion frente a otros elementos
   */
   /*
   	description_component
@@ -461,10 +538,10 @@ a {
 .components_container .main_components .banner_component h1 {
   color: #5c5b5b;
   /*
-  	tag-strong
+  	tag-span
   */
 }
-.components_container .main_components .banner_component h1 strong {
+.components_container .main_components .banner_component h1 span {
   color: #f0db4f;
 }
 .components_container .main_components .description_component {
@@ -524,7 +601,7 @@ a {
   width: 100px;
 }
 .components_container .main_components .section_banner p {
-  font-size: 1.5rem;
+  font-size: 22px;
   line-height: 1.5;
   margin: 30px 0 80px;
   /*
@@ -541,8 +618,11 @@ a {
 }
 .components_container .main_components .sections_container .sect_content {
   /*
-  	tag-h3: definimos un margen en la parte inferior de
-  	este elemento
+  	tag-h3
+  */
+  /*
+      tag-p: definimos un margen personalizado en el eje-y 
+      para generar sepracion frente a otros elementos
   */
   /*
   	code_box: definimos un margen en la parte inferior de este 
@@ -556,7 +636,6 @@ a {
 .components_container .main_components .sections_container .sect_content h3 {
   font-size: 2rem;
   line-height: 1.2;
-  margin-bottom: 40px;
   /*
   	dispositivos menores a 336px: modificamos el tamaño de
   	fuente de este elemento
@@ -566,6 +645,18 @@ a {
   .components_container .main_components .sections_container .sect_content h3 {
     font-size: 1.7rem;
   }
+}
+.components_container .main_components .sections_container .sect_content p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 20px 0 40px;
+  /*
+  	tag-strong
+  */
+}
+.components_container .main_components .sections_container .sect_content p strong {
+  color: #f0db4f;
 }
 .components_container .main_components .sections_container .sect_content .code_box {
   background-color: #343d4d;
@@ -578,7 +669,9 @@ a {
   	tag-span y tag-strong
   */
 }
-.components_container .main_components .sections_container .sect_content .code_box span,
+.components_container .main_components .sections_container .sect_content .code_box span {
+  color: #21c1e1;
+}
 .components_container .main_components .sections_container .sect_content .code_box strong {
   color: #f0db4f;
 }
@@ -586,13 +679,11 @@ a {
   text-align: center;
   margin-bottom: 80px;
   /*
-  	tag-img: definimos vertical-align: top para remover un 
-  	espaciado que generan los navegadores en las imagenes, 
-  	finalmente con object-fit ajustamos la img a su contenedor 
+  	tag-img: definimos object-fit: cover para ajustar las
+                     imagenes a su contenedor padre 
   */
 }
 .components_container .main_components .sections_container .sect_content .sect_box_img img {
-  vertical-align: top;
   width: 100%;
   height: auto;
   -o-object-fit: cover;

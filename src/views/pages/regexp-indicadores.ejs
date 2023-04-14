@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Indicadores</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Nos permiten añadir en los patrones de las expresiones regulares caracterisitcas especiales las cuales hacen que al momento de buscar coincidencias entre estos y una cadena de
+                        caracteres la coincidencia tenga que ser exacta.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Indicador ^</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>Determina que la cadena de caracteres a ser evaluada debe iniciar con el patron definido dentro de la expresion regular.</p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p01.png" alt="indicador ^" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Indicador [^]</h3>
+
+                        <p>Determina que la cadena de caracteres a ser evaluada no debe iniciar con el patron definido dentro de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p02.png" alt="indicador [^]" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Indicador $</h3>
+
+                        <p>Determina que la cadena de caracyeres a ser evaluada debe finalizar con el patron definido dentro de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p03.png" alt="indicador $" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Indicador +</h3>
+
+                        <p>Determina que la cadena de caracteres a ser evaluada debe tener si o si, el o los caracteres definidos despues del indicador en el patron dentro de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p04.png" alt="indicador +" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Indicador [ ]</h3>
+
+                        <p>Determina que la cadena de caracteres a ser evaluada debe iniciar entre el rango de patron definido dentro de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p05.png" alt="indicador [ ]" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Indicador { }</h3>
+
+                        <p>Determina que la cadena de caracteres a ser evaluada debe tener una cantidad minima segun esta haya sido definida dentro del patron de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p06.png" alt="indicador { }" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>07. Indicador { }$</h3>
+
+                        <p>Determina que la cadena de caracteres a ser evaluada solo puede tener una cantidad maxima segun esta haya sido definida dentro del patron de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p07.png" alt="indicador { }$" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>08. Indicador { , }$</h3>
+
+                        <p>Determina que la cadena de caracteres a ser evaluada debe tener una cantidad minima y maxima segun esta haya sido definida dentro del patron de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p08.png" alt="indicador { , }$" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>09. Indicador |</h3>
+
+                        <p>Determina que la cadena de caracteres a ser evaluada puede ser cualquiera de los valores definidos dentro del patron de la expresion regular.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/indicadores/p09.png" alt="indicador |" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Indicadores - RegExp</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

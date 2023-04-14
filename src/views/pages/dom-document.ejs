@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Document</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Pertenece al objeto <strong>window</strong> y al igual que este, puede proporcionarnos metodos y propiedades que pueden ser interminables, por ello en este apartado veremos
+                        algunos de los mas importantes y que son utilizados con mayor frecuencia.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Propiedades del objeto document</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            Estas nos brindan informacion importante sobre la construccion del documento, de los elementos que lo componen, de los diferentes metodos que podemos implementar, entre
+                            otras.
+                        </p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d01.png" alt="propiedades del objeto document" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Propiedad all</h3>
+
+                        <p>
+                            Nos permite conocer mediante una coleccion o <strong>array</strong> todos los elementos html (etiquetas) que componen el documento asi como la longitud (cantidad) de estas.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d02.png" alt="propiedad all" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Propiedad body</h3>
+
+                        <p>Nos permite conocer de manera detallada todos los elementos html (etiquetas) que componen el cuerpo del documento.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d03.png" alt="propiedad body" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Propiedad head</h3>
+
+                        <p>Nos permite conocer de manera detallada todos los elementos html (etiquetas) que componen la cabeza del documento.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d04.png" alt="propiedad head" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Objeto styleSheets</h3>
+
+                        <p>
+                            Nos permite conocer todos los estilos css asociados al documento, este tambien cuenta con propiedades como <strong>cssRules</strong> la cual nos brinda informacion de los
+                            elementos html y sus estilos css.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d06.png" alt="objeto styleSheets" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Propiedad scripts</h3>
+
+                        <p>Nos permite conocer mediante una coleccion o <strong>array</strong> todos los scripts asociados al documento asi como la longitud (cantidad) de estos.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d09.png" alt="propiedad scripts" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>07. Propiedad images</h3>
+
+                        <p>
+                            Nos permite conocer mediante una coleccion o <strong>array</strong> todas las imagenes insertadas en el documento asi como la longitud (cantidad) de estas, a su vez tiene
+                            propiedades que nos brinda informacion como nombre de clases, de atributos, el valor de su atributo src, entre otras.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d07.png" alt="propiedad images" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>08. Propiedad links</h3>
+
+                        <p>
+                            Nos permite conocer mediante una coleccion o <strong>array</strong> todos los enlaces insertados en el documento asi como la longitud (cantidad) de estos, a su vez tiene
+                            propiedades que nos brinda informacion como el nombre del host, el valor de su atributo href, el texto del enlace, entre otras.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d08.png" alt="propiedad links" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>09. Propiedad forms</h3>
+
+                        <p>
+                            Nos permite conocer mediante una coleccion o <strong>array</strong> todos los formularios insertados en el documento asi como la longitud (cantidad) de estos, a su vez
+                            tiene propiedades que nos brinda informacion como nombres de clases, nombres de atributos, su posicion en el documento, que elementos hijo tiene, entre otras.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/document/d05.png" alt="propiedad forms" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Document - DOM</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

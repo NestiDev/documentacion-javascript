@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Patrones</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Hacen referencia a la composicion de una expresion regular la cual permite determinar la secuencia que debe tener la cadena de caracteres para que puedan existir coincidencias
+                        en la busqueda. Estos siguen la estructura <strong>/</strong>patron(es)<strong>/</strong>banderas<strong>;</strong>
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p, code_box y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Patron para emails</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            Este inidica que la cadena debe iniciar con un rango de letras de ^[a-z] seguidamente (opcional) puede ir un caracter especial [-_.]? la tercera parte de la composicion
+                            determinamos un rango de letras y numeros de [a-z-0-9] luego inidicamos que si o si como minimo debe ir un +@{1} repetimos el rango de letras de [a-z] y a continuacion
+                            definimos que tambien es obligatorio como minimo un +\. para finalmente inidicar que el patron debe finalizar en un rango de letras de [a-z] con un minimo de 2 caracteres y
+                            maximo de 3.
+                        </p>
+
+                        <!--  
+							code_box: definida para declarar el codigo en ejecucion
+						-->
+                        <div class="code_box">
+                            <span>/</span
+                            ><strong>^[</strong
+                            >a-z<strong>]+[</strong>-_.<strong>]?[</strong>a-z-0-9<strong>]+@{</strong>1<strong>}[</strong>a-z<strong>]+\.{</strong>1<strong>}[</strong>a-z<strong>]{</strong>2,3<strong
+                                >}$</strong
+                            ><span>/</span>i;
+                        </div>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p01.png" alt="patron para emails" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Patron para contraseñas con caracteres especiales</h3>
+
+                        <p>
+                            Este patron inidica que la cadena debe iniciar con rango de letras y numeros de ^[a-z-0-9] seguidamente (opcional) puede ir un caracterer especial [*-_.]? en la tercera
+                            parte de la composicion repetimos el rango de letras y numeros de [a-z-0-9] y en el ultimo definimos que de manera opcional puede finalizar con un caracter especial [*-_.]?
+                        </p>
+
+                        <div class="code_box">
+                            <span>/</span><strong>^[</strong>a-z-0-9<strong>]+[</strong>*-_.<strong>]?[</strong>a-z-0-9<strong>]+[</strong>*-_.<strong>]$</strong><span>/</span>i;
+                        </div>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p02.png" alt="patron para contraseñas con caracteres especiales" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Patron para contraseñas con minimo una letra mayuscula</h3>
+
+                        <p>
+                            Este patron inidica que la cadena debe iniciar con un rango de letras de ^[A-Z] por ultimo definimos que de manera opcional puede tener un caracter especial [*_.]? al final
+                            de la cadena.
+                        </p>
+
+                        <div class="code_box"><span>/</span><strong>^[</strong>A-Z<strong>]+[</strong>*_.<strong>]?</strong><span>/</span>;</div>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p07.png" alt="patron para contraseñas con minimo una letra mayuscula" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Patron solo cadenas sin espacios</h3>
+
+                        <p>Este inidica que la cadena debe iniciar y finalizar con un rango de letras de [a-z] con un minimo de 3 caracteres y maximo de 10.</p>
+
+                        <div class="code_box"><span>/</span><strong>^[</strong>a-z<strong>]{</strong>3,10<strong>}$</strong><span>/</span>i;</div>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p03.png" alt="patron solo cadenas sin espacios" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Patron solo cadenas con espacios</h3>
+
+                        <p>
+                            Este inidica que la cadena debe iniciar y finalizar con un rango de letras de [a-z\s] con un minimo de 3 caracteres y maximo de 10. El caracter \s especifica que los
+                            espacios para la busqueda de coincidencias son permitidos.
+                        </p>
+
+                        <div class="code_box"><span>/</span><strong>^[</strong>a-z\s<strong>]{</strong>3,10<strong>}$</strong><span>/</span>i;</div>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p04.png" alt="patron solo cadenas con espacios" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Patron solo numeros sin espacios</h3>
+
+                        <p>Este inidica que la cadena debe iniciar y finalizar con un rango de numeros de [0-9] con un minimo de 1 caracteres y maximo de 8.</p>
+
+                        <div class="code_box"><span>/</span><strong>^[</strong>0-9<strong>]{</strong>1,8<strong>}$</strong><span>/</span>;</div>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p05.png" alt="patron solo numeros sin espacios" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>07. Patron solo numeros con espacios</h3>
+
+                        <p>
+                            Este inidica que la cadena debe iniciar y finalizar con un rango de numeros de [0-9\s] con un minimo de 1 caracteres y maximo de 8. El caracter \s especifica que los
+                            espacios para la busqueda de coincidencias son permitidos.
+                        </p>
+
+                        <div class="code_box"><span>/</span><strong>^[</strong>0-9\s<strong>]{</strong>1,9<strong>}$</strong><span>/</span>;</div>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p06.png" alt="patron solo numeros con espacios" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>08. Patron para busqueda de coincidencias</h3>
+
+                        <p>
+                            Este inidica que la cadena debe tener un rango de letras de [a-z] con un minimo de 1 caracteres y maximo de n. A continuacion definimos que la siguiente coincidencia a
+                            buscar es un espacio. Luego repetimos la secuencia segun sea necesario con la diferencia que en la segunda parte de la composicion definimos que el valor puede ser opcional
+                            y para la tercera parte removemos el espacio.
+                        </p>
+
+                        <div class="code_box">
+                            <span>/</span
+                            ><strong>[</strong
+                            >a-z<strong>]{</strong>1,<strong>}</strong>\s<strong>[</strong>a-z<strong>]{</strong>1,<strong>}</strong>\s?<strong>[</strong>a-z<strong>]{</strong>1,<strong>}</strong
+                            ><span>/</span>ig;
+                        </div>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/patrones/p08.png" alt="patron para busqueda de coincidencias" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Patrones - RegExp</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Metodos</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Nos ayudan a comprobar la exintencia de posibles coincidencias que puedan existir entre una cadena de caracteres y el patron de una expresion regular, estos devuelven valores
+                        que podemos manipular para realizar diferentes acciones. Cabe aclarar que
+                        <strong>exec</strong> y <strong>test</strong> son metodos propios de las RegExp y que <strong>match replace search</strong> y <strong>split</strong> son metodos propios de los
+                        Strings.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Exec</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            Determina si el patron definido en la expresion regular tiene alguna coincidencia con la cadena de caracteres suministrada dentro del metodo, de hayar coincidencias
+                            devuelve un <strong>array</strong> con las coincidencias encontradas de lo contrario devuelve un valor <strong>null</strong>
+                        </p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/metodos/e01.png" alt="exec" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Test</h3>
+
+                        <p>
+                            Determina si el patron definido en la expresion regular tiene alguna coincidencia con la cadena de caracteres suministrada dentro del metodo, de hayar coincidencias
+                            devuelve un valor <strong>true</strong> de lo contrario devuelve un valor <strong>false</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/metodos/t01.png" alt="test" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Match</h3>
+
+                        <p>
+                            Determina si la cedena de caracteres tiene alguna coincidencia con el patron de la expresion regular suministrada dentro del metodo, de hayar coincidencias devuelve un
+                            <strong>array</strong> con las coincidencias encontradas de lo contrario devuelve un valor <strong>null</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/metodos/m01.png" alt="match" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Replace</h3>
+
+                        <p>
+                            Permite reemplazar una porsion de una cedena de caracteres siempre y cuando exista alguna coincidencia con el patron de la expresion regular suministrada dentro del metodo,
+                            de hayar coincidencias devuelve la cadena con el nuevo valor.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/metodos/r01.png" alt="replace" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Search</h3>
+
+                        <p>
+                            Permite conocer la posicion de la primera coincidencia encontrada en la cedena de caracteres siempre y cuando exista alguna coincidencia con el patron de la expresion
+                            regular suministrada dentro del metodo, de no hayar coincidencias devuelve un valor <strong>-1</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/metodos/s01.png" alt="search" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Split</h3>
+
+                        <p>Este devuelve un <strong>array</strong> con los valores de la cadena de caracteres que no coincidan con el patron de la expresion regular suministrada dentro del metodo.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/metodos/s02.png" alt="split" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Metodos - RegExp</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

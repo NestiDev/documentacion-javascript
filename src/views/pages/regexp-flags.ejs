@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Flags</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Las <strong>flags</strong> o banderas nos ayudan a la estandarizacion de los patrones definidos en las expresiones regulares lo que hace mas sencillo encontrar algun tipo de
+                        coincidencia entre estos y una cadena de caracteres. En este apartado hacemos uso de algunos metodos los cuales estan explicados a detalle en el menu
+                        <strong>metodos</strong> pertenecientes a esta seccion.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Flag i</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            Permite que la busqueda de coincidencias que se realiza entre una cadena de caracteres y el patron definido en la expresion regular pueda distinguir mayusculas y
+                            minusculas, de hayar coincidencias devuelve un valor <strong>true</strong> de lo contrario devuelve un valor <strong>false</strong>
+                        </p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/flags/f01.png" alt="flag i" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Flag g</h3>
+
+                        <p>
+                            Permite encontrar todas las coincidencias que se encuentren dentro de una cadena de caracteres segun haya sido definido el patron dentro de la expresion regular, esta
+                            bandera realiza una busqueda global y devuelve un <strong>array</strong> con todas las coincidencias encontradas.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/flags/f02.png" alt="flag g" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Flag ig</h3>
+
+                        <p>Esta bandera es una combinacion de las banderas anteriormente descritas.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/regexp/flags/f03.png" alt="flag ig" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Flags - RegExp</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

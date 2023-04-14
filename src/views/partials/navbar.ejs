@@ -1,28 +1,4 @@
 <!--  
-	search_box: contenedor de 1 tag-input y 1 tag-a
--->
-<div class="search_box">
-    <!--  
-		tag-input: en esta definimos el buscador
-	-->
-    <input type="text" name="search" autocomplete="off" placeholder="Buscar" />
-
-    <!--  
-		tag-a: contiene 1 tag-svg
-	-->
-    <a href="#" class="search_btn">
-        <!--  
-			tag-svg: en esta definimos el icono del buscador
-		-->
-        <svg viewBox="0 0 24 24">
-            <path
-                d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
-            ></path>
-        </svg>
-    </a>
-</div>
-
-<!--  
 	nav_menu: en esta definimos los items del menu de navegacion
 -->
 <ul class="nav_menu">
@@ -57,7 +33,7 @@
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            02. Funciones
+            02. Condicionales
 
             <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
@@ -65,11 +41,9 @@
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/funciones-declaradas">a. Declaradas</a></li>
-            <li><a href="/funciones-expresadas">b. Expresadas</a></li>
-            <li><a href="/funciones-callback">c. Callback</a></li>
-            <li><a href="/funciones-events">d. Events</a></li>
-            <li><a href="/funciones-rest-operator">e. Rest Operator</a></li>
+            <li><a href="/condicionales-if-else">a. If - Else</a></li>
+            <li><a href="/condicionales-switch">b. Switch </a></li>
+            <li><a href="/condicionales-operadores">c. Operadores</a></li>
         </ul>
     </li>
 
@@ -95,7 +69,39 @@
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            04. Clases
+            04. Funciones
+
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/funciones-declaradas">a. Declaradas</a></li>
+            <li><a href="/funciones-expresadas">b. Expresadas</a></li>
+            <li><a href="/funciones-callback">c. Callback</a></li>
+            <li><a href="/funciones-events">d. Events</a></li>
+            <li><a href="/funciones-rest-operator">e. Rest Operator</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            05. Arreglos
+
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg> -->
+        </a>
+
+        <!-- <ul class="dropdown_menu">
+            <li><a href="#">a. uno</a></li>
+        </ul> -->
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            06. Clases
 
             <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
@@ -111,7 +117,7 @@
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            05. Objetos
+            07. Objetos
 
             <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
@@ -119,18 +125,17 @@
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/objetos-declaraciones">a. Declaraciones</a></li>
-            <li><a href="/objetos-operaciones">b. Operaciones</a></li>
+            <li><a href="/objetos-declaracion">a. Declaracion</a></li>
+            <li><a href="/objetos-manipulacion">b. Manipulacion</a></li>
             <li><a href="/objetos-constructor">c. Constructor</a></li>
             <li><a href="/objetos-destructuracion">d. Destructuracion</a></li>
             <li><a href="/objetos-metodos">e. Metodos</a></li>
-            <li><a href="/objetos-consola">f. Consola</a></li>
         </ul>
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            06. Condicionales
+            08. JSON
 
             <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
@@ -138,43 +143,33 @@
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/condicionales-if-else">a. If - Else</a></li>
-            <li><a href="/condicionales-switch">b. Switch </a></li>
-            <li><a href="/condicionales-operadores">c. Operadores</a></li>
+            <li><a href="/json-declaracion">a. Declaracion</a></li>
+            <li><a href="/json-manipulacion">b. Manipulacion</a></li>
+            <li><a href="/json-metodos">c. Metodos</a></li>
         </ul>
     </li>
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            07. Arreglos
+        <a href="/try-catch"> 09. Try - Catch </a>
+    </li>
 
-            <svg viewBox="0 0 24 24">
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            10. Promesas
+
+            <!-- <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
+            </svg> -->
         </a>
 
-        <ul class="dropdown_menu">
+        <!-- <ul class="dropdown_menu">
             <li><a href="#">a. uno</a></li>
-        </ul>
+        </ul> -->
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            08. Promesas
-
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
-        </a>
-
-        <ul class="dropdown_menu">
-            <li><a href="#">a. uno</a></li>
-        </ul>
-    </li>
-
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            09. Strings
+            11. Strings
 
             <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
@@ -204,7 +199,7 @@
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            10. Numbers
+            12. Numbers
 
             <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
@@ -220,17 +215,67 @@
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            11. DOM
+            12. DOM
 
             <svg viewBox="0 0 24 24">
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
             </svg>
         </a>
 
-        <!-- <ul class="dropdown_menu">
-            <li><a href="/numbers-generales">a. Generales</a></li>
+        <ul class="dropdown_menu">
+            <li><a href="/dom-window">a. Window</a></li>
 
-            <li><a href="/numbers-math">b. Math</a></li>
-        </ul> -->
+            <li><a href="/dom-document">b. Document</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            13. LocalStorage
+
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/localStorage-setItem">a. SetItem</a></li>
+
+            <li><a href="/localStorage-getItem">b. GetItem</a></li>
+
+            <li><a href="/localStorage-removeItem">c. RemoveItem</a></li>
+
+            <li><a href="/localStorage-clear">d. Clear</a></li>
+
+            <li><a href="/localStorage-propiedades">e. Propiedades</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="/new-date"> 14. Date</a>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="/temporizadores"> 15. Temporizadores</a>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#">
+            16. RegExp
+
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/regexp-flags">a. Flags</a></li>
+
+            <li><a href="/regexp-indicadores">b. Indicadores</a></li>
+
+            <li><a href="/regexp-metodos">c. Metodos</a></li>
+
+            <li><a href="/regexp-patrones">c. Patrones</a></li>
+        </ul>
     </li>
 </ul>
