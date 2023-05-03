@@ -28,7 +28,7 @@
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
@@ -37,20 +37,18 @@
                     -->
                     <h2>Const</h2>
 
-                    <hr style="border: 2px solid #f0db4f; width: 100px" />
-
                     <!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-                    <!-- <div class="banner_line_titles"></div> -->
+                    <hr class="line_titles" />
 
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permite guardar un valor en memoria que posteriormente podemos utilizar, es importante tener en cuenta que el valor de una variable definida con la palabra reservada
-                        <strong>const</strong> no puede cambiar su valor.
+                        Las <strong>variables</strong>
+                        nos permiten guardar un valor en memoria el cual posteriormente podemos implementar en cualquier parte de nuestro proyecto.
                     </p>
                 </section>
 
@@ -66,13 +64,535 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Error al definir una variable const</h3>
+                        <h3>01. Declaracion</h3>
+
+                        <p>
+                            Existen ciertas reglas al momento de declarar una variable como por ejemplo que el nombre tambien conocido como <strong>identificador</strong> no inicie con numeros, que no
+                            inicie y/o finalice con caracteres especiales y que no tenga espaciados ni guiones medios entre letras ya que esto provocaria un <strong>error de sintaxis</strong>
+                        </p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/variables/const/const1.png" alt="error al definir una variable const" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">const</span> NOMBRE
+                                    <span class="operator">=</span>
+                                    <span class="string">"Andres"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">const</span> nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Maria"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="variable">const</span> _nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Carlos"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                    <span class="variable">const</span> $nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Juana"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">09</span>
+                                    <span class="variable">const</span> nombre_usuario
+                                    <span class="operator">=</span>
+                                    <span class="string">"Arturo"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">10</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">11</span>
+                                    <span class="variable">const</span> nombre2023
+                                    <span class="operator">=</span>
+                                    <span class="string">"Sofia"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">12</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">13</span>
+                                    <span class="variable">const</span> nombreUsuario
+                                    <span class="operator">=</span>
+                                    <span class="string">"Raul"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">14</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">15</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">16</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>NOMBRE<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>Andres</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Tipos de datos</h3>
+
+                        <p>
+                            Las variables definidas con la palabra reservada <strong>const</strong> pueden alamcenar tres tipos de valores <strong>primitivos</strong> como lo son string number y
+                            boolean.
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">const</span> nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Lucia"</span><span class="semi_colon">;</span>
+                                     <span class="console">// string</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">const</span> edad
+                                    <span class="operator">=</span>
+                                    <span class="number">34</span><span class="semi_colon">;</span>
+                                     <span class="console">// number</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="variable">const</span> activo
+                                    <span class="operator">=</span>
+                                    <span class="boolean">true <span class="operator">||</span> false</span><span class="semi_colon">;</span>
+                                    <span class="console">// boolean</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="properties">typeof</span> activo<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>boolean</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Error de sintaxis</h3>
+
+                        <p>
+                            Este se genera cuando se define mas de una vez el mismo
+                            <strong>identificador</strong>
+                            de una variable que ha sido declarada haciendo uso de la palabra reservada <strong>const</strong>
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">const</span> marcas
+                                    <span class="operator">=</span>
+                                    <span class="string">"Ferrari"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">const</span> marcas
+                                    <span class="operator">=</span>
+                                    <span class="string">"Mercedez"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="variable">const</span> marcas
+                                    <span class="operator">=</span>
+                                    <span class="string">"Ferrari"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>marcas<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp class="error">SintaxError: Identifier 'marcas' has already been declared</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Comportamiento de const dentro de un scope</h3>
+
+                        <p>
+                            Como vemos hemos declarado dos veces la variable <strong>marca</strong> pero la segunda declaracion al estar dentro del escope de una estructura de control
+                            <strong>if</strong>
+                            hace que dicha variable <strong>unicamente exista</strong>
+                            dentro de esta. Es por ello que no genera error de sintaxis. Pero, es recomendable no realizar este tipo de declaracion ya que definir un nombre de variable haciendo uso de
+                            la palabra reservada
+                            <strong>const</strong> indica que el valor que esta almacena <strong>no debe cambiar</strong> en ningun momento.
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">const</span> valor
+                                    <span class="operator">=</span>
+                                    <span class="number">1000</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">const</span> marca
+                                    <span class="operator">=</span>
+                                    <span class="string">"Mercedez"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="properties">if</span><span class="parenthesis">(</span>valor
+                                    <span class="operator">===</span><span class="number"> 1000</span><span class="parenthesis">)</span>
+                                    <span class="brackets"> {</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">07</span>
+                                    <span class="variable">const</span> marca
+                                    <span class="operator">=</span>
+                                    <span class="string">"Ferrari"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">09</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"el valor de la variable marca es: "</span><span class="semi_colon">,</span> marca<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">10</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">11</span>
+                                    <span class="brackets">}</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>el valor de la variable marca es: Ferrari</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Comportamiento de const fuera de un scope</h3>
+
+                        <p>
+                            Como vemos hemos declarado dos veces la variable <strong>marca</strong>
+                            pero la segunda declaracion al estar dentro del escope de una estructura de control
+                            <strong>if</strong>
+                            impide que esta pueda ser implementada por fuera de esta lo que evita que se genere un error de sintaxis. Pero, es recomendable no realizar este tipo de declaracion ya que
+                            definir un nombre de variable haciendo uso de la palabra reservada
+                            <strong>const</strong> indica que el valor que esta almacena <strong>no debe cambiar</strong> en ningun momento.
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">const</span> valor
+                                    <span class="operator">=</span>
+                                    <span class="number">1000</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">const</span> marca
+                                    <span class="operator">=</span>
+                                    <span class="string">"Mercedez"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="properties">if</span><span class="parenthesis">(</span>valor
+                                    <span class="operator">===</span><span class="number"> 1000</span><span class="parenthesis">)</span>
+                                    <span class="brackets"> {</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">07</span>
+                                    <span class="variable">const</span> marca
+                                    <span class="operator">=</span>
+                                    <span class="string">"Ferrari"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">09</span>
+                                    <span class="brackets">}</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">10</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">11</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">12</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"el valor de la variable marca es: "</span><span class="semi_colon">,</span> marca<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>el valor de la variable marca es: Mercedez</samp>
                         </div>
                     </section>
 

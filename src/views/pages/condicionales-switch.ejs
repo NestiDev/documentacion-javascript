@@ -28,7 +28,7 @@
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
@@ -38,18 +38,19 @@
                     <h2>Switch</h2>
 
                     <!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-                    <div class="banner_line_titles"></div>
+                    <hr class="line_titles" />
 
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Este recibe como parametro una variable cuyo valor es comparado con los diferentes casos definidos dentro del condicional el cual retorna verdadero si el valor coincide con uno
-                        de los casos y que, de ser falso nos permite retornar una respuesta <strong>default</strong> por defecto. Para destacar se recomienda finalizar cada caso con
-                        <strong>break</strong> el cual se encarga de finalizar con el flujo del condicional una vez se haya cumplido un caso.
+                        Esta <strong>estructura de control</strong> recibe como parametro una variable cuyo valor es comparado con los diferentes casos definidos dentro de si. Para destacar se
+                        recomienda finalizar cada caso con un
+                        <strong>break</strong>
+                        el cual se encarga de finalizar con el flujo del condicional una vez este se ha cumplido.
                     </p>
                 </section>
 
@@ -59,35 +60,37 @@
                 -->
                 <div class="sections_container">
                     <!--  
-						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
                     <section class="sect_content">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Verdadero - cuando el valor coincide con un caso</h3>
+                        <h3>01. Case true</h3>
+
+                        <p>
+                            Se ejecuta en el momento en el que el valor de la variable coincide con uno de los casos definidos dentro de la estructura de control ejecutando con ello el bloque de
+                            codigo definido dentro de su escope.
+                        </p>
 
                         <!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
                         <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/switch/swi1.png" alt="verdadero - si el valor coincide con un caso" />
+                            <img src="../../assets/images/condicionales/switch/swi3.png" alt="case true" />
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Default - cuando el valor no coincide con un caso</h3>
+                        <h3>02. Case default</h3>
+
+                        <p>
+                            Se ejecuta en el momento en el que el valor de la variable no coincide con ninguno de los casos definidos dentro de la estructura de control ejecutando con ello el bloque
+                            de codigo definido dentro de su escope.
+                        </p>
 
                         <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/switch/swi2.png" alt="default - si el valor no coincide con un caso" />
-                        </div>
-                    </section>
-
-                    <section class="sect_content">
-                        <h3>03. Casos avanzados</h3>
-
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/switch/swi3.png" alt="casos avanzados" />
+                            <img src="../../assets/images/condicionales/switch/swi2.png" alt="case default" />
                         </div>
                     </section>
 

@@ -26,12 +26,16 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  min-height: 100vh;
+}
+
 /*
 	body
 */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
 }
 
 /*
@@ -241,8 +245,8 @@ svg {
 }
 .header_component .header_container .menu_box li:last-child svg {
   fill: #f0db4f;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 /*  
@@ -271,7 +275,7 @@ svg {
   left: 0;
   z-index: 8;
   border-right: 1px solid #eaecef;
-  width: 240px;
+  width: 260px;
   height: 100vh;
   padding: 0 18px;
   overflow: auto;
@@ -296,10 +300,10 @@ svg {
   */
 }
 .components_container .nav_component::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 .components_container .nav_component::-webkit-scrollbar-thumb {
-  background-color: #c1c1c1;
+  background-color: #d9d9d9;
 }
 @media (max-width: 719px) {
   .components_container .nav_component {
@@ -474,14 +478,14 @@ svg {
   	sections_container
   */
   /*
-  	section_footer: definimos un margen personalizado en
-  	el eje-Y para este elemento 
+  	section_footer: definimos un margen inferior para
+  	generar separacion frente a otros elementos
   */
 }
 @media (min-width: 720px) {
   .components_container .main_components {
     right: 0;
-    width: calc(100% - 240px);
+    width: calc(100% - 260px);
   }
 }
 @media (max-width: 719px) {
@@ -567,7 +571,7 @@ svg {
   	este elemento
   */
   /*
-  	banner_line_titles
+  	line_titles
   */
   /*
   	tag-p: definimos una separacion de lineas y un margen 
@@ -596,12 +600,14 @@ svg {
     font-size: 2.1rem;
   }
 }
-.components_container .main_components .section_banner .banner_line_titles {
-  border: 2px solid #f0db4f;
+.components_container .main_components .section_banner .line_titles {
+  border: 1px solid #f0db4f;
   width: 100px;
+  box-shadow: 0 0 8px 0 #f0db4f;
 }
 .components_container .main_components .section_banner p {
-  font-size: 22px;
+  text-align: justify;
+  font-size: 20px;
   line-height: 1.5;
   margin: 30px 0 80px;
   /*
@@ -610,6 +616,7 @@ svg {
 }
 .components_container .main_components .section_banner p strong {
   color: #f0db4f;
+  text-shadow: 0 0 18px rgba(240, 218, 79, 0.7019607843);
 }
 .components_container .main_components .sections_container {
   /*
@@ -623,10 +630,6 @@ svg {
   /*
       tag-p: definimos un margen personalizado en el eje-y 
       para generar sepracion frente a otros elementos
-  */
-  /*
-  	code_box: definimos un margen en la parte inferior de este 
-  	elemento y un espaciado de 12px para todos los ejes
   */
   /*
   	sect_box_img: definimos un margen en la parte inferior
@@ -647,52 +650,133 @@ svg {
   }
 }
 .components_container .main_components .sections_container .sect_content p {
+  text-align: justify;
   font-size: 20px;
-  font-weight: 500;
   line-height: 1.5;
-  margin: 20px 0 40px;
+  margin: 20px 0 30px;
   /*
   	tag-strong
   */
 }
 .components_container .main_components .sections_container .sect_content p strong {
   color: #f0db4f;
+  text-shadow: 0 0 18px rgba(240, 218, 79, 0.7019607843);
 }
 .components_container .main_components .sections_container .sect_content .code_box {
-  background-color: #343d4d;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 6px 0 #ccc;
-  margin-bottom: 40px;
-  padding: 12px;
-  /*
-  	tag-span y tag-strong
-  */
+  background-color: #242936;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px 5px 0 0;
+  padding: 28px;
+  overflow-x: auto;
 }
-.components_container .main_components .sections_container .sect_content .code_box span {
-  color: #21c1e1;
-}
-.components_container .main_components .sections_container .sect_content .code_box strong {
-  color: #f0db4f;
-}
-.components_container .main_components .sections_container .sect_content .sect_box_img {
-  text-align: center;
-  margin-bottom: 80px;
-  /*
-  	tag-img: definimos object-fit: cover para ajustar las
-                     imagenes a su contenedor padre 
-  */
-}
-.components_container .main_components .sections_container .sect_content .sect_box_img img {
+.components_container .main_components .sections_container .sect_content .code_box pre {
+  white-space: normal;
   width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  box-shadow: 0 2px 6px 0 #ccc;
+  min-width: 100vh;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre:first-child {
+  margin-bottom: 20px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.circle {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.first_circle {
+  background-color: #fc5f55;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.second_circle {
+  background-color: #fabd24;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.thirt_circle {
+  background-color: #26c83f;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.index {
+  display: inline-block;
+  margin-bottom: 2px;
+  color: #4c525d;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.inner_index {
+  padding-right: 16px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.outer_index {
+  padding-right: 42px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.outer_doble_index {
+  padding-right: 72px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.variable {
+  color: #986dff;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.operator {
+  color: #ff66a1;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.symbols {
+  color: #179fff;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.number {
+  color: #dfbfff;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.string {
+  color: #d5ff80;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.boolean {
+  color: #578ac2;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.function {
+  color: #84b6f4;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.parameters {
+  color: #ecc16a;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.parameters_out {
+  color: rgba(236, 193, 106, 0.5215686275);
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.properties {
+  color: #f29e74;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.brackets {
+  color: #ffd700;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.console {
+  color: rgba(193, 193, 193, 0.6784313725);
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.keyword {
+  color: #f783f7;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.square {
+  color: goldenrod;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.semi_colon {
+  color: #808080;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.parenthesis {
+  color: #84b6f4;
+}
+.components_container .main_components .sections_container .sect_content .output_box {
+  background-color: #1f2430;
+  border-top: 1px solid #171b24;
+  border-radius: 0 0 5px 5px;
+  padding: 16px 28px;
+  margin-bottom: 80px;
+}
+.components_container .main_components .sections_container .sect_content .output_box samp {
+  color: #83f8b0;
+  font-size: 17px;
+  display: block;
+  margin-bottom: 4px;
+}
+.components_container .main_components .sections_container .sect_content .output_box samp.error {
+  color: #ff6666;
 }
 .components_container .main_components .section_footer {
   text-align: center;
   color: #ccc;
   font-size: 1.2rem;
-  margin: 60px 0 30px;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */

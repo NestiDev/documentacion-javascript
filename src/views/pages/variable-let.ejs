@@ -28,7 +28,7 @@
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
@@ -38,17 +38,17 @@
                     <h2>Let</h2>
 
                     <!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-                    <div class="banner_line_titles"></div>
+                    <hr class="line_titles" />
 
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permite guardar un valor en memoria que posteriormente podemos utilizar, es importante tener en cuenta que el valor de una variable definida con la palabra reservada
-                        <strong>let</strong> no puede cambiar su valor exepto si se define dentro de un escope.
+                        Las <strong>variables</strong>
+                        nos permiten guardar un valor en memoria el cual posteriormente podemos implementar en cualquier parte de nuestro proyecto.
                     </p>
                 </section>
 
@@ -64,29 +64,528 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Error al definir una variable let</h3>
+                        <h3>01. Declaracion</h3>
+
+                        <p>
+                            Existen ciertas reglas al momento de declarar una variable como por ejemplo que el nombre tambien conocido como <strong>identificador</strong> no inicie con numeros, que no
+                            inicie y/o finalice con caracteres especiales y que no tenga espaciados ni guiones medios entre letras ya que esto puede llevar a un <strong>error de sintaxis</strong>
+                        </p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/variables/let/let2.png" alt="error al definir una variable let" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">let</span> nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Maria"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">let</span> _nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Carlos"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="variable">let</span> $nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Juana"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                    <span class="variable">let</span> nombre_usuario
+                                    <span class="operator">=</span>
+                                    <span class="string">"Arturo"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">09</span>
+                                    <span class="variable">let</span> nombre2023
+                                    <span class="operator">=</span>
+                                    <span class="string">"Sofia"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">10</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">11</span>
+                                    <span class="variable">let</span> nombreUsuario
+                                    <span class="operator">=</span>
+                                    <span class="string">"Raul"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">12</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">13</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">14</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>_nombre<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>Carlos</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Valor de la variable let fuera de un scope</h3>
+                        <h3>02. Tipos de datos</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/variables/let/let3.png" alt="valor de la variable let fuera de un scope" />
+                        <p>
+                            Las variables definidas con la palabra reservada <strong>let</strong> pueden alamcenar cuatro tipos de valores <strong>primitivos</strong> como lo son undefined string
+                            number y boolean.
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">let</span> nacionalidad<span class="semi_colon">;</span>
+                                     <span class="console">// undefined</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">let</span> nombre
+                                    <span class="operator">=</span>
+                                    <span class="string">"Camilo"</span><span class="semi_colon">;</span>
+                                     <span class="console">// string</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="variable">let</span> edad
+                                    <span class="operator">=</span>
+                                    <span class="number">22</span><span class="semi_colon">;</span>
+                                     <span class="console">// number</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                    <span class="variable">let</span> profesional
+                                    <span class="operator">=</span>
+                                    <span class="boolean">false <span class="operator">||</span> true</span><span class="semi_colon">;</span>
+                                    <span class="console">// boolean</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">09</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">10</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="properties">typeof</span> nombre<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>string</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>03. Valor de la variable let dentro de un scope</h3>
+                        <h3>03. Error de sintaxis</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/variables/let/let4.png" alt="valor de la variable let dentro de un scope" />
+                        <p>
+                            Este se genera cuando se define mas de una vez el mismo
+                            <strong>identificador</strong> de una variable que ha sido declarada haciendo uso de la palabra reservada <strong>let</strong>
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">let</span> mes
+                                    <span class="operator">=</span>
+                                    <span class="string">"Junio"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">let</span> mes
+                                    <span class="operator">=</span>
+                                    <span class="string">"Octubre"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="variable">let</span> mes
+                                    <span class="operator">=</span>
+                                    <span class="string">"Junio"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>mes<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp class="error">SintaxError: Identifier 'mes' has already been declared</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Comportamiento de let dentro de un scope</h3>
+
+                        <p>
+                            Como vemos hemos declarado dos veces la variable <strong>mes</strong> pero la segunda declaracion al estar dentro del escope de una estructura de control
+                            <strong>if</strong>
+                            hace que dicha variable <strong>unicamente exista</strong>
+                            dentro de esta. Es por ello que no genera error de sintaxis.
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">let</span> anio
+                                    <span class="operator">=</span>
+                                    <span class="number">2023</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">let</span> mes
+                                    <span class="operator">=</span>
+                                    <span class="string">"Febrero"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="properties">if</span><span class="parenthesis">(</span>anio
+                                    <span class="operator">===</span><span class="number"> 2023</span><span class="parenthesis">)</span>
+                                    <span class="brackets"> {</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">07</span>
+                                    <span class="variable">let</span> mes
+                                    <span class="operator">=</span>
+                                    <span class="string">"Junio"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">09</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"el valor de la variable mes es: "</span><span class="semi_colon">,</span> mes<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">10</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">11</span>
+                                    <span class="brackets">}</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>el valor de la variable mes es: Junio</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Comportamiento de let fuera de un scope</h3>
+
+                        <p>
+                            Como vemos hemos declarado dos veces la variable <strong>mes</strong>
+                            pero la segunda declaracion al estar dentro del escope de una estructura de control
+                            <strong>if</strong> impide que esta pueda ser implementada por fuera de esta lo que evita que se genere un error de sintaxis.
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">let</span> anio
+                                    <span class="operator">=</span>
+                                    <span class="number">2023</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="variable">let</span> mes
+                                    <span class="operator">=</span>
+                                    <span class="string">"Febrero"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="properties">if</span><span class="parenthesis">(</span>anio
+                                    <span class="operator">===</span><span class="number"> 2023</span><span class="parenthesis">)</span>
+                                    <span class="brackets"> {</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">07</span>
+                                    <span class="variable">let</span> mes
+                                    <span class="operator">=</span>
+                                    <span class="string">"Junio"</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">08</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">09</span>
+                                    <span class="brackets">}</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">10</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">11</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">12</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"el valor de la variable mes es: "</span><span class="semi_colon">,</span> mes<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>el valor de la variable mes es: Febrero</samp>
                         </div>
                     </section>
 

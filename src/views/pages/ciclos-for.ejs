@@ -28,7 +28,7 @@
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
@@ -38,17 +38,18 @@
                     <h2>For</h2>
 
                     <!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-                    <div class="banner_line_titles"></div>
+                    <hr class="line_titles" />
 
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Inicia con un punto de partida interno, seguido se define una condicion que indica el punto de llegada, luego viene la iteracion y finalza con la ejecucion. Este ciclo no
-                        realiza ninguna accion si la condicion no se cumple.
+                        Inicia con la declaracion del <strong>ciclo</strong> al cual le definimos una variable que suele ser utilizada para determinar un punto de partida. Luego viene la condicion que
+                        determina cual sera el fin de su ejecucion y seguido a esto la iteracion. Ya dentro del escope, se define la porsion de codigo que se va a ejecutar mientras la condicion se
+                        este cumpliendo. Cabe aclarar que este ciclo <strong>no realiza ninguna ejecucion</strong> si la condicion no se cumple.
                     </p>
                 </section>
 
@@ -58,27 +59,242 @@
                 -->
                 <div class="sections_container">
                     <!--  
-						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
                     <section class="sect_content">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Estructura del ciclo for</h3>
+                        <h3>01. Ejecucion del ciclo</h3>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
+							tag-p: en esta definimos el pararfo de la seccion
 						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/ciclos/for/for1.png" alt="estructura del ciclo for" />
+                        <p>
+                            Definimos una variable e indicamos que el punto del partida del ciclo iniciara en 10, como condicion expresamos que,
+                            <strong>mientras i sea mayor o igual a 3</strong> el <strong>ciclo</strong> va a ejecutarse. A continuacion definimos la iteracion y finalizamos con la impresion por
+                            consola de la <strong>variable i</strong>
+                        </p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="function">for</span><span class="parenthesis">(</span><span class="variable">let</span> i
+                                    <span class="operator">=</span><span class="number"> 10</span><span class="semi_colon">;</span> i
+                                    <span class="operator">>=</span><span class="number"> 6</span><span class="semi_colon">;</span> i<span class="operator">--</span><span class="parenthesis">)</span>
+                                    <span class="brackets"> {</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">03</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">05</span>
+                                    <span class="brackets">}</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>10</samp>
+                            <samp>9</samp>
+                            <samp>8</samp>
+                            <samp>7</samp>
+                            <samp>6</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Recorriendo un arreglo con for</h3>
+                        <h3>02. Recorriendo las posiciones de los valores de un array</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/ciclos/for/for2.png" alt="recorriendo un arreglo con for" />
+                        <p>
+                            Una vez definido el <strong>array</strong> lo siguiente es definir el <strong>ciclo</strong> y declarar el punto de partida, la condicion y su iteracion. Finalmente, dentro
+                            de su escope realizamos la impresion por consola de la variable <strong>posiciones</strong>
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">let</span> marcas
+                                    <span class="operator">=</span>
+                                    <span class="square">[</span><span class="string">"Nike"</span><span class="semi_colon">, </span><span class="string">"Adidas"</span><span class="semi_colon">, </span><span class="string">"Puma"</span><span class="semi_colon">, </span><span class="string">"Vanz"</span><span class="square">]</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="function">for</span><span class="parenthesis">(</span><span class="variable">let</span> posiciones
+                                    <span class="operator">=</span><span class="number"> 0</span><span class="semi_colon">;</span> posiciones
+                                    <span class="operator"><</span> marcas<span class="operator">.</span><span class="properties">length</span><span class="semi_colon">;</span> posiciones<span class="operator">++</span><span class="parenthesis">)</span>
+                                    <span class="brackets"> {</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">05</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posiciones<span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                    <span class="brackets">}</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>0</samp>
+                            <samp>1</samp>
+                            <samp>2</samp>
+                            <samp>3</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Recorriendo los valores de un array</h3>
+
+                        <p>
+                            Una vez definido el <strong>array</strong> lo siguiente es definir el <strong>ciclo</strong> y declarar el punto de partida, la condicion y su iteracion. Finalmente, dentro
+                            de su escope realizamos la impresion por consola del array <strong>marcas</strong> al cual pasamos entre llaves cuadradas la variable
+                            <strong>posiciones</strong>
+                        </p>
+
+                        <div class="code_box">
+                            <pre>
+                                <code>
+                                    <span class="circle first_circle"></span>
+                                    <span class="circle second_circle"></span>
+                                    <span class="circle thirt_circle"></span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">01</span>
+                                    <span class="variable">let</span> marcas
+                                    <span class="operator">=</span>
+                                    <span class="square">[</span><span class="string">"Nike"</span><span class="semi_colon">, </span><span class="string">"Adidas"</span><span class="semi_colon">, </span><span class="string">"Puma"</span><span class="semi_colon">, </span><span class="string">"Vanz"</span><span class="square">]</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">02</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">03</span>
+                                    <span class="function">for</span><span class="parenthesis">(</span><span class="variable">let</span> posiciones
+                                    <span class="operator">=</span><span class="number"> 0</span><span class="semi_colon">;</span> posiciones
+                                    <span class="operator"><</span> marcas<span class="operator">.</span><span class="properties">length</span><span class="semi_colon">;</span> posiciones<span class="operator">++</span><span class="parenthesis">)</span>
+                                    <span class="brackets"> {</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">04</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index outer_index">05</span>
+                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>marcas<span class="square">[</span>posiciones<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">06</span>
+                                </code>
+                            </pre>
+
+                            <pre>
+                                <code>
+                                    <span class="index inner_index">07</span>
+                                    <span class="brackets">}</span><span class="semi_colon">;</span>
+                                </code>
+                            </pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>Nike</samp>
+                            <samp>Adidas</samp>
+                            <samp>Puma</samp>
+                            <samp>Vanz</samp>
                         </div>
                     </section>
 

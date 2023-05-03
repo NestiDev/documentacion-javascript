@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>attributes</h2>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        A travez de metodos y propiedades podemos trabajar con los atributos asociados a los
+                        <strong>elementos HTML</strong>
+                        sean propios del lenguaje o personalizados.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Propiedad getAttribute</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            Retorna el valor de un atributo asociado a un <strong>elemento HTML</strong> para ello, este recibe como parametro el nombre del atributo que de no tener ninguno este
+                            retornara un valor <strong>null</strong>
+                        </p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/e01.png" alt="propiedad getAttributes" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Propiedad attributes</h3>
+
+                        <p>
+                            Retorna un
+                            <strong>array</strong>
+                            con todos los atributos asosicados a un <strong>elemento HTML</strong> de no tener ninguno este retornara un <strong>array</strong> vacio.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/a01.png" alt="propiedad attributes" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Propiedad attributes.length</h3>
+
+                        <p>
+                            Retorna la cantidad de atributos asosicados a un <strong>elemento HTML</strong>
+                            que de no tener ninguno este retornara un valor 0.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/a02.png" alt="propiedad attributes.length" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Metodo setAttribute</h3>
+
+                        <p>
+                            Nos permite asociar un nuevo atributo a un <strong>elemento HTML</strong> para ello, este recibe como parametro el nombre del nuevo atributo seguido de su valor. Cabe
+                            aclarar que si definimos un valor en un atributo existente, todos los valores de este se eliminaran tomando como nuevo valor el definido en el metodo.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/a03.png" alt="metodo setAttribute" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Propiedad hasAttribute</h3>
+
+                        <p>
+                            Nos permite conocer si existe un atributo asociado en un <strong>elemento HTML</strong>
+                            para ello, este recibe como parametro el nombre del atributo que de no tener ninguno este retornara un valor
+                            <strong>false</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/e02.png" alt="propiedad hasAttribute" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Propiedad removeAttribute</h3>
+
+                        <p>Nos permite eliminar un atributo existente de un <strong>elemento HTML</strong> para ello, este recibe como parametro el nombre del atributo a eliminar.</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/a04.png" alt="propiedad removeAttribute" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>07. Propiedad dataset</h3>
+
+                        <p>
+                            Retorna un
+                            <strong>array</strong>
+                            con todos los atributos personalizados asosicados a un <strong>elemento HTML</strong> que de no tener ninguno este retornara un <strong>array</strong> vacio.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/e03.png" alt="propiedad dataset" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>08. Atributos especiales</h3>
+
+                        <p>
+                            Se trata de atributos que pueden asociarse en los <strong>elementos HTML</strong> directamente, cabe aclarar que no todos los atributos estan disponibles y que los
+                            disponibles no son soportados por todos los elementos.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/attribute/a05.png" alt="atributos especiales" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">attributes - DOM</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

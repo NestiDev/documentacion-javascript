@@ -38,12 +38,16 @@ $shadowOne: #b3b1b14d;
     box-sizing: border-box;
 }
 
+html,
+body {
+    min-height: 100vh;
+}
+
 /*
 	body
 */
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
 }
 
 /*
@@ -258,8 +262,8 @@ svg {
                 */
                 &:last-child svg {
                     fill: $colorOne;
-                    width: 32px;
-                    height: 32px;
+                    width: 36px;
+                    height: 36px;
                 }
             }
         }
@@ -285,7 +289,7 @@ svg {
         left: 0;
         z-index: 8;
         border-right: 1px solid $borderOne;
-        width: 240px;
+        width: 260px;
         height: 100vh;
         padding: 0 18px;
         overflow: auto;
@@ -295,14 +299,14 @@ svg {
 			scrollbar
 		*/
         &::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
 
         /*
 			::-webkit-scrollbar-thumb
 		*/
         &::-webkit-scrollbar-thumb {
-            background-color: #c1c1c1;
+            background-color: #d9d9d9;
         }
 
         /*
@@ -493,7 +497,7 @@ svg {
 		*/
         @media (min-width: 720px) {
             right: 0;
-            width: calc(100% - 240px);
+            width: calc(100% - 260px);
         }
 
         /*
@@ -617,11 +621,12 @@ svg {
             }
 
             /*
-				banner_line_titles
+				line_titles
 			*/
-            .banner_line_titles {
-                border: 2px solid $colorOne;
+            .line_titles {
+                border: 1px solid $colorOne;
                 width: 100px;
+                box-shadow: 0 0 8px 0 $colorOne;
             }
 
             /*
@@ -629,7 +634,8 @@ svg {
 				en el eje-Y para este elemento
 			*/
             p {
-                font-size: 22px;
+                text-align: justify;
+                font-size: 20px;
                 line-height: 1.5;
                 margin: 30px 0 80px;
 
@@ -638,6 +644,7 @@ svg {
 				*/
                 strong {
                     color: $colorOne;
+                    text-shadow: 0 0 18px #f0da4fb3;
                 }
             }
         }
@@ -671,40 +678,18 @@ svg {
                     para generar sepracion frente a otros elementos
                 */
                 p {
+                    text-align: justify;
                     font-size: 20px;
-                    font-weight: 500;
+                    // font-weight: 500;
                     line-height: 1.5;
-                    margin: 20px 0 40px;
+                    margin: 20px 0 30px;
 
                     /*
 						tag-strong
 					*/
                     strong {
                         color: $colorOne;
-                    }
-                }
-
-                /*
-					code_box: definimos un margen en la parte inferior de este 
-					elemento y un espaciado de 12px para todos los ejes
-				*/
-                .code_box {
-                    background-color: #343d4d;
-                    color: $colorThree;
-                    border-radius: 5px;
-                    box-shadow: 0 2px 6px 0 #ccc;
-                    margin-bottom: 40px;
-                    padding: 12px;
-
-                    /*
-						tag-span y tag-strong
-					*/
-                    span {
-                        color: #21c1e1;
-                    }
-
-                    strong {
-                        color: $colorOne;
+                        text-shadow: 0 0 18px #f0da4fb3;
                     }
                 }
 
@@ -712,33 +697,179 @@ svg {
 					sect_box_img: definimos un margen en la parte inferior
 					de este elemento
 				*/
-                .sect_box_img {
-                    text-align: center;
-                    margin-bottom: 80px;
+                // .sect_box_img {
+                //     text-align: center;
+                //     margin-bottom: 80px;
 
-                    /*
-						tag-img: definimos object-fit: cover para ajustar las
-                        imagenes a su contenedor padre 
-					*/
-                    img {
+                //     /*
+                // 		tag-img: definimos object-fit: cover para ajustar las
+                //         imagenes a su contenedor padre
+                // 	*/
+                //     img {
+                //         width: 100%;
+                //         height: auto;
+                //         object-fit: cover;
+                //         box-shadow: 0 2px 6px 0 #ccc;
+                //     }
+                // }
+
+                .code_box {
+                    background-color: #242936;
+                    color: white;
+                    font-size: 17px;
+                    border-radius: 5px 5px 0 0;
+                    padding: 28px;
+                    overflow-x: auto;
+                    // box-shadow: 0 4px 6px 0 #333;
+
+                    pre {
+                        white-space: normal;
                         width: 100%;
-                        height: auto;
-                        object-fit: cover;
-                        box-shadow: 0 2px 6px 0 #ccc;
+                        min-width: 100vh;
+                        // margin-bottom: 20px;
+
+                        &:first-child {
+                            margin-bottom: 20px;
+                        }
+
+                        code {
+                            span.circle {
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 50px;
+                            }
+
+                            span.first_circle {
+                                background-color: #fc5f55;
+                            }
+
+                            span.second_circle {
+                                background-color: #fabd24;
+                            }
+
+                            span.thirt_circle {
+                                background-color: #26c83f;
+                            }
+
+                            span.index {
+                                display: inline-block;
+                                margin-bottom: 2px;
+                                color: #4c525d;
+                                user-select: none;
+                            }
+
+                            span.inner_index {
+                                padding-right: 16px;
+                            }
+
+                            span.outer_index {
+                                padding-right: 42px;
+                            }
+
+                            span.outer_doble_index {
+                                padding-right: 72px;
+                            }
+
+                            span.variable {
+                                color: #986dff;
+                            }
+
+                            span.operator {
+                                color: #ff66a1;
+                            }
+
+                            span.symbols {
+                                color: #179fff;
+                            }
+
+                            span.number {
+                                color: #dfbfff;
+                            }
+
+                            span.string {
+                                color: #d5ff80;
+                            }
+
+                            span.boolean {
+                                color: #578ac2;
+                            }
+
+                            span.function {
+                                color: #84b6f4;
+                            }
+
+                            span.parameters {
+                                color: #ecc16a;
+                            }
+
+                            span.parameters_out {
+                                color: #ecc16a85;
+                            }
+
+                            span.properties {
+                                color: #f29e74;
+                            }
+
+                            span.brackets {
+                                color: #ffd700;
+                            }
+
+                            span.console {
+                                color: #c1c1c1ad;
+                            }
+
+                            span.keyword {
+                                // color: #c758ff; color para las funciones
+                                color: #f783f7;
+                            }
+
+                            span.square {
+                                color: goldenrod;
+                            }
+
+                            span.semi_colon {
+                                color: #808080;
+                            }
+
+                            span.parenthesis {
+                                color: #84b6f4;
+                            }
+                        }
+                    }
+                }
+
+                .output_box {
+                    background-color: #1f2430;
+                    border-top: 1px solid #171b24;
+                    border-radius: 0 0 5px 5px;
+                    padding: 16px 28px;
+                    margin-bottom: 80px;
+                    // box-shadow: 0 2px 6px 0 #333;
+
+                    samp {
+                        color: #83f8b0;
+                        font-size: 17px;
+                        display: block;
+                        margin-bottom: 4px;
+
+                        &.error {
+                            color: #ff6666;
+                        }
                     }
                 }
             }
         }
 
         /*
-			section_footer: definimos un margen personalizado en
-			el eje-Y para este elemento 
+			section_footer: definimos un margen inferior para
+			generar separacion frente a otros elementos
 		*/
         .section_footer {
             text-align: center;
             color: $colorFive;
             font-size: 1.2rem;
-            margin: 60px 0 30px;
+            margin-bottom: 30px;
         }
     }
 }

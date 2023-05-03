@@ -28,8 +28,7 @@
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
-                    y 1 tag-p
+                    section_banner: contenedor de 1 tag-h2, 1 tag-hr y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
@@ -38,17 +37,18 @@
                     <h2>If - Else</h2>
 
                     <!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-                    <div class="banner_line_titles"></div>
+                    <hr class="line_titles" />
 
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permite determinar el bloque de codigo que sera ejecutado dada una condicion, si la condicion es verdadera ejecuta la condicion <strong>if</strong> de ser falsa ejecuta la
-                        condicion <strong>else</strong> Este tipo de estructura tambien nos permite anidar condiciones y definir rangos de condiciones.
+                        Esta <strong>estructura de control</strong> nos permite determinar cual sera el bloque de codigo que se ejecutara dada una condicion, si dicha condicion es verdadera se
+                        ejecutara el codigo definido dentro del escope <strong>if</strong> de ser falsa se ejecutara el codigo definido dentro del escope
+                        <strong>else</strong>
                     </p>
                 </section>
 
@@ -58,13 +58,21 @@
                 -->
                 <div class="sections_container">
                     <!--  
-						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
                     <section class="sect_content">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
                         <h3>01. Condicion if</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            Esta se ejecuta en el momento en el que el valor de la variable cumple con la condicion definida en la estructura de control ejecutando con ello el bloque de codigo
+                            definido dentro de su escope.
+                        </p>
 
                         <!--  
 							sect_box_img: contenedor de 1 tag-img
@@ -77,6 +85,11 @@
                     <section class="sect_content">
                         <h3>02. Implementacion de if anidados</h3>
 
+                        <p>
+                            Estos nos permiten ejecutar condiciones dentro de condiciones siempre y cuando el valor de la o las variables cumplan con las diferentes condiciones definidas dentro de
+                            cada estructura de control.
+                        </p>
+
                         <div class="sect_box_img">
                             <img src="../../assets/images/condicionales/if-else/if2.png" alt="implementacion de if anidados" />
                         </div>
@@ -84,6 +97,11 @@
 
                     <section class="sect_content">
                         <h3>03. Implementacion de else - if</h3>
+
+                        <p>
+                            Nos permite definir condiciones extras ampliando con ello el rango de coincidencias entre el valor de una variable y las diferentes condiciones definidas en las estructuras
+                            de control.
+                        </p>
 
                         <div class="sect_box_img">
                             <img src="../../assets/images/condicionales/if-else/elseif1.png" alt="implementacion de else - if" />
@@ -93,6 +111,11 @@
                     <section class="sect_content">
                         <h3>04. Condicion if - else</h3>
 
+                        <p>
+                            Esta se ejecuta en el momento en el que el valor de la variable no cumple con la condicion definida en la estructura de control ejecutando con ello el bloque de codigo
+                            definido dentro de su escope.
+                        </p>
+
                         <div class="sect_box_img">
                             <img src="../../assets/images/condicionales/if-else/else1.png" alt="condicion if - else" />
                         </div>
@@ -100,6 +123,12 @@
 
                     <section class="sect_content">
                         <h3>05. Condicional ternario</h3>
+
+                        <p>
+                            Es una manera simplificada de definir una estructura de control la cual tiene unicamente dos salidas que serian si la condicion se cumple ejecuta el codigo definido dentro
+                            del escope
+                            <strong>if</strong> si no, ejecuta el codigo definido dentro del escope <strong>else</strong>
+                        </p>
 
                         <div class="sect_box_img">
                             <img src="../../assets/images/condicionales/if-else/ternario1.png" alt="condicional ternario" />

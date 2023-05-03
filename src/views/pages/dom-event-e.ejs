@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>event - e</h2>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Es una interfaz que se crea cuando definimos un evento de escucha en un <strong>elemento HTML</strong> esta nos permite acceder a metodos y propiedades l@s cuales nos pueden
+                        brindar informacion importante sobre el evento. En este apartado aunque hacemos referencia a los eventos de escucha, no explicaremos su funcionamiento ya que de estos hablamos
+                        a profundidad en la seccion <strong>listeners</strong>
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Ejecucion de la interfaz pointerEvent</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            En este caso llevamos a cabo la ejecucion implementando el evento de escucha <strong>click</strong>
+                            y en la funcion callback como parametro de la funcion pasamos el
+                            <strong>event</strong> o bien, su forma acotada <strong>e</strong> Finalmente definimos una impresion la cual listara dichas propiedades por consola.
+                        </p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/e01.png" alt="ejecucion de la interfaz pointerEvent" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Propiedades generales</h3>
+
+                        <p>
+                            Debemos tener presente que aunque los eventos de escucha en su mayoria comparten las mismas propiedades tambien tienen propiedades propias las cuales permiten distinguir
+                            cada evento entre si.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/e02.png" alt="propiedades generales" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Ejecucion de la interfaz mouseEvent</h3>
+
+                        <p>
+                            En este caso llevamos a cabo la ejecucion implementando el evento de escucha <strong>mouse</strong>
+                            y en la funcion callback como parametro de la funcion pasamos el
+                            <strong>event</strong> o bien, su forma acotada <strong>e</strong> Finalmente definimos una impresion la cual listara dichas propiedades por consola.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/m01.png" alt="ejecucion de la interfaz mouseEvent" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Propiedades generales</h3>
+
+                        <p>
+                            Debemos tener presente que aunque los eventos de escucha en su mayoria comparten las mismas propiedades tambien tienen propiedades propias las cuales permiten distinguir
+                            cada evento entre si.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/m02.png" alt="propiedades generales" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Ejecucion de la interfaz keyboardEvent</h3>
+
+                        <p>
+                            En este caso llevamos a cabo la ejecucion implementando el evento de escucha <strong>key</strong>
+                            y en la funcion callback como parametro de la funcion pasamos el
+                            <strong>event</strong> o bien, su forma acotada <strong>e</strong> Finalmente definimos una impresion la cual listara dichas propiedades por consola.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/k01.png" alt="ejecucion de la interfaz keyboardEvent" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Propiedades generales</h3>
+
+                        <p>
+                            Debemos tener presente que aunque los eventos de escucha en su mayoria comparten las mismas propiedades tambien tienen propiedades propias las cuales permiten distinguir
+                            cada evento entre si.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/k02.png" alt="propiedades generales" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>07. Propiedad type</h3>
+
+                        <p>
+                            Nos permite conocer cual fue el evento de escucha que fue ejecutado que para este caso seria el evento <strong>click</strong> Cabe resaltar que esta propiedad tambien esta
+                            disponible para los eventos <strong>mouse</strong> y <strong>key</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/x01.png" alt="propiedad type" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>08. Propiedad target</h3>
+
+                        <p>
+                            Nos permite conocer el <strong>elemento HTML</strong> que ejecuto el evento de escucha, esta propiedad es muy importante ya que a travez de ella podemos acceder a la
+                            interfaz <strong>HTMLElement</strong>
+                            que como vimos en su seccion se encarga de proporsionarnos toda la informacion del elemento en si. Cabe resaltar que esta propiedad esta disponible en los 3 tipos de
+                            eventos como lo son
+                            <strong>click mouse</strong> y
+                            <strong>key</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/e05.png" alt="propiedad target" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>09. Propiedad pageY</h3>
+
+                        <p>
+                            Esta retorna un valor numerico con la posicion en el eje-Y justo donde se llevo a cabo la ejecucion del evento de escucha, otras propiedades similares serian
+                            <strong>clienteY layerY</strong> o simplemente <strong>Y</strong> Cabe resaltar que esta propiedad esta disponible en los 3 tipos de eventos como lo son
+                            <strong>click mouse</strong> y
+                            <strong>key</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/x02.png" alt="propiedad pageY" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>10. Propiedad pageX</h3>
+
+                        <p>
+                            Esta retorna un valor numerico con la posicion en el eje-X justo donde se llevo a cabo la ejecucion del evento de escucha, otras propiedades similares serian
+                            <strong>clienteX layerX</strong> o simplemente <strong>x</strong> Cabe resaltar que esta propiedad esta disponible en los 3 tipos de eventos como lo son
+                            <strong>click mouse</strong> y
+                            <strong>key</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/x03.png" alt="propiedad pageX" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>11. Propiedad key</h3>
+
+                        <p>
+                            Nos permite conocer el valor del caracter que ha sido ingresado en una caja de texto. Cabe aclarar que esta propiedad solo esta disponible en los eventos de escucha de la
+                            interfaz
+                            <strong>keyBoardEvent</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/w01.png" alt="propiedad key" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>12. Propiedad keyCode</h3>
+
+                        <p>
+                            Nos permite conocer el codigo del caracter que ha sido ingresado en una caja de texto. Cabe aclarar que esta propiedad solo esta disponible en los eventos de escucha de la
+                            interfaz
+                            <strong>keyBoardEvent</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/w02.png" alt="propiedad keyCode" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>13. Propiedades altKey ctrlKey y shiftKey</h3>
+
+                        <p>
+                            Nos permiten conocer si el valor ingresado en una caja de texto es una combinacion de caracteres alt + / ctrl + / shift + Cabe aclarar que esta propiedad solo esta
+                            disponible para el evento de escucha <strong>keydown</strong>
+                            de la interfaz
+                            <strong>keyBoardEvent</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/w03.png" alt="propiedades altKey ctrlKey y shiftKey" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>14. Metodo preventDefault</h3>
+
+                        <p>
+                            Este metodo evita el comportamiento por defecto que tienen <strong>elementos HTML</strong>
+                            como lo son botones, inputs de tipo submit y enlaces los cuales recargan el documento una vez ejecutan el evento de escucha, cabe destacar que este metodo debe
+                            implementarse cuidadosamente ya que este tambien evita que se realice el envio de informacion.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/e03.png" alt="metodo preventDefault" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>15. Metodo stopPropagation</h3>
+
+                        <p>
+                            Nos permite detener la propagacion de eventos entre elementos anidados, y es que un evento de escucha ejecutado desde un elemento hijo, termina ejecutando indirectamente
+                            los posibles eventos definidos en los elementos adyancentes a este lo que puede desencadenar en errores inesperados.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/s01.png" alt="metodo stopPropagation" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>16. Delegacion de eventos</h3>
+
+                        <p>
+                            Se trata de asiganar el evento de escucha en un elemento padre, de esta manera y haciendo uso de la interfaz
+                            <strong>event</strong> o su acotacion <strong>e</strong>
+                            podemos conocer cuales son sus elementos hijo y determinar a cual de estos le asignamos la responsabilidad de continuar con la ejecucion del evento.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/e-event/s02.png" alt="delegacion de eventos" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">event - e - DOM</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

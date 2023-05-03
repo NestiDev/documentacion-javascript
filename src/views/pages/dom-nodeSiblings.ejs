@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>nodeSiblings</h2>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        Esta interfaz nos provee de metodos y propiedades l@s cuales nos permiten acceder a los elementos hermanos de un elemento referenciado y modificar su comportamiento a lo que se
+                        le conoce como relacion hermano a hermano.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Relacion hermano a hermano</h3>
+
+                        <!--  
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>
+                            Esta relacion existe entre <strong>elementos HTML</strong> que se encuentren definidos en un mismo nivel jerarquico. Si deseamos conocer la estructura de un elemento basta
+                            con seleccionarlo e imprimir su variable por consola.
+                        </p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/nodeSiblings/n01.png" alt="relacion hermano a hermano" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Propiedad tagName</h3>
+
+                        <p>
+                            Nos permite conocer el nombre de la etiqueta del <strong>elemento HTML</strong> referenciado, otras propiedades similares serian <strong>nodeName</strong> y
+                            <strong>localName</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/nodeSiblings/n02.png" alt="propiedad tagName" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Propiedad previousElementSiblings</h3>
+
+                        <p>
+                            Nos permite seleccionar el elemento hermano adyacente que sea un <strong>elemento HTML</strong> otra propiedad similar seria <strong>previousSiblings</strong> la cual
+                            retorna la distancia que existe entre la definicion de ambos elementos, de no existir dicho elemento estas propiedades retornan un valor <strong>null</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/nodeSiblings/n03.png" alt="propiedad previousElementSiblings" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Propiedad nextElementSiblings</h3>
+
+                        <p>
+                            Nos permite seleccionar el elemento hermano subyacente que sea un <strong>elemento HTML</strong> otra propiedad similar seria <strong>nextSiblings</strong> la cual retorna
+                            la distancia que existe entre la definicion de ambos elementos, de no existir dicho elemento estas propiedades retornan un valor <strong>null</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/nodeSiblings/n04.png" alt="propiedad nextElementSiblings" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Propiedad parentNode</h3>
+
+                        <p>
+                            Nos permite conocer al elemento padre del <strong>elemento HTML</strong> referenciado, otra propiedad similar seria
+                            <strong>parentElement</strong>
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/nodeSiblings/n05.png" alt="Propiedad parentNode" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Propiedad ownerDocument</h3>
+
+                        <p>
+                            Nos permite ingresar al objeto <strong>document</strong> que como habiamos descrito en su seccion, esta lleno de metodos y propiedades que podemos implementar para realizar
+                            cambios en el comportamiento de los elementos.
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/DOM/nodeSiblings/n06.png" alt="propiedad ownerDocument" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">nodeSiblings - DOM</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -73,7 +73,7 @@ router.get("/ciclos-while", (req, res) => {
 
 router.get("/ciclos-do-while", (req, res) => {
     res.render("pages/ciclos-do-while", {
-        title: "ciclos dowhile",
+        title: "ciclos do-while",
     });
 });
 
@@ -85,13 +85,13 @@ router.get("/ciclos-for", (req, res) => {
 
 router.get("/ciclos-for-of", (req, res) => {
     res.render("pages/ciclos-for-of", {
-        title: "ciclos forof",
+        title: "ciclos for-of",
     });
 });
 
 router.get("/ciclos-for-in", (req, res) => {
     res.render("pages/ciclos-for-in", {
-        title: "ciclos forin",
+        title: "ciclos for-in",
     });
 });
 
@@ -311,6 +311,60 @@ router.get("/dom-document", (req, res) => {
     });
 });
 
+router.get("/dom-selectores", (req, res) => {
+    res.render("pages/dom-selectores", {
+        title: "DOM selectores",
+    });
+});
+
+router.get("/dom-nodeChild", (req, res) => {
+    res.render("pages/dom-nodeChild", {
+        title: "DOM nodeChild",
+    });
+});
+
+router.get("/dom-nodeSiblings", (req, res) => {
+    res.render("pages/dom-nodeSiblings", {
+        title: "DOM nodeSiblings",
+    });
+});
+
+router.get("/dom-classList", (req, res) => {
+    res.render("pages/dom-classList", {
+        title: "DOM classList",
+    });
+});
+
+router.get("/dom-attribute", (req, res) => {
+    res.render("pages/dom-attribute", {
+        title: "DOM attribute",
+    });
+});
+
+router.get("/dom-style", (req, res) => {
+    res.render("pages/dom-style", {
+        title: "DOM style",
+    });
+});
+
+router.get("/dom-listeners", (req, res) => {
+    res.render("pages/dom-listeners", {
+        title: "DOM listeners",
+    });
+});
+
+router.get("/dom-event-e", (req, res) => {
+    res.render("pages/dom-event-e", {
+        title: "DOM event-e",
+    });
+});
+
+router.get("/dom-formularios", (req, res) => {
+    res.render("pages/dom-formularios", {
+        title: "DOM formularios",
+    });
+});
+
 /* 
 	______________________ localStorage ______________________
 */
@@ -345,11 +399,11 @@ router.get("/localStorage-propiedades", (req, res) => {
 });
 
 /* 
-	______________________ new date ______________________
+	______________________ Date ______________________
 */
-router.get("/new-date", (req, res) => {
-    res.render("pages/new-date", {
-        title: "new Date",
+router.get("/date", (req, res) => {
+    res.render("pages/date", {
+        title: "Date",
     });
 });
 
