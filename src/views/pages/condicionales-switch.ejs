@@ -47,10 +47,10 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Esta <strong>estructura de control</strong> recibe como parametro una variable cuyo valor es comparado con los diferentes casos definidos dentro de si. Para destacar se
-                        recomienda finalizar cada caso con un
+                        Esta estructura de control recibe como parametro una variable cuyo valor asignado <strong>es comparado</strong>
+                        con los diferentes casos definidos dentro de si. Se recomienda finalizar cada caso haciendo uso de la palabra reservada
                         <strong>break</strong>
-                        el cual se encarga de finalizar con el flujo del condicional una vez este se ha cumplido.
+                        la cual se encarga de finalizar con el flujo una vez es hallada una coincidencia.
                     </p>
                 </section>
 
@@ -66,31 +66,106 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Case true</h3>
+                        <h3>01. Case</h3>
 
                         <p>
-                            Se ejecuta en el momento en el que el valor de la variable coincide con uno de los casos definidos dentro de la estructura de control ejecutando con ello el bloque de
-                            codigo definido dentro de su escope.
+                            Se ejecuta en el momento en el que, el valor asignado en la variable
+                            <strong> coincide</strong> con uno de los casos definidos dentro de la estructura de control. Ejecutando con ello, el bloque de codigo definido dentro de su escope.
                         </p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/switch/swi3.png" alt="case true" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> saludo<span class="operator"> =</span><span class="boolean"> true</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="properties">switch</span><span class="parenthesis">(</span>saludo<span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="properties">case</span><span class="string"> "hola"</span><span class="operator">: </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Hola Mundo"</span><span class="parenthesis">)</span><span class="semi_colon">;</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="properties">case</span><span class="number"> 10011</span><span class="operator">: </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Codigo del saludo"</span><span class="parenthesis">)</span><span class="semi_colon">;</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="properties">case</span><span class="boolean"> true</span><span class="operator">:</span> <span class="variable">{</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">11</span><span class="variable">let</span> saludar <span class="operator">=</span><span class="functions"> (<span class="parameters">nombre</span><span class="functions">)</span></span><span class="operator"> => </span><span class="string">`Hola </span><span class="symbols">${</span><span class="parameters">nombre</span><span class="symbols">}</span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>saludar<span class="functions">(<span class="string">"Emma"</span><span class="functions">)</span></span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code> <span class="index outer_index">15</span><span class="variable">}</span><span class="semi_colon">;</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">16</span></code></pre>
+
+                            <pre><code><span class="index outer_index">17</span><span class="properties">default</span><span class="operator">: </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"No existen coincidencias"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">18</span></code></pre>
+
+                            <pre><code><span class="index inner_index">19</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>Hola Emma</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Case default</h3>
+                        <h3>02. Default</h3>
 
                         <p>
-                            Se ejecuta en el momento en el que el valor de la variable no coincide con ninguno de los casos definidos dentro de la estructura de control ejecutando con ello el bloque
-                            de codigo definido dentro de su escope.
+                            Se ejecuta en el momento en el que, el valor asigando en la variable <strong>no coincida</strong>
+                            con ninguno de los casos definidos dentro de la estructura de control. Ejecutando con ello, el bloque de codigo definido dentro de su escope.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/switch/swi2.png" alt="case default" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> pais<span class="operator"> =</span><span class="string"> "Holanda"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="properties">switch</span><span class="parenthesis">(</span>pais<span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="properties">case</span><span class="string"> "Italia"</span><span class="operator">: </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Pais: italia"</span><span class="parenthesis">)</span><span class="semi_colon">;</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="properties">case</span><span class="number"> 10011</span><span class="operator">: </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Codigo de pais: 10011"</span><span class="parenthesis">)</span><span class="semi_colon">;</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="properties">case</span><span class="boolean"> true</span><span class="operator">: </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Europa: true"</span><span class="parenthesis">)</span><span class="semi_colon">;</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index outer_index">11</span><span class="properties">default</span><span class="operator">: </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"No existen coincidencias"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index inner_index">13</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>No existen coincidencias</samp>
                         </div>
                     </section>
 

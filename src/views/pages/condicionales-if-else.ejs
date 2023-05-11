@@ -70,54 +70,169 @@
 							tag-p: en esta definimos el parrafo de la seccion
 						-->
                         <p>
-                            Esta se ejecuta en el momento en el que el valor de la variable cumple con la condicion definida en la estructura de control ejecutando con ello el bloque de codigo
-                            definido dentro de su escope.
+                            Se ejecuta en el momento en el que el valor asignado en la variable
+                            <strong>cumpla con la condicion</strong> definida en la estructura de control, ejecutando con ello el bloque de codigo definido dentro de su escope.
                         </p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/if-else/if1.png" alt="condicion if" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> genero<span class="operator"> =</span><span class="string"> "Femenino"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>genero<span class="operator"> ===</span><span class="string"> "Femenino"</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Estariamos hablando de una dama"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>Estariamos hablando de una dama</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Implementacion de if anidados</h3>
+                        <h3>02. Condicion if anidados</h3>
 
                         <p>
-                            Estos nos permiten ejecutar condiciones dentro de condiciones siempre y cuando el valor de la o las variables cumplan con las diferentes condiciones definidas dentro de
-                            cada estructura de control.
+                            Estos nos permiten ejecutar condiciones dentro de condiciones <strong>siempre y cuando</strong> los valores asinados en las variables cumplan con las diferentes condiciones
+                            definidas dentro de cada estructura de control.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/if-else/if2.png" alt="implementacion de if anidados" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> anio<span class="operator"> =</span><span class="number"> 2023</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> edad<span class="operator"> =</span><span class="number"> 25</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="properties">if</span><span class="parenthesis">(</span>anio<span class="operator"> ===</span><span class="number"> 2023</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="properties">if</span><span class="parenthesis">(</span>edad<span class="operator"> ===</span><span class="number"> 25</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">09</span>edad<span class="operator">++</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La edad en el 2023 seria: "</span><span class="semi_colon">,</span> edad<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>La edad en el 2023 seria 26</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>03. Implementacion de else - if</h3>
+                        <h3>03. Condicion else - if</h3>
 
                         <p>
-                            Nos permite definir condiciones extras ampliando con ello el rango de coincidencias entre el valor de una variable y las diferentes condiciones definidas en las estructuras
-                            de control.
+                            Nos permite definir condiciones extras ampliando con ello el <strong>rango de coincidencias</strong> entre el valor asignado en la variable y las diferentes condiciones
+                            definidas en las estructuras de control.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/if-else/elseif1.png" alt="implementacion de else - if" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> edad<span class="operator"> =</span><span class="number"> 30</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>edad<span class="operator"> <=</span><span class="number"> 17</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Ustede es menor de 18"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="properties"> else if</span><span class="parenthesis">(</span>edad<span class="operator"> >=</span><span class="number"> 18</span><span class="operator"> &&</span> edad<span class="operator"> <=</span><span class="number"> 29</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Usted es mayor o tiene 18 años"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="properties"> else if</span><span class="parenthesis">(</span>edad<span class="operator"> >=</span><span class="number"> 30</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Usted es mayor o tiene 30 años"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>Usted es mayor o tiene 30 años</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>04. Condicion if - else</h3>
+                        <h3>04. Condicion else</h3>
 
                         <p>
-                            Esta se ejecuta en el momento en el que el valor de la variable no cumple con la condicion definida en la estructura de control ejecutando con ello el bloque de codigo
-                            definido dentro de su escope.
+                            Se ejecuta en el momento en el que el valor asignado en la variable <strong>no cumple</strong> con la condicion definida en la estructura de control
+                            <strong>if</strong> ejecutando con ello el bloque de codigo definido dentro de su escope.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/if-else/else1.png" alt="condicion if - else" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> genero<span class="operator"> =</span><span class="string"> "Masculino"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>genero<span class="operator"> ===</span><span class="string"> "Femenino"</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Estariamos hablando de una dama"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="properties"> else</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Estariamos hablando de un caballero"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>Estariamos hablando de un caballero</samp>
                         </div>
                     </section>
 
@@ -125,13 +240,22 @@
                         <h3>05. Condicional ternario</h3>
 
                         <p>
-                            Es una manera simplificada de definir una estructura de control la cual tiene unicamente dos salidas que serian si la condicion se cumple ejecuta el codigo definido dentro
-                            del escope
-                            <strong>if</strong> si no, ejecuta el codigo definido dentro del escope <strong>else</strong>
+                            Es una manera simplificada de definir una estructura de control la cual tiene unicamente <strong>dos salidas</strong> que serian, si la condicion
+                            <strong>se cumple</strong> ejecuta el primer bloque de codigo definido y <strong>si no se cumple</strong> se ejecuta el segundo bloque de codigo definido.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/if-else/ternario1.png" alt="condicional ternario" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> anio<span class="operator"> =</span><span class="number"> 2025</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>anio<span class="operator"> ===</span><span class="number"> 2023</span><span class="operator"> ? </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Ejecucion verdadera"</span><span class="parenthesis">)</span><span class="operator"> : </span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Ejecucion falsa"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>Ejecucion falsa</samp>
                         </div>
                     </section>
 

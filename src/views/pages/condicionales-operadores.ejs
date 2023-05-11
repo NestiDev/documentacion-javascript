@@ -47,8 +47,8 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Existen dos operadores logicos los cuales podemos implementar cuando trabajamos con la estructura de control
-                        <strong>if - else</strong> Un detalle a destacar es que estos operadores siempre los vamos a ver asociados con el condicional <strong>if</strong>
+                        Existen dos operadores logicos los cuales podemos implementar cuando trabajamos con estructuras de control. Cabe aclarar que estos operadores
+                        <strong>los vamos a ver mas asociados</strong> por el lado del <strong>if</strong> ya que su ejecucion se basa estrictamente en condiciones.
                     </p>
                 </section>
 
@@ -64,31 +64,103 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Operador &&</h3>
+                        <h3>01. Operador AND</h3>
 
                         <p>
-                            Se basa en una serie de dos o mas condiciones definidas en una estructura de control las cuales si o si deben cumplirse para que se ejecute el codigo definido dentro del
-                            condicional <strong>if</strong>
+                            Se basa en una serie de dos o mas condiciones definidas en una estructura de control
+                            <strong>if</strong>
+                            las cuales <strong>si o si deben cumplirse</strong> para que se ejecute el bloque de codigo definido dentro de su escope.
                         </p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/operadores/ope1.png" alt="operador &&" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> telefono<span class="operator"> =</span><span class="string"> "Iphone"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> modelo<span class="operator"> =</span><span class="number"> 14</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="variable">const</span> compra<span class="operator"> =</span><span class="boolean"> true</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="properties">if</span><span class="parenthesis">(</span>telefono<span class="operator"> ===</span><span class="string"> "Iphone"</span><span class="operator"> &&</span> modelo<span class="operator"> ===</span><span class="number"> 14</span><span class="operator"> &&</span> compra<span class="operator"> ===</span><span class="boolean"> true</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Todas las condiciones se cumplen"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="properties"> else</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Una o ninguna de las condiciones se cumplen"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>Todas las condiciones se cumplen</samp>
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Operador O</h3>
+                        <h3>02. Operador OR</h3>
 
                         <p>
-                            Se basa en una serie de dos o mas condiciones definidas en una estructura de control las cuales con una de estas que se cumpla pasa a ejecutar el codigo definido dentro del
-                            condicional <strong>if</strong>
+                            Se basa en una serie de dos o mas condiciones definidas en una estructura de control
+                            <strong>if</strong> las cuales <strong>con una de estas que se cumpla</strong> pasa a ejecutarse el bloque de codigo definido dentro de su escope.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/condicionales/operadores/ope2.png" alt="operador O" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> telefono<span class="operator"> =</span><span class="string"> "Motorola"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> modelo<span class="operator"> =</span><span class="number"> 10</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="variable">const</span> compra<span class="operator"> =</span><span class="boolean"> false</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="properties">if</span><span class="parenthesis">(</span>telefono<span class="operator"> ===</span><span class="string"> "Iphone"</span><span class="operator"> ||</span> modelo<span class="operator"> ===</span><span class="number"> 10</span><span class="operator"> ||</span> compra<span class="operator"> ===</span><span class="boolean"> true</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Una condicion se cumple"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="properties"> else</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Ninguna condicion se cumple"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>Una condicion se cumple</samp>
                         </div>
                     </section>
 

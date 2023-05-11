@@ -56,6 +56,12 @@ router.get("/condicionales-switch", (req, res) => {
     });
 });
 
+router.get("/condicionales-return", (req, res) => {
+    res.render("pages/condicionales-return", {
+        title: "condicionales return",
+    });
+});
+
 router.get("/condicionales-operadores", (req, res) => {
     res.render("pages/condicionales-operadores", {
         title: "condicionales operadores",
@@ -134,21 +140,20 @@ router.get("/funciones-events", (req, res) => {
     });
 });
 
-router.get("/funciones-rest-operator", (req, res) => {
-    res.render("pages/funciones-rest-operator", {
-        title: "funciones rest-operator",
+router.get("/funciones-operadores", (req, res) => {
+    res.render("pages/funciones-operadores", {
+        title: "funciones operadores",
     });
 });
 
 /* 
 	______________________ clases ______________________
 */
-router.get("/clases-estructura", (req, res) => {
-    res.render("pages/clases-estructura", {
-        title: "clases estructura",
+router.get("/clases-declaracion", (req, res) => {
+    res.render("pages/clases-declaracion", {
+        title: "clases declaracion",
     });
 });
-
 router.get("/clases-herencia", (req, res) => {
     res.render("pages/clases-herencia", {
         title: "clases herencia",

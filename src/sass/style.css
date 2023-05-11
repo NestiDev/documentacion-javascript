@@ -667,21 +667,20 @@ svg {
   color: white;
   font-size: 17px;
   border-radius: 5px 5px 0 0;
-  padding: 28px;
+  padding: 28px 0;
   overflow-x: auto;
-}
-.components_container .main_components .sections_container .sect_content .code_box pre {
-  white-space: normal;
-  width: 100%;
-  min-width: 100vh;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre:first-child {
   margin-bottom: 20px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code {
+  padding: 0 20px;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.circle {
   display: inline-block;
   width: 14px;
   height: 14px;
+  margin-right: 6px;
   border-radius: 50px;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.first_circle {
@@ -702,13 +701,13 @@ svg {
           user-select: none;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.inner_index {
-  padding-right: 16px;
+  padding-right: 12px;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.outer_index {
-  padding-right: 42px;
+  padding-right: 50px;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.outer_doble_index {
-  padding-right: 72px;
+  padding-right: 88px;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.variable {
   color: #986dff;
@@ -737,8 +736,9 @@ svg {
 .components_container .main_components .sections_container .sect_content .code_box pre code span.parameters_out {
   color: rgba(236, 193, 106, 0.5215686275);
 }
-.components_container .main_components .sections_container .sect_content .code_box pre code span.properties {
-  color: #f29e74;
+.components_container .main_components .sections_container .sect_content .code_box pre code span.properties,
+.components_container .main_components .sections_container .sect_content .code_box pre code span.functions {
+  color: #ffad66;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.brackets {
   color: #ffd700;
@@ -762,7 +762,7 @@ svg {
   background-color: #1f2430;
   border-top: 1px solid #171b24;
   border-radius: 0 0 5px 5px;
-  padding: 16px 28px;
+  padding: 16px 20px;
   margin-bottom: 80px;
 }
 .components_container .main_components .sections_container .sect_content .output_box samp {

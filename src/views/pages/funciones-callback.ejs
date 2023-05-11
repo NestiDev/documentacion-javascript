@@ -67,10 +67,91 @@
                         <h3>01. Definiendo una funcion que no recibe parametros</h3>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/funciones/callback/callbacks1.png" alt="definiendo una funcion que no recibe parametros" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function</span> saludar<span class="functions">(</span><span class="parameters">saludo</span><span class="semi_colon">,</span> <span class="parameters">callback</span><span class="functions">) </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="parameters">saludo</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="variable">let</span> nombres<span class="operator"> =</span><span class="square"> [</span><span class="string">"Sofia"</span><span class="semi_colon">, </span><span class="string">"Hernan"</span><span class="semi_colon">, </span><span class="string">"Mariana"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="parameters">callback</span><span class="functions">(</span>nombres<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span>saludar<span class="functions">(</span><span class="string">"Hola..."</span><span class="semi_colon">,</span> <span class="functions">function(<span class="parameters">nombres</span>)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="parameters">nombres</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <!--  
+                            output_box: en esta definimos la salida en respuesta al codigo
+                        -->
+                        <div class="output_box">
+                            <samp>Hola...</samp>
+                            <samp>Array(2) ["Sofia", "Hernan", "Mariana"]</samp>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Definiendo una funcion que no recibe parametros</h3>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function</span> saludar<span class="functions">(</span><span class="parameters">saludo</span><span class="semi_colon">,</span> <span class="parameters">callback</span><span class="functions">) </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="parameters">saludo</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="parameters">callback</span><span class="functions">(</span><span class="string">"Sofia"</span><span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="functions">function</span> persona<span class="functions">(</span><span class="parameters">nombre</span><span class="functions">) </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="parameters">nombre</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">16</span></code></pre>
+
+                            <pre><code><span class="index inner_index">17</span>saludar<span class="functions">(</span><span class="string">"Hola..."</span><span class="semi_colon">,</span> persona<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+
+                        <div class="output_box">
+                            <samp>Hola...</samp>
+                            <samp>Sofia</samp>
                         </div>
                     </section>
 
