@@ -666,12 +666,27 @@ svg {
   background-color: #242936;
   color: white;
   font-size: 17px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   padding: 28px 0;
+  margin-bottom: 80px;
   overflow-x: auto;
+  box-shadow: 0 0 20px 0 #c1c1c1;
+  /*
+  	::-webkit-scrollbar: definimos un ancho del
+  	scrollbar
+  */
+  /*
+  	::-webkit-scrollbar-thumb
+  */
 }
-.components_container .main_components .sections_container .sect_content .code_box pre:first-child {
-  margin-bottom: 20px;
+.components_container .main_components .sections_container .sect_content .code_box::-webkit-scrollbar {
+  height: 12px;
+}
+.components_container .main_components .sections_container .sect_content .code_box::-webkit-scrollbar-thumb {
+  background-color: #434a58;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre:first-of-type, .components_container .main_components .sections_container .sect_content .code_box pre:last-of-type {
+  margin-bottom: 28px;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code {
   padding: 0 20px;
@@ -758,21 +773,23 @@ svg {
 .components_container .main_components .sections_container .sect_content .code_box pre code span.parenthesis {
   color: #84b6f4;
 }
-.components_container .main_components .sections_container .sect_content .output_box {
-  background-color: #1f2430;
-  border-top: 1px solid #171b24;
-  border-radius: 0 0 5px 5px;
-  padding: 16px 20px;
-  margin-bottom: 80px;
+.components_container .main_components .sections_container .sect_content .code_box .output_box {
+  padding: 0 20px;
 }
-.components_container .main_components .sections_container .sect_content .output_box samp {
+.components_container .main_components .sections_container .sect_content .code_box .output_box pre {
   color: #83f8b0;
-  font-size: 17px;
-  display: block;
   margin-bottom: 4px;
 }
-.components_container .main_components .sections_container .sect_content .output_box samp.error {
+.components_container .main_components .sections_container .sect_content .code_box .output_box pre.error {
   color: #ff6666;
+}
+.components_container .main_components .sections_container .sect_content .code_box .output_box pre:first-of-type {
+  border-bottom: 1px solid #171b24;
+  margin-bottom: 24px;
+}
+.components_container .main_components .sections_container .sect_content .code_box .output_box pre span {
+  color: #4c525d;
+  font-size: 18px;
 }
 .components_container .main_components .section_footer {
   text-align: center;

@@ -717,13 +717,31 @@ svg {
                     background-color: #242936;
                     color: white;
                     font-size: 17px;
-                    border-radius: 5px 5px 0 0;
+                    border-radius: 5px;
                     padding: 28px 0;
+                    margin-bottom: 80px;
                     overflow-x: auto;
+                    box-shadow: 0 0 20px 0 #c1c1c1;
+
+                    /*
+                    	::-webkit-scrollbar: definimos un ancho del
+                    	scrollbar
+                    */
+                    &::-webkit-scrollbar {
+                        height: 12px;
+                    }
+
+                    /*
+                    	::-webkit-scrollbar-thumb
+                    */
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #434a58;
+                    }
 
                     pre {
-                        &:first-child {
-                            margin-bottom: 20px;
+                        &:first-of-type,
+                        &:last-of-type {
+                            margin-bottom: 28px;
                         }
 
                         code {
@@ -834,23 +852,27 @@ svg {
                             }
                         }
                     }
-                }
 
-                .output_box {
-                    background-color: #1f2430;
-                    border-top: 1px solid #171b24;
-                    border-radius: 0 0 5px 5px;
-                    padding: 16px 20px;
-                    margin-bottom: 80px;
+                    .output_box {
+                        padding: 0 20px;
 
-                    samp {
-                        color: #83f8b0;
-                        font-size: 17px;
-                        display: block;
-                        margin-bottom: 4px;
+                        pre {
+                            color: #83f8b0;
+                            margin-bottom: 4px;
 
-                        &.error {
-                            color: #ff6666;
+                            &.error {
+                                color: #ff6666;
+                            }
+
+                            &:first-of-type {
+                                border-bottom: 1px solid #171b24;
+                                margin-bottom: 24px;
+                            }
+
+                            span {
+                                color: #4c525d;
+                                font-size: 18px;
+                            }
                         }
                     }
                 }

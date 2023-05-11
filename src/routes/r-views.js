@@ -128,6 +128,12 @@ router.get("/funciones-expresadas", (req, res) => {
     });
 });
 
+router.get("/funciones-arrow", (req, res) => {
+    res.render("pages/funciones-arrow", {
+        title: "funciones arrow",
+    });
+});
+
 router.get("/funciones-callback", (req, res) => {
     res.render("pages/funciones-callback", {
         title: "funciones callback",
@@ -137,6 +143,12 @@ router.get("/funciones-callback", (req, res) => {
 router.get("/funciones-events", (req, res) => {
     res.render("pages/funciones-events", {
         title: "funciones events",
+    });
+});
+
+router.get("/funciones-return", (req, res) => {
+    res.render("pages/funciones-return", {
+        title: "funciones return",
     });
 });
 
