@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Generales</h2>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        En este aparatado definiremos las propiedades de los numeros
+                        <strong>numbers</strong> de una sola implementacion.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Metodo isNaN</h3>
+
+                        <p>Nos permite determinar si el valor que estamos recibiendo es un numero</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>texto <span class="operator">= </span><span class="string">"Esto es una cadena de texot"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const </span>noSoyUnNumero <span class="operator">= </span><span class="methods">isNaN(</span>texto<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>noSoyUnNumero<span class="semi_colon">, </span><span class="string">"El valor asignado en la variable texto no es un numero"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true "El valor asignado en la variable texto no es un numero"</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>numero <span class="operator">= </span><span class="number"> 1258.9</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const </span>noSoyUnNumero <span class="operator">= </span><span class="methods">isNaN(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>noSoyUnNumero<span class="semi_colon">, </span><span class="string">"El valor asignado en la variable numero si es un numero"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> falso "El valor asignado en la variable numero si es un numero"</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Metodo toString</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> soyUnNumber<span class="operator"> =</span><span class="number"> 100</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>soyUnNumber<span class="semi_colon">, </span><span class="functions">typeof </span>soyUnNumber<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>convertidoATexto <span class="operator">= </span>soyUnNumber<span class="methods">.toString()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertidoATexto<span class="semi_colon">, </span><span class="functions">typeof </span>convertidoATexto<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 100 number</pre>
+                                <pre><span>></span> 100 string</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section class="sect_content">
+                        <h3>02. Metodo parseInt</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> numeroTipoString<span class="operator"> =</span><span class="string"> "10"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>numeroTipoString<span class="semi_colon">, </span><span class="functions">typeof </span>numeroTipoString<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> convertidoEnNumero <span class="operator">= </span><span class="functions">parseInt(</span>numeroTipoString<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertidoEnNumero<span class="semi_colon">, </span><span class="functions">typeof </span>convertidoEnNumero<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 10 string</pre>
+                                <pre><span>></span> 10 number</pre>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <!-- <section class="sect_content">
+                        <h3>03. Metodo parseFloat</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/numbers/generales/par2.png" alt="parsiando cadenas de caracteres a numeros decimales" />
+                        </div>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> numeroTipoString<span class="operator"> =</span><span class="string"> "158.895"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>numeroTipoString<span class="semi_colon">, </span><span class="functions">typeof </span>numeroTipoString<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> convertidoEnNumero <span class="operator">= </span><span class="functions">parseFloat(</span>numeroTipoString<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertidoEnNumero<span class="semi_colon">, </span><span class="functions">typeof </span>convertidoEnNumero<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 158.895 string</pre>
+                                <pre><span>></span> 158.895 number</pre>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <!--  
+                        incluimos el partial pagination.ejs y asigamos los valores requeridos por 
+                        las variables ahi definidas
+                    -->
+                    <%- include('../partials/pagination', previousSection="#", nextSection="./numeros-math"); %>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Generales - Numbers</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

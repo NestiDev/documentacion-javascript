@@ -28,14 +28,27 @@
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Var</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Var</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -51,7 +64,50 @@
                         debido a que estas tienen un <strong>ambito global</strong>
                         tomando como valor el valor asignado en la ultima declaracion.
                     </p>
-                </section>
+                </div>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#declaracion">01. Declaracion</a></li>
+                                    <li><a href="#valores-primitivos">02. Valores primitivos</a></li>
+                                    <li><a href="#dentro-de-un-escope">03. Dentro de un escope</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
                 <!--  
                     sections_container: contenedor de las secciones que componen
@@ -61,7 +117,7 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="declaracion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
@@ -103,17 +159,18 @@
                             <pre><code><span class="index">12</span></code></pre>
 
                             <pre><code><span class="index inner_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$nombre<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                        </div>
 
-                        <!--  
-                            output_box: en esta definimos la salida en respuesta al codigo
-                        -->
-                        <div class="output_box">
-                            <samp>Juana</samp>
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Juana</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="valores-primitivos">
                         <h3>02. Valores primitivos</h3>
 
                         <p>
@@ -141,15 +198,16 @@
                             <pre><code><span class="index">08</span></code></pre>
 
                             <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="properties">typeof</span> edad<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                        </div>
 
-                        <div class="output_box">
-                            <samp>number</samp>
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> number</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Declaracion dentro de un escope</h3>
+                    <section class="sect_content" id="dentro-de-un-escope">
+                        <h3>03. Dentro de un escope</h3>
 
                         <p>
                             Como vemos hemos declarado dos veces la variable <strong>pais</strong> y aunque la segunda declaracion esta dentro del escope de la estructura de control
@@ -180,17 +238,39 @@
                             <pre><code><span class="index">10</span></code></pre>
 
                             <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El valor de la variable pais es: "</span><span class="semi_colon">,</span> pais<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                        </div>
 
-                        <div class="output_box">
-                            <samp>El valor de la variable pais es: Hungria</samp>
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> El valor de la variable pais es: Hungria</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Var - Variables</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./variables-let">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Var - Variables") %>
                 </div>
             </main>
         </div>

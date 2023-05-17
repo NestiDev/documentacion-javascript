@@ -23,21 +23,21 @@ router.get("/", (req, res) => {
 /* 
 	______________________ variables ______________________
 */
-router.get("/variable-var", (req, res) => {
-    res.render("pages/variable-var", {
-        title: "variable var",
+router.get("/variables-var", (req, res) => {
+    res.render("pages/variables-var", {
+        title: "variables var",
     });
 });
 
-router.get("/variable-let", (req, res) => {
-    res.render("pages/variable-let", {
-        title: "variable let",
+router.get("/variables-let", (req, res) => {
+    res.render("pages/variables-let", {
+        title: "variables let",
     });
 });
 
-router.get("/variable-const", (req, res) => {
-    res.render("pages/variable-const", {
-        title: "variable const",
+router.get("/variables-const", (req, res) => {
+    res.render("pages/variables-const", {
+        title: "variables const",
     });
 });
 
@@ -299,17 +299,17 @@ router.get("/strings-start-end", (req, res) => {
 });
 
 /* 
-	______________________ numbers ______________________
+	______________________ numeros ______________________
 */
-router.get("/numbers-generales", (req, res) => {
-    res.render("pages/numbers-generales", {
-        title: "numbers generales",
+router.get("/numeros-generales", (req, res) => {
+    res.render("pages/numeros-generales", {
+        title: "numeros generales",
     });
 });
 
-router.get("/numbers-math", (req, res) => {
-    res.render("pages/numbers-math", {
-        title: "numbers math",
+router.get("/numeros-math", (req, res) => {
+    res.render("pages/numeros-math", {
+        title: "numeros math",
     });
 });
 

@@ -7,6 +7,9 @@
 	variables para definir colores
 */
 /*
+	variables para definir color de fondo
+*/
+/*
 	variables para definir el color
     de los iconos
 */
@@ -39,6 +42,13 @@ body {
 }
 
 /*
+	tag-li: estilos generales para esta etiqueta
+*/
+li {
+  list-style: none;
+}
+
+/*
 	tag-a: estilos generales para esta etiqueta
 */
 a {
@@ -53,6 +63,17 @@ a {
 img,
 svg {
   vertical-align: top;
+}
+
+/*
+    line_titles: : definimos un margen inferior para generar 
+    separacion frente a otros elementos
+*/
+.line_titles {
+  border: 1px solid #f0db4f;
+  width: 100px;
+  box-shadow: 0 0 8px 0 #f0db4f;
+  margin-bottom: 30px;
 }
 
 /*  
@@ -181,6 +202,10 @@ svg {
     /*
         cuando tag-input tiene el foco añadimos una sombra
     */
+    /*
+        hacemos uso del pseudo elemento ::palceholder para 
+        modificar el color del texto por defecto
+    */
   }
   .header_component .header_container .menu_box li.search_box input.js_input_hidden {
     display: block;
@@ -188,15 +213,20 @@ svg {
   .header_component .header_container .menu_box li.search_box input:focus {
     box-shadow: 0 0 8px 0 rgba(179, 177, 177, 0.3019607843);
   }
+  .header_component .header_container .menu_box li.search_box input::-moz-placeholder {
+    color: #c3c3c3;
+  }
+  .header_component .header_container .menu_box li.search_box input::placeholder {
+    color: #c3c3c3;
+  }
   .header_component .header_container .menu_box li.search_box svg {
     margin-top: 2px;
   }
 }
 .header_component .header_container .menu_box li {
-  list-style: none;
   cursor: pointer;
   /*  
-      tag-li
+      tag-a
   */
   /*  
       tag-svg
@@ -428,7 +458,6 @@ svg {
   */
 }
 .components_container .nav_component .nav_menu .li_dropdown .dropdown_menu li {
-  list-style: none;
   padding: 10px 0;
   /*
   	tag-a
@@ -475,11 +504,20 @@ svg {
   	section_banner  
   */
   /*
+      modal_section
+  */
+  /*
   	sections_container
   */
   /*
-  	section_footer: definimos un margen inferior para
-  	generar separacion frente a otros elementos
+  	section_pagination: definimos flexbox con su propiedad
+            justify-content para generar un espaciado entre los 
+            elementos que este contiene, finalmente definimos un margen 
+            en el eje-Y para generar separacion frente a otros elementos
+  */
+  /*
+      section_footer: definimos un margen inferior
+      para generar separacion frente a otros elementos
   */
 }
 @media (min-width: 720px) {
@@ -567,49 +605,59 @@ svg {
 }
 .components_container .main_components .section_banner {
   /*
-  	tag-h2: definimos un margen en la parte superior de
-  	este elemento
+      index_container: definimos flexbox con su propiedad
+      justify-content y align-items para centrar de manera
+      vertical y horizontal los elementos que este contiene,
+      finalmente definimos un margen en la parte superior 
+      de este elemento
   */
   /*
-  	line_titles
-  */
-  /*
-  	tag-p: definimos una separacion de lineas y un margen 
-  	en el eje-Y para este elemento
+  	tag-p
   */
 }
-.components_container .main_components .section_banner h2 {
-  font-size: 2.8rem;
+.components_container .main_components .section_banner .index_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 30px;
   /*
-  	dispositivos menores a 381px: modificamos el tamaño de
-  	fuente para este elemento
+      tag-svg
   */
   /*
-  	dispositivos menores a 333px: modificamos el tamaño de
-  	fuente para este elemento
+      tag-h2
+  */
+}
+.components_container .main_components .section_banner .index_container svg {
+  fill: #c3c3c3;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+.components_container .main_components .section_banner .index_container h2 {
+  font-size: 2.8rem;
+  /*
+      dispositivos menores a 381px: modificamos el tamaño de
+      fuente para este elemento
+  */
+  /*
+      dispositivos menores a 333px: modificamos el tamaño de
+      fuente para este elemento
   */
 }
 @media (max-width: 381px) {
-  .components_container .main_components .section_banner h2 {
+  .components_container .main_components .section_banner .index_container h2 {
     font-size: 2.4rem;
   }
 }
 @media (max-width: 333px) {
-  .components_container .main_components .section_banner h2 {
+  .components_container .main_components .section_banner .index_container h2 {
     font-size: 2.1rem;
   }
-}
-.components_container .main_components .section_banner .line_titles {
-  border: 1px solid #f0db4f;
-  width: 100px;
-  box-shadow: 0 0 8px 0 #f0db4f;
 }
 .components_container .main_components .section_banner p {
   text-align: justify;
   font-size: 20px;
   line-height: 1.5;
-  margin: 30px 0 80px;
   /*
   	tag-strong
   */
@@ -617,6 +665,88 @@ svg {
 .components_container .main_components .section_banner p strong {
   color: #f0db4f;
   text-shadow: 0 0 18px rgba(240, 218, 79, 0.7019607843);
+}
+.components_container .main_components .modal_section {
+  /*
+      container_name
+  */
+}
+.components_container .main_components .modal_section .modal_container {
+  /*
+      hidden_modal: definimos position: fixed y sus propiedades
+      top, left, right, bottom y z-index para que este contenedor
+      tome el ancho y alto total de la pantalla
+      implementamos display: none para ocultar el modal y las 
+      propiedades justify-content y align-items para centrar 
+      los elementos horizontal y verticalmente
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.9450980392);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /*
+      js_show_hidden_modal: clase añadida con javascript
+      la cual implementa display: flex la cual hace visible
+      el modal y centra los elementos
+  */
+  /*
+      js_show_hidden_modal: cuando hidden_modal tiene esta clase 
+      añadida con javascript relaciona a content_modal y le añade
+      la animacion animationModal la cual hace que el modal
+      emerja desde la parte izquierda
+  */
+  /*
+      content_modal: definimos la animacion animationModal
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal.js_show_hidden_modal {
+  display: flex;
+}
+@keyframes animationModal {
+  0% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal {
+  animation: animationModal 0.8s;
+  /*
+      tag-h2
+  */
+  /*
+      tag-ul
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal h2 {
+  font-size: 42px;
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul {
+  /*
+      tag-li: definimos un margen superior para generar 
+      separacion frente a otros elementos 
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li {
+  margin-top: 18px;
+  /*
+      tag-a
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li a {
+  color: #5c5b5b;
+  font-size: 18px;
+  font-weight: 500;
 }
 .components_container .main_components .sections_container {
   /*
@@ -631,14 +761,11 @@ svg {
       tag-p: definimos un margen personalizado en el eje-y 
       para generar sepracion frente a otros elementos
   */
-  /*
-  	sect_box_img: definimos un margen en la parte inferior
-  	de este elemento
-  */
 }
 .components_container .main_components .sections_container .sect_content h3 {
   font-size: 2rem;
   line-height: 1.2;
+  margin: 80px 0 20px;
   /*
   	dispositivos menores a 336px: modificamos el tamaño de
   	fuente de este elemento
@@ -653,7 +780,6 @@ svg {
   text-align: justify;
   font-size: 20px;
   line-height: 1.5;
-  margin: 20px 0 30px;
   /*
   	tag-strong
   */
@@ -664,11 +790,11 @@ svg {
 }
 .components_container .main_components .sections_container .sect_content .code_box {
   background-color: #242936;
-  color: white;
+  color: #fff;
   font-size: 17px;
   border-radius: 5px;
   padding: 28px 0;
-  margin-bottom: 80px;
+  margin: 30px 0 40px;
   overflow-x: auto;
   box-shadow: 0 0 20px 0 #c1c1c1;
   /*
@@ -773,6 +899,9 @@ svg {
 .components_container .main_components .sections_container .sect_content .code_box pre code span.parenthesis {
   color: #84b6f4;
 }
+.components_container .main_components .sections_container .sect_content .code_box pre code span.methods {
+  color: #ffd173;
+}
 .components_container .main_components .sections_container .sect_content .code_box .output_box {
   padding: 0 20px;
 }
@@ -791,9 +920,65 @@ svg {
   color: #4c525d;
   font-size: 18px;
 }
+.components_container .main_components .section_pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+  /*
+      tag-a: definimos un espaciado para generar el efecto boton
+  */
+}
+.components_container .main_components .section_pagination a {
+  background-color: #242936;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 8px 0 #c1c1c1;
+  /*
+      cuando la tag-a tiene el pseudo elemento :hover modificamos 
+      su color de fondo
+  */
+  /*
+      cuando la tag-a tiene la clase not_previous o not_next cancelamos 
+      su seleccion con la propiedad pointer-events
+  */
+  /*
+      tag-svg
+  */
+}
+.components_container .main_components .section_pagination a:hover {
+  background-color: rgba(36, 41, 54, 0.7568627451);
+}
+.components_container .main_components .section_pagination a.not_previous, .components_container .main_components .section_pagination a.not_next {
+  background-color: rgba(36, 41, 54, 0.4980392157);
+  pointer-events: none;
+}
+.components_container .main_components .section_pagination a svg {
+  fill: #fff;
+  width: 28px;
+  height: 28px;
+}
 .components_container .main_components .section_footer {
+  margin-bottom: 30px;
+  /*
+      box_gotop: definimos un margen inferior
+      para generar separacion frente a otros elementos
+  */
+}
+.components_container .main_components .section_footer .box_gotop {
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 12px;
+  /*
+      tag-svg
+  */
+}
+.components_container .main_components .section_footer .box_gotop svg {
+  fill: #242936;
+  width: 38px;
+  height: 38px;
+}
+.components_container .main_components .section_footer h4 {
   text-align: center;
   color: #ccc;
   font-size: 1.2rem;
-  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */

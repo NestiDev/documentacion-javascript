@@ -171,3 +171,68 @@ $liDropdown.forEach((drop1) =>
 /*
 	_******************** end code - show dropdown menu ********************_
 */
+
+/* 
+	$showHiddenModal: almacena el elemento html con el ID show-modal
+*/
+let $showModal = document.querySelector("#show-modal");
+
+/* 
+	$closeHiddenModal: almacena el elemento html con el ID show-hidden-modal
+*/
+let $hiddenModal = document.querySelector("#hidden-modal");
+
+/* 
+	añadimos un evento click en la variable $showModal
+*/
+$showModal.addEventListener("click", () => {
+    /* 
+		seleccionamos $hiddenModal y le añadimos la
+		clase js_show_hidden_modal definida en la
+		hoja d eestilos
+	*/
+    $hiddenModal.classList.add("js_show_hidden_modal");
+});
+
+/* 
+	añadimos un evento click en la variable $hiddenModal
+*/
+$hiddenModal.addEventListener("click", () => {
+    /* 
+		seleccionamos $hiddenModal y le removemos la
+		clase js_show_hidden_modal definida en la
+		hoja d eestilos
+	*/
+    $hiddenModal.classList.remove("js_show_hidden_modal");
+});
+
+/*
+	_******************** start code - footer gotop ********************_
+*/
+
+/* 
+	$goTop: alamacena el elemento html con el ID go-top 
+*/
+let $goTop = document.querySelector("#go-top");
+
+/* 
+	definimos un evento click en $goTop y declaramos una 
+	funcion 
+*/
+$goTop.addEventListener("click", () => {
+    /* 
+        implementamos scrollTo del objeto window 
+		que recibe la propiedades top y left que nos 
+        redirige a la parte inicial de la pagina y
+        behavior que suavisa la subida
+    */
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+});
+
+/*
+	_******************** end code - footer gotop ********************_
+*/

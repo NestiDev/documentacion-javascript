@@ -13,6 +13,11 @@ $colorFour: #5c5b5b;
 $colorFive: #ccc;
 
 /*
+	variables para definir color de fondo
+*/
+$backgroundColorOne: #242936;
+
+/*
 	variables para definir el color
     de los iconos
 */
@@ -27,6 +32,7 @@ $borderOne: #eaecef;
 	variables para definir sombras
 */
 $shadowOne: #b3b1b14d;
+$shadowTwo: #c1c1c1;
 
 /*
 	formatiamos las margenes y espaciados que definen los
@@ -51,6 +57,13 @@ body {
 }
 
 /*
+	tag-li: estilos generales para esta etiqueta
+*/
+li {
+    list-style: none;
+}
+
+/*
 	tag-a: estilos generales para esta etiqueta
 */
 a {
@@ -65,6 +78,17 @@ a {
 img,
 svg {
     vertical-align: top;
+}
+
+/*
+    line_titles: : definimos un margen inferior para generar 
+    separacion frente a otros elementos
+*/
+.line_titles {
+    border: 1px solid $colorOne;
+    width: 100px;
+    box-shadow: 0 0 8px 0 $colorOne;
+    margin-bottom: 30px;
 }
 
 /*  
@@ -194,6 +218,14 @@ svg {
                         &:focus {
                             box-shadow: 0 0 8px 0 $shadowOne;
                         }
+
+                        /*
+                            hacemos uso del pseudo elemento ::palceholder para 
+                            modificar el color del texto por defecto
+                        */
+                        &::placeholder {
+                            color: $iconsColor;
+                        }
                     }
 
                     /*
@@ -210,11 +242,10 @@ svg {
                 tag-li
             */
             li {
-                list-style: none;
                 cursor: pointer;
 
                 /*  
-                    tag-li
+                    tag-a
                 */
                 a {
                     /*
@@ -452,7 +483,6 @@ svg {
 						tag-li: definimos un espaciado en el eje-Y para este elemento
 					*/
                     li {
-                        list-style: none;
                         padding: 10px 0;
 
                         /*
@@ -596,48 +626,59 @@ svg {
 		*/
         .section_banner {
             /*
-				tag-h2: definimos un margen en la parte superior de
-				este elemento
-			*/
-            h2 {
-                font-size: 2.8rem;
+                index_container: definimos flexbox con su propiedad
+                justify-content y align-items para centrar de manera
+                vertical y horizontal los elementos que este contiene,
+                finalmente definimos un margen en la parte superior 
+                de este elemento
+            */
+            .index_container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 margin-top: 30px;
 
                 /*
-					dispositivos menores a 381px: modificamos el tamaño de
-					fuente para este elemento
-				*/
-                @media (max-width: 381px) {
-                    font-size: 2.4rem;
+                    tag-svg
+                */
+                svg {
+                    fill: $iconsColor;
+                    width: 38px;
+                    height: 38px;
+                    cursor: pointer;
                 }
 
                 /*
-					dispositivos menores a 333px: modificamos el tamaño de
-					fuente para este elemento
-				*/
-                @media (max-width: 333px) {
-                    font-size: 2.1rem;
+                    tag-h2
+                */
+                h2 {
+                    font-size: 2.8rem;
+
+                    /*
+                        dispositivos menores a 381px: modificamos el tamaño de
+                        fuente para este elemento
+                    */
+                    @media (max-width: 381px) {
+                        font-size: 2.4rem;
+                    }
+
+                    /*
+                        dispositivos menores a 333px: modificamos el tamaño de
+                        fuente para este elemento
+                    */
+                    @media (max-width: 333px) {
+                        font-size: 2.1rem;
+                    }
                 }
             }
 
             /*
-				line_titles
-			*/
-            .line_titles {
-                border: 1px solid $colorOne;
-                width: 100px;
-                box-shadow: 0 0 8px 0 $colorOne;
-            }
-
-            /*
-				tag-p: definimos una separacion de lineas y un margen 
-				en el eje-Y para este elemento
+				tag-p
 			*/
             p {
                 text-align: justify;
                 font-size: 20px;
                 line-height: 1.5;
-                margin: 30px 0 80px;
 
                 /*
 					tag-strong
@@ -645,6 +686,101 @@ svg {
                 strong {
                     color: $colorOne;
                     text-shadow: 0 0 18px #f0da4fb3;
+                }
+            }
+        }
+
+        /*
+            modal_section
+        */
+        .modal_section {
+            /*
+                container_name
+            */
+            .modal_container {
+                /*
+                    hidden_modal: definimos position: fixed y sus propiedades
+                    top, left, right, bottom y z-index para que este contenedor
+                    tome el ancho y alto total de la pantalla
+                    implementamos display: none para ocultar el modal y las 
+                    propiedades justify-content y align-items para centrar 
+                    los elementos horizontal y verticalmente
+                */
+                .hidden_modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 9;
+                    background-color: #fffffff1;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    /*
+                        js_show_hidden_modal: clase añadida con javascript
+                        la cual implementa display: flex la cual hace visible
+                        el modal y centra los elementos
+                    */
+                    &.js_show_hidden_modal {
+                        display: flex;
+                    }
+
+                    /*
+                        js_show_hidden_modal: cuando hidden_modal tiene esta clase 
+                        añadida con javascript relaciona a content_modal y le añade
+                        la animacion animationModal la cual hace que el modal
+                        emerja desde la parte izquierda
+                    */
+                    &.js_show_hidden_modal .content_modal {
+                        @keyframes animationModal {
+                            0% {
+                                transform: translateY(-70px);
+                            }
+
+                            100% {
+                                transform: translateY(0px);
+                            }
+                        }
+                    }
+
+                    /*
+                        content_modal: definimos la animacion animationModal
+                    */
+                    .content_modal {
+                        animation: animationModal 0.8s;
+
+                        /*
+                            tag-h2
+                        */
+                        h2 {
+                            font-size: 42px;
+                        }
+
+                        /*
+                            tag-ul
+                        */
+                        ul {
+                            /*
+                                tag-li: definimos un margen superior para generar 
+                                separacion frente a otros elementos 
+                            */
+                            li {
+                                margin-top: 18px;
+
+                                /*
+                                    tag-a
+                                */
+                                a {
+                                    color: $colorFour;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -663,6 +799,7 @@ svg {
                 h3 {
                     font-size: 2rem;
                     line-height: 1.2;
+                    margin: 80px 0 20px;
 
                     /*
 						dispositivos menores a 336px: modificamos el tamaño de
@@ -680,9 +817,8 @@ svg {
                 p {
                     text-align: justify;
                     font-size: 20px;
-                    // font-weight: 500;
                     line-height: 1.5;
-                    margin: 20px 0 30px;
+                    // margin: 20px 0 30px;
 
                     /*
 						tag-strong
@@ -693,35 +829,16 @@ svg {
                     }
                 }
 
-                /*
-					sect_box_img: definimos un margen en la parte inferior
-					de este elemento
-				*/
-                // .sect_box_img {
-                //     text-align: center;
-                //     margin-bottom: 80px;
-
-                //     /*
-                // 		tag-img: definimos object-fit: cover para ajustar las
-                //         imagenes a su contenedor padre
-                // 	*/
-                //     img {
-                //         width: 100%;
-                //         height: auto;
-                //         object-fit: cover;
-                //         box-shadow: 0 2px 6px 0 #ccc;
-                //     }
-                // }
-
+                // pendiente por documentar
                 .code_box {
-                    background-color: #242936;
-                    color: white;
+                    background-color: $backgroundColorOne;
+                    color: $colorThree;
                     font-size: 17px;
                     border-radius: 5px;
                     padding: 28px 0;
-                    margin-bottom: 80px;
+                    margin: 30px 0 40px;
                     overflow-x: auto;
-                    box-shadow: 0 0 20px 0 #c1c1c1;
+                    box-shadow: 0 0 20px 0 $shadowTwo;
 
                     /*
                     	::-webkit-scrollbar: definimos un ancho del
@@ -850,6 +967,10 @@ svg {
                             span.parenthesis {
                                 color: #84b6f4;
                             }
+
+                            span.methods {
+                                color: #ffd173;
+                            }
                         }
                     }
 
@@ -880,14 +1001,85 @@ svg {
         }
 
         /*
-			section_footer: definimos un margen inferior para
-			generar separacion frente a otros elementos
+			section_pagination: definimos flexbox con su propiedad
+            justify-content para generar un espaciado entre los 
+            elementos que este contiene, finalmente definimos un margen 
+            en el eje-Y para generar separacion frente a otros elementos
 		*/
+        .section_pagination {
+            display: flex;
+            justify-content: space-between;
+            margin: 80px 0;
+
+            /*
+                tag-a: definimos un espaciado para generar el efecto boton
+            */
+            a {
+                background-color: $backgroundColorOne;
+                border-radius: 5px;
+                padding: 5px;
+                box-shadow: 0 0 8px 0 $shadowTwo;
+
+                /*
+                    cuando la tag-a tiene el pseudo elemento :hover modificamos 
+                    su color de fondo
+                */
+                &:hover {
+                    background-color: #242936c1;
+                }
+
+                /*
+                    cuando la tag-a tiene la clase not_previous o not_next cancelamos 
+                    su seleccion con la propiedad pointer-events
+                */
+                &.not_previous,
+                &.not_next {
+                    background-color: #2429367f;
+                    pointer-events: none;
+                }
+
+                /*
+                    tag-svg
+                */
+                svg {
+                    fill: $colorThree;
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+
+        /*
+            section_footer: definimos un margen inferior
+            para generar separacion frente a otros elementos
+        */
         .section_footer {
-            text-align: center;
-            color: $colorFive;
-            font-size: 1.2rem;
             margin-bottom: 30px;
+
+            /*
+                box_gotop: definimos un margen inferior
+                para generar separacion frente a otros elementos
+            */
+            .box_gotop {
+                text-align: center;
+                cursor: pointer;
+                margin-bottom: 12px;
+
+                /*
+                    tag-svg
+                */
+                svg {
+                    fill: $backgroundColorOne;
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+
+            h4 {
+                text-align: center;
+                color: $colorFive;
+                font-size: 1.2rem;
+            }
         }
     }
 }
