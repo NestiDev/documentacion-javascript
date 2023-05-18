@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Math</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Math</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -50,6 +63,57 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#metodo-random">01. Metodo random</a></li>
+                                    <li><a href="#metodo-max">02. Metodo max</a></li>
+                                    <li><a href="#metodo-min">03. Metodo min</a></li>
+                                    <li><a href="#metodo-round">04. Metodo round</a></li>
+                                    <li><a href="#metodo-ceil">05. Metodo ceil</a></li>
+                                    <li><a href="#metodo-floor">06. Metodo floor</a></li>
+                                    <li><a href="#metodo-trunc">07. Metodo trunc</a></li>
+                                    <li><a href="#metodo-abs">08. Metodo abs</a></li>
+                                    <li><a href="#metodo-pow">09. Metodo pow</a></li>
+                                    <li><a href="#metodo-sqrt">10. Metodo sqrt</a></li>
+                                    <li><a href="#metodo-sign">11. Metodo sign</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -57,7 +121,7 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-random">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
@@ -95,7 +159,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-max">
                         <h3>02. Metodo max</h3>
 
                         <p>texto pendiente</p>
@@ -128,7 +192,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-min">
                         <h3>03. Metodo min</h3>
 
                         <p>texto pendiente</p>
@@ -161,7 +225,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-round">
                         <h3>04. Metodo round</h3>
 
                         <p>texto pendiente</p>
@@ -186,7 +250,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-ceil">
                         <h3>05. Metodo ceil</h3>
 
                         <p>texto pendiente</p>
@@ -211,7 +275,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-floor">
                         <h3>06. Metodo floor</h3>
 
                         <p>texto pendiente</p>
@@ -236,7 +300,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-trunc">
                         <h3>07. Metodo trunc</h3>
 
                         <p>texto pendiente</p>
@@ -261,7 +325,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-abs">
                         <h3>08. Metodo abs</h3>
 
                         <p>texto pendiente</p>
@@ -286,7 +350,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-pow">
                         <h3>09. Metodo pow</h3>
 
                         <p>texto pendiente</p>
@@ -315,7 +379,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-sqrt">
                         <h3>10. Metodo sqrt</h3>
 
                         <p>texto pendiente</p>
@@ -340,7 +404,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-sign">
                         <h3>11. Metodo sign</h3>
 
                         <p>texto pendiente</p>
@@ -404,15 +468,30 @@
                     </section>
 
                     <!--  
-                        incluimos el partial pagination.ejs y asigamos los valores requeridos por 
-                        las variables ahi definidas
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <%- include('../partials/pagination', previousSection="./numeros-generales", nextSection="#"); %>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./numeros-generales">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a class="not_next">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
 
                     <!--  
-                        section_footer
+                        incluimos el partial footer.ejs
                     -->
-                    <footer class="section_footer">Math - Numbers</footer>
+                    <%- include('../partials/footer', titleSection = "Math - Numeros") %>
                 </div>
             </main>
         </div>

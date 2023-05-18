@@ -747,9 +747,16 @@ svg {
                     }
 
                     /*
-                        content_modal: definimos la animacion animationModal
+                        content_modal: definimos una altura maxima en porcentaje 
+                        con respecto a la altura de su contenedor padre, 
+                        definimos un espaciado en el eje-X y un overflow-y para que 
+                        oculte los valores que sobrepasen la altura, finalmente 
+                        ejecutamos la animacion animationModal
                     */
                     .content_modal {
+                        max-height: 80%;
+                        padding: 0 6%;
+                        overflow-y: auto;
                         animation: animationModal 0.8s;
 
                         /*
@@ -777,6 +784,14 @@ svg {
                                     color: $colorFour;
                                     font-size: 18px;
                                     font-weight: 500;
+
+                                    /*
+                                        cuando la tag-a tiene el pseudo elemento :hover 
+                                        modificamos su color
+                                    */
+                                    &:hover {
+                                        color: $colorOne;
+                                    }
                                 }
                             }
                         }
@@ -835,7 +850,7 @@ svg {
                     color: $colorThree;
                     font-size: 17px;
                     border-radius: 5px;
-                    padding: 28px 0;
+                    padding: 20px 0;
                     margin: 30px 0 40px;
                     overflow-x: auto;
                     box-shadow: 0 0 20px 0 $shadowTwo;
@@ -975,11 +990,10 @@ svg {
                     }
 
                     .output_box {
-                        padding: 0 20px;
-
                         pre {
                             color: #83f8b0;
                             margin-bottom: 4px;
+                            padding: 0 20px;
 
                             &.error {
                                 color: #ff6666;
@@ -987,7 +1001,7 @@ svg {
 
                             &:first-of-type {
                                 border-bottom: 1px solid #171b24;
-                                margin-bottom: 24px;
+                                margin-bottom: 20px;
                             }
 
                             span {

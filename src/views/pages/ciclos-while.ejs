@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>While</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>While</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -56,6 +69,49 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#definicion">01. Definicion</a></li>
+                                    <li><a href="#posiciones-de-un-array">02. Posiciones de un array</a></li>
+                                    <li><a href="#valores-de-un-array">03. Valores de un array</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -64,17 +120,17 @@
 						sect_content: contenedor de 1 tag-h3, 1 tag-p, de code_box y
                         de 1 tag-samp
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="definicion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Ejecucion de un ciclo</h3>
+                        <h3>01. Definicion</h3>
 
                         <!--  
 							tag-p: en esta definimos el pararfo de la seccion
 						-->
                         <p>
-                            Definimos una variable e indicamos que el punto del partida del ciclo iniciara en 0, como condicion expresamos que,
+                            Comenzamos con una variable e indicamos que el punto del partida del ciclo iniciara en 0, como condicion expresamos que,
                             <strong>mientras i sea menor o igual a 5</strong>
                             el <strong>ciclo</strong> va a ejecutarse. A continuacion definimos que imprima por consola la <strong>variable i</strong> y finalizamos con la iteracion.
                         </p>
@@ -83,304 +139,157 @@
                             code_box: en esta definimos
                         -->
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> i
-                                    <span class="operator">=</span>
-                                    <span class="number">0</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>i <span class="operator">= </span><span class="number">0</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="function">while</span><span class="parenthesis">(</span>i
-                                    <span class="operator"><=</span><span class="number"> 5</span><span class="parenthesis">)</span>
-                                    <span class="brackets"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">03</span><span class="function">while</span><span class="parenthesis">(</span>i <span class="operator"><= </span><span class="number">5</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">04</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">05</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    i<span class="operator">++</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">07</span>i<span class="operator">++</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">09</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                        <!--  
-                            output_box: en esta definimos la salida en respuesta al codigo
-                        -->
-                        <div class="output_box">
-                            <samp>0</samp>
-                            <samp>1</samp>
-                            <samp>2</samp>
-                            <samp>3</samp>
-                            <samp>4</samp>
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> 3</pre>
+                                <pre><span>></span> 4</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Recorriendo las posiciones de los valores de un array</h3>
+                    <section class="sect_content" id="posiciones-de-un-array">
+                        <h3>02. Posiciones de un array</h3>
 
-                        <p>
+                        <!-- <p>
                             Una vez definido el punto de partida y el <strong>array</strong> lo siguiente es definir el <strong>ciclo</strong> y definir la condicion, dentro de su escope realizamos la
                             impresion por consola de la variable <strong>posiciones</strong>
                             y finalizamos con la iteracion.
-                        </p>
+                        </p> -->
+
+                        <p>texto pendiente</p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> posiciones
-                                    <span class="operator">=</span>
-                                    <span class="number">0</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="variable">let</span> colores
-                                    <span class="operator">=</span>
-                                    <span class="square">[</span><span class="string">"Blanco"</span><span class="semi_colon">,</span><span class="string">"Negro"</span><span class="semi_colon">,</span><span class="string">"Azul"</span><span class="semi_colon">,</span><span class="string">"Rojo"</span><span class="square">]</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>colores <span class="operator">= </span><span class="square">[</span><span class="string">"Blanco"</span><span class="semi_colon">, </span><span class="string">"Negro"</span><span class="semi_colon">, </span><span class="string">"Azul"</span><span class="semi_colon">, </span><span class="string">"Rojo"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">04</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">05</span>
-                                    <span class="function">while</span><span class="parenthesis">(</span>posiciones
-                                    <span class="operator"><</span><span class="number_value"> colores<span class="operator">.</span><span class="properties">length</span></span><span class="parenthesis">)</span>
-                                    <span class="brackets"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">05</span><span class="function">while</span><span class="parenthesis">(</span>posiciones <span class="operator">< </span><span class="number_value">colores<span class="operator">.</span><span class="properties">length</span></span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posiciones<span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posiciones<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">09</span>
-                                    posiciones<span class="operator">++</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">09</span>posiciones<span class="operator">++</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">11</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>0</samp>
-                            <samp>1</samp>
-                            <samp>2</samp>
-                            <samp>3</samp>
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> 3</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Recorriendo los valores de un array</h3>
+                    <section class="sect_content" id="valores-de-un-array">
+                        <h3>03. Valores de un array</h3>
 
-                        <p>
-                            Una vez definido el punto de partida y el <strong>array</strong> lo siguiente es definir el <strong>ciclo</strong> y definir la condicion, dentro de su escope realizamos la
-                            impresion por consola del array <strong>colores</strong> al cual pasamos entre llaves cuadradas la variable
+                        <!-- <p>
+                            Para iterar sobre los valores de un <strong>array</strong> comenzamos definiendo el punto de partida seguido del array lo siguiente es definir el <strong>ciclo</strong> y
+                            definir la condicion, dentro de su escope realizamos la impresion por consola del array <strong>colores</strong> al cual pasamos entre llaves cuadradas la variable
                             <strong>posiciones</strong>
-                        </p>
+                        </p> -->
+
+                        <p>texto pendiente</p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> posiciones
-                                    <span class="operator">=</span>
-                                    <span class="number">0</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="variable">let</span> colores
-                                    <span class="operator">=</span>
-                                    <span class="square">[</span><span class="string">"Blanco"</span><span class="semi_colon">,</span><span class="string">"Negro"</span><span class="semi_colon">,</span><span class="string">"Azul"</span><span class="semi_colon">,</span><span class="string">"Rojo"</span><span class="square">]</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>colores <span class="operator">= </span><span class="square">[</span><span class="string">"Blanco"</span><span class="semi_colon">, </span><span class="string">"Negro"</span><span class="semi_colon">, </span><span class="string">"Azul"</span><span class="semi_colon">, </span><span class="string">"Rojo"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">04</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">05</span>
-                                    <span class="function">while</span><span class="parenthesis">(</span>posiciones
-                                    <span class="operator"><</span><span class="number_value"> colores<span class="operator">.</span><span class="properties">length</span></span><span class="parenthesis">)</span>
-                                    <span class="brackets"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">05</span><span class="function">while</span><span class="parenthesis">(</span>posiciones <span class="operator"><</span><span class="number_value"> colores<span class="operator">.</span><span class="properties">length</span></span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>colores<span class="square">[</span>posiciones<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>colores<span class="square">[</span>posiciones<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">09</span>
-                                    posiciones<span class="operator">++</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">09</span>posiciones<span class="operator">++</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">11</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>Blanco</samp>
-                            <samp>Negro</samp>
-                            <samp>Azul</samp>
-                            <samp>Rojo</samp>
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Blanco</pre>
+                                <pre><span>></span> Negro</pre>
+                                <pre><span>></span> Azul</pre>
+                                <pre><span>></span> Rojo</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">While - Ciclos</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./ciclos-do-while">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "While - Ciclos") %>
                 </div>
             </main>
         </div>

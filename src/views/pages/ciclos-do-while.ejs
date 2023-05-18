@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Do - While</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Do - While</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -55,6 +68,49 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#definicion">01. Definicion</a></li>
+                                    <li><a href="#posiciones-de-un-array">02. Posiciones de un array</a></li>
+                                    <li><a href="#valores-de-un-array">03. Valores de un array</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -62,11 +118,11 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="definicion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Ejecucion del ciclo</h3>
+                        <h3>01. Definicion</h3>
 
                         <!--  
 							tag-p: en esta definimos el pararfo de la seccion
@@ -82,305 +138,155 @@
                             code_box: en esta definimos
                         -->
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> i
-                                    <span class="operator">=</span>
-                                    <span class="number">10</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>i <span class="operator">= </span><span class="number">10</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="function">do</span>
-                                    <span class="brackets"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">03</span><span class="function">do </span><span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">04</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">05</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    i<span class="operator">+=</span><span class="number"> 4</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">07</span>i<span class="operator">+=</span><span class="number"> 4</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">09</span>
-                                    <span class="brackets">}</span>
-                                    <span class="function">while</span><span class="parenthesis">(</span>i
-                                    <span class="operator"><=</span><span class="number"> 20</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">} </span><span class="function">while</span><span class="parenthesis">(</span>i <span class="operator"><= </span><span class="number">20</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <!--  
-                            output_box: en esta definimos la salida en respuesta al codigo
-                        -->
-                        <div class="output_box">
-                            <samp>10</samp>
-                            <samp>14</samp>
-                            <samp>18</samp>
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 10</pre>
+                                <pre><span>></span> 14</pre>
+                                <pre><span>></span> 18</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Recorriendo las posiciones de los valores de un array</h3>
+                    <section class="sect_content" id="posiciones-de-un-array">
+                        <h3>02. Posiciones de un array</h3>
 
-                        <p>
+                        <!-- <p>
                             Una vez definido el punto de partida y el <strong>array</strong> lo siguiente es definir la parte <strong>do</strong> del ciclo, dentro de su escope realizamos la impresion
                             por consola de la variable <strong>posiciones</strong> y en la linea continua la iteracion. Finalmente definimos la parte <strong>while</strong> del ciclo en la cual
                             definimos la condicion.
-                        </p>
+                        </p> -->
+
+                        <P>texto pendiente</P>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> posiciones
-                                    <span class="operator">=</span>
-                                    <span class="number">0</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="variable">let</span> dias
-                                    <span class="operator">=</span>
-                                    <span class="square">[</span><span class="string">"Lunes"</span><span class="semi_colon">,</span><span class="string">"Martes"</span><span class="semi_colon">,</span><span class="string">"Jueves"</span><span class="semi_colon">,</span><span class="string">"Sabado"</span><span class="square">]</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>dias <span class="operator">= </span><span class="square">[</span><span class="string">"Lunes"</span><span class="semi_colon">, </span><span class="string">"Martes"</span><span class="semi_colon">, </span><span class="string">"Jueves"</span><span class="semi_colon">, </span><span class="string">"Sabado"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">04</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="function">do</span>
-                                    <span class="brackets"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">05</span><span class="function">do</span><span class="brackets"> {</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posiciones<span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posiciones<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    posiciones<span class="operator">++</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">09</span>posiciones<span class="operator">++</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">09</span>
-                                    <span class="brackets">}</span>
-                                    <span class="function">while</span><span class="parenthesis">(</span>posiciones
-                                    <span class="operator"><</span> dias<span class="operator">.</span><span class="properties">length</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">} </span><span class="function">while</span><span class="parenthesis">(</span>posiciones <span class="operator">< </span>dias<span class="operator">.</span><span class="properties">length</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>0</samp>
-                            <samp>1</samp>
-                            <samp>2</samp>
-                            <samp>3</samp>
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> 3</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Recorriendo los valores de un array</h3>
+                    <section class="sect_content" id="valores-de-un-array">
+                        <h3>03. Valores de un array</h3>
 
-                        <p>
+                        <!-- <p>
                             Una vez definido el punto de partida y el <strong>array</strong> lo siguiente es definir la parte <strong>do</strong> del ciclo, dentro de su escope realizamos la impresion
                             por consola del array <strong>dias</strong> al cual pasamos entre llaves cuadradas la variable <strong>posiciones</strong> y en la liena continua la iteracion. Finalmente
                             definimos la parte <strong>while</strong> del ciclo en la cual definimos la condicion.
-                        </p>
+                        </p> -->
+
+                        <P>texto pendiente</P>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> posiciones
-                                    <span class="operator">=</span>
-                                    <span class="number">0</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="variable">let</span> dias
-                                    <span class="operator">=</span>
-                                    <span class="square">[</span><span class="string">"Lunes"</span><span class="semi_colon">,</span><span class="string">"Martes"</span><span class="semi_colon">,</span><span class="string">"Jueves"</span><span class="semi_colon">,</span><span class="string">"Sabado"</span><span class="square">]</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>dias <span class="operator">= </span><span class="square">[</span><span class="string">"Lunes"</span><span class="semi_colon">, </span><span class="string">"Martes"</span><span class="semi_colon">, </span><span class="string">"Jueves"</span><span class="semi_colon">, </span><span class="string">"Sabado"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">04</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">03</span>
-                                    <span class="function">do</span>
-                                    <span class="brackets"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">05</span><span class="function">do </span><span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dias<span class="square">[</span>posiciones<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dias<span class="square">[</span>posiciones<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    posiciones<span class="operator">++</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">09</span>posiciones<span class="operator">++</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">09</span>
-                                    <span class="brackets">}</span>
-                                    <span class="function">while</span><span class="parenthesis">(</span>posiciones
-                                    <span class="operator"><</span> dias<span class="operator">.</span><span class="properties">length</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">} </span><span class="function">while</span><span class="parenthesis">(</span>posiciones <span class="operator">< </span>dias<span class="operator">.</span><span class="properties">length</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>Lunes</samp>
-                            <samp>Martes</samp>
-                            <samp>Jueves</samp>
-                            <samp>Sabado</samp>
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Lunes</pre>
+                                <pre><span>></span> Martes</pre>
+                                <pre><span>></span> Jueves</pre>
+                                <pre><span>></span> Sabado</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Do - While - Ciclos</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./ciclos-while">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./ciclos-for">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Do - While - Ciclos") %>
                 </div>
             </main>
         </div>

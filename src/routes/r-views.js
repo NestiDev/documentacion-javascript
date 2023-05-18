@@ -427,9 +427,21 @@ router.get("/date", (req, res) => {
 /* 
 	______________________ temporizadores ______________________
 */
-router.get("/temporizadores", (req, res) => {
-    res.render("pages/temporizadores", {
-        title: "temporizadores",
+router.get("/temporizadores-setTimeout", (req, res) => {
+    res.render("pages/temporizadores-setTimeout", {
+        title: "temporizadores setTimeout",
+    });
+});
+
+router.get("/temporizadores-setInterval", (req, res) => {
+    res.render("pages/temporizadores-setInterval", {
+        title: "temporizadores setInterval",
+    });
+});
+
+router.get("/temporizadores-clearInterval", (req, res) => {
+    res.render("pages/temporizadores-clearInterval", {
+        title: "temporizadores clearInterval",
     });
 });
 
