@@ -39,7 +39,7 @@
                         <!--  
                             tag-h2: en esta definimos el titulo del banner
                         -->
-                        <h2>Arrow</h2>
+                        <h2>Sentencias</h2>
 
                         <!--  
                             tag-svg: en esta definimos el icono del temario, le 
@@ -59,10 +59,7 @@
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
-                    <p>
-                        Nos permiten definir un bloque de codigo el cual solo puede ser ejecutado despues de su invocacion, estas funciones se guardan en variables y reciben parametros como argumentos
-                        cuyos valores son definidos en su invocacion.
-                    </p>
+                    <p>Son dos sentencias que nos permiten definir el momento exacto en el cual deseamos interrumpir las iteraciones de un ciclo.</p>
                 </section>
 
                 <!--  
@@ -99,9 +96,8 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#definicion-e-invocacion">01. Definicion e invocacion</a></li>
-                                    <li><a href="#definicion-en-una-linea">02. Definicion en una linea</a></li>
-                                    <li><a href="#error-de-invocacion">03. Error de invocacion</a></li>
+                                    <li><a href="#break">01. Break</a></li>
+                                    <li><a href="#continue">02. Continue</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -114,13 +110,21 @@
                 -->
                 <div class="sections_container">
                     <!--  
-						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-                    <section class="sect_content" id="definicion-e-invocacion">
+                    <section class="sect_content" id="break">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Definicion e invocacion</h3>
+                        <h3>01. Break</h3>
+
+                        <!--  
+							tag-p: en esta definimos el pararfo de la seccion
+						-->
+                        <p>
+                            Para llevar a cabo esta accion <strong>break</strong> depende de una condicion la cual <strong>una vez cumplida</strong> detiene inmediatamente y de manera abrupta la
+                            ejecucion del <strong>ciclo</strong> En este caso el valor dado en la condicion detiene el ciclo en la impresion del numero 5.
+                        </p>
 
                         <!--  
                             code_box: en esta definimos
@@ -128,74 +132,84 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>tipo_funcion <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>i <span class="operator">= </span><span class="number">0</span><span class="semi_colon">; </span>i <span class="operator">< </span><span class="number">10</span><span class="semi_colon">; </span>i<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Funcion flecha sin parametros"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>i <span class="operator">=== </span><span class="number">6</span><span class="parenthesis">)</span><span class="variable"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">05</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span>tipo_funcion<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">07</span><span class="variable">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
                             -->
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> Funcion flecha sin parametros</pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> 3</pre>
+                                <pre><span>></span> 5</pre>
                             </div>
                         </div>
                     </section>
 
-                    <section class="sect_content" id="definicion-en-una-linea">
-                        <h3>02. Definicion en una linea</h3>
+                    <section class="sect_content" id="continue">
+                        <h3>02. Continue</h3>
+
+                        <p>
+                            Para llevar a cabo esta accion <strong>continue</strong> depende de una condicion la cual <strong>una vez cumplida</strong>
+                            omite el valor dado en la condicion y continua con la ejecucion del
+                            <strong>ciclo</strong> En este caso el valor omitido en la impresion es el numero 13.
+                        </p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>operacion <span class="operator">= </span><span class="functions">(<span class="parameters">numero_a</span><span class="semi_colon">, </span><span class="parameters">numero_b</span>) => </span><span class="string">`Total: <span class="symbols">${</span><span class="parameters">numero_a</span><span class="operator"> + </span><span class="parameters">numero_b</span><span class="symbols">}</span>`</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>i <span class="operator">= </span><span class="number">10</span><span class="semi_colon">; </span>i <span class="operator"><= </span><span class="number">16</span><span class="semi_colon">; </span>i<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>operacion<span class="functions">(<span class="number">40</span><span class="semi_colon">, </span><span class="number">60</span>)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-
-                            <div class="output_box">
-                                <pre></pre>
-                                <pre><span>></span> Total: 100</pre>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="sect_content" id="error-de-invocacion">
-                        <h3>03. Error de invocacion</h3>
-
-                        <div class="code_box">
-                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
-
-                            <pre><code><span class="index inner_index">01</span>cancelarCompra<span class="functions">(<span class="boolean">true</span>)</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">02</span></code></pre>
-
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>cancelarCompra <span class="operator">= </span><span class="functions">(<span class="parameters">solicitud</span>) => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>i <span class="operator">=== </span><span class="number">13</span><span class="parenthesis">)</span><span class="variable"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Compra cancelada"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">05</span><span class="properties">continue</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">07</span><span class="variable">}</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
+                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
                             <div class="output_box">
                                 <pre></pre>
-                                <pre class="error"><span>></span> Cannot access 'cancelarCompra' before initialization</pre>
+                                <pre><span>></span> 10</pre>
+                                <pre><span>></span> 11</pre>
+                                <pre><span>></span> 12</pre>
+                                <pre><span>></span> 14</pre>
+                                <pre><span>></span> 15</pre>
+                                <pre><span>></span> 16</pre>
                             </div>
                         </div>
                     </section>
@@ -208,13 +222,13 @@
                             tag-a: en estas definimos el enlace de redireccionamiento
                             a las diferentes secciones y el icono de redireccion
                         -->
-                        <a href="./funciones-expresadas">
+                        <a href="./ciclos-forEach">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
                             </svg>
                         </a>
 
-                        <a href="./funciones-callback">
+                        <a class="not_next">
                             <svg viewBox="0 0 24 24">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                             </svg>
@@ -224,7 +238,7 @@
                     <!--  
                         incluimos el partial footer.ejs
                     -->
-                    <%- include('../partials/footer', titleSection = "Arrow - Funciones") %>
+                    <%- include('../partials/footer', titleSection = "Sentencias - Ciclos") %>
                 </div>
             </main>
         </div>

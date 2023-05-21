@@ -608,6 +608,7 @@ svg {
 				inferior en este elemento
 			*/
             .description_paragraph {
+                text-align: justify;
                 font-size: 1.5rem;
                 line-height: 1.5;
                 margin-bottom: 30px;
@@ -871,8 +872,7 @@ svg {
                     }
 
                     pre {
-                        &:first-of-type,
-                        &:last-of-type {
+                        &:first-of-type {
                             margin-bottom: 28px;
                         }
 
@@ -1001,7 +1001,7 @@ svg {
 
                             &:first-of-type {
                                 border-bottom: 1px solid #171b24;
-                                margin-bottom: 20px;
+                                margin: 36px 0 20px;
                             }
 
                             span {

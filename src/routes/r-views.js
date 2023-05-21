@@ -107,9 +107,9 @@ router.get("/ciclos-forEach", (req, res) => {
     });
 });
 
-router.get("/ciclos-break-continue", (req, res) => {
-    res.render("pages/ciclos-break-continue", {
-        title: "ciclos break - continue",
+router.get("/ciclos-sentencias", (req, res) => {
+    res.render("pages/ciclos-sentencias", {
+        title: "ciclos sentencias",
     });
 });
 
@@ -166,15 +166,28 @@ router.get("/clases-declaracion", (req, res) => {
         title: "clases declaracion",
     });
 });
+
+router.get("/clases-manipulacion", (req, res) => {
+    res.render("pages/clases-manipulacion", {
+        title: "clases manipulacion",
+    });
+});
+
+router.get("/clases-destructuring", (req, res) => {
+    res.render("pages/clases-destructuring", {
+        title: "clases destructuring",
+    });
+});
+
 router.get("/clases-herencia", (req, res) => {
     res.render("pages/clases-herencia", {
         title: "clases herencia",
     });
 });
 
-router.get("/clases-consola", (req, res) => {
-    res.render("pages/clases-consola", {
-        title: "clases consola",
+router.get("/clases-metodos", (req, res) => {
+    res.render("pages/clases-metodos", {
+        title: "clases metodos",
     });
 });
 

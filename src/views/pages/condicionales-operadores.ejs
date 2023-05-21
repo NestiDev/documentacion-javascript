@@ -99,9 +99,10 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#operador-and">01. Operador AND - &&</a></li>
-                                    <li><a href="#operador-or">02. Operador OR - ||</a></li>
-                                    <li><a href="#operador-not">03. Operador NOT - !</a></li>
+                                    <li><a href="#and">01. AND - &&</a></li>
+                                    <li><a href="#or">02. OR - ||</a></li>
+                                    <li><a href="#not">03. NOT - !=</a></li>
+                                    <li><a href="#not-exist">04. NOT EXIST - !</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -116,7 +117,7 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content" id="operador-and">
+                    <section class="sect_content" id="and">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
@@ -173,7 +174,7 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="operador-or">
+                    <section class="sect_content" id="or">
                         <h3>02. OR - ||</h3>
 
                         <p>
@@ -221,8 +222,8 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="operador-not">
-                        <h3>03. NOT - !</h3>
+                    <section class="sect_content" id="not">
+                        <h3>03. NOT - !=</h3>
 
                         <p>texto pendiente</p>
 
@@ -254,6 +255,39 @@
                             <div class="output_box">
                                 <pre></pre>
                                 <pre><span>></span> La frase es descriminatoria</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="not-exist">
+                        <h3>04. NOT EXIST - !</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="properties">if</span><span class="parenthesis">(</span><span class="operator">!</span>frase<span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La variable frase no esta definida"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="properties"> else</span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El valor de la variable frase es: "</span><span class="semi_colon">, </span>frase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> La variable frase no esta definida</pre>
                             </div>
                         </div>
                     </section>

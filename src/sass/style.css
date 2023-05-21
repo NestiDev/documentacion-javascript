@@ -593,6 +593,7 @@ svg {
   */
 }
 .components_container .main_components .description_component .description_paragraph {
+  text-align: justify;
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -825,7 +826,7 @@ svg {
 .components_container .main_components .sections_container .sect_content .code_box::-webkit-scrollbar-thumb {
   background-color: #434a58;
 }
-.components_container .main_components .sections_container .sect_content .code_box pre:first-of-type, .components_container .main_components .sections_container .sect_content .code_box pre:last-of-type {
+.components_container .main_components .sections_container .sect_content .code_box pre:first-of-type {
   margin-bottom: 28px;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code {
@@ -926,7 +927,7 @@ svg {
 }
 .components_container .main_components .sections_container .sect_content .code_box .output_box pre:first-of-type {
   border-bottom: 1px solid #171b24;
-  margin-bottom: 20px;
+  margin: 36px 0 20px;
 }
 .components_container .main_components .sections_container .sect_content .code_box .output_box pre span {
   color: #4c525d;

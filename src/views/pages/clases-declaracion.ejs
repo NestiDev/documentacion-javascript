@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Declaracion</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Declaracion</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -53,6 +66,52 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#definicion-de-una-clase">01. Definicion de una clase</a></li>
+                                    <li><a href="#metodo-constructor">02. Metodo constructor</a></li>
+                                    <li><a href="#definicion-de-un-objeto">03. Definicion de un objeto</a></li>
+                                    <li><a href="#reutilizacion-de-una-clase">04. Reutilizacion de una clase</a></li>
+                                    <li><a href="#definicion-de-un-metodo">05. Definicion de un metodo</a></li>
+                                    <li><a href="#ejecucion-de-un-metodo">06. Ejecucion de un metodo</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -60,11 +119,11 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="definicion-de-una-clase">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Definicion del constructor</h3>
+                        <h3>01. Definicion de una clase</h3>
 
                         <p>
                             Inicia con la definicion de la palabra reservada <strong>constructor</strong>
@@ -75,57 +134,24 @@
                             code_box: en esta definimos
                         -->
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">class</span> Vehiculo
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Vehiculo <span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span>
-                                    <span class="functions"> constructor()</span> <span class="keyword"> {}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span>disponible <span class="operator">= </span><span class="boolean">true</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span>precio <span class="operator">= </span><span class="number">35250000</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">05</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
                         </div>
-
-                        <!--  
-                            output_box: en esta definimos la salida en respuesta al codigo
-                        -->
-                        <div class="output_box"></div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Instanciacion de parametros</h3>
+                    <section class="sect_content" id="metodo-constructor">
+                        <h3>02. Metodo constructor</h3>
 
                         <p>
                             Nos permite almacenar los valores que se definen en la creacion del <strong>objeto</strong> estos seran asignados a las diferentes claves definidas en la
@@ -133,87 +159,38 @@
                         </p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">class</span> Vehiculo
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Vehiculo <span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span>
-                                    <span class="functions"> constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">)</span> <span class="keyword"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span>disponible <span class="operator">= </span><span class="boolean">true</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span>precio <span class="operator">= </span><span class="number">35250000</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">05</span>
-                                    <span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">05</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">06</span>
-                                    <span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">06</span><span class="functions">constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">07</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">07</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">08</span>
-                                    <span class="keyword">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">08</span><span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">09</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">09</span><span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index outer_index">10</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index inner_index">12</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
                         </div>
-
-                        <div class="output_box"></div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Creacion de un objeto</h3>
+                    <section class="sect_content" id="definicion-de-un-objeto">
+                        <h3>03. Definicion de un objeto</h3>
 
                         <p>
                             para crear un <strong>objeto</strong> debemos hacer uso de la palabra reservada <strong>new</strong> seguido de la clase <strong>Vehiculo</strong> y dentro de los
@@ -222,117 +199,51 @@
                         </p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">class</span> Vehiculo
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Vehiculo<span class="brackets"> {</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span>
-                                    <span class="functions"> constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">)</span> <span class="keyword"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span>disponible <span class="operator">= </span><span class="boolean">true</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span>precio <span class="operator">= </span><span class="number">35250000</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">05</span>
-                                    <span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">05</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">06</span>
-                                    <span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">06</span><span class="functions">constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">)</span><span class="keyword"> {</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">07</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">07</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">08</span>
-                                    <span class="keyword">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">08</span><span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">09</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">09</span><span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">11</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">11</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">12</span>
-                                    <span class="variable">let</span> nissan
-                                    <span class="operator">=</span>
-                                    <span class="operator">new</span> Vehiculo<span class="parenthesis">(</span><span class="string">"Centra"</span><span class="semi_colon">,</span> <span class="number">2023</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">12</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">13</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">13</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">14</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Tengo un Nissan </span><span class="symbols">${</span>nissan<span class="operator">.</span>marca<span class="symbols">}</span><span class="string"> modelo </span><span class="symbols">${</span>nissan<span class="operator">.</span>modelo<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index">14</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>Tengo un Nissan Centra modelo 2023</samp>
+                            <pre><code><span class="index inner_index">15</span><span class="variable">let </span>nissan <span class="operator">= </span><span class="operator">new </span>Vehiculo<span class="parenthesis">(</span><span class="string">"Centra"</span><span class="semi_colon">,</span> <span class="number">2023</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">16</span></code></pre>
+
+                            <pre><code><span class="index inner_index">17</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Nissan </span><span class="symbols">${</span>nissan<span class="operator">.</span>marca<span class="symbols">}</span><span class="string"> modelo </span><span class="symbols">${</span>nissan<span class="operator">.</span>modelo<span class="symbols">}</span><span class="string"> precio </span><span class="symbols">${</span>nissan<span class="operator">.</span>precio<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Nissan Centra modelo 2023 precio 35250000</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>05. Creacion de multiples objetos</h3>
+                    <section class="sect_content" id="reutilizacion-de-una-clase">
+                        <h3>04. Reutilizacion de una clase</h3>
 
                         <p>
                             Gracias a la declaracion de una <strong>clase</strong> podemos crear infinidad de <strong>objetos</strong> partiendo desde la misma base siempre y cuando sus claves
@@ -340,149 +251,60 @@
                         </p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">class</span> Vehiculo
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Vehiculo <span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span>
-                                    <span class="functions"> constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">)</span> <span class="keyword"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span>disponible <span class="operator">= </span><span class="boolean">true</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span>precio <span class="operator">= </span><span class="number">35250000</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">05</span>
-                                    <span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">05</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">06</span>
-                                    <span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">06</span><span class="functions">constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">07</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">07</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">08</span>
-                                    <span class="keyword">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">05</span><span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">09</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">08</span><span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">09</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">11</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">10</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">12</span>
-                                    <span class="variable">let</span> nissan
-                                    <span class="operator">=</span>
-                                    <span class="operator">new</span> Vehiculo<span class="parenthesis">(</span><span class="string">"Centra"</span><span class="semi_colon">,</span> <span class="number">2023</span><span class="parenthesis">)</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">11</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">13</span>
-                                    honda
-                                    <span class="operator">=</span>
-                                    <span class="operator">new</span> Vehiculo<span class="parenthesis">(</span><span class="string">"Civic"</span><span class="semi_colon">,</span> <span class="number">2018</span><span class="parenthesis">)</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">12</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">15</span>
-                                    kia
-                                    <span class="operator">=</span>
-                                    <span class="operator">new</span> Vehiculo<span class="parenthesis">(</span><span class="string">"Cerato"</span><span class="semi_colon">,</span> <span class="number">2020</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">13</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">16</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">14</span><span class="variable">let </span>honda <span class="operator">= </span><span class="operator">new </span>Vehiculo<span class="parenthesis">(</span><span class="string">"Civic"</span><span class="semi_colon">,</span> <span class="number">2018</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">17</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Nissan </span><span class="symbols">${</span>nissan<span class="operator">.</span>marca<span class="symbols">}</span><span class="string"> modelo </span><span class="symbols">${</span>nissan<span class="operator">.</span>modelo<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">18</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Honda </span><span class="symbols">${</span>honda<span class="operator">.</span>marca<span class="symbols">}</span><span class="string"> modelo </span><span class="symbols">${</span>honda<span class="operator">.</span>modelo<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">19</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Kia </span><span class="symbols">${</span>kia<span class="operator">.</span>marca<span class="symbols">}</span><span class="string"> modelo </span><span class="symbols">${</span>kia<span class="operator">.</span>modelo<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index">15</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>Nissan Centra modelo 2023</samp>
-                            <samp>Honda Civic modelo 2018</samp>
-                            <samp>Kia Cerato modelo 2020</samp>
+                            <pre><code><span class="index inner_index">16</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Honda </span><span class="symbols">${</span>honda<span class="operator">.</span>marca<span class="symbols">}</span><span class="string"> modelo </span><span class="symbols">${</span>honda<span class="operator">.</span>modelo<span class="symbols">}</span><span class="string"> precio </span><span class="symbols">${</span>honda<span class="operator">.</span>precio<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">17</span></code></pre>
+
+                            <pre><code><span class="index inner_index">18</span><span class="variable">let </span>kia <span class="operator">= </span><span class="operator">new </span>Vehiculo<span class="parenthesis">(</span><span class="string">"Cerato"</span><span class="semi_colon">,</span> <span class="number">2020</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">19</span></code></pre>
+
+                            <pre><code><span class="index inner_index">20</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Kia </span><span class="symbols">${</span>kia<span class="operator">.</span>marca<span class="symbols">}</span><span class="string"> modelo </span><span class="symbols">${</span>kia<span class="operator">.</span>modelo<span class="symbols">}</span><span class="string"> precio </span><span class="symbols">${</span>kia<span class="operator">.</span>precio<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Honda Civic modelo 2018 precio 35250000</pre>
+                                <pre><span>></span> Kia Cerato modelo 2020 precio 35250000</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>06. Definicion de un metodo</h3>
+                    <section class="sect_content" id="definicion-de-un-metodo">
+                        <h3>05. Definicion de un metodo</h3>
 
                         <p>
                             Consisten en <strong>acciones</strong> que son o pueden ser realizadas por el objeto. Como regla general se suele definir el nombre de estos metodos con verbos en
@@ -490,100 +312,42 @@
                         </p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">class</span> Vehiculo
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Vehiculo <span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span>
-                                    <span class="functions"> constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">)</span> <span class="keyword"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span>disponible <span class="operator">= </span><span class="boolean">true</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span>precio <span class="operator">= </span><span class="number">35250000</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">05</span>
-                                    <span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">05</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">06</span>
-                                    <span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">06</span><span class="functions">constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">07</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">07</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">08</span>
-                                    <span class="keyword">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">08</span><span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">09</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">09</span><span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">10</span>
-                                    <span class="functions">encender()</span> <span class="keyword"> {}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">11</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">11</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">12</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">12</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="functions">encender()</span><span class="keyword"> {}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
                         </div>
-
-                        <div class="output_box"></div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>07. Ejecucion del metodo</h3>
+                    <section class="sect_content" id="ejecucion-de-un-metodo">
+                        <h3>06. Ejecucion de un metodo</h3>
 
                         <p>
                             Para acceder a los metodos de una clase debemos hacer uso de la variable que almacena al nuevo <strong>objeto</strong> que fue creado seguido de la
@@ -592,158 +356,86 @@
                         </p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">class</span> Vehiculo
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Vehiculo <span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span>
-                                    <span class="functions"> constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">)</span> <span class="keyword"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span>disponible <span class="operator">= </span><span class="boolean">true</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span>precio <span class="operator">= </span><span class="number">35250000</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">05</span>
-                                    <span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">05</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">06</span>
-                                    <span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">06</span><span class="functions">constructor(</span><span class="number">marca</span><span class="semi_colon">,</span> <span class="number">modelo</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">07</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">07</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">08</span>
-                                    <span class="keyword">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">08</span><span class="operator">this.</span>marca <span class="operator">= </span><span class="number">marca</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">09</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">09</span><span class="operator">this.</span>modelo <span class="operator">= </span><span class="number">modelo</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">10</span>
-                                    <span class="functions">encender(</span><span class="number">cualidad</span><span class="functions">)</span> <span class="keyword"> {</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">11</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">11</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">12</span>
-                                    <span class="functions">return</span> <span class="string">`Mi Renault </span><span class="symbols">${</span><span class="operator">this.</span>marca<span class="symbols">}</span><span class="string"> tiene un sistema de </span><span class="symbols">${</span><span class="number">cualidad</span><span class="symbols">}</span><span class="string">`</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">12</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">13</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">13</span><span class="functions">encender(</span><span class="number">cualidad</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">14</span>
-                                    <span class="keyword">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">14</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">15</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_doble_index">15</span><span class="functions">return</span> <span class="string">`Mi Renault </span><span class="symbols">${</span><span class="operator">this.</span>marca<span class="symbols">}</span><span class="string"> tiene un boton de </span><span class="symbols">${</span><span class="number">cualidad</span><span class="symbols">}</span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">16</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">16</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">17</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">17</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">18</span>
-                                    <span class="variable">let</span> renault
-                                    <span class="operator">=</span>
-                                    <span class="operator">new</span> Vehiculo<span class="parenthesis">(</span><span class="string">"Clio"</span><span class="semi_colon">,</span> <span class="number">2012</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">18</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index">19</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">19</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">20</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>renault<span class="operator">.</span><span class="functions">encender(</span><span class="string">"encendido automatico"</span><span class="functions">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index">20</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>Mi Renault Clio tiene un sistema de encendido automatico</samp>
+                            <pre><code><span class="index inner_index">21</span><span class="variable">let </span>renault <span class="operator">= </span><span class="operator">new </span>Vehiculo<span class="parenthesis">(</span><span class="string">"Clio"</span><span class="semi_colon">,</span> <span class="number">2012</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">22</span></code></pre>
+
+                            <pre><code><span class="index inner_index">23</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>renault<span class="operator">.</span><span class="functions">encender(</span><span class="string">"encendido automatico"</span><span class="functions">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Mi Renault Clio tiene un boton de encendido automatico</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Declaracion - Clases</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./clases-manipulacion">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Declaracion - Clases") %>
                 </div>
             </main>
         </div>

@@ -39,7 +39,7 @@
                         <!--  
                             tag-h2: en esta definimos el titulo del banner
                         -->
-                        <h2>Break - Continue</h2>
+                        <h2>Destructuring</h2>
 
                         <!--  
                             tag-svg: en esta definimos el icono del temario, le 
@@ -59,7 +59,7 @@
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
-                    <p>Son dos sentencias que nos permiten definir el momento exacto en el cual deseamos interrumpir las iteraciones de un ciclo.</p>
+                    <p>texto pendiente</p>
                 </section>
 
                 <!--  
@@ -96,8 +96,7 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#detener-el-ciclo">01. Detener el ciclo</a></li>
-                                    <li><a href="#omitir-un-valor-del-ciclo">02. Omitir un valor del ciclo</a></li>
+                                    <li><a href="#implementacion">01. Implementacion</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -110,106 +109,56 @@
                 -->
                 <div class="sections_container">
                     <!--  
-						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content" id="detener-el-ciclo">
+                    <section class="sect_content" id="implementacion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Detener el ciclo</h3>
+                        <h3>01. Implementacion</h3>
 
-                        <!--  
-							tag-p: en esta definimos el pararfo de la seccion
-						-->
-                        <p>
-                            Para llevar a cabo esta accion <strong>break</strong> depende de una condicion la cual <strong>una vez cumplida</strong> detiene inmediatamente y de manera abrupta la
-                            ejecucion del <strong>ciclo</strong> En este caso el valor dado en la condicion detiene el ciclo en la impresion del numero 5.
-                        </p>
+                        <p>texto pendiente</p>
 
-                        <!--  
-                            code_box: en esta definimos
-                        -->
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>i <span class="operator">= </span><span class="number">0</span><span class="semi_colon">; </span>i <span class="operator">< </span><span class="number">10</span><span class="semi_colon">; </span>i<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Motocicleta<span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>i <span class="operator">=== </span><span class="number">6</span><span class="parenthesis">)</span><span class="variable"> {</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span>marca <span class="operator">= </span><span class="string">"Honda"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">05</span><span class="properties">break</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor(</span><span class="number">color</span><span class="functions">)</span><span class="keyword"> {</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index outer_index">07</span><span class="variable">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="operator">this.</span>color <span class="operator">= </span><span class="number">color</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">09</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">10</span></code></pre>
 
                             <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <!--  
-                                output_box: en esta definimos la salida en respuesta al codigo
-                            -->
-                            <div class="output_box">
-                                <pre></pre>
-                                <pre><span>></span> 0</pre>
-                                <pre><span>></span> 1</pre>
-                                <pre><span>></span> 2</pre>
-                                <pre><span>></span> 3</pre>
-                                <pre><span>></span> 5</pre>
-                            </div>
-                        </div>
-                    </section>
+                            <pre><code><span class="index">12</span></code></pre>
 
-                    <section class="sect_content" id="omitir-un-valor-del-ciclo">
-                        <h3>02. Omitir un valor del ciclo</h3>
+                            <pre><code><span class="index inner_index">13</span><span class="variable">let </span>motocicleta1 <span class="operator">= </span><span class="operator">new </span>Motocicleta<span class="parenthesis">(</span><span class="string">"Blanco perla"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <p>
-                            Para llevar a cabo esta accion <strong>continue</strong> depende de una condicion la cual <strong>una vez cumplida</strong>
-                            omite el valor dado en la condicion y continua con la ejecucion del
-                            <strong>ciclo</strong> En este caso el valor omitido en la impresion es el numero 13.
-                        </p>
+                            <pre><code><span class="index">14</span></code></pre>
 
-                        <div class="code_box">
-                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+                            <pre><code><span class="index inner_index">15</span><span class="variable">let </span><span class="brackets">{</span>marca<span class="semi_colon">, </span>color<span class="brackets">} </span><span class="operator">= </span>motocicleta1<span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>i <span class="operator">= </span><span class="number">10</span><span class="semi_colon">; </span>i <span class="operator"><= </span><span class="number">16</span><span class="semi_colon">; </span>i<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index">16</span></code></pre>
 
-                            <pre><code><span class="index">02</span></code></pre>
-
-                            <pre><code><span class="index outer_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>i <span class="operator">=== </span><span class="number">13</span><span class="parenthesis">)</span><span class="variable"> {</span></code></pre>
-
-                            <pre><code><span class="index">04</span></code></pre>
-
-                            <pre><code><span class="index outer_doble_index">05</span><span class="properties">continue</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">06</span></code></pre>
-
-                            <pre><code><span class="index outer_index">07</span><span class="variable">}</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">08</span></code></pre>
-
-                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">10</span></code></pre>
-
-                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Tengo una motocicleta </span><span class="symbols">${</span>marca<span class="symbols">}</span><span class="string"> de color </span><span class="symbols">${</span>color<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> 10</pre>
-                                <pre><span>></span> 11</pre>
-                                <pre><span>></span> 12</pre>
-                                <pre><span>></span> 14</pre>
-                                <pre><span>></span> 15</pre>
-                                <pre><span>></span> 16</pre>
+                                <pre><span>></span> Tengo una motocicleta Honda de color Blanco perla</pre>
                             </div>
                         </div>
                     </section>
@@ -222,13 +171,13 @@
                             tag-a: en estas definimos el enlace de redireccionamiento
                             a las diferentes secciones y el icono de redireccion
                         -->
-                        <a href="./ciclos-forEach">
+                        <a href="./clases-manipulacion">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
                             </svg>
                         </a>
 
-                        <a class="not_next">
+                        <a href="./clases-herencia">
                             <svg viewBox="0 0 24 24">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                             </svg>
@@ -238,7 +187,7 @@
                     <!--  
                         incluimos el partial footer.ejs
                     -->
-                    <%- include('../partials/footer', titleSection = "Break - Continue - Ciclos") %>
+                    <%- include('../partials/footer', titleSection = "Destructuring - Clases") %>
                 </div>
             </main>
         </div>

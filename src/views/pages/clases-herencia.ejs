@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Herencia</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Herencia</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -54,6 +67,49 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#clase-padre">01. Clase padre</a></li>
+                                    <li><a href="#clase-hija">02. Clase Hija</a></li>
+                                    <li><a href="#definicion-y-ejecucion">03. Definicion y Ejecucion</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -61,48 +117,152 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="clase-padre">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Estructura</h3>
+                        <h3>01. Clase padre</h3>
 
-                        <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/clases/herencia/herencia1.png" alt="estructura" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Fia <span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span>enteRegulador <span class="operator">= </span><span class="string">"Fia"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor(</span><span class="number">escuderias</span><span class="semi_colon">, </span><span class="number">directores</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">07</span><span class="operator">this.</span>escuderia <span class="operator">= </span><span class="number">escuderias</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">08</span><span class="operator">this.</span>director <span class="operator">= </span><span class="number">directores</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index outer_index">10</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index outer_index">12</span><span class="functions">registrarEscuderia() </span><span class="keyword">{</span></code></pre>
+
+                            <pre><code><span class="index">13</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">14</span><span class="functions">return</span> <span class="string">`La escuderia </span><span class="symbols">${</span><span class="operator">this.</span>escuderia<span class="symbols">} </span><span class="string">ha sido registrada`</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">15</span></code></pre>
+
+                            <pre><code><span class="index outer_index">16</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">17</span></code></pre>
+
+                            <pre><code><span class="index inner_index">18</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Definicion de metodos</h3>
+                    <section class="sect_content" id="clase-hija">
+                        <h3>02. Clase hija</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/clases/herencia/herencia2.png" alt="definicion de metodos" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">19</span><span class="variable">class </span>Escuderia <span class="parenthesis">extends </span>Fia <span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">20</span></code></pre>
+
+                            <pre><code><span class="index">21</span></code></pre>
+
+                            <pre><code><span class="index outer_index">22</span><span class="functions">constructor(</span><span class="number">escuderia</span><span class="semi_colon">, </span><span class="number">director</span><span class="semi_colon">, </span><span class="number">pilotos</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
+
+                            <pre><code><span class="index">23</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">24</span><span class="operator">super</span><span class="parenthesis">(</span><span class="number">escuderia</span><span class="semi_colon">, </span><span class="number">director</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">25</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">26</span><span class="operator">this.</span>pilotos <span class="operator">= </span><span class="number">pilotos</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">27</span></code></pre>
+
+                            <pre><code><span class="index outer_index">28</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">29</span></code></pre>
+
+                            <pre><code><span class="index outer_index">30</span><span class="functions">presentarMonoplaza() </span><span class="keyword">{</span></code></pre>
+
+                            <pre><code><span class="index">31</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">32</span><span class="functions">return</span> <span class="string">`El monoplaza sera presentado por el piloto </span><span class="symbols">${</span><span class="operator">this.</span>pilotos<span class="square">[</span>0<span class="square">]</span><span class="symbols">} </span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">33</span></code></pre>
+
+                            <pre><code><span class="index outer_index">34</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">35</span></code></pre>
+
+                            <pre><code><span class="index inner_index">36</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Llamado de los metodos</h3>
+                    <section class="sect_content" id="definicion-y-ejecucion">
+                        <h3>03. Definicion y ejecucion</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/clases/herencia/herencia3.png" alt="llamado de los metodos" />
-                        </div>
-                    </section>
+                        <p>texto pendiente</p>
 
-                    <section class="sect_content">
-                        <h3>04. Constructor en el heredero</h3>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/clases/herencia/herencia4.png" alt="constructor en el heredero" />
+                            <pre><code><span class="index inner_index">37</span><span class="variable">const </span>escuderia1 <span class="operator">= </span><span class="operator">new </span>Escuderia<span class="parenthesis">(</span><span class="string">"RedBull"</span><span class="semi_colon">,</span> <span class="string">"Chris Horner"</span><span class="semi_colon">, </span><span class="square">[</span><span class="string">"Max Verstapen"</span><span class="semi_colon">, </span><span class="string">"Sergio Perez"</span><span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">38</span></code></pre>
+
+                            <pre><code><span class="index inner_index">39</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>escuderia1<span class="operator">.</span><span class="functions">registrarEscuderia()</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">40</span></code></pre>
+
+                            <pre><code><span class="index inner_index">41</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>escuderia1<span class="operator">.</span><span class="functions">presentarMonoplaza()</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> La escuderia RedBull ha sido registrada</pre>
+                                <pre><span>></span> El Monoplaza sera presentado por el piloto Max Verstapen</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Herencia - Clases</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./clases-destructuring">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./classes-metodos">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Herencia - Clases") %>
                 </div>
             </main>
         </div>
