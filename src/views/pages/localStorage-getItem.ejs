@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>getItem</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>GetItem</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -53,6 +66,52 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#valores-almacenados">01. Valores almacenados</a></li>
+                                    <li><a href="#obteniendo-valores1">02. Obteniendo valores</a></li>
+                                    <li><a href="#objetos-almacenados">03. Objetos almacenados</a></li>
+                                    <li><a href="#obteniendo-valores2">04. Obteniendo valores</a></li>
+                                    <li><a href="#arrays-almacenados">05. Arrays almacenados</a></li>
+                                    <li><a href="#obteniendo-valores3">06. Obteniendo valores</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -60,64 +119,171 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="valores-almacenados">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Recuperando un valor del almacenamiento local - getItem</h3>
+                        <h3>01. Valores almacenados</h3>
 
-                        <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/getItem/g01.png" alt="recuperando un valor del almacenamiento local - getItem" />
+                        <p>texto pendiente</p>
+
+                        <div class="img_box">
+                            <img src="../../assets/images/localStorage/ls01.png" alt="valores almacenados" />
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Validacion del valor recuperado</h3>
+                    <section class="sect_content" id="obteniendo-valores1">
+                        <h3>02. Obteniendo valores</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/getItem/g02.png" alt="validacion del valor recuperado" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>obtenerUsuario <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="variable">let </span>nombre <span class="operator">= </span><span class="console">localStorage</span><span class="methods">.getItem(</span><span class="string">"usuario"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="variable">let </span>edad <span class="operator">= </span><span class="console">localStorage</span><span class="methods">.getItem(</span><span class="string">"edad"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="variable">let </span>estudiante <span class="operator">= </span><span class="console">localStorage</span><span class="methods">.getItem(</span><span class="string">"estudiante"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>nombre<span class="semi_colon">, </span>edad<span class="semi_colon">, </span>estudiante<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span>obtenerUsuario<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Mariana 22 true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Recuperando un arreglo del almacenamiento local</h3>
+                    <section class="sect_content" id="objetos-almacenados">
+                        <h3>03. Objetos almacenados</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/getItem/a01.png" alt="recuperando un arreglo del almacenamiento local" />
+                        <p>texto pendiente</p>
+
+                        <div class="img_box">
+                            <img src="../../assets/images/localStorage/ls02.png" alt="objetos almacenados" />
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>04. Validacion de los valores recuperados</h3>
+                    <section class="sect_content" id="obteniendo-valores2">
+                        <h3>04. Obteniendo valores</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/getItem/a02.png" alt="validacion de los valores recuperados" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>obtenerUsuario <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="console">localStorage</span><span class="methods">.getItem(</span><span class="string">"usuario"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="variable">let </span>convertirEnObjeto <span class="operator">= </span>JSON<span class="methods">.parse(</span>usuario<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertirEnObjeto<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index inner_index">08</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index inner_index">10</span>obtenerUsuario<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> {</pre>
+                                <pre><span>></span>     nombre: 'Sofia',</pre>
+                                <pre><span>></span>     edad: 19,</pre>
+                                <pre><span>></span>     estudiante: false</pre>
+                                <pre><span>></span> }</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>05. Recuperando un objeto del almacenamiento local</h3>
+                    <section class="sect_content" id="arrays-almacenados">
+                        <h3>05. Arrays almacenados</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/getItem/o01.png" alt="recuperando un objeto del almacenamiento local" />
+                        <p>texto pendiente</p>
+
+                        <div class="img_box">
+                            <img src="../../assets/images/localStorage/ls03.png" alt="arrays almacenados" />
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>06. Validacion de los valores recuperados</h3>
+                    <section class="sect_content" id="obteniendo-valores3">
+                        <h3>06. Obteniendo valores</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/getItem/o02.png" alt="validacion de los valores recuperados" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>obtenerUsuario <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="console">localStorage</span><span class="methods">.getItem(</span><span class="string">"usuario"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="variable">let </span>convertirEnArray <span class="operator">= </span>JSON<span class="methods">.parse(</span>usuario<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertirEnArray<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index inner_index">08</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index inner_index">10</span>obtenerUsuario<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Andres', 33, false ] </pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">GetItem - LocalStorage</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./localStorage-setItem">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./localStorage-removeItem">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "GetItem - LocalStorage") %>
                 </div>
             </main>
         </div>

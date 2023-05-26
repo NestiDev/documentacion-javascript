@@ -39,7 +39,7 @@
                         <!--  
                             tag-h2: en esta definimos el titulo del banner
                         -->
-                        <h2>Clear</h2>
+                        <h2>Generales</h2>
 
                         <!--  
                             tag-svg: en esta definimos el icono del temario, le 
@@ -59,7 +59,7 @@
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
-                    <p>Nos permite limpiar todos los valores que se encuentren guardados en el almacenamiento local, este metodo no requiere de parametros para llevar a cabo la ejecucion.</p>
+                    <p>texto pendiente</p>
                 </section>
 
                 <!--  
@@ -97,8 +97,8 @@
                                 -->
                                 <ul>
                                     <li><a href="#valores-almacenados">01. Valores almacenados</a></li>
-                                    <li><a href="#limpiando-el-almacenamiento">02. Limpiando el almacenamiento</a></li>
-                                    <li><a href="#almacenamiento-limpio">03. Almacenamiento limpio</a></li>
+                                    <li><a href="#propiedad-length">02. Propiedad length</a></li>
+                                    <li><a href="#metodo-key">03. Metodo key</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -126,37 +126,69 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="limpiando-el-almacenamiento">
-                        <h3>02. Limpiando el almacenamiento</h3>
+                    <section class="sect_content" id="propiedad-length">
+                        <h3>02. Propiedad length</h3>
 
                         <p>texto pendiente</p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>limpiarAlmacenamiento <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>almacenamiento <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">localStorage</span><span class="methods">.clear()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="variable">let </span>valoresAlmacenados <span class="operator">= </span><span class="console">localStorage</span><span class="functions">.length</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>valoresAlmacenados<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span>limpiarAlmacenamiento<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span>almacenamiento<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 3</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content" id="almacenamiento-limpio">
-                        <h3>03. Almacenamiento limpio</h3>
+                    <section class="sect_content" id="metodo-key">
+                        <h3>02. Metodo key</h3>
 
                         <p>texto pendiente</p>
 
-                        <div class="img_box">
-                            <img src="../../assets/images/localStorage/ls04.png" alt="almacenamiento limpio" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>almacenamiento <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="variable">let </span>clavePosicion <span class="operator">= </span><span class="console">localStorage</span><span class="functions">.key(</span><span class="number">1</span><span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>clavePosicion<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span>almacenamiento<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> edad</pre>
+                            </div>
                         </div>
                     </section>
 
@@ -168,13 +200,13 @@
                             tag-a: en estas definimos el enlace de redireccionamiento
                             a las diferentes secciones y el icono de redireccion
                         -->
-                        <a href="./localStorage-removeItem">
+                        <a href="./localStorage-clear">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
                             </svg>
                         </a>
 
-                        <a href="./localStorage-generales">
+                        <a class="not_next">
                             <svg viewBox="0 0 24 24">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                             </svg>
@@ -184,7 +216,7 @@
                     <!--  
                         incluimos el partial footer.ejs
                     -->
-                    <%- include('../partials/footer', titleSection = "Clear - LocalStorage") %>
+                    <%- include('../partials/footer', titleSection = "Generales - LocalStorage") %>
                 </div>
             </main>
         </div>

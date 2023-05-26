@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Declaracion</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Declaracion</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -53,6 +66,48 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#definicion">01. Definicion</a></li>
+                                    <li><a href="#funcion-constructora">02. Funcion constructora</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -60,11 +115,11 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="definicion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Definicion de claves y valores</h3>
+                        <h3>01. Definicion</h3>
 
                         <p>
                             Para este ejemplo, dentro del escope del objeto hemos definido tres claves con sus respectivos valores cada una separadas por coma. Finalmente, realizamos la impresion por
@@ -76,470 +131,106 @@
                             code_box: en esta definimos
                         -->
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> personaje
-                                    <span class="operator">=</span>
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>personaje <span class="operator">= </span><span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span> nombre<span class="operator">:</span><span class="string"> "Batman"</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span> nombre<span class="operator">:</span><span class="string"> "Giutaro"</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">04</span> heroe<span class="operator">:</span><span class="boolean"> true</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span> villano<span class="operator">:</span><span class="boolean"> true</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">05</span> edad<span class="operator">:</span><span class="number"> 38</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">05</span> edad<span class="operator">:</span><span class="number"> 32</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">07</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">08</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">09</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje<span class="operator">.</span>nombre<span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <!--  
-                            output_box: en esta definimos la salida en respuesta al codigo
-                        -->
-                        <div class="output_box">
-                            <samp>Batman</samp>
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> {</pre>
+                                <pre><span>></span>     nombre: 'Giutaro',</pre>
+                                <pre><span>></span>     villano: true,</pre>
+                                <pre><span>></span>     edad: 32</pre>
+                                <pre><span>></span> }</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Arrays dentro objetos</h3>
+                    <section class="sect_content" id="funcion-constructora">
+                        <h3>02. Funcion constructora</h3>
 
-                        <p>
-                            Los <strong>objetos</strong> pueden contener <strong>arrays</strong> dentro de si, de tal manera que si necesitamos acceder a los valores de este, primero debemos
-                            especificar el objeto seguido de la <strong> notacion punto</strong> y el array al cual le definimos entre llaves cuadradas la posicion del valor requerido.
-                        </p>
+                        <p>texto pendiente</p>
 
                         <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> personaje
-                                    <span class="operator">=</span>
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function </span>Personaje<span class="functions">(</span><span class="number">nombre</span><span class="semi_colon">, </span><span class="number">villano</span><span class="semi_colon">, </span><span class="number">edad</span><span class="functions">) </span><span class="brackets">{</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span> 
-                                    cualidades<span class="operator">:</span>
-                                    <span class="square">[</span><span class="string">"Fuerza"</span><span class="semi_colon">, </span><span class="string">"Resistencia"</span><span class="semi_colon">, </span><span class="string">"Inteligencia"</span><span class="square">]</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">03</span><span class="operator">this.</span>nombre <span class="operator">= </span><span class="number">nombre</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">04</span><span class="operator">this.</span>villano <span class="operator">= </span><span class="number">villano</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">05</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index outer_index">05</span><span class="operator">this.</span>edad <span class="operator">= </span><span class="number">edad</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index">06</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">07</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje<span class="operator">.</span>cualidades<span class="square">[</span>2<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
+                            <pre><code><span class="index inner_index">07</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="output_box">
-                            <samp>Inteligencia</samp>
-                        </div>
-                    </section>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                    <section class="sect_content">
-                        <h3>03. Objetos dentro objetos</h3>
+                            <pre><code><span class="index inner_index">09</span><span class="variable">const </span>personaje1 <span class="operator">= new </span>Personaje<span class="parenthesis">(</span><span class="string">"Giutaro"</span><span class="semi_colon">, </span><span class="boolean">true</span><span class="semi_colon">, </span><span class="number">32</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <p>
-                            Los <strong>objetos</strong> pueden contener otros <strong>objetos</strong> dentro de si, de tal manera que si necesitamos acceder a los valores de este, primero debemos
-                            especificar el objeto seguido de la <strong> notacion punto</strong>
-                            el objeto interno, notacion punto y la clave.
-                        </p>
+                            <pre><code><span class="index">10</span></code></pre>
 
-                        <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
+                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> personaje
-                                    <span class="operator">=</span>
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span> 
-                                    traje<span class="operator">:</span>
-                                    <span class="keyword">{</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">05</span>
-                                    color<span class="operator">:</span><span class="string"> "Negro"</span><span class="semi_colon">, </span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">06</span>
-                                    capa<span class="operator">:</span><span class="boolean"> true</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">07</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">08</span>
-                                    <span class="keyword">}</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">09</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">11</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">12</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje<span class="operator">.</span>traje<span class="operator">.</span>capa<span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
-
-                        <div class="output_box">
-                            <samp>true</samp>
-                        </div>
-                    </section>
-
-                    <section class="sect_content">
-                        <h3>04. Metodos dentro objetos</h3>
-
-                        <p>
-                            Las <strong>funciones</strong> que se definen dentro de un objeto son conocidas como <strong>metodos</strong> y basicamente, consisten en acciones que son o pueden ser
-                            realizadas por el objeto, estas funciones tienen el comportamiento de las funciones anonimas debido a que no tienen un nombre en su declaracion.
-                        </p>
-
-                        <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> personaje
-                                    <span class="operator">=</span>
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span>
-                                    salvar<span class="operator">:</span><span class="functions"> function(</span><span class="parameters">nombre</span><span class="functions">)</span> <span class="keyword"> {</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">05</span>
-                                    <span class="functions">return</span> <span class="string">`</span><span class="symbols">${</span><span class="parameters">nombre</span><span class="symbols">}</span><span class="string"> salva a las personas</span><span class="string">`</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">07</span>
-                                    <span class="keyword">}</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">09</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">11</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje<span class="operator">.</span>salvar<span class="functions">(</span><span class="string">"Batman"</span><span class="functions">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
-
-                        <div class="output_box">
-                            <samp>Batman salva a las personas</samp>
-                        </div>
-                    </section>
-
-                    <section class="sect_content">
-                        <h3>05. Uso de this</h3>
-
-                        <p>
-                            Hace referencia al <strong>objeto</strong> como tal siempre y cuando se implemente <strong>dentro de un metodo</strong>
-                            que pertenezaca a este, esta declaracion permite acceder a los valores del objeto por medio de su o sus claves.
-                        </p>
-
-                        <div class="code_box">
-                            <pre>
-                                <code>
-                                    <span class="circle first_circle"></span>
-                                    <span class="circle second_circle"></span>
-                                    <span class="circle thirt_circle"></span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">01</span>
-                                    <span class="variable">let</span> personaje
-                                    <span class="operator">=</span>
-                                    <span class="brackets">{</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">02</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">03</span> nombre<span class="operator">:</span><span class="string"> "Batman"</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">04</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">05</span>
-                                    salvar<span class="operator">:</span><span class="functions"> function()</span><span class="keyword"> {</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">06</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_doble_index">07</span>
-                                    <span class="functions">return</span> <span class="string">`</span><span class="symbols">${</span><span class="operator">this.</span>nombre<span class="symbols">}</span><span class="string"> es lo mismo que escribir</span> <span class="symbols">${</span><span>personaje<span class="operator">.</span></span>nombre<span class="symbols">}</span><span class="string">`</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">08</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index outer_index">09</span>
-                                    <span class="keyword">}</span><span class="semi_colon">,</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">10</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">11</span>
-                                    <span class="brackets">}</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">12</span>
-                                </code>
-                            </pre>
-
-                            <pre>
-                                <code>
-                                    <span class="index inner_index">13</span>
-                                    <span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje<span class="operator">.</span>salvar<span class="functions">()</span><span class="parenthesis">)</span><span class="semi_colon">;</span>
-                                </code>
-                            </pre>
-                        </div>
-
-                        <div class="output_box">
-                            <samp>Batman es lo mismo que escribir Batman</samp>
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> {</pre>
+                                <pre><span>></span>     nombre: 'Giutaro',</pre>
+                                <pre><span>></span>     villano: true,</pre>
+                                <pre><span>></span>     edad: 32</pre>
+                                <pre><span>></span> }</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Declaracion - Objetos</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./objetos-manipulacion">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Declaracion - Objetos") %>
                 </div>
             </main>
         </div>

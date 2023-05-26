@@ -24,7 +24,7 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                modal_section y 1 sections_container
+                section_container y 1 tag-footer
             -->
             <main class="main_components">
                 <!--  
@@ -39,7 +39,7 @@
                         <!--  
                             tag-h2: en esta definimos el titulo del banner
                         -->
-                        <h2>Clear</h2>
+                        <h2>Declaracion</h2>
 
                         <!--  
                             tag-svg: en esta definimos el icono del temario, le 
@@ -59,7 +59,7 @@
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
-                    <p>Nos permite limpiar todos los valores que se encuentren guardados en el almacenamiento local, este metodo no requiere de parametros para llevar a cabo la ejecucion.</p>
+                    <p>texto pendiente</p>
                 </section>
 
                 <!--  
@@ -96,9 +96,9 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#valores-almacenados">01. Valores almacenados</a></li>
-                                    <li><a href="#limpiando-el-almacenamiento">02. Limpiando el almacenamiento</a></li>
-                                    <li><a href="#almacenamiento-limpio">03. Almacenamiento limpio</a></li>
+                                    <li><a href="#definicion">01. Definicion</a></li>
+                                    <li><a href="#resolve-reject">02. Resolve y Reject</a></li>
+                                    <li><a href="#then-catch">03. Then y Catch</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -113,50 +113,96 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content" id="valores-almacenados">
+                    <section class="sect_content" id="declaracion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Valores almacenados</h3>
+                        <h3>01. Definicion</h3>
 
                         <p>texto pendiente</p>
 
-                        <div class="img_box">
-                            <img src="../../assets/images/localStorage/ls05.png" alt="valores almacenados" />
-                        </div>
-                    </section>
-
-                    <section class="sect_content" id="limpiando-el-almacenamiento">
-                        <h3>02. Limpiando el almacenamiento</h3>
-
-                        <p>texto pendiente</p>
-
+                        <!--  
+                            code_box: en esta definimos
+                        -->
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>limpiarAlmacenamiento <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
-
-                            <pre><code><span class="index">02</span></code></pre>
-
-                            <pre><code><span class="index outer_index">03</span><span class="console">localStorage</span><span class="methods">.clear()</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">04</span></code></pre>
-
-                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">06</span></code></pre>
-
-                            <pre><code><span class="index inner_index">07</span>limpiarAlmacenamiento<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>obtenerPost <span class="operator">= new </span><span class="parenthesis">Promise(</span><span class="keyword">(</span><span class="keyword">) </span><span class="operator">=> </span><span class="brackets">{}</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
                         </div>
                     </section>
 
-                    <section class="sect_content" id="almacenamiento-limpio">
-                        <h3>03. Almacenamiento limpio</h3>
+                    <section class="sect_content" id="resolve-reject">
+                        <h3>02. Resolve y Reject</h3>
 
                         <p>texto pendiente</p>
 
-                        <div class="img_box">
-                            <img src="../../assets/images/localStorage/ls04.png" alt="almacenamiento limpio" />
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>obtenerPost <span class="operator">= new </span><span class="parenthesis">Promise(</span><span class="keyword">(</span><span class="parameters">resolve</span><span class="semi_colon">, </span><span class="parameters">reject</span><span class="keyword">) </span><span class="operator">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="variable">let </span>existeSolicitud <span class="operator">= </span><span class="boolean">false</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="functions">setTimeout(<span class="parenthesis">() </span>=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">07</span>existeSolicitud<span class="operator"> ? </span><span class="parameters">resolve(</span><span class="string">"Obteniendo post"</span><span class="parameters">)</span><span class="operator"> : </span><span class="parameters">reject(</span><span class="string">"No existe una solicitud"</span><span class="parameters">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span><span class="brackets">}</span><span class="semi_colon">, </span>3000<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="brackets">}</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="then-catch">
+                        <h3>03. Then y Catch</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">12</span>obtenerPost</code></pre>
+
+                            <pre><code><span class="index outer_index">13</span><span class="methods">.then(<span class="parenthesis">(<span class="number">respuesta</span>) </span>=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">14</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">15</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">respuesta</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">16</span></code></pre>
+
+                            <pre><code><span class="index outer_index">17</span><span class="brackets">}</span><span class="symbols">)</span></code></pre>
+
+                            <pre><code><span class="index outer_index">18</span><span class="methods">.catch(<span class="parenthesis">(<span class="number">error</span>) </span>=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">19</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">20</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">error</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">21</span></code></pre>
+
+                            <pre><code><span class="index outer_index">22</span><span class="brackets">}</span><span class="symbols">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> No existe una solicitud</pre>
+                            </div>
                         </div>
                     </section>
 
@@ -168,13 +214,13 @@
                             tag-a: en estas definimos el enlace de redireccionamiento
                             a las diferentes secciones y el icono de redireccion
                         -->
-                        <a href="./localStorage-removeItem">
+                        <a class="not_next">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
                             </svg>
                         </a>
 
-                        <a href="./localStorage-generales">
+                        <a href="./promesas-async-await">
                             <svg viewBox="0 0 24 24">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                             </svg>
@@ -184,7 +230,7 @@
                     <!--  
                         incluimos el partial footer.ejs
                     -->
-                    <%- include('../partials/footer', titleSection = "Clear - LocalStorage") %>
+                    <%- include('../partials/footer', titleSection = "Declaracion - Promesas") %>
                 </div>
             </main>
         </div>

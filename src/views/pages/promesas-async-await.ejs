@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Async - Await</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>texto pendiente</p>
+                </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#definicion">01. Definicion</a></li>
+                                    <li><a href="#resolve-reject">02. Resolve y Reject</a></li>
+                                    <li><a href="#implementacion">03. Implementacion</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+                    <section class="sect_content" id="declaracion">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Definicion</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>obtenerPost <span class="operator">= </span><span class="keyword">(</span><span class="keyword">) </span><span class="operator">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="functions">return </span><span class="operator">new </span><span class="parenthesis">Promise(</span><span class="keyword">() </span><span class="operator">=> </span><span class="brackets">{}</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="resolve-reject">
+                        <h3>02. Resolve y Reject</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>obtenerPost <span class="operator">= </span><span class="keyword">() </span><span class="operator">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="functions">return </span><span class="operator">new </span><span class="parenthesis">Promise(</span><span class="keyword">(</span><span class="parameters">resolve</span><span class="semi_colon">, </span><span class="parameters">reject</span><span class="keyword">) </span><span class="operator">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">05</span><span class="variable">let </span>post <span class="operator">= </span><span class="square">[</span><span class="string">"Post1"</span><span class="semi_colon">, </span><span class="string">"Post2"</span><span class="semi_colon">, </span><span class="string">"Post3"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">06</span><span class="variable">let </span>existeError <span class="operator">= </span><span class="boolean">false</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">08</span><span class="functions">setTimeout(<span class="parenthesis">() </span>=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">10</span>    existeError<span class="operator"> ? </span><span class="parameters">reject(</span><span class="string">"Hubo un error"</span><span class="parameters">)</span><span class="operator"> : </span><span class="parameters">resolve(</span>post<span class="parameters">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">12</span><span class="brackets">}</span><span class="semi_colon">, </span>3000<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">13</span></code></pre>
+
+                            <pre><code><span class="index outer_index">14</span><span class="brackets">}</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="implementacion">
+                        <h3>03. Implementacion</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">16</span><span class="variable">const </span>mostrarPost <span class="operator">= </span><span class="functions">async </span><span class="keyword">() </span><span class="operator">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">17</span></code></pre>
+
+                            <pre><code><span class="index outer_index">18</span><span class="functions">await </span>obtenerPost<span class="functions">()</span></code></pre>
+
+                            <pre><code><span class="index outer_index">19</span><span class="methods">.then(<span class="parenthesis">(<span class="number">respuesta</span>) </span>=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">20</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">21</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">respuesta</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">22</span></code></pre>
+
+                            <pre><code><span class="index outer_index">23</span><span class="brackets">}</span><span class="symbols">)</span></code></pre>
+
+                            <pre><code><span class="index outer_index">24</span><span class="methods">.catch(<span class="parenthesis">(<span class="number">error</span>) </span>=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">25</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">26</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">error</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">27</span></code></pre>
+
+                            <pre><code><span class="index outer_index">28</span><span class="brackets">}</span><span class="symbols">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">29</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">30</span></code></pre>
+
+                            <pre><code><span class="index inner_index">31</span>mostrarPost<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'post1', 'post2', 'post3' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./promesas-declaracion">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./promesas-try-catch">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Async - Await - Promesas") %>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -206,15 +206,9 @@ router.get("/objetos-manipulacion", (req, res) => {
     });
 });
 
-router.get("/objetos-constructor", (req, res) => {
-    res.render("pages/objetos-constructor", {
-        title: "objetos constructor",
-    });
-});
-
-router.get("/objetos-destructuracion", (req, res) => {
-    res.render("pages/objetos-destructuracion", {
-        title: "objetos destructuracion",
+router.get("/objetos-destructuring", (req, res) => {
+    res.render("pages/objetos-destructuring", {
+        title: "objetos destructuring",
     });
 });
 
@@ -239,6 +233,12 @@ router.get("/json-manipulacion", (req, res) => {
     });
 });
 
+router.get("/json-destructuring", (req, res) => {
+    res.render("pages/json-destructuring", {
+        title: "json destructuring",
+    });
+});
+
 router.get("/json-metodos", (req, res) => {
     res.render("pages/json-metodos", {
         title: "json metodos",
@@ -246,11 +246,29 @@ router.get("/json-metodos", (req, res) => {
 });
 
 /* 
-	______________________ try - catch ______________________
+	______________________ promesas ______________________
 */
-router.get("/try-catch", (req, res) => {
-    res.render("pages/try-catch", {
-        title: "try-catch",
+router.get("/promesas-declaracion", (req, res) => {
+    res.render("pages/promesas-declaracion", {
+        title: "promesas declaracion",
+    });
+});
+
+router.get("/promesas-async-await", (req, res) => {
+    res.render("pages/promesas-async-await", {
+        title: "promesas async-await",
+    });
+});
+
+router.get("/promesas-try-catch", (req, res) => {
+    res.render("pages/promesas-try-catch", {
+        title: "promesas try-catch",
+    });
+});
+
+router.get("/promesas-throw-error", (req, res) => {
+    res.render("pages/promesas-throw-error", {
+        title: "promesas throw-error",
     });
 });
 
@@ -422,9 +440,9 @@ router.get("/localStorage-clear", (req, res) => {
     });
 });
 
-router.get("/localStorage-propiedades", (req, res) => {
-    res.render("pages/localStorage-propiedades", {
-        title: "localStorage propiedades",
+router.get("/localStorage-generales", (req, res) => {
+    res.render("pages/localStorage-generales", {
+        title: "localStorage generales",
     });
 });
 

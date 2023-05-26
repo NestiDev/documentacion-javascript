@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>removeItem</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>RemoveItem</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -47,10 +60,53 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        <strong>removeItem</strong> nos permite remover un valor que haya sido guardado en el almacenamiento local, para ello este metodo requiere un parametro el cual hace referencia
-                        al nombre de la clave. Por otro lado <strong>clear</strong> se encarga de limpiar todos los valores que se encuentren almacenados.
+                        Nos permite remover un valor que haya sido guardado en el almacenamiento local, para ello este metodo requiere un parametro el cual hace referencia al nombre de la clave. Por
+                        otro lado <strong>clear</strong> se encarga de limpiar todos los valores que se encuentren almacenados.
                     </p>
                 </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#valores-almacenados">01. Valores almacenados</a></li>
+                                    <li><a href="#removiendo-valores">02. Removiendo valores</a></li>
+                                    <li><a href="#valores-removidos">03. Valores removidos</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
                 <!--  
                     sections_container: contenedor de las secciones que componen
@@ -60,32 +116,78 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="valores-almacenados">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Removiendo un valor del almacenamiento local - removeItem</h3>
+                        <h3>01. Valores almacenados</h3>
 
-                        <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/removeItem/r01.png" alt="removiendo un valor del almacenamiento local - removeItem" />
+                        <p>texto pendiente</p>
+
+                        <div class="img_box">
+                            <img src="../../assets/images/localStorage/ls05.png" alt="valores almacenados" />
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Validacion del valor removido</h3>
+                    <section class="sect_content" id="removiendo-valores">
+                        <h3>02. Removiendo valores</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/localStorage/removeItem/r02.png" alt="validacion del valor removido" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>removerUsuario <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="console">localStorage</span><span class="methods">.removeItem(</span><span class="string">"usuario"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span>removerUsuario<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="valores-removidos">
+                        <h3>03. Valores removidos</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="img_box">
+                            <img src="../../assets/images/localStorage/ls06.png" alt="valores removidos" />
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">RemoveItem - LocalStorage</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./localStorage-getItem">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./localStorage-clear">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "RemoveItem - LocalStorage") %>
                 </div>
             </main>
         </div>

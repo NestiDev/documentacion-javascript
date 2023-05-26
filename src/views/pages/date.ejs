@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Date</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Date</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -47,10 +60,63 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Este objeto nos permite trabajar con la fecha y el tiempo y puede recibir valores con los cuales podemos determinar una fecha especifica o bien podemos hacer uso de los
+                        Esta interfaz nos permite trabajar con la fecha y el tiempo y puede recibir valores con los cuales podemos determinar una fecha especifica o bien podemos hacer uso de los
                         diferentes metodos que nos ofrece los cuales veremos a lo largo de este apartado.
                     </p>
                 </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#new-date">01. New Date</a></li>
+                                    <li><a href="#fecha-personalizada">02. Fecha personalizada</a></li>
+                                    <li><a href="#metodo-getFullYear">03. Metodo getFullYear</a></li>
+                                    <li><a href="#metodo-getDate">04. Metodo getDate</a></li>
+                                    <li><a href="#metodo-getDay">05. Metodo getDay</a></li>
+                                    <li><a href="#metodo-getMonth">06. Metodo getMonth</a></li>
+                                    <li><a href="#metodo-getHours">07. Metodo getHours</a></li>
+                                    <li><a href="#metodo-getMinutes">08. Metodo getMinutes</a></li>
+                                    <li><a href="#metodo-getSeconds">09. Metodo getSeconds</a></li>
+                                    <li><a href="#metodo-toDateString">10. Metodo toDateString</a></li>
+                                    <li><a href="#metodo-toLocaleString">11. Metodo toLocaleString</a></li>
+                                    <li><a href="#metodo-toLocaleDateString">12. Metodo toLocaleDateString</a></li>
+                                    <li><a href="#metodo-toLocaleTimeString">13. Metodo toLocaleTimeString</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
                 <!--  
                     sections_container: contenedor de las secciones que componen
@@ -60,120 +126,316 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="new-date">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Implementacion de Date</h3>
+                        <h3>01. New Date</h3>
+
+                        <p>texto pendiente</p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d01.png" alt="implementacion de new Date" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>fecha_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Thu May 25 2023 17:59:09 GMT-0500 (GMT-05:00)</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Definicion de una fecha especifica</h3>
+                    <section class="sect_content" id="fecha-personalizada">
+                        <h3>02. Fecha personalizada</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d02.png" alt="definicion de una fecha especifica" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_personalizada<span class="operator"> = new </span><span class="symbols">Date(<span class="string">"febrero-10-1989 11:00:59"</span>)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>fecha_personalizada<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Fri Feb 10 1989 11:00:59 GMT-0500 (GMT-05:00)</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Uso del metodo getFullYear</h3>
+                    <section class="sect_content" id="metodo-getFullYear">
+                        <h3>03. Metodo getFullYear</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d03.png" alt="uso del metodo getFullYear" />
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> anio_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getFullYear()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>anio_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 2023 <span class="console">=> Año</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>04. Uso del metodo getDate</h3>
+                    <section class="sect_content" id="metodo-getDate">
+                        <h3>04. Metodo getDate</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d04.png" alt="uso del metodo getDate" />
+                        <p>Devuelve el dia actual calendario que va desde el dia 01 hasta el dia 31.</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getDate()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dia_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 25 <span class="console">=> Dia</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>05. Uso del metodo getDay</h3>
+                    <section class="sect_content" id="metodo-getDay">
+                        <h3>05. Metodo getDay</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d05.png" alt="uso del metodo getDay" />
+                        <p>Devuelve el dia actual de la semana, estos comprenden desde el Domingo <strong>cuya posicion seria 0</strong> hasta el Sabado <strong>cuya posicion seria 6</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_actual_semana<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getDay()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dia_actual_semana<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 04 <span class="console">=> Jueves</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>06. Uso del metodo getHours</h3>
+                    <section class="sect_content" id="metodo-getMonth">
+                        <h3>06. Metodo getMonth</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d06.png" alt="uso del metodo getHours" />
+                        <p>Devuelve el mes actual del año, estos comprenden desde Enero <strong>cuya posicion seria 0</strong> hasta el Diciembre <strong>cuya posicion seria 11</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> mes_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getMonth()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>mes_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 04 <span class="console">=> Mayo</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>07. Uso del metodo getMinutes</h3>
+                    <section class="sect_content" id="metodo-getHours">
+                        <h3>07. Metodo getHours</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d07.png" alt="uso del metodo getMinutes" />
+                        <p>Devuelve la hora actual comprendida entre las <strong>0 a 23 horas</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> hora_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getHours()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>hora_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 18 <span class="console">=> 6pm</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>08. Uso del metodo getMonth</h3>
+                    <section class="sect_content" id="metodo-getMinutes">
+                        <h3>08. Metodo getMinutes</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d08.png" alt="uso del metodo getMonth" />
+                        <p>Devuelve el minuto actual comprendido entre <strong>0 a 59 minutos</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> minuto_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getMinutes()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>minuto_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 30 <span class="console">=> Minutos</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>09. Uso del metodo getSeconds</h3>
+                    <section class="sect_content" id="metodo-getSeconds">
+                        <h3>09. Metodo getSeconds</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d09.png" alt="uso del metodo getSeconds" />
+                        <p>Devuelve el segundo actual comprendido entre <strong>0 a 59 segundos</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> segundos_actuales<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getSeconds()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>segundos_actuales<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 40 <span class="console">=> Segundos</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>10. Uso del metodo toDateString</h3>
+                    <section class="sect_content" id="metodo-toDateString">
+                        <h3>10. Metodo toDateString</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d10.png" alt="uso del metodo toDateString" />
+                        <p>Devuelve la fecha actual en formato <strong>dia semana</strong> - <strong>mes</strong> - <strong>dia calendario</strong> - <strong>año</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_fecha<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toDateString()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dia_fecha<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Thu May 25 2023 <span class="console">=> Dia Fecha</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>11. Uso del metodo toLocaleString</h3>
+                    <section class="sect_content" id="metodo-toLocaleString">
+                        <h3>11. Metodo toLocaleString</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d13.png" alt="uso del metodo toLocaleString" />
+                        <p>
+                            Devuelve la fecha y hora actual en formato <strong>año</strong> - <strong>mes</strong> - <strong>dia calendario</strong> <strong>hora</strong> : <strong>minutos</strong> :
+                            <strong>segundos</strong>
+                        </p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_hora<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toLocaleString()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>fecha_hora<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 2023-5-25 19:10:59 <span class="console">=> Fecha Hora</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>12. Uso del metodo toLocaleDateString</h3>
+                    <section class="sect_content" id="metodo-toLocaleDateString">
+                        <h3>12. Metodo toLocaleDateString</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d11.png" alt="uso del metodo toLocaleDateString" />
+                        <p>Devuelve la fecha actual en formato <strong>año</strong> - <strong>mes</strong> - <strong>dia calendario</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> solo_fecha<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toLocaleDateString()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>solo_fecha<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 2020-09-31 <span class="console">=> Fecha</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>13. Uso del metodo toLocaleTimeString</h3>
+                    <section class="sect_content" id="metodo-toLocaleTimeString">
+                        <h3>13. Metodo toLocaleTimeString</h3>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/date/d12.png" alt="uso del metodo toLocaleTimeString" />
+                        <p>Devuelve la hora actual en formato <strong>hora</strong> : <strong>minutos</strong> : <strong>segundos</strong></p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> solo_hora<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toLocaleTimeString()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>solo_hora<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 10:30:59 <span class="console">=> Hora</span></pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Date - Javascript</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a class="not_next">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Date - Interfaz") %>
                 </div>
             </main>
         </div>

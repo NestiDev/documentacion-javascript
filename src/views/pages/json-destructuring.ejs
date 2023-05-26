@@ -39,7 +39,7 @@
                         <!--  
                             tag-h2: en esta definimos el titulo del banner
                         -->
-                        <h2>Clear</h2>
+                        <h2>Destructuring</h2>
 
                         <!--  
                             tag-svg: en esta definimos el icono del temario, le 
@@ -59,7 +59,7 @@
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
-                    <p>Nos permite limpiar todos los valores que se encuentren guardados en el almacenamiento local, este metodo no requiere de parametros para llevar a cabo la ejecucion.</p>
+                    <p>texto pendiente</p>
                 </section>
 
                 <!--  
@@ -96,9 +96,7 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#valores-almacenados">01. Valores almacenados</a></li>
-                                    <li><a href="#limpiando-el-almacenamiento">02. Limpiando el almacenamiento</a></li>
-                                    <li><a href="#almacenamiento-limpio">03. Almacenamiento limpio</a></li>
+                                    <li><a href="#implementacion">01. Implementacion</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -113,50 +111,41 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content" id="valores-almacenados">
+                    <section class="sect_content" id="implementacion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Valores almacenados</h3>
-
-                        <p>texto pendiente</p>
-
-                        <div class="img_box">
-                            <img src="../../assets/images/localStorage/ls05.png" alt="valores almacenados" />
-                        </div>
-                    </section>
-
-                    <section class="sect_content" id="limpiando-el-almacenamiento">
-                        <h3>02. Limpiando el almacenamiento</h3>
+                        <h3>01. Implementacion</h3>
 
                         <p>texto pendiente</p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>limpiarAlmacenamiento <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>usuario <span class="operator">= </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">localStorage</span><span class="methods">.clear()</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">04</span></code></pre>
-
-                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="string">"nombre"</span><span class="operator">: </span><span class="string">"Camila"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="string">"edad"</span><span class="operator">: </span><span class="number">30</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="string">"profesional"</span><span class="operator">: </span><span class="boolean">true</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span>limpiarAlmacenamiento<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
-                        </div>
-                    </section>
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
-                    <section class="sect_content" id="almacenamiento-limpio">
-                        <h3>03. Almacenamiento limpio</h3>
+                            <pre><code><span class="index">08</span></code></pre>
 
-                        <p>texto pendiente</p>
+                            <pre><code><span class="index inner_index">09</span><span class="variable">let </span><span class="brackets">{</span>nombre<span class="semi_colon">, </span>edad<span class="semi_colon">, </span>profesional<span class="brackets">} </span><span class="operator">= </span>usuario<span class="semi_colon">;</span></code></pre>
 
-                        <div class="img_box">
-                            <img src="../../assets/images/localStorage/ls04.png" alt="almacenamiento limpio" />
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Nombre de usuario </span><span class="symbols">${</span>nombre<span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Nombre de usuario Camila</pre>
+                            </div>
                         </div>
                     </section>
 
@@ -168,13 +157,13 @@
                             tag-a: en estas definimos el enlace de redireccionamiento
                             a las diferentes secciones y el icono de redireccion
                         -->
-                        <a href="./localStorage-removeItem">
+                        <a href="./json-manipulacion">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
                             </svg>
                         </a>
 
-                        <a href="./localStorage-generales">
+                        <a href="./json-metodos">
                             <svg viewBox="0 0 24 24">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                             </svg>
@@ -184,7 +173,7 @@
                     <!--  
                         incluimos el partial footer.ejs
                     -->
-                    <%- include('../partials/footer', titleSection = "Clear - LocalStorage") %>
+                    <%- include('../partials/footer', titleSection = "Destructuring - JSON") %>
                 </div>
             </main>
         </div>
