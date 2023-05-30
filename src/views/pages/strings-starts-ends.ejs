@@ -39,7 +39,7 @@
                         <!--  
                             tag-h2: en esta definimos el titulo del banner
                         -->
-                        <h2>Replace</h2>
+                        <h2>Starts - Ends</h2>
 
                         <!--  
                             tag-svg: en esta definimos el icono del temario, le 
@@ -60,8 +60,8 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permite reemplazar el valor de una cadena de caracteres por otra, se debe tener presente que este metodo reemplaza la primer coincidencia y que distingue caracteres
-                        especiales como tildes, simbolos, mayusculas, minusculas etc.
+                        Nos permiten conocer si una cadena de caracteres inicia o finaliza por un valor determinado. cuando hay concidencias el metodo retorna un
+                        <strong>true</strong> de lo contario un <strong>false</strong> Este no acepta expresiones y es capaz de distinguir entre mayusculas y minusculas.
                     </p>
                 </section>
 
@@ -99,9 +99,8 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#implementacion">01. Implementacion</a></li>
-                                    <li><a href="#primer-coincidencia">02. Primer coincidencia</a></li>
-                                    <li><a href="#todas-las-coincidencias">03. Todas las coincidencias</a></li>
+                                    <li><a href="#metodo-startsWith">01. Metodo startsWith</a></li>
+                                    <li><a href="#metodo-endsWith">02. Metodo endsWith</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -116,11 +115,11 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="metodo-startsWith">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Implementacion</h3>
+                        <h3>1. Metodo startsWith</h3>
 
                         <p>texto pendiente</p>
 
@@ -130,72 +129,111 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Me encanta el arroz con PoLLo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> coroCancion<span class="operator"> =</span><span class="string"> "Dale a tu CUERPO alegria macarena"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="operator"> = </span>frase<span class="methods">.replace(</span><span class="string">"el arroz con PoLLo"</span><span class="semi_colon">, </span><span class="string">"la sopa de verduras"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> iniciaCon<span class="operator"> = </span>coroCancion<span class="methods">.startsWith(</span><span class="string">"dale a tu cuerpo"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>nuevaFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>iniciaCon<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
                             -->
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> Me encanta la sopa de verduras</pre>
+                                <pre><span>></span> false</pre>
                             </div>
                         </div>
-                    </section>
-
-                    <section class="sect_content" id="primer-coincidencia">
-                        <h3>02. Primer coincidencia</h3>
-
-                        <p>texto pendiente</p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Me encanta el ARROZ con pollo y el ARROZ con verduras"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> coroCancion<span class="operator"> =</span><span class="string"> "Dale a tu CUERPO alegria macarena"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="operator"> = </span>frase<span class="methods">.replace(</span><span class="parenthesis">/</span><span class="string">el arroz con</span><span class="parenthesis">/</span>i<span class="semi_colon">, </span><span class="string">"la sopa de"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> iniciaCon<span class="operator"> = </span>coroCancion<span class="methods">.startsWith(</span><span class="string">"Dale a tu CUERPO"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>nuevaFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>iniciaCon<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> Me encanta la sopa de pollo y el ARROZ con verduras</pre>
+                                <pre><span>></span> true</pre>
                             </div>
                         </div>
-                    </section>
-
-                    <section class="sect_content" id="todas-las-coincidencias">
-                        <h3>03. Todas las coincidencias</h3>
-
-                        <p>texto pendiente</p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Me encanta el ARROZ con pollo y el ARROZ con verduras"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> coroCancion<span class="operator"> =</span><span class="string"> "Dale a tu CUERPO alegria macarena"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index">02                      012345678910</span></code></pre>
 
-                            <pre><code><span class="index">02</span></code></pre>
+                            <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="operator"> = </span>frase<span class="methods">.replace(</span><span class="parenthesis">/</span><span class="string">el arroz con</span><span class="parenthesis">/</span>ig<span class="semi_colon">, </span><span class="string">"la sopa de"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> iniciaCon<span class="operator"> = </span>coroCancion<span class="methods">.startsWith(</span><span class="string">"CUERPO"</span><span class="semi_colon">, </span><span class="number">10</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index">04</span></code></pre>
+                            <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>nuevaFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>iniciaCon<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> Me encanta la sopa de pollo y la sopa de verduras</pre>
+                                <pre><span>></span> true</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-endsWith">
+                        <h3>2. Metodo endsWith</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> coroCancion<span class="operator"> =</span><span class="string"> "Dale a tu CUERPO alegria macarena"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> finalizaCon<span class="operator"> = </span>coroCancion<span class="methods">.endsWith(</span><span class="string">"macarela"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>finalizaCon<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> coroCancion<span class="operator"> =</span><span class="string"> "Dale a tu CUERPO alegria macarena"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> finalizaCon<span class="operator"> = </span>coroCancion<span class="methods">.endsWith(</span><span class="string">"macarena"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>finalizaCon<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
                             </div>
                         </div>
                     </section>
@@ -208,13 +246,13 @@
                             tag-a: en estas definimos el enlace de redireccionamiento
                             a las diferentes secciones y el icono de redireccion
                         -->
-                        <a href="./strings-slice">
+                        <a href="./strings-search">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
                             </svg>
                         </a>
 
-                        <a href="./strings-includes">
+                        <a class="not_previous">
                             <svg viewBox="0 0 24 24">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                             </svg>
@@ -224,7 +262,7 @@
                     <!--  
                         incluimos el partial footer.ejs
                     -->
-                    <%- include('../partials/footer', titleSection = "Replace - Strings") %>
+                    <%- include('../partials/footer', titleSection = "Starts - Ends - Strings") %>
                 </div>
             </main>
         </div>

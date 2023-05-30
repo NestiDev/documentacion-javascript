@@ -88,7 +88,7 @@ svg {
   right: 0;
   z-index: 9;
   background-color: #fff;
-  border-bottom: 1px solid #eaecef;
+  border-bottom: 1px solid #f6f6f6;
   transition: box-shadow 0.2s;
   /*
   	js_header_scroll: clase añadida con javascript en "./src/js/main.js"
@@ -185,7 +185,7 @@ svg {
     outline: none;
     background-color: transparent;
     color: #5c5b5b;
-    border: 1px solid #eaecef;
+    border: 1px solid #f6f6f6;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 17px;
     font-weight: 600;
@@ -304,10 +304,9 @@ svg {
   top: 60px;
   left: 0;
   z-index: 8;
-  border-right: 1px solid #eaecef;
   width: 260px;
   height: 100vh;
-  padding: 0 18px;
+  padding: 0 14px 0 28px;
   overflow: auto;
   /*
   	::-webkit-scrollbar: definimos un ancho del
@@ -324,13 +323,14 @@ svg {
   	dispositivos mayores a 720px
   */
   /*
-  	nav_menu: definimos un espaciado personalizado en el eje-Y para este elemento 
+  	menu_nav: definimos un espaciado personalizado en el eje-Y para este elemento 
   	el espaciado inferior permite solucionar un error que se presenta 
   	impidiendo que el ultimo item del menu se vea correctamente
   */
 }
 .components_container .nav_component::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  background-color: #f6f6f6;
 }
 .components_container .nav_component::-webkit-scrollbar-thumb {
   background-color: #d9d9d9;
@@ -369,14 +369,18 @@ svg {
     width: 100%;
   }
 }
-.components_container .nav_component .nav_menu {
-  padding: 30px 0 70px;
+.components_container .nav_component .menu_nav {
+  padding: 24px 0 70px;
   /*
   	li_dropdown: definimos un margen en la parte inferior de este 
   	elemento
   */
+  /*
+      line_nav: definimos un margen inferior
+      para generar separacion frente a otros elementos
+  */
 }
-.components_container .nav_component .nav_menu .li_dropdown {
+.components_container .nav_component .menu_nav .li_dropdown {
   list-style: none;
   margin-bottom: 18px;
   /*
@@ -413,20 +417,20 @@ svg {
   	para este elemento
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown:hover > a {
+.components_container .nav_component .menu_nav .li_dropdown:hover > a {
   color: #f0db4f;
 }
-.components_container .nav_component .nav_menu .li_dropdown:hover svg {
+.components_container .nav_component .menu_nav .li_dropdown:hover svg {
   fill: #f0db4f;
 }
-.components_container .nav_component .nav_menu .li_dropdown.js_show_dropdown_menu .dropdown_menu {
+.components_container .nav_component .menu_nav .li_dropdown.js_show_dropdown_menu .dropdown_menu {
   display: block;
   max-height: 999px;
 }
-.components_container .nav_component .nav_menu .li_dropdown.js_show_dropdown_menu a svg {
+.components_container .nav_component .menu_nav .li_dropdown.js_show_dropdown_menu a svg {
   transform: rotate(180deg);
 }
-.components_container .nav_component .nav_menu .li_dropdown a {
+.components_container .nav_component .menu_nav .li_dropdown a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -437,19 +441,19 @@ svg {
   	tag-svg
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown a.js_active_link {
+.components_container .nav_component .menu_nav .li_dropdown a.js_active_link {
   color: #f0db4f;
 }
-.components_container .nav_component .nav_menu .li_dropdown a.js_active_link svg {
+.components_container .nav_component .menu_nav .li_dropdown a.js_active_link svg {
   fill: #f0db4f;
 }
-.components_container .nav_component .nav_menu .li_dropdown a svg {
+.components_container .nav_component .menu_nav .li_dropdown a svg {
   fill: #5c5b5b;
-  width: 12px;
-  height: 12px;
+  width: 26px;
+  height: 26px;
   transition: transform 0.3s;
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu {
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu {
   max-height: 0;
   overflow: hidden;
   padding: 0 13px;
@@ -457,21 +461,26 @@ svg {
   	tag-li: definimos un espaciado en el eje-Y para este elemento
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu li {
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu li {
   padding: 10px 0;
   /*
   	tag-a
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu li a {
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu li a {
   font-size: 1rem;
   /*
   	cuando hacemos :hover sobre la tag-a modificamos
   	el color de este elemento
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu li a:hover {
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu li a:hover {
   color: #f0db4f;
+}
+.components_container .nav_component .menu_nav .line_nav {
+  border: 1px solid #f6f6f6;
+  width: 96%;
+  margin-bottom: 18px;
 }
 .components_container .main_components {
   position: absolute;
@@ -1002,4 +1011,5 @@ svg {
   text-align: center;
   color: #ccc;
   font-size: 1.2rem;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

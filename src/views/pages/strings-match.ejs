@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Match</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Match</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -53,6 +66,47 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#implementacion">01. Implementacion</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -60,40 +114,104 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="implementacion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Busqueda de un cadena</h3>
+                        <h3>01. Implementacion</h3>
+
+                        <p>texto pendiente</p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/strings/match/mat1.png" alt="busqueda de un cadena" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Javascript es GRANDIOSO"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index">02              012345678901234</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let</span> posicionFrase<span class="operator"> = </span>frase<span class="methods">.match(</span><span class="parenthesis">/</span><span class="string">grandioso</span><span class="parenthesis">/</span>i<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'GRANDIOSO', index: 14, input: 'Javascript es GRANDIOSO' ]</pre>
+                            </div>
                         </div>
-                    </section>
 
-                    <section class="sect_content">
-                        <h3>02. Valor nulo</h3>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/strings/match/mat2.png" alt="valor nulo" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Javascript es GRANDIOSO, JAVASCRIPT es genial"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> buscarFrase<span class="operator"> = </span>frase<span class="methods">.match(</span><span class="parenthesis">/</span><span class="string">javascript</span><span class="parenthesis">/</span>ig<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>buscarFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Javascript', 'JAVASCRIPT' ]</pre>
+                            </div>
                         </div>
-                    </section>
 
-                    <section class="sect_content">
-                        <h3>03. Normalizacion de la busqueda</h3>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/strings/match/mat3.png" alt="normalizacion de la busqueda" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Javascript es GRANDIOSO"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> posicionFrase<span class="operator"> = </span>frase<span class="methods">.search(</span><span class="parenthesis">/</span><span class="string">Angular</span><span class="parenthesis">/</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La palabra Angular no aparece en la frase"</span><span class="semi_colon">, </span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> La palabra Angular no aparece en la frase -1</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Match - Strings</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./strings-index">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./strings-split">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Match - Strings") %>
                 </div>
             </main>
         </div>

@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Patrones</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Patrones</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -48,9 +61,58 @@
                     -->
                     <p>
                         Hacen referencia a la composicion de una expresion regular la cual permite determinar la secuencia que debe tener la cadena de caracteres para que puedan existir coincidencias
-                        en la busqueda. Estos siguen la estructura <strong>/</strong>patron(es)<strong>/</strong>banderas<strong>;</strong>
+                        en la busqueda. Estos siguen la estructura <strong>/</strong>patron(es)<strong>/</strong>banderas.
                     </p>
                 </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#emails">01. Emails</a></li>
+                                    <li><a href="#contraseñas-y-caracteres">02. Contraseñas y caracteres</a></li>
+                                    <li><a href="#contraseñas-y-requerimientos">03. Contraseñas y requerimientos</a></li>
+                                    <li><a href="#contraseñas-con-longitud">04. Contraseñas con longitud</a></li>
+                                    <li><a href="#cadenas-sin-espacios">05. Cadenas sin espacios</a></li>
+                                    <li><a href="#cadenas-con-espacios">06. Cadenas con espacios</a></li>
+                                    <li><a href="#numeros-sin-espacios">07. Numeros sin espacios</a></li>
+                                    <li><a href="#numeros-con-espacios">08. Numeros con espacios</a></li>
+                                    <li><a href="#buscador">09. Buscador</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
                 <!--  
                     sections_container: contenedor de las secciones que componen
@@ -60,11 +122,11 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3, 1 tag-p, code_box y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="emails">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Patron para emails</h3>
+                        <h3>01. Emails</h3>
 
                         <!--  
 							tag-p: en esta definimos el parrafo de la seccion
@@ -77,26 +139,38 @@
                         </p>
 
                         <!--  
-							code_box: definida para declarar el codigo en ejecucion
-						-->
+                            code_box: en esta definimos
+                        -->
                         <div class="code_box">
-                            <span>/</span
-                            ><strong>^[</strong
-                            >a-z<strong>]+[</strong>-_.<strong>]?[</strong>a-z-0-9<strong>]+@{</strong>1<strong>}[</strong>a-z<strong>]+\.{</strong>1<strong>}[</strong>a-z<strong>]{</strong>2,3<strong
-                                >}$</strong
-                            ><span>/</span>i;
-                        </div>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p01.png" alt="patron para emails" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> emailExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z<span class="functions">]+[</span>-_.<span class="functions">]?[</span>a-z-0-9<span class="functions">]+@{</span>1<span class="functions">}[</span>a-z<span class="functions">]+\.{</span>1<span class="functions">}[</span>a-z<span class="functions">]{</span>2,3<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"JuanAndres@hotmail.com"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"maria_gomez@empresa.co"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"Lorena-2289gmail.com"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"gustavo2289@outlookcom"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> false</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Patron para contraseñas con caracteres especiales</h3>
+                    <section class="sect_content" id="contraseñas-y-caracteres">
+                        <h3>02. Contraseñas y caracteres</h3>
 
                         <p>
                             Este patron inidica que la cadena debe iniciar con rango de letras y numeros de ^[a-z-0-9] seguidamente (opcional) puede ir un caracterer especial [*-_.]? en la tercera
@@ -104,108 +178,278 @@
                         </p>
 
                         <div class="code_box">
-                            <span>/</span><strong>^[</strong>a-z-0-9<strong>]+[</strong>*-_.<strong>]?[</strong>a-z-0-9<strong>]+[</strong>*-_.<strong>]$</strong><span>/</span>i;
-                        </div>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p02.png" alt="patron para contraseñas con caracteres especiales" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> contraseniasExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z-0-9<span class="functions">]+[</span>*-_.<span class="functions">]?[</span>a-z-0-9<span class="functions">]+</span><span class="functions">[</span>*-_.<span class="functions">]</span><span class="functions">$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"Juan.1258"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"maria*1245"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"c4m1la$p3r3z"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"1245-.*gustavo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> false</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Patron para contraseñas con minimo una letra mayuscula</h3>
+                    <section class="sect_content" id="contraseñas-y-requerimientos">
+                        <h3>03. Contraseñas y requerimientos</h3>
 
                         <p>
                             Este patron inidica que la cadena debe iniciar con un rango de letras de ^[A-Z] por ultimo definimos que de manera opcional puede tener un caracter especial [*_.]? al final
                             de la cadena.
                         </p>
 
-                        <div class="code_box"><span>/</span><strong>^[</strong>A-Z<strong>]+[</strong>*_.<strong>]?</strong><span>/</span>;</div>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p07.png" alt="patron para contraseñas con minimo una letra mayuscula" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> contraseniasExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>A-Z<span class="functions">]+[</span>*-_.<span class="functions">]?</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"Juan.Dias"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"CAMILA_PEREZ"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"1245Gustavo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"maria-estrada"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> false</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>04. Patron solo cadenas sin espacios</h3>
+                    <section class="sect_content" id="contraseñas-con-longitud">
+                        <h3>04. Contraseñas con longitud</h3>
 
-                        <p>Este inidica que la cadena debe iniciar y finalizar con un rango de letras de [a-z] con un minimo de 3 caracteres y maximo de 10.</p>
+                        <p>Este patron inidica que la cadena debe iniciar con un rango de letras y numeros de ^[a-z-0-9] por ultimo definimos que como minimo recibe 1 caracter y maximo 8.</p>
 
-                        <div class="code_box"><span>/</span><strong>^[</strong>a-z<strong>]{</strong>3,10<strong>}$</strong><span>/</span>i;</div>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p03.png" alt="patron solo cadenas sin espacios" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> longitudExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z-0-9<span class="functions">]{</span>1,8<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">"1"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">"carmen10"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">""</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">"Andrea12345678"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> false</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>05. Patron solo cadenas con espacios</h3>
+                    <section class="sect_content" id="cadenas-sin-espacios">
+                        <h3>05. Cadenas sin espacios</h3>
+
+                        <p>Este inidica que la cadena debe iniciar y finalizar con un rango de letras de [a-z] con un minimo de 3 caracteres y maximo de 16.</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> sinEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z<span class="functions">]{</span>3,16<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"JuanDias"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"anaSOFIA"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">" davidperez"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"maria estrada"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> false</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="cadenas-con-espacios">
+                        <h3>06. Cadenas con espacios</h3>
 
                         <p>
                             Este inidica que la cadena debe iniciar y finalizar con un rango de letras de [a-z\s] con un minimo de 3 caracteres y maximo de 10. El caracter \s especifica que los
                             espacios para la busqueda de coincidencias son permitidos.
                         </p>
 
-                        <div class="code_box"><span>/</span><strong>^[</strong>a-z\s<strong>]{</strong>3,10<strong>}$</strong><span>/</span>i;</div>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p04.png" alt="patron solo cadenas con espacios" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> conEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z\s<span class="functions">]{</span>3,16<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"maria estrada"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"JuanDias"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">" davidperez"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"anaSOFIA"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>06. Patron solo numeros sin espacios</h3>
+                    <section class="sect_content" id="numeros-sin-espacios">
+                        <h3>07. Numeros sin espacios</h3>
 
-                        <p>Este inidica que la cadena debe iniciar y finalizar con un rango de numeros de [0-9] con un minimo de 1 caracteres y maximo de 8.</p>
+                        <p>Este inidica que la cadena debe iniciar y finalizar con un rango de numeros de [0-9] con un minimo de 1 caracteres y maximo de 16.</p>
 
-                        <div class="code_box"><span>/</span><strong>^[</strong>0-9<strong>]{</strong>1,8<strong>}$</strong><span>/</span>;</div>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p05.png" alt="patron solo numeros sin espacios" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> sinEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>0-9<span class="functions">]{</span>1,16<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"0"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"12457898"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">" 2565"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"1298 9632"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> false</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>07. Patron solo numeros con espacios</h3>
+                    <section class="sect_content" id="numeros-con-espacios">
+                        <h3>08. Numeros con espacios</h3>
 
                         <p>
-                            Este inidica que la cadena debe iniciar y finalizar con un rango de numeros de [0-9\s] con un minimo de 1 caracteres y maximo de 8. El caracter \s especifica que los
+                            Este inidica que la cadena debe iniciar y finalizar con un rango de numeros de [0-9\s] con un minimo de 1 caracteres y maximo de 16. El caracter \s especifica que los
                             espacios para la busqueda de coincidencias son permitidos.
                         </p>
 
-                        <div class="code_box"><span>/</span><strong>^[</strong>0-9\s<strong>]{</strong>1,9<strong>}$</strong><span>/</span>;</div>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p06.png" alt="patron solo numeros con espacios" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> conEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>0-9\s<span class="functions">]{</span>1,16<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"5"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"12457898"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">" 2565"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"1298 9632"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>08. Patron para busqueda de coincidencias</h3>
+                    <section class="sect_content" id="buscador">
+                        <h3>09. Buscador</h3>
 
                         <p>
                             Este inidica que la cadena debe tener un rango de letras de [a-z] con un minimo de 1 caracteres y maximo de n. A continuacion definimos que la siguiente coincidencia a
-                            buscar es un espacio. Luego repetimos la secuencia segun sea necesario con la diferencia que en la segunda parte de la composicion definimos que el valor puede ser opcional
-                            y para la tercera parte removemos el espacio.
+                            buscar es un espacio <strong>\s</strong> Luego repetimos la secuencia segun sea necesario con la diferencia que a dicha composicion le definimos que el valor puede ser
+                            opcional <strong>?</strong>
+                            finalmente en la ultima composicion removemos el espacio.
                         </p>
 
                         <div class="code_box">
-                            <span>/</span
-                            ><strong>[</strong
-                            >a-z<strong>]{</strong>1,<strong>}</strong>\s<strong>[</strong>a-z<strong>]{</strong>1,<strong>}</strong>\s?<strong>[</strong>a-z<strong>]{</strong>1,<strong>}</strong
-                            ><span>/</span>ig;
-                        </div>
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/patrones/p08.png" alt="patron para busqueda de coincidencias" />
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> datosUsuarios<span class="operator"> = </span><span class="string">`</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="string">juan 12548965 Peru</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="string">LUCIA MARTINEZ 00698541 Mexico</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="string">Ana Luz Hernandez 74459655 Colombia</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="variable">let</span> buscadorExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span>\s<span class="functions">?[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span>\s<span class="functions">?[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span><span class="parenthesis">/</span>ig<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>datosUsuario<span class="methods">.match(</span>buscadorExpReg<span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'juan', 'Peru' 'LUCIA MARTINEZ', 'Mexico', 'Ana Luz Hernandez', 'Colombia' ]</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Patrones - RegExp</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./regexp-indicadores">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a class="not_next">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Patrones - RegExp") %>
                 </div>
             </main>
         </div>

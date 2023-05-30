@@ -26,7 +26,7 @@ $iconsColor: #c3c3c3;
 /*
 	variables para definir bordes
 */
-$borderOne: #eaecef;
+$borderOne: #f6f6f6;
 
 /*
 	variables para definir sombras
@@ -319,10 +319,9 @@ svg {
         top: $heightFixed;
         left: 0;
         z-index: 8;
-        border-right: 1px solid $borderOne;
         width: 260px;
         height: 100vh;
-        padding: 0 18px;
+        padding: 0 14px 0 28px;
         overflow: auto;
 
         /*
@@ -330,7 +329,8 @@ svg {
 			scrollbar
 		*/
         &::-webkit-scrollbar {
-            width: 6px;
+            width: 8px;
+            background-color: #f6f6f6;
         }
 
         /*
@@ -382,12 +382,12 @@ svg {
         }
 
         /*
-			nav_menu: definimos un espaciado personalizado en el eje-Y para este elemento 
+			menu_nav: definimos un espaciado personalizado en el eje-Y para este elemento 
 			el espaciado inferior permite solucionar un error que se presenta 
 			impidiendo que el ultimo item del menu se vea correctamente
 		*/
-        .nav_menu {
-            padding: 30px 0 70px;
+        .menu_nav {
+            padding: 24px 0 70px;
 
             /*
 				li_dropdown: definimos un margen en la parte inferior de este 
@@ -460,8 +460,8 @@ svg {
 					*/
                     svg {
                         fill: $colorFour;
-                        width: 12px;
-                        height: 12px;
+                        width: 26px;
+                        height: 26px;
                         transition: transform 0.3s;
                     }
                 }
@@ -501,6 +501,16 @@ svg {
                         }
                     }
                 }
+            }
+
+            /*
+                line_nav: definimos un margen inferior
+                para generar separacion frente a otros elementos
+            */
+            .line_nav {
+                border: 1px solid $borderOne;
+                width: 96%;
+                margin-bottom: 18px;
             }
         }
     }
@@ -1104,6 +1114,7 @@ svg {
                 text-align: center;
                 color: $colorFive;
                 font-size: 1.2rem;
+                font-weight: 400;
             }
         }
     }

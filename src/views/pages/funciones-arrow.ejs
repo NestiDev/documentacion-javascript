@@ -102,6 +102,7 @@
                                     <li><a href="#definicion-e-invocacion">01. Definicion e invocacion</a></li>
                                     <li><a href="#definicion-en-una-linea">02. Definicion en una linea</a></li>
                                     <li><a href="#error-de-invocacion">03. Error de invocacion</a></li>
+                                    <li><a href="#autoinvocacion">04. Autoinvocacion</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -128,7 +129,7 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>tipo_funcion <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>descripcion <span class="operator">= </span><span class="functions">() => </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
@@ -140,7 +141,7 @@
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span>tipo_funcion<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span>descripcion<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -196,6 +197,31 @@
                             <div class="output_box">
                                 <pre></pre>
                                 <pre class="error"><span>></span> Cannot access 'cancelarCompra' before initialization</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="autoinvocacion">
+                        <h3>04. Autoinvocacion</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="functions">(</span><span class="keyword">(<span class="parameters">contrasenia</span>) <span class="functions">=> </span></span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Contaseña ingesada: </span><span class="symbols">${</span><span class="parameters">contrasenia</span><span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="functions">)(</span><span class="string">"Usuario12345"</span><span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Contaseña ingesada: Usuario12345</pre>
                             </div>
                         </div>
                     </section>

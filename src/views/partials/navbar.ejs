@@ -1,20 +1,20 @@
 <!--  
-	nav_menu: en esta definimos los items del menu de navegacion
+	menu_nav: en esta definimos los items del menu de navegacion
 -->
-<ul class="nav_menu">
+<ul class="menu_nav">
     <!--  
 		:li_dropdown: contenedor de 1tag-a y 1 tag-ul, la clase
 		:li_dropdown se implementa en javascript
 	-->
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            01. Variables
+            Variables
 
             <!--          
 				tag-svg: en este definimos el icono del del item
 			-->
             <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
             </svg>
         </a>
 
@@ -23,295 +23,448 @@
 			:navegacion interno
 		-->
         <ul class="dropdown_menu">
-            <li><a href="/variables-var">a. Var</a></li>
+            <li><a href="/variables-var">Var</a></li>
 
-            <li><a href="/variables-let">b. Let</a></li>
+            <li><a href="/variables-let">Let</a></li>
 
-            <li><a href="/variables-const">c. Const</a></li>
+            <li><a href="/variables-const">Const</a></li>
         </ul>
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            02. Condicionales
+            Strings
 
             <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
             </svg>
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/condicionales-if-else">a. If - Else</a></li>
-            <li><a href="/condicionales-switch">b. Switch </a></li>
-            <li><a href="/condicionales-return">c. Return</a></li>
-            <li><a href="/condicionales-operadores">d. Operadores</a></li>
+            <li><a href="/strings-generales">Generales</a></li>
+
+            <li><a href="/strings-parse">Parse</a></li>
+
+            <li><a href="/strings-slice">Slice</a></li>
+
+            <li><a href="/strings-replace">Replace</a></li>
+
+            <li><a href="/strings-includes">Includes</a></li>
+
+            <li><a href="/strings-index">Index</a></li>
+
+            <li><a href="/strings-match">Match</a></li>
+
+            <li><a href="/strings-split">Split</a></li>
+
+            <li><a href="/strings-search">Search</a></li>
+
+            <li><a href="/strings-starts-ends">Starts - Ends</a></li>
         </ul>
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            03. Ciclos
+            Numbers
 
             <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
             </svg>
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/ciclos-while">a. While</a></li>
-            <li><a href="/ciclos-do-while">b. Do - While</a></li>
-            <li><a href="/ciclos-for">c. For</a></li>
-            <li><a href="/ciclos-for-of">d. For - Of</a></li>
-            <li><a href="/ciclos-for-in">e. For - In</a></li>
-            <li><a href="/ciclos-forEach">f. ForEach</a></li>
-            <li><a href="/ciclos-sentencias">f. Sentencias</a></li>
+            <li><a href="/numbers-generales">Generales</a></li>
+
+            <li><a href="/numbers-math">Math</a></li>
+        </ul>
+    </li>
+
+    <hr class="line_nav" />
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Condicionales
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/condicionales-if-else">If - Else</a></li>
+            <li><a href="/condicionales-switch">Switch </a></li>
+            <li><a href="/condicionales-return">Return</a></li>
+            <li><a href="/condicionales-operadores">Operadores</a></li>
         </ul>
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            04. Funciones
+            Ciclos
 
             <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
             </svg>
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/funciones-declaradas">a. Declaradas</a></li>
-            <li><a href="/funciones-expresadas">b. Expresadas</a></li>
-            <li><a href="/funciones-arrow">c. Arrow</a></li>
-            <li><a href="/funciones-callback">d. Callback</a></li>
-            <li><a href="/funciones-return">e. Return</a></li>
+            <li><a href="/ciclos-while">While</a></li>
+            <li><a href="/ciclos-do-while">Do - While</a></li>
+            <li><a href="/ciclos-for">For</a></li>
+            <li><a href="/ciclos-for-of">For - Of</a></li>
+            <li><a href="/ciclos-for-in">For - In</a></li>
+            <li><a href="/ciclos-forEach">ForEach</a></li>
+            <li><a href="/ciclos-sentencias">Sentencias</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Funciones
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/funciones-declaradas">Declaradas</a></li>
+            <li><a href="/funciones-expresadas">Expresadas</a></li>
+            <li><a href="/funciones-arrow">Arrow</a></li>
+            <li><a href="/funciones-callback">Callback</a></li>
+            <li><a href="/funciones-return">Return</a></li>
             <!-- <li><a href="/funciones-events">d. Events</a></li> -->
-            <li><a href="/funciones-operadores">f. Operadores</a></li>
+            <li><a href="/funciones-operadores">Operadores</a></li>
         </ul>
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            05. Arreglos
+            Arrays
 
             <!-- <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
             </svg> -->
         </a>
 
         <!-- <ul class="dropdown_menu">
-            <li><a href="#">a. uno</a></li>
+            <li><a href="#">uno</a></li>
+        </ul> -->
+    </li>
+
+    <hr class="line_nav" />
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Objetos
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/objetos-declaracion">Declaracion</a></li>
+            <li><a href="/objetos-manipulacion">Manipulacion</a></li>
+            <li><a href="/objetos-destructuring">Destructuring</a></li>
+            <li><a href="/objetos-metodos">Metodos</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Clases
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/clases-declaracion">Declaracion</a></li>
+            <li><a href="/clases-manipulacion">Manipulacion</a></li>
+            <li><a href="/clases-destructuring">Destructuring</a></li>
+            <li><a href="/clases-herencia">Herencia</a></li>
+            <li><a href="/clases-metodos">Metodos</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            JSON
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/json-declaracion">Declaracion</a></li>
+            <li><a href="/json-manipulacion">Manipulacion</a></li>
+            <li><a href="/json-destructuring">Destructuring</a></li>
+            <li><a href="/json-metodos">Metodos</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Map
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/map-declaracion">Declaracion</a></li>
+            <li><a href="/map-propiedades">Propiedades</a></li>
+            <li><a href="/map-metodos">Metodos</a></li>
+        </ul>
+    </li>
+
+    <hr class="line_nav" />
+
+    <li class="li_dropdown">
+        <a href="/date"> Date</a>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#">
+            Temporizadores
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/temporizadores-setTimeout">SetTimeout</a></li>
+
+            <li><a href="/temporizadores-setInterval">SetInterval</a></li>
+
+            <li><a href="/temporizadores-clearInterval">ClearInterval</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#">
+            RegExp
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/regexp-metodos">Metodos</a></li>
+
+            <li><a href="/regexp-flags">Flags</a></li>
+
+            <li><a href="/regexp-indicadores">Indicadores</a></li>
+
+            <li><a href="/regexp-patrones">Patrones</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            LocalStorage
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/localStorage-setItem">SetItem</a></li>
+
+            <li><a href="/localStorage-getItem">GetItem</a></li>
+
+            <li><a href="/localStorage-removeItem">RemoveItem</a></li>
+
+            <li><a href="/localStorage-clear">Clear</a></li>
+
+            <li><a href="/localStorage-generales">Generales</a></li>
+        </ul>
+    </li>
+
+    <hr class="line_nav" />
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Promesas
+
+            <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Fetch
+
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
+        </a>
+
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
         </ul> -->
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            06. Objetos
+            Ajax
+
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
+        </a>
+
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
+    </li>
+
+    <hr class="line_nav" />
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            DOM
 
             <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
             </svg>
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/objetos-declaracion">a. Declaracion</a></li>
-            <li><a href="/objetos-manipulacion">b. Manipulacion</a></li>
-            <li><a href="/objetos-destructuring">c. Destructuring</a></li>
-            <li><a href="/objetos-metodos">d. Metodos</a></li>
+            <li><a href="/dom-window">Window</a></li>
+
+            <li><a href="/dom-document">Document</a></li>
+
+            <li><a href="/dom-selectores">Selectores</a></li>
+
+            <li><a href="/dom-nodeChild">NodeChild</a></li>
+
+            <li><a href="/dom-nodeSiblings">NodeSiblings</a></li>
+
+            <li><a href="/dom-classList">ClassList</a></li>
+
+            <li><a href="/dom-attribute">Attribute</a></li>
+
+            <li><a href="/dom-style">Style</a></li>
+
+            <li><a href="/dom-listeners">Listeners</a></li>
+
+            <li><a href="/dom-event-e">Event - e</a></li>
+
+            <li><a href="/dom-formularios">Formularios</a></li>
         </ul>
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            07. Clases
+            BOM
 
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
         </a>
 
-        <ul class="dropdown_menu">
-            <li><a href="/clases-declaracion">a. Declaracion</a></li>
-            <li><a href="/clases-manipulacion">b. Manipulacion</a></li>
-            <li><a href="/clases-destructuring">c. Destructuring</a></li>
-            <li><a href="/clases-herencia">d. Herencia</a></li>
-            <li><a href="/clases-metodos">e. Metodos</a></li>
-        </ul>
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
+    </li>
+
+    <hr class="line_nav" />
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            Websockets
+
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
+        </a>
+
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
     </li>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            08. JSON
+            Webworkets
 
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
         </a>
 
-        <ul class="dropdown_menu">
-            <li><a href="/json-declaracion">a. Declaracion</a></li>
-            <li><a href="/json-manipulacion">b. Manipulacion</a></li>
-            <li><a href="/json-destructuring">c. Destructuring</a></li>
-            <li><a href="/json-metodos">d. Metodos</a></li>
-        </ul>
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
     </li>
+
+    <hr class="line_nav" />
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            10. Promesas
+            PWA
 
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
         </a>
 
-        <ul class="dropdown_menu">
-            <li><a href="/promesas-definicion">a. Definicion</a></li>
-            <li><a href="/promesas-async-await">b. Async - Await</a></li>
-            <li><a href="/promesas-try-catch">c. Try - Catch</a></li>
-            <li><a href="/promesas-throw-error">c. Throw error</a></li>
-        </ul>
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
     </li>
+
+    <hr class="line_nav" />
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            11. Strings
+            Jest
 
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
         </a>
 
-        <ul class="dropdown_menu">
-            <li><a href="/strings-generales">a. Generales</a></li>
-
-            <li><a href="/strings-slice">b. slice</a></li>
-
-            <li><a href="/strings-replace">c. replace</a></li>
-
-            <li><a href="/strings-includes">d. includes</a></li>
-
-            <li><a href="/strings-index">e. index</a></li>
-
-            <li><a href="/strings-match">f. match</a></li>
-
-            <li><a href="/strings-split">g. split</a></li>
-
-            <li><a href="/strings-search">h. rearch</a></li>
-
-            <li><a href="/strings-start-end">i. start - end</a></li>
-        </ul>
-    </li>
-
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            12. Numeros
-
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
-        </a>
-
-        <ul class="dropdown_menu">
-            <li><a href="/numeros-generales">a. Generales</a></li>
-
-            <li><a href="/numeros-math">b. Math</a></li>
-        </ul>
-    </li>
-
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            12. DOM
-
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
-        </a>
-
-        <ul class="dropdown_menu">
-            <li><a href="/dom-window">a. window</a></li>
-
-            <li><a href="/dom-document">b. document</a></li>
-
-            <li><a href="/dom-selectores">c. Selectores</a></li>
-
-            <li><a href="/dom-nodeChild">d. nodeChild</a></li>
-
-            <li><a href="/dom-nodeSiblings">e. nodeSiblings</a></li>
-
-            <li><a href="/dom-classList">f. classList</a></li>
-
-            <li><a href="/dom-attribute">g. attribute</a></li>
-
-            <li><a href="/dom-style">h. style</a></li>
-
-            <li><a href="/dom-listeners">i. Listeners</a></li>
-
-            <li><a href="/dom-event-e">j. event - e</a></li>
-
-            <li><a href="/dom-formularios">k. Formularios</a></li>
-        </ul>
-    </li>
-
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            13. LocalStorage
-
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
-        </a>
-
-        <ul class="dropdown_menu">
-            <li><a href="/localStorage-setItem">a. SetItem</a></li>
-
-            <li><a href="/localStorage-getItem">b. GetItem</a></li>
-
-            <li><a href="/localStorage-removeItem">c. RemoveItem</a></li>
-
-            <li><a href="/localStorage-clear">d. Clear</a></li>
-
-            <li><a href="/localStorage-generales">e. Generales</a></li>
-        </ul>
-    </li>
-
-    <li class="li_dropdown">
-        <a href="/date"> 14. Date</a>
-    </li>
-
-    <li class="li_dropdown">
-        <a href="#">
-            15. Temporizadores
-
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
-        </a>
-
-        <ul class="dropdown_menu">
-            <li><a href="/temporizadores-setTimeout">a. SetTimeout</a></li>
-
-            <li><a href="/temporizadores-setInterval">b. SetInterval</a></li>
-
-            <li><a href="/temporizadores-clearInterval">c. ClearInterval</a></li>
-        </ul>
-    </li>
-
-    <li class="li_dropdown">
-        <a href="#">
-            16. RegExp
-
-            <svg viewBox="0 0 24 24">
-                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
-            </svg>
-        </a>
-
-        <ul class="dropdown_menu">
-            <li><a href="/regexp-flags">a. Flags</a></li>
-
-            <li><a href="/regexp-indicadores">b. Indicadores</a></li>
-
-            <li><a href="/regexp-metodos">c. Metodos</a></li>
-
-            <li><a href="/regexp-patrones">c. Patrones</a></li>
-        </ul>
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
     </li>
 </ul>

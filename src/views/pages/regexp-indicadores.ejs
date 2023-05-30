@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Indicadores</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Indicadores</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -53,6 +66,55 @@
                 </section>
 
                 <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Indicadores</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#indicador-^">01. Indicador-^</a></li>
+                                    <li><a href="#indicador-[^]">02. Indicador-[^]</a></li>
+                                    <li><a href="#indicador-$">03. Indicador-$</a></li>
+                                    <li><a href="#indicador-+">04. Indicador-+</a></li>
+                                    <li><a href="#indicador-[]">05. Indicador-[ ]</a></li>
+                                    <li><a href="#indicador-{}">06. Indicador-{ }</a></li>
+                                    <li><a href="#indicador-{}$">07. Indicador-{ }$</a></li>
+                                    <li><a href="#indicador-{,}$">08. Indicador-{ , }$</a></li>
+                                    <li><a href="#indicador-|">09. Indicador-|</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
@@ -60,7 +122,7 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-^">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
@@ -69,100 +131,364 @@
                         <!--  
 							tag-p: en esta definimos el parrafo de la seccion
 						-->
-                        <p>Determina que la cadena de caracteres a ser evaluada debe iniciar con el patron definido dentro de la expresion regular.</p>
+                        <p>Determina que la cadena de caracteres a ser evaluada <strong>debe iniciar</strong> con el patron definido dentro de la expresion regular.</p>
 
-                        <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p01.png" alt="indicador ^" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^</span><span class="string">saludo</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"me despedido y luego saludo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^</span><span class="string">saludo</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"saludo y luego me despido"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-[^]">
                         <h3>02. Indicador [^]</h3>
 
-                        <p>Determina que la cadena de caracteres a ser evaluada no debe iniciar con el patron definido dentro de la expresion regular.</p>
+                        <p>Determina que la cadena de caracteres a ser evaluada <strong>no debe iniciar</strong> con el patron definido dentro de la expresion regular.</p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p02.png" alt="indicador [^]" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[^</span><span class="string">saludo</span><span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"me despedido y luego saludo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[^</span><span class="string">saludo</span><span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"saludo y luego me despido"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-$">
                         <h3>03. Indicador $</h3>
 
-                        <p>Determina que la cadena de caracyeres a ser evaluada debe finalizar con el patron definido dentro de la expresion regular.</p>
+                        <p>Determina que la cadena de caracteres a ser evaluada <strong>debe finalizar</strong> con el patron definido dentro de la expresion regular.</p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p03.png" alt="indicador $" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">LENGUAJE</span><span class="functions">$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Javascript es un gran idioma"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">LENGUAJE</span><span class="functions">$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Javascript es un gran lenguaje"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-+">
                         <h3>04. Indicador +</h3>
 
-                        <p>Determina que la cadena de caracteres a ser evaluada debe tener si o si, el o los caracteres definidos despues del indicador en el patron dentro de la expresion regular.</p>
+                        <p>
+                            Determina que la cadena de caracteres a ser evaluada <strong>debe tener si o si</strong> los caracteres definidos despues del indicador <strong>+</strong> en el patron
+                            dentro de la expresion regular.
+                        </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p04.png" alt="indicador +" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Codigo</span><span class="functions">+</span>-col<span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Codigo col"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Codigo</span><span class="functions">+</span>-col<span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Codigo-col"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-[]">
                         <h3>05. Indicador [ ]</h3>
 
-                        <p>Determina que la cadena de caracteres a ser evaluada debe iniciar entre el rango de patron definido dentro de la expresion regular.</p>
+                        <p>
+                            Determina que la cadena de caracteres a ser evaluada debe tener <strong>como minimo 1 caracter</strong> segun sea el rango del patron definido dentro de la expresion
+                            regular.
+                        </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p05.png" alt="indicador [ ]" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>a-d<span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Geronimo es mi primo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>a-d<span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Lorieth es mi prima"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-{}">
                         <h3>06. Indicador { }</h3>
 
-                        <p>Determina que la cadena de caracteres a ser evaluada debe tener una cantidad minima segun esta haya sido definida dentro del patron de la expresion regular.</p>
+                        <p>
+                            Determina que la cadena de caracteres a ser evaluada debe tener <strong>una cantidad minima</strong> segun haya sido definida la condicion dentro del patron de la expresion
+                            regular.
+                        </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p06.png" alt="indicador { }" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"1234567"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"12345678"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-{}$">
                         <h3>07. Indicador { }$</h3>
 
-                        <p>Determina que la cadena de caracteres a ser evaluada solo puede tener una cantidad maxima segun esta haya sido definida dentro del patron de la expresion regular.</p>
+                        <p>
+                            Determina que la cadena de caracteres a ser evaluada solo puede tener <strong>una cantidad maxima</strong> segun haya sido definida la condicion dentro del patron de la
+                            expresion regular.
+                        </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p07.png" alt="indicador { }$" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Me encanta corre</span><span class="functions">+</span><span class="string">r</span><span class="functions">{</span>1<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Me encanta correrr"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Me encanta corre</span><span class="functions">+</span><span class="string">r</span><span class="functions">{</span>1<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Me encanta correr"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-{,}$">
                         <h3>08. Indicador { , }$</h3>
 
-                        <p>Determina que la cadena de caracteres a ser evaluada debe tener una cantidad minima y maxima segun esta haya sido definida dentro del patron de la expresion regular.</p>
+                        <p>Determina que la cadena de caracteres a ser evaluada <strong>debe estar definida entre el rango</strong> del patron definido dentro de la expresion regular.</p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p08.png" alt="indicador { , }$" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>4,8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"456"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>4,8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"45678"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="indicador-|">
                         <h3>09. Indicador |</h3>
 
-                        <p>Determina que la cadena de caracteres a ser evaluada puede ser cualquiera de los valores definidos dentro del patron de la expresion regular.</p>
+                        <p>Determina que la cadena de caracteres a ser evaluada <strong>puede ser cualquiera de los valores</strong> definidos dentro del patron de la expresion regular.</p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/indicadores/p09.png" alt="indicador |" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Php</span><span class="functions">|</span><span class="string">Angular</span><span class="functions">|</span><span class="string">Pyton</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Java"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Php</span><span class="functions">|</span><span class="string">Angular</span><span class="functions">|</span><span class="string">Pyton</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Angular"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Indicadores - RegExp</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./regexp-flags">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./regexp-patrones">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Indicadores - RegExp") %>
                 </div>
             </main>
         </div>

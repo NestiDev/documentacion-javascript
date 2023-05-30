@@ -101,9 +101,10 @@
                                 <ul>
                                     <li><a href="#definicion-e-invocacion">01. Definicion e invocacion</a></li>
                                     <li><a href="#invocacion-y-definicion">02. Invocacion y definicion</a></li>
-                                    <li><a href="#variables-como-argumentos">03. Variables como argumentos</a></li>
-                                    <li><a href="#argumentos-por-defecto">04. Argumentos por defecto</a></li>
-                                    <li><a href="#reutilizacion">05. Reutilizacion</a></li>
+                                    <li><a href="#autoinvocacion">03. Autoinvocacion</a></li>
+                                    <li><a href="#variables-como-argumentos">04. Variables como argumentos</a></li>
+                                    <li><a href="#argumentos-por-defecto">05. Argumentos por defecto</a></li>
+                                    <li><a href="#reutilizacion">06. Reutilizacion</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -135,11 +136,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="functions">function</span> usuario<span class="functions">() </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function</span> descripcion<span class="functions">() </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Esta es una funcion sin parametros"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Funcion declarada sin parametros"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
@@ -147,14 +148,14 @@
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span>usuario<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span>descripcion<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
                             -->
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> Esta es una funcion sin parametros</pre>
+                                <pre><span>></span> Funcion declarada sin parametros</pre>
                             </div>
                         </div>
                     </section>
@@ -191,8 +192,33 @@
                         </div>
                     </section>
 
+                    <section class="sect_content" id="autoinvocacion">
+                        <h3>03. Autoinvocacion</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">(function</span> usuario<span class="keyword">(<span class="parameters">nombre</span>) </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Bienvenido </span><span class="symbols">${</span><span class="parameters">nombre</span><span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="functions">)(</span><span class="string">"Camilo"</span><span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Bienvenido Camilo</pre>
+                            </div>
+                        </div>
+                    </section>
+
                     <section class="sect_content" id="variables-como-argumentos">
-                        <h3>03. Variables como argumentos</h3>
+                        <h3>04. Variables como argumentos</h3>
 
                         <p>Una practica muy comun es pasar variables en la invocacion de una funcion ya que estas pueden almacenar valores de manera dinamica.</p>
 
@@ -229,7 +255,7 @@
                     </section>
 
                     <section class="sect_content" id="argumentos-por-defecto">
-                        <h3>04. Argumentos por defecto</h3>
+                        <h3>05. Argumentos por defecto</h3>
 
                         <p>
                             Podemos asignar argumentos directamente en los parametros de una funcion lo que sigifica que si un argumento
@@ -261,7 +287,7 @@
                     </section>
 
                     <section class="sect_content" id="reutilizacion">
-                        <h3>05. Reutilizacion</h3>
+                        <h3>06. Reutilizacion</h3>
 
                         <p>
                             Uno de los muchos beneficios de las funciones consiste en la reutilizacion. Esto significa que un bloque de codigo definido dentro del escope de una una funcion

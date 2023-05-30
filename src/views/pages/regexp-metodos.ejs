@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
                 <section class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Metodos</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Metodos</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -48,11 +61,51 @@
                     -->
                     <p>
                         Nos ayudan a comprobar la exintencia de posibles coincidencias que puedan existir entre una cadena de caracteres y el patron de una expresion regular, estos devuelven valores
-                        que podemos manipular para realizar diferentes acciones. Cabe aclarar que
-                        <strong>exec</strong> y <strong>test</strong> son metodos propios de las RegExp y que <strong>match replace search</strong> y <strong>split</strong> son metodos propios de los
-                        Strings.
+                        que <strong>podemos manipular</strong> para realizar diferentes acciones.
                     </p>
                 </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#test">01. Test</a></li>
+                                    <li><a href="#exec">02. Exec</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
                 <!--  
                     sections_container: contenedor de las secciones que componen
@@ -62,94 +115,109 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="test">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Exec</h3>
+                        <h3>01. Test</h3>
 
                         <!--  
 							tag-p: en esta definimos el parrafo de la seccion
 						-->
                         <p>
                             Determina si el patron definido en la expresion regular tiene alguna coincidencia con la cadena de caracteres suministrada dentro del metodo, de hayar coincidencias
-                            devuelve un <strong>array</strong> con las coincidencias encontradas de lo contrario devuelve un valor <strong>null</strong>
-                        </p>
-
-                        <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/metodos/e01.png" alt="exec" />
-                        </div>
-                    </section>
-
-                    <section class="sect_content">
-                        <h3>02. Test</h3>
-
-                        <p>
-                            Determina si el patron definido en la expresion regular tiene alguna coincidencia con la cadena de caracteres suministrada dentro del metodo, de hayar coincidencias
                             devuelve un valor <strong>true</strong> de lo contrario devuelve un valor <strong>false</strong>
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/metodos/t01.png" alt="test" />
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">mi familia</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"mi familia es maravillosa"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"tu familia y mi familia"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"amo a mis padres"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"mis familiares son demasiados"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> true</pre>
+                                <pre><span>></span> false</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Match</h3>
+                    <section class="sect_content" id="exec">
+                        <h3>02. Exec</h3>
 
                         <p>
-                            Determina si la cedena de caracteres tiene alguna coincidencia con el patron de la expresion regular suministrada dentro del metodo, de hayar coincidencias devuelve un
-                            <strong>array</strong> con las coincidencias encontradas de lo contrario devuelve un valor <strong>null</strong>
+                            Determina si el patron definido en la expresion regular tiene alguna coincidencia con la cadena de caracteres suministrada dentro del metodo, de hayar coincidencias
+                            devuelve un <strong>array</strong> con las coincidencias encontradas de lo contrario devuelve un valor <strong>null</strong>
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/metodos/m01.png" alt="match" />
-                        </div>
-                    </section>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                    <section class="sect_content">
-                        <h3>04. Replace</h3>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">mi familia</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
 
-                        <p>
-                            Permite reemplazar una porsion de una cedena de caracteres siempre y cuando exista alguna coincidencia con el patron de la expresion regular suministrada dentro del metodo,
-                            de hayar coincidencias devuelve la cadena con el nuevo valor.
-                        </p>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/metodos/r01.png" alt="replace" />
-                        </div>
-                    </section>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.exec(</span><span class="string">"mi familia es maravillosa"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.exec(</span><span class="string">"tu familia y mi familia"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                    <section class="sect_content">
-                        <h3>05. Search</h3>
+                            <pre><code><span class="index">05</span></code></pre>
 
-                        <p>
-                            Permite conocer la posicion de la primera coincidencia encontrada en la cedena de caracteres siempre y cuando exista alguna coincidencia con el patron de la expresion
-                            regular suministrada dentro del metodo, de no hayar coincidencias devuelve un valor <strong>-1</strong>
-                        </p>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.exec(</span><span class="string">"amo a mis padres"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.exec(</span><span class="string">"mis familiares son demasiados"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/metodos/s01.png" alt="search" />
-                        </div>
-                    </section>
-
-                    <section class="sect_content">
-                        <h3>06. Split</h3>
-
-                        <p>Este devuelve un <strong>array</strong> con los valores de la cadena de caracteres que no coincidan con el patron de la expresion regular suministrada dentro del metodo.</p>
-
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/regexp/metodos/s02.png" alt="split" />
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'mi familia', index: 0, input: 'mi familia es maravillosa' ]</pre>
+                                <pre><span>></span> [ 'mi familia', index: 13, input: 'tu familia y mi familia' ]</pre>
+                                <pre><span>></span> null</pre>
+                                <pre><span>></span> null</pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Metodos - RegExp</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./regexp-flags">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Metodos - RegExp") %>
                 </div>
             </main>
         </div>
