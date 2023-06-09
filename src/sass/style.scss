@@ -54,6 +54,12 @@ body {
 */
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: $colorFour;
+
+    &.js_dark_mode {
+        background-color: $backgroundColorOne;
+        color: #dbd8d8;
+    }
 }
 
 /*
@@ -102,7 +108,7 @@ svg {
     left: 0;
     right: 0;
     z-index: 9;
-    background-color: $colorThree;
+    // background-color: $colorThree;
     border-bottom: 1px solid $borderOne;
     transition: box-shadow 0.2s;
 
@@ -112,6 +118,7 @@ svg {
 	*/
     &.js_header_scroll {
         box-shadow: 0 2px 5px $shadowOne;
+        background-color: $colorThree;
     }
 
     /*
@@ -329,15 +336,16 @@ svg {
 			scrollbar
 		*/
         &::-webkit-scrollbar {
-            width: 8px;
-            background-color: #f6f6f6;
+            width: 10px;
+            background-color: #f1f1f1;
         }
 
         /*
 			::-webkit-scrollbar-thumb
 		*/
         &::-webkit-scrollbar-thumb {
-            background-color: #d9d9d9;
+            // background-color: #d9d9d9;
+            background-color: #c1c1c1;
         }
 
         /*
@@ -524,7 +532,7 @@ svg {
     .main_components {
         position: absolute;
         top: $heightFixed;
-        color: $colorFour;
+        // color: $colorFour;
         min-height: calc(100% - 60px);
         padding: 0 6%;
 
@@ -825,7 +833,7 @@ svg {
                 h3 {
                     font-size: 2rem;
                     line-height: 1.2;
-                    margin: 80px 0 20px;
+                    padding: 80px 0 20px;
 
                     /*
 						dispositivos menores a 336px: modificamos el tamaño de
@@ -862,7 +870,7 @@ svg {
                     img {
                         width: 100%;
                         border-radius: 5px;
-                        box-shadow: 0 0 20px 0 $shadowTwo;
+                        box-shadow: 0 0 8px 0 $shadowTwo;
                     }
                 }
 
@@ -873,9 +881,9 @@ svg {
                     font-size: 17px;
                     border-radius: 5px;
                     padding: 20px 0;
-                    margin: 30px 0 40px;
+                    margin-top: 38px;
                     overflow-x: auto;
-                    box-shadow: 0 0 20px 0 $shadowTwo;
+                    box-shadow: 0 0 8px 0 $shadowTwo;
 
                     /*
                     	::-webkit-scrollbar: definimos un ancho del
@@ -1092,24 +1100,70 @@ svg {
             margin-bottom: 30px;
 
             /*
-                box_gotop: definimos un margen inferior
-                para generar separacion frente a otros elementos
+                box_gotop: implementamos fixed y sus propiedades right, 
+                y bottom para darle posicion a esta caja, luego hacemos
+                uso de flexbox y sus propiedades justify-content y
+                align-items para centrar vertical y horizontalmente el icono,
+                finalmente overflow: hidden para ocualtar la caja
             */
             .box_gotop {
-                text-align: center;
+                position: fixed;
+                right: 2%;
+                bottom: 85px;
+                z-index: 99;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 39px;
+                height: 39px;
+                border-radius: 5px;
+                overflow: hidden;
                 cursor: pointer;
-                margin-bottom: 12px;
 
                 /*
-                    tag-svg
+                    añadimos la clase javascript js_show_gotop para agregar 
+                    color de fondo, una sombra y overflow: visible para 
+                    visible nuevamente esta caja 
+                */
+                &.js_show_gotop {
+                    background-color: $colorOne;
+                    box-shadow: 0 2px 6px 0 $shadowTwo;
+                    overflow: visible;
+
+                    /*
+                        cuando hacemos :hover sobre box_gotop,
+                        relacionamos a tag-svg y modificamos el 
+                        tamaño del icono
+                    */
+                    &:hover svg {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+                /*
+                    añadimos la clase javascript js_show_gotop, 
+                    relacionamos a tag-svg para añadirle color 
+                    al icono
+                */
+                &.js_show_gotop svg {
+                    fill: $backgroundColorOne;
+                }
+
+                /*
+                    tag-svg: importante definir fill: transparent 
+                    para ocultar el icono
                 */
                 svg {
-                    fill: $backgroundColorOne;
-                    width: 38px;
-                    height: 38px;
+                    fill: transparent;
+                    width: 27px;
+                    height: 27px;
                 }
             }
 
+            /*
+                tag-h2
+            */
             h4 {
                 text-align: center;
                 color: $colorFive;

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                modal_section y 1 sections_container
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Modulos</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>texto pendiente</p>
+                </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#script">01. Script</a></li>
+                                    <li><a href="#export">02. Export</a></li>
+                                    <li><a href="#import">03. Import</a></li>
+                                    <li><a href="#as">04. As</a></li>
+                                    <li><a href="#as-import">05. As import</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+                    <section class="sect_content" id="script">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Script</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="console"><</span><span class="parenthesis">!DOCTYPE </span><span class="functions">html</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">02</span><span class="console"><</span><span class="parenthesis">html </span><span class="functions">lang</span><span class="console">=</span><span class="string">"es"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="console"><</span><span class="parenthesis">head</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_doble_index">04</span><span class="console"><</span><span class="parenthesis">meta </span><span class="functions">http-equiv</span><span class="console">=</span><span class="string">"X-UA-Compatible" </span><span class="functions">content</span><span class="console">=</span><span class="string">"IE=edge"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_doble_index">05</span><span class="console"><</span><span class="parenthesis">meta </span><span class="functions">name</span><span class="console">=</span><span class="string">"viewport" </span><span class="functions">content</span><span class="console">=</span><span class="string">"width=device-width, initial-scale=1.0"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_doble_index">06</span><span class="console"><</span><span class="parenthesis">title</span><span class="console">></span>Modulos<span class="console"><</span><span class="parenthesis">/title</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">07</span><span class="console"><</span><span class="parenthesis">/head</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">09</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">10</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./importar.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">12</span><span class="console"><</span><span class="parenthesis">/html</span><span class="console">></span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="export">
+                        <h3>02. Export</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function </span>moduloAExportar<span class="functions">() </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Modulo exportado correctamente"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="functions">export {</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span>moduloAExportar</code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="functions">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="import">
+                        <h3>03. Import</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">import { </span>moduloAExportar <span class="functions">} from </span><span class="string">"./export.js"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>moduloAExportar<span class="methods">()</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Modulo exportado correctamente</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">import { </span>moduloAExportar <span class="functions">} from </span><span class="string">"./export.js"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>moduloAExportar<span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Modulo exportado correctamente</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="as">
+                        <h3>04. As</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function </span>moduloAExportar<span class="functions">(<span class="number">confirmacion</span>) </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">confirmacion</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="functions">export {</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index outer_index">09</span>moduloAExportar <span class="functions">as </span>modulo</code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="functions">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="as-import">
+                        <h3>05. As import</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">import { </span>modulo <span class="functions">} from </span><span class="string">"./export.js"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>modulo<span class="methods">(</span><span class="string">"Modulo exportado correctamente"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Modulo exportado correctamente</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_pagination
+                    -->
+                    <div class="section_pagination"></div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Modulos - Javascript") %>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

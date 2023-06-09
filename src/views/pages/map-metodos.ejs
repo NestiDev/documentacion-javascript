@@ -96,8 +96,12 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#instanciamiento">01. Instanciamiento</a></li>
-                                    <li><a href="#claves-y-valores">02. Claves y valores</a></li>
+                                    <li><a href="#get">01. Get</a></li>
+                                    <li><a href="#set">02. Set</a></li>
+                                    <li><a href="#delete">03. Delete</a></li>
+                                    <li><a href="#has">04. Has</a></li>
+                                    <li><a href="#forEach">05. ForEach</a></li>
+                                    <li><a href="#object-fromEntries">06. Object.fromEntries</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -112,11 +116,11 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-                    <section class="sect_content" id="metodo-get">
+                    <section class="sect_content" id="get">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Metodo get</h3>
+                        <h3>01. Get</h3>
 
                         <p>texto pendiente</p>
 
@@ -167,8 +171,8 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="metodo-set">
-                        <h3>02. Metodo set</h3>
+                    <section class="sect_content" id="set">
+                        <h3>02. Set</h3>
 
                         <p>texto pendiente tambien sirve pa modificar las claves y sus valores</p>
 
@@ -233,8 +237,8 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="metodo-delete">
-                        <h3>03. Metodo delete</h3>
+                    <section class="sect_content" id="delete">
+                        <h3>03. Delete</h3>
 
                         <p>texto pendiente</p>
 
@@ -279,8 +283,8 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="metodo-has">
-                        <h3>03. Metodo has</h3>
+                    <section class="sect_content" id="has">
+                        <h3>04. Has</h3>
 
                         <p>texto pendiente</p>
 
@@ -339,8 +343,8 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="metodo forEach">
-                        <h3>04. Metodo forEach</h3>
+                    <section class="sect_content" id="forEach">
+                        <h3>05. ForEach</h3>
 
                         <p>texto pendiente</p>
 
@@ -425,6 +429,59 @@
                         </div>
                     </section>
 
+                    <section class="sect_content" id="object-fromEntries">
+                        <h3>06. Object.fromEntries</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> curso<span class="operator"> = new </span><span class="symbols">Map(</span><span class="square">[</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="parenthesis">[</span><span class="string">'tema'<span class="semi_colon">, </span>'Manejo avanzado de Visual Studio Code'</span><span class="parenthesis">]</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="parenthesis">[</span><span class="string">'niveles'</span><span class="semi_colon">, </span><span class="square">[</span><span class="string">"intermedio"</span><span class="semi_colon">, </span><span class="string">"avanzado"</span><span class="square">]</span><span class="parenthesis">]</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="parenthesis">[</span><span class="string">'requerimientos'</span><span class="semi_colon">, </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">08</span>conocimientos<span class="operator">: </span><span class="string">"Basico"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">09</span>conectividad<span class="operator">: </span><span class="boolean">true</span></code></pre>
+
+                            <pre><code><span class="index outer_index">10</span><span class="brackets">}</span><span class="parenthesis">]</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index inner_index">12</span><span class="square">]</span><span class="symbols">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">13</span></code></pre>
+
+                            <pre><code><span class="index inner_index">14</span><span class="variable">let</span> convertirEnObjeto<span class="operator"> = </span><span class="parenthesis">Object</span><span class="methods">.fromEntries(</span>curso<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">15</span></code></pre>
+
+                            <pre><code><span class="index inner_index">16</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertirEnObjeto<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> {</pre>
+                                <pre><span>></span>     tema: 'Manejo avanzado de Visual Studio Code',</pre>
+                                <pre><span>></span>     niveles: [ 'intermedio', 'avanzado' ],</pre>
+                                <pre><span>></span>     requerimientos: {</pre>
+                                <pre><span>></span>         conocimientos: 'Basico',</pre>
+                                <pre><span>></span>         conectividad: true</pre>
+                                <pre><span>></span>     }</pre>
+                                <pre><span>></span> }</pre>
+                            </div>
+                        </div>
+                    </section>
+
                     <!--  
                         section_pagination: contenedor de 2 tags-a
                     -->
@@ -454,6 +511,6 @@
             </main>
         </div>
 
-        <script src="./js/main.js"></script>
+        <script type="module" src="./js/main.js"></script>
     </body>
 </html>

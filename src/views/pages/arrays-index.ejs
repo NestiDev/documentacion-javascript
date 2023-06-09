@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                modal_section y 1 sections_container
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Index</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>texto pendiente</p>
+                </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#indexOf">01. IndexOf</a></li>
+                                    <li><a href="#lastIndexOf">02. LastIndexOf</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p, de code_box y
+                        de 1 tag-samp
+					-->
+                    <section class="sect_content" id="indexOf">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>12. IndexOf</h3>
+
+                        <!--  
+							tag-p: en esta definimos el pararfo de la seccion
+						-->
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>lenguajes <span class="operator">= </span><span class="square">[</span><span class="string">"C++"</span><span class="semi_colon">, </span><span class="string">"Java"</span><span class="semi_colon">, </span><span class="string">"Go"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1      2</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValor <span class="operator">= </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Python"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValor<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> -1</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>lenguajes <span class="operator">= </span><span class="square">[</span><span class="string">"C++"</span><span class="semi_colon">, </span><span class="string">"Java"</span><span class="semi_colon">, </span><span class="string">"Go"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1      2</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValor <span class="operator">= </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Go"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValor<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 2</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>lenguajes <span class="operator">= </span><span class="square">[</span><span class="string">"C++"</span><span class="semi_colon">, </span><span class="string">"Java"</span><span class="semi_colon">, </span><span class="string">"Go"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1      2</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValorApartirDe <span class="operator">= </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Go"</span><span class="semi_colon">, </span><span class="number">3</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValorApartirDe<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> -1</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>lenguajes <span class="operator">= </span><span class="square">[</span><span class="string">"C++"</span><span class="semi_colon">, </span><span class="string">"Java"</span><span class="semi_colon">, </span><span class="string">"Go"</span><span class="semi_colon">, </span><span class="string">"Python"</span><span class="semi_colon">, </span><span class="string">"Php"</span><span class="semi_colon">, </span><span class="string">"Go"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1      2       3       4      5</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValorApartirDe <span class="operator">= </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Go"</span><span class="semi_colon">, </span><span class="number">3</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValorApartirDe<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 5</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="lastIndexOf">
+                        <h3>13. LastIndexOf</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>animales <span class="operator">= </span><span class="square">[</span><span class="string">"Gato"</span><span class="semi_colon">, </span><span class="string">"Loro"</span><span class="semi_colon">, </span><span class="string">"Perro"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1       2</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValor <span class="operator">= </span>animales<span class="methods">.lastIndexOf(</span><span class="string">"Hanster"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValor<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> -1</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>animales <span class="operator">= </span><span class="square">[</span><span class="string">"Gato"</span><span class="semi_colon">, </span><span class="string">"Loro"</span><span class="semi_colon">, </span><span class="string">"Perro"</span><span class="semi_colon">, </span><span class="string">"Loro"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1       2        3</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValor <span class="operator">= </span>animales<span class="methods">.lastIndexOf(</span><span class="string">"Loro"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValor<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 3</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>animales <span class="operator">= </span><span class="square">[</span><span class="string">"Gato"</span><span class="semi_colon">, </span><span class="string">"Loro"</span><span class="semi_colon">, </span><span class="string">"Perro"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1       2</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValorApartirDe <span class="operator">= </span>animales<span class="methods">.lastIndexOf(</span><span class="string">"Perro"</span><span class="semi_colon">, </span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValorApartirDe<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> -1</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>animales <span class="operator">= </span><span class="square">[</span><span class="string">"Gato"</span><span class="semi_colon">, </span><span class="string">"Loro"</span><span class="semi_colon">, </span><span class="string">"Perro"</span><span class="semi_colon">, </span><span class="string">"Perro"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                   0       1       2        3</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>indiceDelValorApartirDe <span class="operator">= </span>animales<span class="methods">.lastIndexOf(</span><span class="string">"Perro"</span><span class="semi_colon">, </span><span class="number">3</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>indiceDelValorApartirDe<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 3</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./arrays-includes">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./arrays-filter">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Index - Arrays") %>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

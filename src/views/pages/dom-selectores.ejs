@@ -24,18 +24,31 @@
 
             <!--  
                 main_components: contenedor de section_banner,
-                section_container y 1 tag-footer
+                modal_section y 1 sections_container
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Selectores</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Selectores</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -51,7 +64,59 @@
                         <strong>querySelectorAll</strong>
                         los cuales retornan el elemento que se ha seleccionado y las propiedades que lo componen.
                     </p>
-                </section>
+                </div>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#selector-tag">01. Selector tag</a></li>
+                                    <li><a href="#selector-class">02. Selector class</a></li>
+                                    <li><a href="#selector-id">03. Selector ID</a></li>
+                                    <li><a href="#selector-hermanos">04. Selector hermanos</a></li>
+                                    <li><a href="#selector-hijo">05. Selector hijo</a></li>
+                                    <li><a href="#selector-hijos">06. Selector hijos</a></li>
+                                    <li><a href="#selector-atributo">07. Selector atributo</a></li>
+                                    <li><a href="#selector-por-atributo-relacionado">08. Selector atributo relacionado</a></li>
+                                    <li><a href="#selector->">09. Selector ></a></li>
+                                    <li><a href="#selector-last-child">10. Selector last-child</a></li>
+                                    <li><a href="#selector-nth-child(even)">11. Selector nth-child(even)</a></li>
+                                    <li><a href="#selector-nth-child(odd)">12. Selector nth-child(odd)</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
                 <!--  
                     sections_container: contenedor de las secciones que componen
@@ -61,173 +126,524 @@
                     <!--  
 						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="selector-tag">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Seleccion de un elemento por etiqueta</h3>
+                        <h3>01. Selector tag</h3>
 
                         <!--  
 							tag-p: en esta definimos el parrafo de la seccion
 						-->
                         <p>
                             Podemos seleccionar cualquier <strong>elemento HTML</strong>
-                            a travez del nombre de etiqueta.
+                            a travez de su nombre de etiqueta.
                         </p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/e01.png" alt="seleccion de un elemento por etiqueta" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h1</span><span class="console">></span>Hola mundo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH1<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagH1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> h1</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>02. Seleccion de un elemento por su clase</h3>
+                    <section class="sect_content" id="selector-class">
+                        <h3>02. Selector class</h3>
 
                         <p>
-                            Tal cual como si de css se tratase haciendo uso del selector <strong>.</strong> podemos seleccionar cualquier <strong>elemento HTML</strong>
+                            Tal cual como si de css se tratase haciendo uso del selector <strong>.</strong> (punto) podemos seleccionar cualquier <strong>elemento HTML</strong>
                             a travez de su clase.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s02.png" alt="seleccion de un elemento por su identificador" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h1 </span><span class="functions">class</span><span class="console">=</span><span class="string">"tag_h1"</span><span class="console">></span>Hola mundo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH1<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">".tag_h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagH1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> h1.tag_h1</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Seleccion de un elemento por su identificador</h3>
+                    <section class="sect_content" id="selector-id">
+                        <h3>03. Selector ID</h3>
 
                         <p>
-                            Tal cual como si de css se tratase haciendo uso del selector <strong>#</strong> podemos seleccionar cualquier <strong>elemento HTML</strong>
+                            Tal cual como si de css se tratase haciendo uso del selector <strong>#</strong> (hash) podemos seleccionar cualquier <strong>elemento HTML</strong>
                             a travez de su identificador.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s01.png" alt="seleccion de un elemento por su identificador" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h1 </span><span class="functions">id</span><span class="console">=</span><span class="string">"tag-h1"</span><span class="console">></span>Hola mundo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH1<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#tag-h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagH1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> h1#tag-h1</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>04. Seleccion de un elemento hijo</h3>
+                    <section class="sect_content" id="selector-hijos">
+                        <h3>04. Selector hermanos</h3>
+
+                        <p>
+                            Para llevar a cabo esta seleccion debemos hacer uso de <strong>querySelectorAll</strong> esta accion retorna un <strong>array</strong> con todos los
+                            <strong>elementos HTML</strong> que compartan la misma clase.
+                        </p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">p </span><span class="functions">class</span><span class="console">=</span><span class="string">"parrafo"</span><span class="console">></span>Con clase parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">p </span><span class="functions">class</span><span class="console">=</span><span class="string">"parrafo"</span><span class="console">></span>Con clase parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">13</span></code></pre>
+                            <pre><code><span class="index outer_index">14</span><span class="console"><</span><span class="parenthesis">p</span><span class="console">></span>Sin clase parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">15</span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">p </span><span class="functions">class</span><span class="console">=</span><span class="string">"parrafo"</span><span class="console">></span>Con clase parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">17</span></code></pre>
+                            <pre><code><span class="index outer_index">18</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagsP<span class="operator"> = </span>document<span class="methods">.querySelectorAll(</span><span class="string">".parrafo"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagsP<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> NodeList(3) [ p.parrafo, p.parrafo, p.parrafo ]</pre>
+                                <pre><code><span>></span><span class="index inner_index">0</span><span class="parenthesis">p.parrafo</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">1</span><span class="parenthesis">p.parrafo</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">2</span><span class="parenthesis">p.parrafo</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">length: 3</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">[[Prototype]]: NodeList</span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="selector-hijo">
+                        <h3>05. Selector hijo</h3>
 
                         <p>Para llevar a cabo esta seleccion basta con seguir la secuencia de anidacion con la que se definieron los <strong>elementos HTML</strong> en el documento.</p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s03.png" alt="seleccion de un elemento hijo" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">class</span><span class="console">=</span><span class="string">"div-padre"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console">   <</span><span class="parenthesis">p </span><span class="functions">id</span><span class="console">=</span><span class="string">"parrafo"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console">       <</span><span class="parenthesis">span</span><span class="console">></span>texto de la seccion<span class="console"><</span><span class="parenthesis">/span</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">13</span><span class="console">   <</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">14</span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">15</span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSpan<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">".div-padre #parrafo span"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagSpan<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> span</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>05. Seleccion de multiples elementos</h3>
+                    <section class="sect_content" id="selector-hijos">
+                        <h3>06. Selector hijos</h3>
 
                         <p>
                             Para llevar a cabo esta seleccion debemos hacer uso de <strong>querySelectorAll</strong> esta accion retorna un <strong>array</strong> con todos los
                             <strong>elementos HTML</strong> que compartan la misma clase.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s04.png" alt="seleccion de multiples elementos" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">id</span><span class="console">=</span><span class="string">"div-padre"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console">   <</span><span class="parenthesis">p </span><span class="functions">class</span><span class="console">=</span><span class="string">"parrafo"</span><span class="console">></span>Con clase parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">12</span></code></pre>
+                            <pre><code><span class="index outer_index">13</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Sin clase parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">14</span></code></pre>
+                            <pre><code><span class="index outer_index">15</span><span class="console">   <</span><span class="parenthesis">p </span><span class="functions">class</span><span class="console">=</span><span class="string">"parrafo"</span><span class="console">></span>Con clase parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">17</span></code></pre>
+                            <pre><code><span class="index outer_index">18</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagsP<span class="operator"> = </span>document<span class="methods">.querySelectorAll(</span><span class="string">"#div-padre .parrafo"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagsP<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> NodeList(2) [ p.parrafo, p.parrafo ]</pre>
+                                <pre><code><span>></span><span class="index inner_index">0</span><span class="parenthesis">p.parrafo</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">1</span><span class="parenthesis">p.parrafo</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">length: 2</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">[[Prototype]]: NodeList</span></code></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>06. Seleccion de multiples elementos hijo</h3>
+                    <section class="sect_content" id="selector-atributo">
+                        <h3>07. Selector atributo</h3>
 
                         <p>
-                            Para llevar a cabo esta seleccion debemos hacer uso de <strong>querySelectorAll</strong> esta accion retorna un <strong>array</strong> con todos los
-                            <strong>elementos HTML</strong> que compartan la misma clase.
+                            Esta tipo de seleccion tambien la podemos realizar con <strong>querySelectorAll</strong> en dado caso que necesitemos seleccionar multiples elementos que compartan el mismo
+                            atributo.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s05.png" alt="seleccion de multiples elementos hijo" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">a </span><span class="functions">href</span><span class="console">=</span><span class="string">"www.javascript.com"</span><span class="console">></span>Ver Javascript<span class="console"><</span><span class="parenthesis">/a</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">a </span><span class="functions">href</span><span class="console">=</span><span class="string">"www.node.com"</span><span class="console">></span>Ver Node<span class="console"><</span><span class="parenthesis">/a</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">13</span></code></pre>
+                            <pre><code><span class="index outer_index">14</span><span class="console"><</span><span class="parenthesis">a </span><span class="functions">href</span><span class="console">=</span><span class="string">"www.angular.com"</span><span class="console">></span>Ver Angular<span class="console"><</span><span class="parenthesis">/a</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">15</span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagsLink<span class="operator"> = </span>document<span class="methods">.querySelectorAll(</span><span class="string">"[href]"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagsLink<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> NodeList(3) [ a, a, a ]</pre>
+                                <pre><code><span>></span><span class="index inner_index">0</span><span class="parenthesis">a</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">1</span><span class="parenthesis">a</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">2</span><span class="parenthesis">a</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">length: 3</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">[[Prototype]]: NodeList</span></code></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>07. Seleccion del primer elemento hijo</h3>
+                    <section class="sect_content" id="selector-por-atributo-relacionado">
+                        <h3>08. Selector atributo relacionado</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">img </span><span class="functions">src</span><span class="console">=</span><span class="string">"imagen1.png" </span><span class="functions">alt</span><span class="console">=</span><span class="string">"imagen-pricipal"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">img </span><span class="functions">src</span><span class="console">=</span><span class="string">"imagen2.png" </span><span class="functions">alt</span><span class="console">=</span><span class="string">"imagen"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">13</span></code></pre>
+                            <pre><code><span class="index outer_index">14</span><span class="console"><</span><span class="parenthesis">img </span><span class="functions">src</span><span class="console">=</span><span class="string">"imagen3.png" </span><span class="functions">alt</span><span class="console">=</span><span class="string">"imagen-pricipal"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">15</span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagsImg<span class="operator"> = </span>document<span class="methods">.querySelectorAll(</span><span class="string">"[alt=imagen-principal]"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagsImg<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> NodeList(2) [ img, img ]</pre>
+                                <pre><code><span>></span><span class="index inner_index">0</span><span class="parenthesis">img</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">1</span><span class="parenthesis">img</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">length: 2</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">[[Prototype]]: NodeList</span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="selector->">
+                        <h3>09. Selector ></h3>
 
                         <p>
                             Para llevar a cabo esta seleccion debemos tener como referencia al elemento padre, el caracter <strong>></strong> inidica la seleccion de ese primer
                             <strong>elementos HTML</strong> Esta accion tambien podemos realizarla con el pseudo elemento <strong>:first-child</strong>
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s06.png" alt="seleccion del primer elemento hijo" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">ul </span><span class="functions">id</span><span class="console">=</span><span class="string">"ul-padre"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console">   <</span><span class="parenthesis">li</span><span class="console">></span>Primer item<span class="console"><</span><span class="parenthesis">/li</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">12</span></code></pre>
+                            <pre><code><span class="index outer_index">13</span><span class="console">   <</span><span class="parenthesis">li</span><span class="console">></span>Segundo item<span class="console"><</span><span class="parenthesis">/li</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">14</span></code></pre>
+                            <pre><code><span class="index outer_index">15</span><span class="console">   <</span><span class="parenthesis">li</span><span class="console">></span>Tercer item<span class="console"><</span><span class="parenthesis">/li</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">/ul</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">17</span></code></pre>
+                            <pre><code><span class="index outer_index">18</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagLi<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#ul-padre > li"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagLi<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> li <span class="console">=> primer item</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>08. Seleccion del ultimo elemento hijo</h3>
+                    <section class="sect_content" id="selector-last-child">
+                        <h3>10. Selector last-child</h3>
 
                         <p>Para llevar a cabo esta seleccion debemos tener como referencia al elemento padre.</p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s07.png" alt="seleccion del ultimo elemento hijo" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">ul </span><span class="functions">id</span><span class="console">=</span><span class="string">"ul-padre"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console">   <</span><span class="parenthesis">li</span><span class="console">></span>Primer item<span class="console"><</span><span class="parenthesis">/li</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">12</span></code></pre>
+                            <pre><code><span class="index outer_index">13</span><span class="console">   <</span><span class="parenthesis">li</span><span class="console">></span>Segundo item<span class="console"><</span><span class="parenthesis">/li</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">14</span></code></pre>
+                            <pre><code><span class="index outer_index">15</span><span class="console">   <</span><span class="parenthesis">li</span><span class="console">></span>Ultimo item<span class="console"><</span><span class="parenthesis">/li</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">/ul</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">17</span></code></pre>
+                            <pre><code><span class="index outer_index">18</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagLi<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#ul-padre li:last-child"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagLi<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> li <span class="console">=> ultimo item</span></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>09. Seleccion de elementos hijo - pares</h3>
+                    <section class="sect_content" id="selector-nth-child(even)">
+                        <h3>11. Selector nth-child(even)</h3>
 
                         <p>
                             Haciendo uso del pseudo elemento <strong>:nth-child(even)</strong> podemos seleccionar todos los <strong>elementos HTML</strong> pares teniendo como referencia a su
                             elemento padre.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s08.png" alt="seleccion de elementos hijo - pares" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">id</span><span class="console">=</span><span class="string">"div-padre"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo impar<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">12</span></code></pre>
+                            <pre><code><span class="index outer_index">13</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo par<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">14</span></code></pre>
+                            <pre><code><span class="index outer_index">15</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo impar<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">16</span></code></pre>
+                            <pre><code><span class="index outer_index">17</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo par<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">18</span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">19</span></code></pre>
+                            <pre><code><span class="index outer_index">20</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">21</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tags_p_pares<span class="operator"> = </span>document<span class="methods">.querySelectorAll(</span><span class="string">"#div-padre p:nth-child(even)"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tags_p_pares<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> NodeList(2) [ p, p ]</pre>
+                                <pre><code><span>></span><span class="index inner_index">0</span><span class="parenthesis">p </span><span class="console">=> Parrafo par</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">1</span><span class="parenthesis">p </span><span class="console">=> Parrafo par</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">length: 2</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">[[Prototype]]: NodeList</span></code></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>10. Seleccion de elementos hijo - impares</h3>
+                    <section class="sect_content" id="selector-nth-child(odd)">
+                        <h3>12. Selector nth-child(odd)</h3>
 
                         <p>
                             Haciendo uso del pseudo elemento <strong>:nth-child(odd)</strong> podemos seleccionar todos los <strong>elementos HTML</strong> impares teniendo como referencia a su
                             elemento padre.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s09.png" alt="seleccion de elementos hijo - impares" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">id</span><span class="console">=</span><span class="string">"div-padre"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo impar<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">12</span></code></pre>
+                            <pre><code><span class="index outer_index">13</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo par<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">14</span></code></pre>
+                            <pre><code><span class="index outer_index">15</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo impar<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">16</span></code></pre>
+                            <pre><code><span class="index outer_index">17</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo par<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">18</span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">19</span></code></pre>
+                            <pre><code><span class="index outer_index">20</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">21</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
                         </div>
-                    </section>
 
-                    <section class="sect_content">
-                        <h3>11. Seleccion de un elemento por su atributo</h3>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <p>
-                            Esta tipo de seleccion tambien la podemos realizar con <strong>querySelectorAll</strong> en dado caso que necesitemos seleccionar multiples elementos que compartan el mismo
-                            atributo.
-                        </p>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tags_p_impares<span class="operator"> = </span>document<span class="methods">.querySelectorAll(</span><span class="string">"#div-padre p:nth-child(odd)"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s10.png" alt="seleccion de un elemento por su atributo" />
-                        </div>
-                    </section>
+                            <pre><code><span class="index">02</span></code></pre>
 
-                    <section class="sect_content">
-                        <h3>12. Seleccion de multiples elementos por su atributo</h3>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tags_p_impares<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <p>
-                            Esta tipo de seleccion tambien la podemos realizar con <strong>querySelectorAll</strong> en dado caso que necesitemos seleccionar multiples elementos que compartan el mismo
-                            atributo.
-                        </p>
-
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/selectores/s11.png" alt="seleccion de multiples elementos por su atributo" />
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> NodeList(2) [ p, p ]</pre>
+                                <pre><code><span>></span><span class="index inner_index">0</span><span class="parenthesis">p </span><span class="console">=> Parrafo impar</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">1</span><span class="parenthesis">p </span><span class="console">=> Parrafo impar</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">length: 2</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">[[Prototype]]: NodeList</span></code></pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Selectores - DOM</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./dom-document">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./dom-node-elements.ejs">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Selectores - DOM") %>
                 </div>
             </main>
         </div>
 
-        <script src="./js/main.js"></script>
+        <script type="module" src="./js/main.js"></script>
     </body>
 </html>

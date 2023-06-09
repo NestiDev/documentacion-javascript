@@ -79,6 +79,10 @@
         </ul>
     </li>
 
+    <li class="li_dropdown">
+        <a href="/operadores"> Operadores </a>
+    </li>
+
     <hr class="line_nav" />
 
     <li class="li_dropdown">
@@ -142,14 +146,20 @@
         <a href="#" data-toggle="dropdown">
             Arrays
 
-            <!-- <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24">
                 <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-            </svg> -->
+            </svg>
         </a>
 
-        <!-- <ul class="dropdown_menu">
-            <li><a href="#">uno</a></li>
-        </ul> -->
+        <ul class="dropdown_menu">
+            <li><a href="/arrays-declaracion">Declaracion</a></li>
+            <li><a href="/arrays-generales">Generales</a></li>
+            <li><a href="/arrays-slice">Slice</a></li>
+            <li><a href="/arrays-splice">Splice</a></li>
+            <li><a href="/arrays-includes">Includes</a></li>
+            <li><a href="/arrays-index">Index</a></li>
+            <li><a href="/arrays-filter">Filter</a></li>
+        </ul>
     </li>
 
     <hr class="line_nav" />
@@ -308,7 +318,7 @@
     </li>
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
             Fetch
 
             <!-- <svg viewBox="0 0 24 24">
@@ -325,7 +335,7 @@
     </li>
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
             Ajax
 
             <!-- <svg viewBox="0 0 24 24">
@@ -353,15 +363,11 @@
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/dom-window">Window</a></li>
-
             <li><a href="/dom-document">Document</a></li>
 
             <li><a href="/dom-selectores">Selectores</a></li>
 
-            <li><a href="/dom-nodeChild">NodeChild</a></li>
-
-            <li><a href="/dom-nodeSiblings">NodeSiblings</a></li>
+            <li><a href="/dom-node-elements">Node elements</a></li>
 
             <li><a href="/dom-classList">ClassList</a></li>
 
@@ -381,23 +387,31 @@
         <a href="#" data-toggle="dropdown">
             BOM
 
-            <!-- <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24">
                 <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-            </svg> -->
+            </svg>
         </a>
 
-        <!-- <ul class="dropdown_menu">
-            <li><a href="/promesas-definicion">Definicion</a></li>
-            <li><a href="/promesas-async-await">Async - Await</a></li>
-            <li><a href="/promesas-try-catch">Try - Catch</a></li>
-            <li><a href="/promesas-throw-error">Throw error</a></li>
-        </ul> -->
+        <ul class="dropdown_menu">
+            <li><a href="/bom-console">Console</a></li>
+            <li><a href="/bom-alertas">Alertas</a></li>
+            <li><a href="/bom-listeners">Listeners</a></li>
+            <li><a href="/bom-location">Location</a></li>
+            <li><a href="/bom-navigation" style="pointer-events: none; color: rgb(223, 225, 228)">Navigation</a></li>
+            <li><a href="/bom-historial" style="pointer-events: none; color: rgb(223, 225, 228)">Historial</a></li>
+            <li><a href="/bom-propiedades">Propiedades</a></li>
+            <li><a href="/bom-metodos">Metodos</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="./modulos"> Modulos</a>
     </li>
 
     <hr class="line_nav" />
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
             Websockets
 
             <!-- <svg viewBox="0 0 24 24">
@@ -414,7 +428,7 @@
     </li>
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
             Webworkets
 
             <!-- <svg viewBox="0 0 24 24">
@@ -433,7 +447,24 @@
     <hr class="line_nav" />
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
+            SPA
+
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
+        </a>
+
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
             PWA
 
             <!-- <svg viewBox="0 0 24 24">
@@ -452,7 +483,43 @@
     <hr class="line_nav" />
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
+            Webpack
+
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
+        </a>
+
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
+            Vite
+
+            <!-- <svg viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg> -->
+        </a>
+
+        <!-- <ul class="dropdown_menu">
+            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-async-await">Async - Await</a></li>
+            <li><a href="/promesas-try-catch">Try - Catch</a></li>
+            <li><a href="/promesas-throw-error">Throw error</a></li>
+        </ul> -->
+    </li>
+
+    <hr class="line_nav" />
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
             Jest
 
             <!-- <svg viewBox="0 0 24 24">

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                modal_section y 1 sections_container
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Generales</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>texto pendiente</p>
+                </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#length">01. Length</a></li>
+                                    <li><a href="#array-isArray">02. Array.isArray</a></li>
+                                    <li><a href="#push">03. Push</a></li>
+                                    <li><a href="#unshift">04. Unshift</a></li>
+                                    <li><a href="#pop">05. Pop</a></li>
+                                    <li><a href="#shift">06. Shift</a></li>
+                                    <li><a href="#reverse">07. Reverse</a></li>
+                                    <li><a href="#sort">08. Sort</a></li>
+                                    <li><a href="#concat">09. Concat</a></li>
+                                    <li><a href="#join">10. Join</a></li>
+                                    <li><a href="#find">11. Find</a></li>
+                                    <li><a href="#findIndex">12. FindIndex</a></li>
+                                    <li><a href="#from">13. From</a></li>
+                                    <li><a href="#some">14. Some</a></li>
+                                    <li><a href="#every">15. Every</a></li>
+                                    <li><a href="#map">16. Map</a></li>
+                                    <li><a href="#flat">17. Flat</a></li>
+                                    <li><a href="#object-fromEntries">18. Object.fromEntries</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p, de code_box y
+                        de 1 tag-samp
+					-->
+                    <section class="sect_content" id="length">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Length</h3>
+
+                        <!--  
+							tag-p: en esta definimos el pararfo de la seccion
+						-->
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>variado <span class="operator">= </span><span class="square">[</span><span class="string">"Programacion"</span><span class="semi_colon">, </span><span class="number">125865</span><span class="semi_colon">, </span><span class="boolean">false</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                     1           2       3</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>longitud <span class="operator">= </span>variado<span class="functions">.length</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La cantidad de elementos en el array es de"</span><span class="semi_colon">, </span>longitud<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> La cantidad de elementos en el array es de 3</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>variado <span class="operator">= </span><span class="square">[</span><span class="string">"Programacion"</span><span class="semi_colon">, </span><span class="number">125865</span><span class="semi_colon">, </span><span class="boolean">false</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                     0           1       2</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>ultimoElemento <span class="operator">= </span>variado<span class="functions">.length </span><span class="operator">-</span><span class="number">1</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La posicion del ultimo elemento en el array es"</span><span class="semi_colon">, </span>ultimoElemento<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> La posicion del ultimo elemento en el array es 2</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="array-isArray">
+                        <h3>02. Array.isArray</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>deportes <span class="operator">= </span><span class="square">[</span><span class="string">"Tenis"</span><span class="semi_colon">, </span><span class="string">"Futbol"</span><span class="semi_colon">, </span><span class="string">"Automovilismo"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>esUnArray <span class="operator">= </span><span class="parenthesis">Array</span><span class="methods">.isArray(</span>deportes<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>esUnArray<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>deportes <span class="operator">= </span><span class="number">12458987</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>esUnArray <span class="operator">= </span><span class="parenthesis">Array</span><span class="methods">.isArray(</span>deportes<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>esUnArray<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="push">
+                        <h3>03. Push</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>idiomas <span class="operator">= </span><span class="square">[</span><span class="string">"Español"</span><span class="semi_colon">, </span><span class="string">"Ingles"</span><span class="semi_colon">, </span><span class="string">"Mandarin"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>agregarUltimoIdioma <span class="operator">= </span>idiomas<span class="methods">.push(</span><span class="string">"Italiano"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>idiomas<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Español', 'Ingles', 'Mandarin', 'Italiano' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="unshift">
+                        <h3>04. Unshift</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>idiomas <span class="operator">= </span><span class="square">[</span><span class="string">"Español"</span><span class="semi_colon">, </span><span class="string">"Ingles"</span><span class="semi_colon">, </span><span class="string">"Mandarin"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>agregarPrimerIdioma <span class="operator">= </span>idiomas<span class="methods">.unshift(</span><span class="string">"Italiano"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>idiomas<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Italiano', 'Español', 'Ingles', 'Mandarin' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="pop">
+                        <h3>05. Pop</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>idiomas <span class="operator">= </span><span class="square">[</span><span class="string">"Español"</span><span class="semi_colon">, </span><span class="string">"Ingles"</span><span class="semi_colon">, </span><span class="string">"Mandarin"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>eliminarUltimoIdioma <span class="operator">= </span>idiomas<span class="methods">.pop()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>idiomas<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Español', 'Ingles' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="shift">
+                        <h3>06. Shift</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>idiomas <span class="operator">= </span><span class="square">[</span><span class="string">"Español"</span><span class="semi_colon">, </span><span class="string">"Ingles"</span><span class="semi_colon">, </span><span class="string">"Mandarin"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>eliminarPrimerIdioma <span class="operator">= </span>idiomas<span class="methods">.shift()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>idiomas<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Ingles', 'Mandarin' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="reverse">
+                        <h3>07. Reverse</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>colores <span class="operator">= </span><span class="square">[</span><span class="string">"Morado"</span><span class="semi_colon">, </span><span class="string">"Verde"</span><span class="semi_colon">, </span><span class="string">"Negro"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>invertirOrden <span class="operator">= </span>colores<span class="methods">.reverse()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>invertirOrden<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Negro', 'Verde', 'Morado' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="sort">
+                        <h3>08. Sort</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>colores <span class="operator">= </span><span class="square">[</span><span class="string">"Morado"</span><span class="semi_colon">, </span><span class="string">"Verde"</span><span class="semi_colon">, </span><span class="string">"Negro"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>ordenarAlfabeticamente <span class="operator">= </span>colores<span class="methods">.sort()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>ordenarAlfabeticamente<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Morado', 'Negro', 'Verde' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="concat">
+                        <h3>09. Concat</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>cadenas <span class="operator">= </span><span class="square">[</span><span class="string">"Espacio"</span><span class="semi_colon">, </span><span class="string">"Cometas"</span><span class="semi_colon">, </span><span class="string">"Estrellas"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>numeros <span class="operator">= </span><span class="square">[</span><span class="number">1245</span><span class="semi_colon">, </span><span class="number">89653</span><span class="semi_colon">, </span><span class="number">5321</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>estados <span class="operator">= </span><span class="square">[</span><span class="boolean">true</span><span class="semi_colon">, </span><span class="boolean">false</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="variable">let </span>concatenacionDeArrays <span class="operator">= </span>cadenas<span class="methods">.concat(</span>numeros<span class="semi_colon">, </span><span>estados</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>concatenacionDeArrays<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Espacio', 'Cometas', 'Estrellas', 1245, 89653, 5321, true, false ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="join">
+                        <h3>10. Join</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="square">[</span><span class="string">"Carlos"</span><span class="semi_colon">, </span><span class="string">"Sanchez"</span><span class="semi_colon">, </span><span class="string">"Moreno"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>unionDeLosValores <span class="operator">= </span>usuario<span class="methods">.join(</span><span class="string">" "</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>unionDeLosValores<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Carlos Sanchez Moreno</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="square">[</span><span class="string">"Carlos"</span><span class="semi_colon">, </span><span class="string">"Sanchez"</span><span class="semi_colon">, </span><span class="string">"Moreno"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>unionDeLosValores <span class="operator">= </span>usuario<span class="methods">.join(</span><span class="string">", "</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>unionDeLosValores<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Carlos, Sanchez, Moreno</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="find">
+                        <h3>11. Find</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcasTelefonicas <span class="operator">= </span><span class="square">[</span><span class="string">"Samsung"</span><span class="semi_colon">, </span><span class="string">"Motorola"</span><span class="semi_colon">, </span><span class="string">"Iphone"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>marcaTelefonica <span class="operator">= </span>marcasTelefonicas<span class="methods">.find(</span><span class="parenthesis">(</span><span class="number">marca</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="number">marca </span><span class="operator">=== </span><span class="string">"Samsung"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>marcaTelefonica<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> Samsung</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcasTelefonicas <span class="operator">= </span><span class="square">[</span><span class="string">"Samsung"</span><span class="semi_colon">, </span><span class="string">"Motorola"</span><span class="semi_colon">, </span><span class="string">"Iphone"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>marcaTelefonica <span class="operator">= </span>marcasTelefonicas<span class="methods">.find(</span><span class="parenthesis">(</span><span class="number">marca</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="number">marca </span><span class="operator">=== </span><span class="string">"Nokia"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>marcaTelefonica<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> undefined</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="findIndex">
+                        <h3>12. FindIndex</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcasTelefonicas <span class="operator">= </span><span class="square">[</span><span class="string">"Samsung"</span><span class="semi_colon">, </span><span class="string">"Motorola"</span><span class="semi_colon">, </span><span class="string">"Iphone"</span><span class="semi_colon">, </span><span class="string">"Iphone"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                             0          1           2         3</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>marcaTelefonica <span class="operator">= </span>marcasTelefonicas<span class="methods">.findIndex(</span><span class="parenthesis">(</span><span class="number">marca</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="number">marca </span><span class="operator">=== </span><span class="string">"Iphone"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>marcaTelefonica<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 2</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcasTelefonicas <span class="operator">= </span><span class="square">[</span><span class="string">"Samsung"</span><span class="semi_colon">, </span><span class="string">"Motorola"</span><span class="semi_colon">, </span><span class="string">"Iphone"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                             0          1           2</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>marcaTelefonica <span class="operator">= </span>marcasTelefonicas<span class="methods">.findIndex(</span><span class="parenthesis">(</span><span class="number">marca</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="number">marca </span><span class="operator">=== </span><span class="string">"Nokia"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>marcaTelefonica<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> -1</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="from">
+                        <h3>13. From</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>mes <span class="operator">= </span><span class="string">"febrero"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>convertirEnArray <span class="operator">= </span><span class="parenthesis">Array</span><span class="methods">.from(</span>mes<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertirEnArray<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'f', 'e', 'b', 'r', 'e', 'r', 'o' ]</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>calendario <span class="operator">= </span><span class="square">[</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">04</span> indice<span class="operator">:</span><span class="number"> 4</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">05</span> mes<span class="operator">:</span><span class="string"> "Mayo"</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="brackets">}</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">08</span> indice<span class="operator">:</span><span class="number"> 7</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">09</span> mes<span class="operator">:</span><span class="string"> "Agosto"</span></code></pre>
+
+                            <pre><code><span class="index outer_index">10</span><span class="brackets">}</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index outer_index">11</span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">12</span> indice<span class="operator">:</span><span class="number"> 1</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">13</span> mes<span class="operator">:</span><span class="string"> "Febrero"</span></code></pre>
+
+                            <pre><code><span class="index outer_index">14</span><span class="brackets">}</span></code></pre>
+
+                            <pre><code><span class="index">15</span></code></pre>
+
+                            <pre><code><span class="index inner_index">16</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">17</span></code></pre>
+
+                            <pre><code><span class="index inner_index">18</span><span class="variable">let </span>mes <span class="operator">= </span><span class="parenthesis">Array</span><span class="methods">.from(</span>calendario<span class="semi_colon">, </span><span class="number">nombre </span><span class="methods">=> </span><span class="number">nombre</span><span class="operator">.</span>mes<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">19</span></code></pre>
+
+                            <pre><code><span class="index inner_index">20</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>mes<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'Mayo', 'Agosto', 'Febrero' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="some">
+                        <h3>14. Some</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>letras <span class="operator">= </span><span class="square">[</span><span class="string">"eme"</span><span class="semi_colon">, </span><span class="string">"pe"</span><span class="semi_colon">, </span><span class="number">104</span><span class="semi_colon">, </span><span class="string">"equis"</span><span class="semi_colon">, </span><span class="number">630</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                0      1    2      3      4</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>tipoDeDato <span class="operator">= </span>letras<span class="methods">.some(</span><span class="parenthesis">(</span><span class="number">tipo</span><span class="semi_colon">, </span><span class="number">indice</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">indice</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index outer_index">08</span><span class="functions">return typeof </span><span class="number">tipo </span><span class="operator">=== </span><span class="string">"number"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index inner_index">10</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index inner_index">12</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>tipoDeDato<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> true</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>letras <span class="operator">= </span><span class="square">[</span><span class="string">"eme"</span><span class="semi_colon">, </span><span class="string">"pe"</span><span class="semi_colon">, </span><span class="number">104</span><span class="semi_colon">, </span><span class="string">"equis"</span><span class="semi_colon">, </span><span class="number">630</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                0      1    2      3      4</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>tipoDeDato <span class="operator">= </span>letras<span class="methods">.some(</span><span class="parenthesis">(</span><span class="number">tipo</span><span class="semi_colon">, </span><span class="number">indice</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">indice</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index outer_index">08</span><span class="functions">return typeof </span><span class="number">tipo </span><span class="operator">=== </span><span class="string">"undefined"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index inner_index">10</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index inner_index">12</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>tipoDeDato<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> 3</pre>
+                                <pre><span>></span> 4</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="every">
+                        <h3>15. Every</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>letras <span class="operator">= </span><span class="square">[</span><span class="string">"eme"</span><span class="semi_colon">, </span><span class="string">"pe"</span><span class="semi_colon">, </span><span class="number">104</span><span class="semi_colon">, </span><span class="string">"equis"</span><span class="semi_colon">, </span><span class="number">630</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                0      1    2      3      4</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>tipoDeDato <span class="operator">= </span>letras<span class="methods">.every(</span><span class="parenthesis">(</span><span class="number">tipo</span><span class="semi_colon">, </span><span class="number">indice</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">indice</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index outer_index">08</span><span class="functions">return typeof </span><span class="number">tipo </span><span class="operator">=== </span><span class="string">"string"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index inner_index">10</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index inner_index">12</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>tipoDeDato<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>letras <span class="operator">= </span><span class="square">[</span><span class="string">"eme"</span><span class="semi_colon">, </span><span class="string">"pe"</span><span class="semi_colon">, </span><span class="string">"104"</span><span class="semi_colon">, </span><span class="string">"equis"</span><span class="semi_colon">, </span><span class="string">"630"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">02</span><span class="index">                0      1     2       3       4</span></code></pre>
+
+                            <pre><code><span class="index">03</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>tipoDeDato <span class="operator">= </span>letras<span class="methods">.every(</span><span class="parenthesis">(</span><span class="number">tipo</span><span class="semi_colon">, </span><span class="number">indice</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">05</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">indice</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">07</span></code></pre>
+
+                            <pre><code><span class="index outer_index">08</span><span class="functions">return typeof </span><span class="number">tipo </span><span class="operator">=== </span><span class="string">"string"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">09</span></code></pre>
+
+                            <pre><code><span class="index inner_index">10</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index inner_index">12</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>tipoDeDato<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> 3</pre>
+                                <pre><span>></span> 4</pre>
+                                <pre><span>></span> true</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="map">
+                        <h3>16. map</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>heroes <span class="operator">= </span><span class="square">[</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">04</span> nombre<span class="operator">:</span><span class="string"> "Hulk"</span><span class="semi_colon">,</span><span class="index">   0</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">05</span> nivel<span class="operator">:</span><span class="number"> 23</span></code></pre>
+
+                            <pre><code><span class="index outer_index">06</span><span class="brackets">}</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">08</span> nombre<span class="operator">:</span><span class="string"> "Thor"</span><span class="semi_colon">,</span><span class="index">   1</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">09</span> nivel<span class="operator">:</span><span class="number"> 19</span></code></pre>
+
+                            <pre><code><span class="index outer_index">10</span><span class="brackets">}</span><span class="semi_colon">,</span></code></pre>
+
+                            <pre><code><span class="index outer_index">11</span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">12</span> nombre<span class="operator">:</span><span class="string"> "Spider man"</span><span class="semi_colon">,</span><span class="index">   2</span></code></pre>
+
+                            <pre><code><span class="index outer_doble_index">13</span> indice<span class="operator">:</span><span class="number"> 17</span></code></pre>
+
+                            <pre><code><span class="index outer_index">14</span><span class="brackets">}</span></code></pre>
+
+                            <pre><code><span class="index">15</span></code></pre>
+
+                            <pre><code><span class="index inner_index">16</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">17</span></code></pre>
+
+                            <pre><code><span class="index inner_index">18</span><span class="variable">let </span>heroe <span class="operator">= </span>heroes<span class="methods">.map(</span><span class="parenthesis">(</span><span class="number">heroe</span><span class="semi_colon">, </span><span class="number">indice</span><span class="parenthesis">) </span><span class="methods">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">19</span></code></pre>
+
+                            <pre><code><span class="index outer_index">20</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="number">indice</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">21</span></code></pre>
+
+                            <pre><code><span class="index outer_index">22</span><span class="functions">return </span><span class="number">heroe</span><span class="operator">.</span>nombre<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">23</span></code></pre>
+
+                            <pre><code><span class="index inner_index">24</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">25</span></code></pre>
+
+                            <pre><code><span class="index inner_index">26</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroe<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 0</pre>
+                                <pre><span>></span> 1</pre>
+                                <pre><span>></span> 2</pre>
+                                <pre><span>></span> [ 'Hulk', 'Thor', 'Spider man' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="flat">
+                        <h3>17. Flat</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>anidacion <span class="operator">= </span><span class="square">[</span><span class="string">"a"</span><span class="semi_colon">, </span><span class="string">"b"</span><span class="semi_colon">, </span><span class="keyword">[</span><span class="number">1250</span><span class="semi_colon">, </span><span class="number">1158</span><span class="keyword">]</span><span class="semi_colon">, </span><span class="string">"c"</span><span class="semi_colon">, </span><span class="keyword">[</span><span class="boolean">true</span><span class="semi_colon">, </span><span class="boolean">false</span><span class="keyword">]</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>eliminarAnidacion <span class="operator">= </span>anidacion<span class="methods">.flat(</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>eliminarAnidacion<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'a', 'b', 1250, 1158, 'c', true, false ]</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>vocalesAnidadas <span class="operator">= </span><span class="square">[</span><span class="string">"a"</span><span class="semi_colon">, </span><span class="keyword">[</span><span class="string">"e"</span><span class="semi_colon">, </span><span class="parenthesis">[</span><span class="string">"i"</span><span class="semi_colon">, </span><span class="square">[</span><span class="string">"o"</span><span class="semi_colon">, </span><span class="keyword">[</span><span class="string">"u"</span><span class="keyword">]</span><span class="square">]</span><span class="parenthesis">]</span><span class="keyword">]</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>eliminarAnidacion <span class="operator">= </span>vocalesAnidadas<span class="methods">.flat(</span><span class="number">Infinity</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>eliminarAnidacion<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> [ 'a', 'e', 'i', 'o', 'u' ]</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="object-fromEntries">
+                        <h3>18. Object.fromEntries</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>diasSemana <span class="operator">= </span><span class="square">[</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span><span class="square">[</span><span class="string">"indice"</span><span class="semi_colon">, </span><span class="number">1</span><span class="square">]</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="square">[</span><span class="string">"dia"</span><span class="semi_colon">, </span><span class="string">"Lunes"</span><span class="square">]</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="square">[</span><span class="string">"festivo"</span><span class="semi_colon">, </span><span class="boolean">true</span><span class="square">]</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="variable">let </span>convertirEnObjeto <span class="operator">= </span><span class="parenthesis">Object</span><span class="methods">.fromEntries(</span>diasSemana<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertirEnObjeto<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> {</pre>
+                                <pre><span>></span>     indice: 1,</pre>
+                                <pre><span>></span>     dia: 'Lunes,</pre>
+                                <pre><span>></span>     festivo: true</pre>
+                                <pre><span>></span> }</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./arrays-declaracion">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./arrays-slice">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Generales - Arrays") %>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

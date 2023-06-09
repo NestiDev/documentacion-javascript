@@ -39,6 +39,11 @@ body {
 */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #5c5b5b;
+}
+body.js_dark_mode {
+  background-color: #242936;
+  color: #dbd8d8;
 }
 
 /*
@@ -87,7 +92,6 @@ svg {
   left: 0;
   right: 0;
   z-index: 9;
-  background-color: #fff;
   border-bottom: 1px solid #f6f6f6;
   transition: box-shadow 0.2s;
   /*
@@ -103,6 +107,7 @@ svg {
 }
 .header_component.js_header_scroll {
   box-shadow: 0 2px 5px rgba(179, 177, 177, 0.3019607843);
+  background-color: #fff;
 }
 .header_component .header_container {
   display: flex;
@@ -329,11 +334,11 @@ svg {
   */
 }
 .components_container .nav_component::-webkit-scrollbar {
-  width: 8px;
-  background-color: #f6f6f6;
+  width: 10px;
+  background-color: #f1f1f1;
 }
 .components_container .nav_component::-webkit-scrollbar-thumb {
-  background-color: #d9d9d9;
+  background-color: #c1c1c1;
 }
 @media (max-width: 719px) {
   .components_container .nav_component {
@@ -485,7 +490,6 @@ svg {
 .components_container .main_components {
   position: absolute;
   top: 60px;
-  color: #5c5b5b;
   min-height: calc(100% - 60px);
   padding: 0 6%;
   /*
@@ -789,7 +793,7 @@ svg {
 .components_container .main_components .sections_container .sect_content h3 {
   font-size: 2rem;
   line-height: 1.2;
-  margin: 80px 0 20px;
+  padding: 80px 0 20px;
   /*
   	dispositivos menores a 336px: modificamos el tamaño de
   	fuente de este elemento
@@ -818,7 +822,7 @@ svg {
 .components_container .main_components .sections_container .sect_content .img_box img {
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0 0 20px 0 #c1c1c1;
+  box-shadow: 0 0 8px 0 #c1c1c1;
 }
 .components_container .main_components .sections_container .sect_content .code_box {
   background-color: #242936;
@@ -826,9 +830,9 @@ svg {
   font-size: 17px;
   border-radius: 5px;
   padding: 20px 0;
-  margin: 30px 0 40px;
+  margin-top: 38px;
   overflow-x: auto;
-  box-shadow: 0 0 20px 0 #c1c1c1;
+  box-shadow: 0 0 8px 0 #c1c1c1;
   /*
   	::-webkit-scrollbar: definimos un ancho del
   	scrollbar
@@ -990,22 +994,65 @@ svg {
 .components_container .main_components .section_footer {
   margin-bottom: 30px;
   /*
-      box_gotop: definimos un margen inferior
-      para generar separacion frente a otros elementos
+      box_gotop: implementamos fixed y sus propiedades right, 
+      y bottom para darle posicion a esta caja, luego hacemos
+      uso de flexbox y sus propiedades justify-content y
+      align-items para centrar vertical y horizontalmente el icono,
+      finalmente overflow: hidden para ocualtar la caja
+  */
+  /*
+      tag-h2
   */
 }
 .components_container .main_components .section_footer .box_gotop {
-  text-align: center;
+  position: fixed;
+  right: 2%;
+  bottom: 85px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 5px;
+  overflow: hidden;
   cursor: pointer;
-  margin-bottom: 12px;
   /*
-      tag-svg
+      añadimos la clase javascript js_show_gotop para agregar 
+      color de fondo, una sombra y overflow: visible para 
+      visible nuevamente esta caja 
+  */
+  /*
+      añadimos la clase javascript js_show_gotop, 
+      relacionamos a tag-svg para añadirle color 
+      al icono
+  */
+  /*
+      tag-svg: importante definir fill: transparent 
+      para ocultar el icono
   */
 }
-.components_container .main_components .section_footer .box_gotop svg {
+.components_container .main_components .section_footer .box_gotop.js_show_gotop {
+  background-color: #f0db4f;
+  box-shadow: 0 2px 6px 0 #c1c1c1;
+  overflow: visible;
+  /*
+      cuando hacemos :hover sobre box_gotop,
+      relacionamos a tag-svg y modificamos el 
+      tamaño del icono
+  */
+}
+.components_container .main_components .section_footer .box_gotop.js_show_gotop:hover svg {
+  width: 25px;
+  height: 25px;
+}
+.components_container .main_components .section_footer .box_gotop.js_show_gotop svg {
   fill: #242936;
-  width: 38px;
-  height: 38px;
+}
+.components_container .main_components .section_footer .box_gotop svg {
+  fill: transparent;
+  width: 27px;
+  height: 27px;
 }
 .components_container .main_components .section_footer h4 {
   text-align: center;

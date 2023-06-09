@@ -105,7 +105,7 @@ router.get("/strings-starts-ends", (req, res) => {
 });
 
 /* 
-	______________________ numeros ______________________
+	______________________ numbers ______________________
 */
 router.get("/numbers-generales", (req, res) => {
     res.render("pages/numbers-generales", {
@@ -116,6 +116,15 @@ router.get("/numbers-generales", (req, res) => {
 router.get("/numbers-math", (req, res) => {
     res.render("pages/numbers-math", {
         title: "numbers math",
+    });
+});
+
+/* 
+	______________________ operadores ______________________
+*/
+router.get("/operadores", (req, res) => {
+    res.render("pages/operadores", {
+        title: "operadores",
     });
 });
 
@@ -233,6 +242,51 @@ router.get("/funciones-return", (req, res) => {
 router.get("/funciones-operadores", (req, res) => {
     res.render("pages/funciones-operadores", {
         title: "funciones operadores",
+    });
+});
+
+/* 
+	______________________ arrays ______________________
+*/
+router.get("/arrays-declaracion", (req, res) => {
+    res.render("pages/arrays-declaracion", {
+        title: "arrays declaracion",
+    });
+});
+
+router.get("/arrays-generales", (req, res) => {
+    res.render("pages/arrays-generales", {
+        title: "arrays generales",
+    });
+});
+
+router.get("/arrays-slice", (req, res) => {
+    res.render("pages/arrays-slice", {
+        title: "arrays slice",
+    });
+});
+
+router.get("/arrays-splice", (req, res) => {
+    res.render("pages/arrays-splice", {
+        title: "arrays splice",
+    });
+});
+
+router.get("/arrays-includes", (req, res) => {
+    res.render("pages/arrays-includes", {
+        title: "arrays includes",
+    });
+});
+
+router.get("/arrays-index", (req, res) => {
+    res.render("pages/arrays-index", {
+        title: "arrays index",
+    });
+});
+
+router.get("/arrays-filter", (req, res) => {
+    res.render("pages/arrays-filter", {
+        title: "arrays filter",
     });
 });
 
@@ -464,12 +518,6 @@ router.get("/promesas-throw-error", (req, res) => {
 /* 
 	______________________ DOM ______________________
 */
-router.get("/dom-window", (req, res) => {
-    res.render("pages/dom-window", {
-        title: "DOM window",
-    });
-});
-
 router.get("/dom-document", (req, res) => {
     res.render("pages/dom-document", {
         title: "DOM document",
@@ -482,15 +530,9 @@ router.get("/dom-selectores", (req, res) => {
     });
 });
 
-router.get("/dom-nodeChild", (req, res) => {
-    res.render("pages/dom-nodeChild", {
-        title: "DOM nodeChild",
-    });
-});
-
-router.get("/dom-nodeSiblings", (req, res) => {
-    res.render("pages/dom-nodeSiblings", {
-        title: "DOM nodeSiblings",
+router.get("/dom-node-elements", (req, res) => {
+    res.render("pages/dom-node-elements", {
+        title: "DOM node elements",
     });
 });
 
@@ -527,6 +569,54 @@ router.get("/dom-event-e", (req, res) => {
 router.get("/dom-formularios", (req, res) => {
     res.render("pages/dom-formularios", {
         title: "DOM formularios",
+    });
+});
+
+/* 
+	______________________ BOM ______________________
+*/
+router.get("/bom-console", (req, res) => {
+    res.render("pages/bom-console", {
+        title: "BOM console",
+    });
+});
+
+router.get("/bom-alertas", (req, res) => {
+    res.render("pages/bom-alertas", {
+        title: "BOM alertas",
+    });
+});
+
+router.get("/bom-listeners", (req, res) => {
+    res.render("pages/bom-listeners", {
+        title: "BOM listeners",
+    });
+});
+
+router.get("/bom-location", (req, res) => {
+    res.render("pages/bom-location", {
+        title: "BOM location",
+    });
+});
+
+router.get("/bom-propiedades", (req, res) => {
+    res.render("pages/bom-propiedades", {
+        title: "BOM propiedades",
+    });
+});
+
+router.get("/bom-metodos", (req, res) => {
+    res.render("pages/bom-metodos", {
+        title: "BOM metodos",
+    });
+});
+
+/* 
+	______________________ Modulos ______________________
+*/
+router.get("/modulos", (req, res) => {
+    res.render("pages/modulos", {
+        title: "modulos",
     });
 });
 
