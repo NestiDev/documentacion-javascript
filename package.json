@@ -3,6 +3,7 @@
 	"version": "v1.1.0",
 	"description": "Esta es una documentacion propia basada en mis conocimientos sobre javascript",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"start": "node index.js",
 		"nodemon": "nodemon index.js"
@@ -14,10 +15,10 @@
 	"author": "Jefferson Salazar",
 	"license": "ISC",
 	"dependencies": {
-		"ejs": "^3.1.8",
-		"express": "^4.18.1"
+		"ejs": "^3.1.9",
+		"express": "^4.18.2"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.19"
+		"nodemon": "^2.0.22"
 	}
 }

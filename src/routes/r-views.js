@@ -1,7 +1,12 @@
 /* 
-	router: almacena el requerimiento de express().Router
+	Router: alamacena la importacion de Router del modulo express
 */
-let router = require("express").Router();
+import { Router } from "express";
+
+/* 
+	router: almacena el metodo Router() de express
+*/
+let router = Router();
 
 /* 
 	haciendo uso del metodo get(), definimos el endpoint 
@@ -656,4 +661,4 @@ router.get("/webpack-build", (req, res) => {
 /* 
 	finalmente realizamos una exportacion del modulo
 */
-module.exports = router;
+export default router;
