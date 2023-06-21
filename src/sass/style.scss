@@ -58,9 +58,32 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: $colorFour;
 
+    /*
+			::-webkit-scrollbar: definimos un ancho del
+			scrollbar
+		*/
+    &::-webkit-scrollbar {
+        background-color: #f1f1f1;
+    }
+
+    /*
+			::-webkit-scrollbar-thumb
+		*/
+    &::-webkit-scrollbar-thumb {
+        background-color: #c1c1c1;
+    }
+
     &.js_dark_mode {
         background-color: $backgroundColorOne;
         color: #d8d8d8;
+
+        &::-webkit-scrollbar {
+            background-color: #2c303a;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #444857;
+        }
 
         .header_component {
             background-color: $backgroundColorOne;

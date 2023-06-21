@@ -40,10 +40,29 @@ body {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #5c5b5b;
+  /*
+  	::-webkit-scrollbar: definimos un ancho del
+  	scrollbar
+  */
+  /*
+  	::-webkit-scrollbar-thumb
+  */
+}
+body::-webkit-scrollbar {
+  background-color: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
 }
 body.js_dark_mode {
   background-color: #242936;
   color: #d8d8d8;
+}
+body.js_dark_mode::-webkit-scrollbar {
+  background-color: #2c303a;
+}
+body.js_dark_mode::-webkit-scrollbar-thumb {
+  background-color: #444857;
 }
 body.js_dark_mode .header_component {
   background-color: #242936;
