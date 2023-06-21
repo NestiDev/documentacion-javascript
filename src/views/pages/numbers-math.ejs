@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -60,7 +60,7 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>Este objeto nos proporciona una serie de metodos con los cuales podemos realizar diferentes operacion numericas.</p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -135,19 +135,19 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>inicio <span class="operator">= </span><span class="number">1</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>inicio <span class="keyword">= </span><span class="number">1</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>final <span class="operator">= </span><span class="number">10</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>final <span class="keyword">= </span><span class="number">10</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>numeroAleatorio <span class="operator">= </span>Math<span class="methods">.random(</span>inicio<span class="methods">) </span><span class="operator">* </span>final<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>numeroAleatorio <span class="keyword">= </span>Math<span class="methods">.random(</span>inicio<span class="methods">) </span><span class="keyword">* </span>final<span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Generamos un numero aleatorio entre 1 y 10 => "</span><span class="semi_colon">, </span>numeroAleatorio<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Generamos un numero aleatorio entre 1 y 10 => "</span><span class="semi_colon">, </span>numeroAleatorio<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -167,23 +167,23 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero1 <span class="operator">= </span><span class="number">105</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero1 <span class="keyword">= </span><span class="number">105</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>numero2 <span class="operator">= </span><span class="number">820</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>numero2 <span class="keyword">= </span><span class="number">820</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>numero3 <span class="operator">= </span><span class="number">372</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>numero3 <span class="keyword">= </span><span class="number">372</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span><span class="variable">let </span>numeroMayor <span class="operator">= </span>Math<span class="methods">.max(</span>numero1<span class="semi_colon">, </span>numero2<span class="semi_colon">, </span>numero3<span class="methods">) </span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="variable">let </span>numeroMayor <span class="keyword">= </span>Math<span class="methods">.max(</span>numero1<span class="semi_colon">, </span>numero2<span class="semi_colon">, </span>numero3<span class="methods">) </span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El numero mayor entre los tres es el "</span><span class="semi_colon">, </span>numeroMayor<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El numero mayor entre los tres es el "</span><span class="semi_colon">, </span>numeroMayor<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -200,23 +200,23 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero1 <span class="operator">= </span><span class="number">76</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero1 <span class="keyword">= </span><span class="number">76</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>numero2 <span class="operator">= </span><span class="number">33</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>numero2 <span class="keyword">= </span><span class="number">33</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>numero3 <span class="operator">= </span><span class="number">18</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>numero3 <span class="keyword">= </span><span class="number">18</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span><span class="variable">let </span>numeroMenor <span class="operator">= </span>Math<span class="methods">.min(</span>numero1<span class="semi_colon">, </span>numero2<span class="semi_colon">, </span>numero3<span class="methods">) </span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="variable">let </span>numeroMenor <span class="keyword">= </span>Math<span class="methods">.min(</span>numero1<span class="semi_colon">, </span>numero2<span class="semi_colon">, </span>numero3<span class="methods">) </span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El numero menor entre los tres es el "</span><span class="semi_colon">, </span>numeroMenor<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El numero menor entre los tres es el "</span><span class="semi_colon">, </span>numeroMenor<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -233,15 +233,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="operator">= </span><span class="number">1.5</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="keyword">= </span><span class="number">1.5</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>enteroCercano <span class="operator">= </span>Math<span class="methods">.round(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>enteroCercano <span class="keyword">= </span>Math<span class="methods">.round(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El entero mas cercano es "</span><span class="semi_colon">, </span>enteroCercano<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El entero mas cercano es "</span><span class="semi_colon">, </span>enteroCercano<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -258,15 +258,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="operator">= </span><span class="number">5.2</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="keyword">= </span><span class="number">5.2</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>enteroCercano <span class="operator">= </span>Math<span class="methods">.ceil(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>enteroCercano <span class="keyword">= </span>Math<span class="methods">.ceil(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El entero mas cercano hacia arriba es "</span><span class="semi_colon">, </span>enteroCercano<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El entero mas cercano hacia arriba es "</span><span class="semi_colon">, </span>enteroCercano<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -283,15 +283,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="operator">= </span><span class="number">5.2</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="keyword">= </span><span class="number">5.2</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>enteroCercano <span class="operator">= </span>Math<span class="methods">.floor(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>enteroCercano <span class="keyword">= </span>Math<span class="methods">.floor(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El entero mas cercano hacia abajo es "</span><span class="semi_colon">, </span>enteroCercano<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El entero mas cercano hacia abajo es "</span><span class="semi_colon">, </span>enteroCercano<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -308,15 +308,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="operator">= </span><span class="number">9.2201254879981</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroDecimal <span class="keyword">= </span><span class="number">9.2201254879981</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>convertidoANumeroEntero <span class="operator">= </span>Math<span class="methods">.trunc(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>convertidoANumeroEntero <span class="keyword">= </span>Math<span class="methods">.trunc(</span>numeroDecimal<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Sin decimales tenemos el numero entero "</span><span class="semi_colon">, </span>convertidoANumeroEntero<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Sin decimales tenemos el numero entero "</span><span class="semi_colon">, </span>convertidoANumeroEntero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -333,15 +333,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroNegativo <span class="operator">= </span><span class="number">-1500</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numeroNegativo <span class="keyword">= </span><span class="number">-1500</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>convertidoAPositivo <span class="operator">= </span>Math<span class="methods">.abs(</span>numeroNegativo<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>convertidoAPositivo <span class="keyword">= </span>Math<span class="methods">.abs(</span>numeroNegativo<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Como resultado tenemos el numero positivo "</span><span class="semi_colon">, </span>convertidoAPositivo<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Como resultado tenemos el numero positivo "</span><span class="semi_colon">, </span>convertidoAPositivo<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -358,19 +358,19 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="operator">= </span><span class="number">10</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="keyword">= </span><span class="number">10</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>potencia <span class="operator">= </span><span class="number">2</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>potencia <span class="keyword">= </span><span class="number">2</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>resultado <span class="operator">= </span>Math<span class="methods">.pow(</span>numero<span class="semi_colon">, </span>potencia<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let </span>resultado <span class="keyword">= </span>Math<span class="methods">.pow(</span>numero<span class="semi_colon">, </span>potencia<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La potencia de 10 a la 2 es "</span><span class="semi_colon">, </span>resultado<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La potencia de 10 a la 2 es "</span><span class="semi_colon">, </span>resultado<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -387,15 +387,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="operator">= </span><span class="number">100</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="keyword">= </span><span class="number">100</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>raizCuadrada <span class="operator">= </span>Math<span class="methods">.sqrt(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>raizCuadrada <span class="keyword">= </span>Math<span class="methods">.sqrt(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La raiz cuadrada de 100 es "</span><span class="semi_colon">, </span>raizCuadrada<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La raiz cuadrada de 100 es "</span><span class="semi_colon">, </span>raizCuadrada<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -412,15 +412,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="operator">= </span><span class="number">0</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="keyword">= </span><span class="number">0</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>resultado <span class="operator">= </span>Math<span class="methods">.sign(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>resultado <span class="keyword">= </span>Math<span class="methods">.sign(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El valor asignado en la variable numero es un numero "</span><span class="semi_colon">, </span>resultado<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El valor asignado en la variable numero es un numero "</span><span class="semi_colon">, </span>resultado<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -431,15 +431,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="operator">= </span><span class="number">84</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="keyword">= </span><span class="number">84</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>resultado <span class="operator">= </span>Math<span class="methods">.sign(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>resultado <span class="keyword">= </span>Math<span class="methods">.sign(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El valor asignado en la variable numero es un numero positivo"</span><span class="semi_colon">, </span>resultado<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El valor asignado en la variable numero es un numero positivo"</span><span class="semi_colon">, </span>resultado<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -450,15 +450,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="operator">= </span><span class="number">-35</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>numero <span class="keyword">= </span><span class="number">-35</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>resultado <span class="operator">= </span>Math<span class="methods">.sign(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>resultado <span class="keyword">= </span>Math<span class="methods">.sign(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El valor asignado en la variable numero es un numero negativo"</span><span class="semi_colon">, </span>resultado<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El valor asignado en la variable numero es un numero negativo"</span><span class="semi_colon">, </span>resultado<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

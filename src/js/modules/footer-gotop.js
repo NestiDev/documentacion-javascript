@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
 		$goTop la clase js_show_gotop definida 
 		en la hoja de estilos
     */
-    if (window.pageYOffset > 50) {
+    if (window.scrollY > 50) {
         $goTop.classList.add("js_show_gotop");
 
         /*

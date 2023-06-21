@@ -43,7 +43,64 @@ body {
 }
 body.js_dark_mode {
   background-color: #242936;
-  color: #dbd8d8;
+  color: #d8d8d8;
+}
+body.js_dark_mode .header_component {
+  background-color: #242936;
+  border-color: #444857;
+}
+body.js_dark_mode .components_container .nav_component {
+  background-color: #242936;
+  border-color: #2c303a;
+}
+body.js_dark_mode .components_container .nav_component::-webkit-scrollbar {
+  background-color: #2c303a;
+}
+body.js_dark_mode .components_container .nav_component::-webkit-scrollbar-thumb {
+  background-color: #444857;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .line_nav {
+  border-color: #444857;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown:hover > a {
+  color: #f0db4f;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown:hover svg {
+  fill: #f0db4f;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown a {
+  color: #d8d8d8;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown a svg {
+  fill: #d8d8d8;
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal {
+  background-color: rgba(36, 41, 54, 0.9450980392);
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li a {
+  color: #d8d8d8;
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li a:hover {
+  color: #f0db4f;
+}
+@media (max-width: 719px) {
+  body.js_dark_mode .components_container .nav_component {
+    background-color: #242936;
+  }
+}
+body.js_dark_mode input[type=search] {
+  background-color: #444857;
+  color: #d8d8d8;
+  border: 2px solid #242933;
+}
+body.js_dark_mode .components_container .main_components .sections_container .sect_content .code_box {
+  box-shadow: 0 0 8px 0 #232323;
+}
+body.js_dark_mode .components_container .main_components .section_pagination a {
+  box-shadow: 0 0 8px 0 #232323;
+}
+body.js_dark_mode .components_container .main_components .section_footer .box_gotop.js_show_gotop {
+  box-shadow: 0 2px 6px 0 #232323;
 }
 
 /*
@@ -81,6 +138,34 @@ svg {
   margin-bottom: 30px;
 }
 
+/*
+    input[type="search"]: definimos outline: none  para 
+    remover el borde que generan los navegadores en los inputs, 
+    tambien un espaciado en el eje-Y para este elemento
+*/
+input[type=search] {
+  outline: none;
+  border: 2px solid #f6f6f6;
+  background-color: #fff;
+  color: #5c5b5b;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  height: 35px;
+  padding: 0 10px;
+  /*
+      hacemos uso del pseudo elemento ::palceholder para 
+      modificar el color del texto por defecto
+  */
+}
+input[type=search]::-moz-placeholder {
+  color: #d8d8d8;
+}
+input[type=search]::placeholder {
+  color: #d8d8d8;
+}
+
 /*  
     header_component: definimos position: fixed junto con sus 
 	propiedades top, left, right y z-index para fijar el menu
@@ -92,10 +177,11 @@ svg {
   left: 0;
   right: 0;
   z-index: 9;
-  border-bottom: 1px solid #f6f6f6;
+  background-color: #fff;
+  border-bottom: 2px solid #f6f6f6;
   transition: box-shadow 0.2s;
   /*
-  	js_header_scroll: clase añadida con javascript en "./src/js/main.js"
+  	js_header_scroll: clase añadida con javascript
   	definimos una sombra cuando inicia el scroll
   */
   /*
@@ -104,10 +190,6 @@ svg {
          el logo y el menu y align-items para centrar de manera
          vertical los elementos que este contiene 
   */
-}
-.header_component.js_header_scroll {
-  box-shadow: 0 2px 5px rgba(179, 177, 177, 0.3019607843);
-  background-color: #fff;
 }
 .header_component .header_container {
   display: flex;
@@ -142,6 +224,7 @@ svg {
 }
 .header_component .header_container .nitlogo_box a h4 span {
   color: #f0db4f;
+  text-shadow: 0 0 18px rgba(240, 218, 79, 0.7);
 }
 .header_component .header_container .menu_box {
   display: flex;
@@ -176,10 +259,8 @@ svg {
     align-items: center;
     grid-gap: 8px;
     /*
-        tag-input: definimos outline: none  para remover el borde que 
-        generan los navegadores en los inputs, tambien un espaciado en
-        el eje-Y para este elemento, finalmente definimos la propiedad
-        display: none para remover este elemento de la vista
+        tag-input: definimos la propiedad display: none para remover este 
+        elemento de la vista
     */
     /*
         tag-svg: definimos un margen superior para generar 
@@ -187,42 +268,15 @@ svg {
     */
   }
   .header_component .header_container .menu_box li.search_box input {
-    outline: none;
-    background-color: transparent;
-    color: #5c5b5b;
-    border: 1px solid #f6f6f6;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    height: 35px;
-    padding: 0 10px;
-    transition: box-shadow 0.2s;
     display: none;
     /*
         js_input_hidden: clase añadida con javascript en "./src/js/main.js"
         modificamos la propiedad display a block para hacer visible este 
         elemento
     */
-    /*
-        cuando tag-input tiene el foco añadimos una sombra
-    */
-    /*
-        hacemos uso del pseudo elemento ::palceholder para 
-        modificar el color del texto por defecto
-    */
   }
   .header_component .header_container .menu_box li.search_box input.js_input_hidden {
     display: block;
-  }
-  .header_component .header_container .menu_box li.search_box input:focus {
-    box-shadow: 0 0 8px 0 rgba(179, 177, 177, 0.3019607843);
-  }
-  .header_component .header_container .menu_box li.search_box input::-moz-placeholder {
-    color: #c3c3c3;
-  }
-  .header_component .header_container .menu_box li.search_box input::placeholder {
-    color: #c3c3c3;
   }
   .header_component .header_container .menu_box li.search_box svg {
     margin-top: 2px;
@@ -231,7 +285,8 @@ svg {
 .header_component .header_container .menu_box li {
   cursor: pointer;
   /*  
-      tag-a
+      tag-a: definimos un padding derecho 
+      para generar espaciado en referencia a su contenedor
   */
   /*  
       tag-svg
@@ -243,35 +298,27 @@ svg {
   */
 }
 .header_component .header_container .menu_box li a {
+  color: #d8d8d8;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  padding-right: 24px;
   /*
-      dispositivos menores a 719px: definimos display: none 
-      para ocultar el buscador de la vista en esta medida
+      dispositivos menores a 719px: modificamos el
+      padding para esta medida
   */
   /*
-      dispositivos mayores a 720px: definimos un padding derecho 
-      para generar espaciado en referencia a su contenedor
+      cuando la tag-a tiene el pseudo elemento :hover modificamos 
+      su color
   */
 }
 @media (max-width: 719px) {
   .header_component .header_container .menu_box li a {
-    display: none;
+    padding-right: 4px;
   }
 }
-@media (min-width: 720px) {
-  .header_component .header_container .menu_box li a {
-    color: #c3c3c3;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 1.1px;
-    padding-right: 24px;
-    /*
-        cuando la tag-a tiene el pseudo elemento :hover modificamos 
-        su color
-    */
-  }
-  .header_component .header_container .menu_box li a:hover {
-    color: #f0db4f;
-  }
+.header_component .header_container .menu_box li a:hover {
+  color: #f0db4f;
 }
 .header_component .header_container .menu_box li svg {
   fill: #c3c3c3;
@@ -311,6 +358,8 @@ svg {
   z-index: 8;
   width: 260px;
   height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #f6f6f6;
   padding: 0 14px 0 28px;
   overflow: auto;
   /*
@@ -342,7 +391,6 @@ svg {
 }
 @media (max-width: 719px) {
   .components_container .nav_component {
-    background-color: #fff;
     transform: translateX(-1000px);
     transition: transform 0.3s;
     /*
@@ -377,17 +425,28 @@ svg {
 .components_container .nav_component .menu_nav {
   padding: 24px 0 70px;
   /*
-  	li_dropdown: definimos un margen en la parte inferior de este 
-  	elemento
+  	li_dropdown
   */
   /*
       line_nav: definimos un margen inferior
       para generar separacion frente a otros elementos
   */
 }
+.components_container .nav_component .menu_nav li input[type=search] {
+  width: 100%;
+  margin-bottom: 30px;
+  /*
+      dispositivos mayores a 720px: definimos display: none 
+      para ocultar el buscador de la vista en esta medida
+  */
+}
+@media (min-width: 720px) {
+  .components_container .nav_component .menu_nav li input[type=search] {
+    display: none;
+  }
+}
 .components_container .nav_component .menu_nav .li_dropdown {
   list-style: none;
-  margin-bottom: 18px;
   /*
       cuando hacemos :hover sobre la tag-li, seleccionamos a 
       tag-a y modificamos el color de este elemento
@@ -411,7 +470,8 @@ svg {
   	tag-a: definimos flexbox con su propiedad
   	justify-content para generar un espaciado entre
   	el enlace y el icono y align-items para centrar de manera
-  	vertical los elementos que este contiene 
+  	vertical los elementos que este contiene, finalmente 
+                  definimos un margen en la parte inferior de este elemento
   */
   /*
   	dropdown_menu: definimos un max-height: 0 para
@@ -442,6 +502,19 @@ svg {
   color: #5c5b5b;
   font-size: 1.1rem;
   font-weight: 600;
+  margin-bottom: 18px;
+  /*  
+      js_active_link: cuando tag-a tiene esta clase 
+      modificamos el color de estos elementos
+  */
+  /*  
+      js_active_link svg: cuando tag-a tiene esta clase 
+      seleccionamos a tag-svg y modificamos el color del icono
+  */
+  /*  
+      js_link_hidden: cuando tag-a tiene esta clase 
+      definimos display: none para ocultar los elementos
+  */
   /*
   	tag-svg
   */
@@ -451,6 +524,9 @@ svg {
 }
 .components_container .nav_component .menu_nav .li_dropdown a.js_active_link svg {
   fill: #f0db4f;
+}
+.components_container .nav_component .menu_nav .li_dropdown a.js_link_hidden {
+  display: none;
 }
 .components_container .nav_component .menu_nav .li_dropdown a svg {
   fill: #5c5b5b;
@@ -463,11 +539,10 @@ svg {
   overflow: hidden;
   padding: 0 13px;
   /*
-  	tag-li: definimos un espaciado en el eje-Y para este elemento
+  	tag-li
   */
 }
 .components_container .nav_component .menu_nav .li_dropdown .dropdown_menu li {
-  padding: 10px 0;
   /*
   	tag-a
   */
@@ -486,6 +561,13 @@ svg {
   border: 1px solid #f6f6f6;
   width: 96%;
   margin-bottom: 18px;
+  /*
+      js_hidden_line_nav: clase añadida con javascript 
+      definimos display: none para remover este elemento
+  */
+}
+.components_container .nav_component .menu_nav .line_nav.js_hidden_line_nav {
+  display: none;
 }
 .components_container .main_components {
   position: absolute;
@@ -701,7 +783,7 @@ svg {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9;
+  z-index: 99;
   background-color: rgba(255, 255, 255, 0.9450980392);
   display: none;
   justify-content: center;
@@ -826,7 +908,7 @@ svg {
 }
 .components_container .main_components .sections_container .sect_content .code_box {
   background-color: #242936;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8392156863);
   font-size: 17px;
   border-radius: 5px;
   padding: 20px 0;
@@ -871,7 +953,7 @@ svg {
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.index {
   display: inline-block;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   color: #4c525d;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -888,9 +970,6 @@ svg {
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.variable {
   color: #986dff;
-}
-.components_container .main_components .sections_container .sect_content .code_box pre code span.operator {
-  color: #ff66a1;
 }
 .components_container .main_components .sections_container .sect_content .code_box pre code span.symbols {
   color: #179fff;
@@ -938,6 +1017,9 @@ svg {
 .components_container .main_components .sections_container .sect_content .code_box pre code span.methods {
   color: #ffd173;
 }
+.components_container .main_components .sections_container .sect_content .code_box pre code span.text {
+  color: #fff;
+}
 .components_container .main_components .sections_container .sect_content .code_box .output_box pre {
   color: #83f8b0;
   margin-bottom: 4px;
@@ -952,7 +1034,15 @@ svg {
 }
 .components_container .main_components .sections_container .sect_content .code_box .output_box pre span {
   color: #4c525d;
-  font-size: 18px;
+}
+.components_container .main_components .sections_container .sect_content .code_box .output_box pre span.key {
+  color: #73d0ff;
+}
+.components_container .main_components .sections_container .sect_content .code_box .output_box pre span.text {
+  color: #fff;
+}
+.components_container .main_components .sections_container .sect_content .code_box .output_box pre span.flat {
+  color: #f783f7;
 }
 .components_container .main_components .section_pagination {
   display: flex;
@@ -987,7 +1077,7 @@ svg {
   pointer-events: none;
 }
 .components_container .main_components .section_pagination a svg {
-  fill: #fff;
+  fill: rgba(255, 255, 255, 0.8392156863);
   width: 28px;
   height: 28px;
 }
@@ -1008,7 +1098,7 @@ svg {
   position: fixed;
   right: 2%;
   bottom: 85px;
-  z-index: 99;
+  z-index: 98;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1056,7 +1146,7 @@ svg {
 }
 .components_container .main_components .section_footer h4 {
   text-align: center;
-  color: #ccc;
+  color: #d8d8d8;
   font-size: 1.2rem;
   font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

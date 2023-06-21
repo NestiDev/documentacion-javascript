@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                modal_section y 1 sections_container
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <div class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Install</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>texto pendiente</p>
+                </div>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#npm-init">01. Npm init</a></li>
+                                    <li><a href="#packaje.json">02. Packaje.json</a></li>
+                                    <li><a href="#webpack">03. Webpack</a></li>
+                                    <li><a href="#html">04. Html</a></li>
+                                    <li><a href="#css">05. Css</a></li>
+                                    <li><a href="#sass">06. Sass</a></li>
+                                    <li><a href="#file">07. File</a></li>
+                                    <li><a href="#clean">08. Clean</a></li>
+                                    <li><a href="#server">09. Server</a></li>
+                                    <li><a href="#devDependencies">10. DevDependencies</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+                    <section class="sect_content" id="npm-init">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Npm init</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install init </span><span class="flat">-y</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="packaje.json">
+                        <h3>02. Packaje.json</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index"></span><span class="console">packaje.json</span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_index">02</span><span class="parenthesis">"name"</span><span class="operator">: </span><span class="string">"procject"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="parenthesis">"version"</span><span class="operator">: </span><span class="string">"1.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="parenthesis">"description"</span><span class="operator">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="parenthesis">"main"</span><span class="operator">: </span><span class="string">"index.js"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">06</span><span class="parenthesis">"scripts"</span><span class="operator">: </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="parenthesis">"test"</span><span class="operator">: </span><span class="string">"echo \"Error: no test specified\" && exit 1"</span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="brackets">}</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">09</span><span class="parenthesis">"keywords"</span><span class="operator">: </span><span class="square">[]</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="parenthesis">"author"</span><span class="operator">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="parenthesis">"license"</span><span class="operator">: </span><span class="string">"ISC"</span></code></pre>
+                            <pre><code><span class="index inner_index">12</span><span class="brackets">}</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="webpack">
+                        <h3>03. Webpack</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install webpack </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install webpack-cli </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="html">
+                        <h3>04. Html</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install html-loader </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install html-webpack-plugin </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="css">
+                        <h3>05. Css</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install style-loader css-loader </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install mini-css-extract-plugin </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="sass">
+                        <h3>06. Sass</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install sass sass-loader </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="file">
+                        <h3>07. File</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install file-loader </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="clean">
+                        <h3>08. Clean</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install clean-webpack-plugin </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="server">
+                        <h3>09. Server</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre>C:<span>\</span>Users<span>\</span>name<span>\</span>Desktop<span>\</span>project<span>> </span><span class="key">npm </span><span class="text">install webpack-dev-server </span><span class="flat">-D</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="devDependencies">
+                        <h3>10. DevDependencies</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">></span><span class="boolean">node_modules</span></code></pre>
+                            <pre><code><span class="index inner_index"> </span><span class="console">packaje-lock.json</span></code></pre>
+                            <pre><code><span class="index inner_index"> </span><span class="console">packaje.json</span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="parenthesis">"devDependencies"</span><span class="operator">: </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">13</span><span class="parenthesis">"clean-webpack-plugin"</span><span class="operator">: </span><span class="string">"^4.0.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">14</span><span class="parenthesis">"css-loader"</span><span class="operator">: </span><span class="string">"^6.8.1"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">15</span><span class="parenthesis">"file-loader"</span><span class="operator">: </span><span class="string">"^6.2.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">16</span><span class="parenthesis">"html-loader"</span><span class="operator">: </span><span class="string">"^4.2.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">17</span><span class="parenthesis">"html-webpack-plugin"</span><span class="operator">: </span><span class="string">"^5.5.1"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">18</span><span class="parenthesis">"mini-css-extract-plugin"</span><span class="operator">: </span><span class="string">"^2.7.6"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">19</span><span class="parenthesis">"sass"</span><span class="operator">: </span><span class="string">"^1.62.1"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">20</span><span class="parenthesis">"sass-loader"</span><span class="operator">: </span><span class="string">"^13.3.1"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">21</span><span class="parenthesis">"style-loader"</span><span class="operator">: </span><span class="string">"^3.3.3"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">22</span><span class="parenthesis">"webpack"</span><span class="operator">: </span><span class="string">"^5.85.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">23</span><span class="parenthesis">"webpack-cli"</span><span class="operator">: </span><span class="string">"^5.1.2"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">24</span><span class="parenthesis">"webpack-dev-server"</span><span class="operator">: </span><span class="string">"^4.15.1"</span></code></pre>
+                            <pre><code><span class="index outer_index">25</span><span class="brackets">}</span></code></pre>
+                            <pre><code><span class="index inner_index">26</span><span class="brackets">}</span></code></pre>
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./webpack-estructura">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Install - Webpack") %>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

@@ -431,6 +431,12 @@ router.get("/temporizadores-clearInterval", (req, res) => {
 /* 
 	______________________ regexp ______________________
 */
+router.get("/regexp-new", (req, res) => {
+    res.render("pages/regexp-new", {
+        title: "regexp new",
+    });
+});
+
 router.get("/regexp-metodos", (req, res) => {
     res.render("pages/regexp-metodos", {
         title: "regexp metodos",
@@ -536,9 +542,9 @@ router.get("/dom-node-elements", (req, res) => {
     });
 });
 
-router.get("/dom-classList", (req, res) => {
-    res.render("pages/dom-classList", {
-        title: "DOM classList",
+router.get("/dom-class", (req, res) => {
+    res.render("pages/dom-class", {
+        title: "DOM class",
     });
 });
 
@@ -617,6 +623,33 @@ router.get("/bom-metodos", (req, res) => {
 router.get("/modulos", (req, res) => {
     res.render("pages/modulos", {
         title: "modulos",
+    });
+});
+
+/* 
+	______________________ Webpack ______________________
+*/
+router.get("/webpack-install", (req, res) => {
+    res.render("pages/webpack-install", {
+        title: "webpack install",
+    });
+});
+
+router.get("/webpack-estructura", (req, res) => {
+    res.render("pages/webpack-estructura", {
+        title: "webpack estructura",
+    });
+});
+
+router.get("/webpack-config", (req, res) => {
+    res.render("pages/webpack-config", {
+        title: "webpack config",
+    });
+});
+
+router.get("/webpack-build", (req, res) => {
+    res.render("pages/webpack-build", {
+        title: "webpack build",
     });
 });
 

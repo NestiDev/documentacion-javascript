@@ -102,11 +102,12 @@
                                     <li><a href="#createElement">01. CreateElement</a></li>
                                     <li><a href="#innerHTML">02. InnerHTML</a></li>
                                     <li><a href="#appendChild">03. AppendChild</a></li>
-                                    <li><a href="#removeChild">04. RemoveChild</a></li>
-                                    <li><a href="#replaceChild">05. ReplaceChild</a></li>
-                                    <li><a href="#cloneNode">06. CloneNode</a></li>
-                                    <li><a href="#insertBefore">07. InsertBefore</a></li>
-                                    <li><a href="#insertBefore-after">08. InsertBefore - after</a></li>
+                                    <li><a href="#remove">04. Remove</a></li>
+                                    <li><a href="#removeChild">05. RemoveChild</a></li>
+                                    <li><a href="#replaceChild">06. ReplaceChild</a></li>
+                                    <li><a href="#cloneNode">07. CloneNode</a></li>
+                                    <li><a href="#insertBefore">08. InsertBefore</a></li>
+                                    <li><a href="#insertBefore-after">09. InsertBefore - after</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -139,11 +140,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> tagH1<span class="operator"> = </span>document<span class="methods">.createElement(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> tagH1<span class="keyword"> = </span>document<span class="methods">.createElement(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>tagH1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>tagH1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -164,15 +165,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> tagH1<span class="operator"> = </span>document<span class="methods">.createElement(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> tagH1<span class="keyword"> = </span>document<span class="methods">.createElement(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span>tagH1<span class="methods">.</span>innerHTML <span class="operator">= </span><span class="string">"Hola mundo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span>tagH1<span class="methods">.</span>innerHTML <span class="keyword">= </span><span class="string">"Hola mundo"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>tagH1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>tagH1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -200,15 +201,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> tagH1<span class="operator"> = </span>document<span class="methods">.createElement(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> tagH1<span class="keyword"> = </span>document<span class="methods">.createElement(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span>tagH1<span class="methods">.</span>innerHTML <span class="operator">= </span><span class="string">"Hola mundo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span>tagH1<span class="methods">.</span>innerHTML <span class="keyword">= </span><span class="string">"Hola mundo"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -216,7 +217,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagSection<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span>$tagSection<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -228,8 +229,49 @@
                         </div>
                     </section>
 
+                    <section class="sect_content" id="remove">
+                        <h3>04. Remove</h3>
+
+                        <p>Nos permite eliminar un elemento padre.</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">section </span><span class="functions">id</span><span class="console">=</span><span class="string">"section-padre"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="console">   <</span><span class="parenthesis">h1</span><span class="console">></span>Titulo de la seccion<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">12</span></code></pre>
+                            <pre><code><span class="index outer_index">13</span><span class="console">   <</span><span class="parenthesis">p</span><span class="console">></span>Parrafo de la seccion<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">14</span></code></pre>
+                            <pre><code><span class="index outer_index">15</span><span class="console">   <</span><span class="parenthesis">button </span><span class="functions">type</span><span class="console">=</span><span class="string">"button"</span><span class="console">></span>Boton de la seccion<span class="console"><</span><span class="parenthesis">/button</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">/section</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">17</span></code></pre>
+                            <pre><code><span class="index outer_index">18</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagSection<span class="methods">.remove()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>$tagSection<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> undefined <span class="console">=> elemento eliminado</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
                     <section class="sect_content" id="removeChild">
-                        <h3>04. RemoveChild</h3>
+                        <h3>05. RemoveChild</h3>
 
                         <p>Nos permite eliminar un elemento hijo, para ello este recibe como parametro el <strong>elemento HTML</strong> a eliminar.</p>
 
@@ -252,11 +294,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagP<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"p"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagP<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"p"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
@@ -264,7 +306,7 @@
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagSection<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span>$tagSection<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -278,7 +320,7 @@
                     </section>
 
                     <section class="sect_content" id="replaceChild">
-                        <h3>05. ReplaceChild</h3>
+                        <h3>06. ReplaceChild</h3>
 
                         <p>
                             Nos permite reemplazar un <strong>elemento HTML</strong> existente por un nuevo elemento. Para ello, es importante tener referenciado al elemento padre y al elemento que
@@ -301,15 +343,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagH1<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagH1<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> tagH2<span class="operator"> = </span>document<span class="methods">.createElement(</span><span class="string">"h2"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> tagH2<span class="keyword"> = </span>document<span class="methods">.createElement(</span><span class="string">"h2"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -317,7 +359,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagSection<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span>$tagSection<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -330,7 +372,7 @@
                     </section>
 
                     <section class="sect_content" id="cloneNode">
-                        <h3>06. CloneNode</h3>
+                        <h3>07. CloneNode</h3>
 
                         <p>
                             Nos permite clonar un <strong>elemento HTML</strong> Para ello, es importante referenciar al elemento que deseamos clonar, a este elemento le definimos
@@ -357,15 +399,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagButton<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"button"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagButton<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"button"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> tagButtonClonada<span class="operator"> = </span>$tagButton<span class="methods">.cloneNode(</span><span class="boolean">true</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> tagButtonClonada<span class="keyword"> = </span>$tagButton<span class="methods">.cloneNode(</span><span class="function">true</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>tagButtonClonada<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>tagButtonClonada<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -376,7 +418,7 @@
                     </section>
 
                     <section class="sect_content" id="insertBefore">
-                        <h3>07. InsertBefore</h3>
+                        <h3>08. InsertBefore</h3>
 
                         <p>
                             Nos permite insertar un nuevo elemento <strong>elemento HTML</strong> justo por encima de otro elemento ya existente. Para ello, es importante tener referenciado al
@@ -401,15 +443,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagButton<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"button"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagButton<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"button"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> tagBr<span class="operator"> = </span>document<span class="methods">.createElement(</span><span class="string">"br"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> tagBr<span class="keyword"> = </span>document<span class="methods">.createElement(</span><span class="string">"br"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -417,7 +459,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagSection<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span>$tagSection<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -432,7 +474,7 @@
                     </section>
 
                     <section class="sect_content" id="insertBefore-after">
-                        <h3>08. InsertBefore - after</h3>
+                        <h3>09. InsertBefore - after</h3>
 
                         <p>
                             Este tip nos permite insertar un nuevo <strong>elemento HTML</strong> justo por debajo de otro ya existente. Para ello, es importante tener referenciado al elemento padre y
@@ -457,15 +499,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagSection<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"#section-padre"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagButton<span class="operator"> = </span>document<span class="methods">.querySelector(</span><span class="string">"button"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> $tagButton<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"button"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> tagHr<span class="operator"> = </span>document<span class="methods">.createElement(</span><span class="string">"hr"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> tagHr<span class="keyword"> = </span>document<span class="methods">.createElement(</span><span class="string">"hr"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -473,7 +515,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>$tagSection<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span>$tagSection<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

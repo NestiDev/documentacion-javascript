@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <div class="section_banner">
+                <section class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -39,7 +39,7 @@
                         <!--  
                             tag-h2: en esta definimos el titulo del banner
                         -->
-                        <h2>Includes</h2>
+                        <h2>New</h2>
 
                         <!--  
                             tag-svg: en esta definimos el icono del temario, le 
@@ -59,11 +59,8 @@
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
-                    <p>
-                        Nos permite buscar un valor dentro de una cadena de caracteres, este metodo retorna un boolean
-                        <strong>true</strong> si el valor definido se encuentra en la cadena y un <strong>false</strong> si no existe.
-                    </p>
-                </div>
+                    <p>texto pendiente</p>
+                </section>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -99,7 +96,7 @@
                                     tag-ul: en esta definimos los items del temario del modal
                                 -->
                                 <ul>
-                                    <li><a href="#implementacion">01. Implementacion</a></li>
+                                    <li><a href="#definicion">01. Definicion</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -112,57 +109,35 @@
                 -->
                 <div class="sections_container">
                     <!--  
-						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-                    <section class="sect_content" id="implementacion">
+                    <section class="sect_content" id="definicion">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Implementacion</h3>
-
-                        <p>texto pendiente</p>
+                        <h3>01. Definicion</h3>
 
                         <!--  
-                            code_box: en esta definimos
-                        -->
-                        <div class="code_box">
-                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
-
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> oracion<span class="keyword"> =</span><span class="string"> "La programacion es asombrosa"</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">02</span></code></pre>
-
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> incluyeFrase<span class="keyword"> = </span>oracion<span class="methods">.includes(</span><span class="string">"genial"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
-
-                            <pre><code><span class="index">04</span></code></pre>
-
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>incluyeFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
-
-                            <!--  
-                                output_box: en esta definimos la salida en respuesta al codigo
-                            -->
-                            <div class="output_box">
-                                <pre></pre>
-                                <pre><span>></span> false</pre>
-                            </div>
-                        </div>
+							tag-p: en esta definimos el parrafo de la seccion
+						-->
+                        <p>texto pendiente</p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> oracion<span class="keyword"> =</span><span class="string"> "La programacion es asombrosa"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> inputValue<span class="operator"> = </span><span class="string">"Juan Valdez"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> incluyeFrase<span class="keyword"> = </span>oracion<span class="methods">.includes(</span><span class="string">"asombrosa"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> expRegInputValue<span class="operator"> = </span><span class="functions">new </span><span class="parenthesis">RegExp(</span>inputValue<span class="semi_colon">, </span><span class="string">"i"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>incluyeFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expRegInputValue<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> true</pre>
+                                <pre><span>></span> /Juan Valdez/i</pre>
                             </div>
                         </div>
                     </section>
@@ -175,13 +150,13 @@
                             tag-a: en estas definimos el enlace de redireccionamiento
                             a las diferentes secciones y el icono de redireccion
                         -->
-                        <a href="./strings-replace">
+                        <a class="not_previous">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
                             </svg>
                         </a>
 
-                        <a href="./strings-index">
+                        <a href="./regexp-metodos">
                             <svg viewBox="0 0 24 24">
                                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
                             </svg>
@@ -191,7 +166,7 @@
                     <!--  
                         incluimos el partial footer.ejs
                     -->
-                    <%- include('../partials/footer', titleSection = "Includes - Strings") %>
+                    <%- include('../partials/footer', titleSection = "New - RegExp") %>
                 </div>
             </main>
         </div>

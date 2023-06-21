@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <div class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Class</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>texto pendiente</p>
+                </div>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#propiedad-classList">01. Propiedad classList</a></li>
+                                    <li><a href="#propiedad-length">02. Propiedad length</a></li>
+                                    <li><a href="#metodo-add">03. Metodo add</a></li>
+                                    <li><a href="#metodo-remove">04. Metodo remove</a></li>
+                                    <li><a href="#metodo-toggle">05. Metodo toggle</a></li>
+                                    <li><a href="#metodo-replace">06. Metodo replace</a></li>
+                                    <li><a href="#metodo-contains">07. Metodo contains</a></li>
+                                    <li><a href="#metodo-forEach">08. Metodo forEach</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content" id="propiedad-classList">
+                        <!--  
+                            tag-h3: en esta definimos el titulo de la seccion
+                        -->
+                        <h3>01. Propiedad classList</h3>
+
+                        <!--  
+                            tag-p: en esta definimos el parrafo de la seccion
+                        -->
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h1 </span><span class="functions">class</span><span class="console">=</span><span class="string">"titulo color"</span><span class="console">></span>Hola mundo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH1<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> arrayDeClases<span class="keyword"> = </span>$tagH1<span class="functions">.classList</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>arrayDeClases<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> DOMTokenList(2) ['titulo', 'color', value: 'titulo color']</pre>
+                                <pre><code><span>></span><span class="index inner_index">0</span><span class="parenthesis">"titulo"</span></code></pre>
+                                <pre><code><span>></span><span class="index inner_index">1</span><span class="parenthesis">"color"</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">length: 2</span></code></pre>
+                                <pre><code><span>></span><span class="parenthesis">[[Prototype]]: DOMTokenList</span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="propiedad-length">
+                        <h3>02. Propiedad length</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">class</span><span class="console">=</span><span class="string">"contenedor caja"</span><span class="console">></span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagDiv<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"div"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> cantidadDeClases<span class="keyword"> = </span>$tagDiv<span class="functions">.classList.length</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>cantidadDeClases<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 2</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-add">
+                        <h3>03. Metodo add</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">p</span><span class="console">></span>Parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagP<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"p"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagP<span class="functions">.classList</span><span class="methods">.add(</span><span class="string">"parrafo"</span><span class="semi_colon">, </span><span class="string">"color"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>$tagP<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> #p</pre>
+                                <pre><code><span><</span><span class="parenthesis">p </span><span class="functions">class</span><span class="console">=</span><span class="string">"parrafo color"</span><span>></span><span class="text">Parrafo</span><span><</span><span class="parenthesis">/p</span><span>></span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-remove">
+                        <h3>04. Metodo remove</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h3 </span><span class="functions">class</span><span class="console">=</span><span class="string">"sub_titulo color"</span><span class="console">></span>Sub titulo<span class="console"><</span><span class="parenthesis">/h3</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH3<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h3"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagH3<span class="functions">.classList</span><span class="methods">.remove(</span><span class="string">"sub_titulo"</span><span class="semi_colon">, </span><span class="string">"color"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>$tagH3<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> #h3</pre>
+                                <pre><code><span><</span><span class="parenthesis">h3 <span class="functions">class</span></span><span>></span><span class="text">Sub titulo</span><span><</span><span class="parenthesis">/h3</span><span>></span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-toggle">
+                        <h3>05. Metodo toggle</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">p </span><span class="functions">class</span><span class="console">=</span><span class="string">"parrafo"</span><span class="console">></span>Parrafo<span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagP<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"p"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagP<span class="functions">.classList</span><span class="methods">.toggle(</span><span class="string">"parrafo"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span>$tagP<span class="functions">.classList</span><span class="methods">.toggle(</span><span class="string">"texto"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span>$tagP<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> #p</pre>
+                                <pre><code><span><</span><span class="parenthesis">p <span class="functions">class</span><span class="console">=</span><span class="string">"texto"</span></span><span>></span><span class="text">Parrafo</span><span><</span><span class="parenthesis">/p</span><span>></span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-replace">
+                        <h3>06. Metodo replace</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h1 </span><span class="functions">class</span><span class="console">=</span><span class="string">"titulo"</span><span class="console">></span>Titulo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH1<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagH1<span class="functions">.classList</span><span class="methods">.replace(</span><span class="string">"titulo"</span><span class="semi_colon">, </span><span class="string">"encabezado"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>$tagH1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> #h1</pre>
+                                <pre><code><span><</span><span class="parenthesis">h1 <span class="functions">class</span><span class="console">=</span><span class="string">"encabezado"</span></span><span>></span><span class="text">Parrafo</span><span><</span><span class="parenthesis">/h1</span><span>></span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-contains">
+                        <h3>07. Metodo contains</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h3 </span><span class="functions">class</span><span class="console">=</span><span class="string">"texto"</span><span class="console">></span>Javascript<span class="console"><</span><span class="parenthesis">/h3</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH3<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h3"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> contieneLaClase<span class="keyword"> = </span>$tagH3<span class="functions">.classList</span><span class="methods">.contains(</span><span class="string">"texto"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>contieneLaClase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> true</pre>
+                            </div>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH3<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h3"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> contieneLaClase<span class="keyword"> = </span>$tagH3<span class="functions">.classList</span><span class="methods">.contains(</span><span class="string">"parrafo"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>contieneLaClase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> false</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-forEach">
+                        <h3>08. Metodo forEach</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">class</span><span class="console">=</span><span class="string">"contenedor caja padre"</span><span class="console">></span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagDiv<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"div"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagDiv<span class="functions">.classList</span><span class="methods">.forEach(</span><span class="number">clases</span><span class="keyword"> =></span><span class="brackets"> {</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="number">clases</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> contenedor</pre>
+                                <pre><span>></span> caja</pre>
+                                <pre><span>></span> padre</pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./dom-node-elements">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./dom-attribute">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Class - DOM") %>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

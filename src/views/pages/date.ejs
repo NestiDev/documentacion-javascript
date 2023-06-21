@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Esta interfaz nos permite trabajar con la fecha y el tiempo y puede recibir valores con los cuales podemos determinar una fecha especifica o bien podemos hacer uso de los
                         diferentes metodos que nos ofrece los cuales veremos a lo largo de este apartado.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -101,17 +101,18 @@
                                 <ul>
                                     <li><a href="#new-date">01. New Date</a></li>
                                     <li><a href="#fecha-personalizada">02. Fecha personalizada</a></li>
-                                    <li><a href="#metodo-getFullYear">03. Metodo getFullYear</a></li>
-                                    <li><a href="#metodo-getDate">04. Metodo getDate</a></li>
-                                    <li><a href="#metodo-getDay">05. Metodo getDay</a></li>
-                                    <li><a href="#metodo-getMonth">06. Metodo getMonth</a></li>
-                                    <li><a href="#metodo-getHours">07. Metodo getHours</a></li>
-                                    <li><a href="#metodo-getMinutes">08. Metodo getMinutes</a></li>
-                                    <li><a href="#metodo-getSeconds">09. Metodo getSeconds</a></li>
-                                    <li><a href="#metodo-toDateString">10. Metodo toDateString</a></li>
-                                    <li><a href="#metodo-toLocaleString">11. Metodo toLocaleString</a></li>
-                                    <li><a href="#metodo-toLocaleDateString">12. Metodo toLocaleDateString</a></li>
-                                    <li><a href="#metodo-toLocaleTimeString">13. Metodo toLocaleTimeString</a></li>
+                                    <li><a href="#metodo-now">03. Metodo now</a></li>
+                                    <li><a href="#metodo-getFullYear">04. Metodo getFullYear</a></li>
+                                    <li><a href="#metodo-getDate">05. Metodo getDate</a></li>
+                                    <li><a href="#metodo-getDay">06. Metodo getDay</a></li>
+                                    <li><a href="#metodo-getMonth">07. Metodo getMonth</a></li>
+                                    <li><a href="#metodo-getHours">08. Metodo getHours</a></li>
+                                    <li><a href="#metodo-getMinutes">09. Metodo getMinutes</a></li>
+                                    <li><a href="#metodo-getSeconds">10. Metodo getSeconds</a></li>
+                                    <li><a href="#metodo-toDateString">11. Metodo toDateString</a></li>
+                                    <li><a href="#metodo-toLocaleString">12. Metodo toLocaleString</a></li>
+                                    <li><a href="#metodo-toLocaleDateString">13. Metodo toLocaleDateString</a></li>
+                                    <li><a href="#metodo-toLocaleTimeString">14. Metodo toLocaleTimeString</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -140,11 +141,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_actual<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>fecha_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>fecha_actual<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -164,11 +165,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_personalizada<span class="operator"> = new </span><span class="symbols">Date(<span class="string">"febrero-10-1989 11:00:59"</span>)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_personalizada<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date(<span class="string">"febrero-10-1989 11:00:59"</span>)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>fecha_personalizada<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>fecha_personalizada<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -177,19 +178,40 @@
                         </div>
                     </section>
 
-                    <section class="sect_content" id="metodo-getFullYear">
-                        <h3>03. Metodo getFullYear</h3>
+                    <section class="sect_content" id="metodo-now">
+                        <h3>03. Metodo now</h3>
 
                         <p>texto pendiente</p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> anio_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getFullYear()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> tiempo<span class="operator"> = </span><span class="parenthesis">Date()</span><span class="methods">.now()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>anio_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>tiempo<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 1686948021171 <span class="console">=> Tiempo en milisegundos</span></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="metodo-getFullYear">
+                        <h3>04. Metodo getFullYear</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> anio_actual<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.getFullYear()</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>anio_actual<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -199,18 +221,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-getDate">
-                        <h3>04. Metodo getDate</h3>
+                        <h3>05. Metodo getDate</h3>
 
                         <p>Devuelve el dia actual calendario que va desde el dia 01 hasta el dia 31.</p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getDate()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_actual<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.getDate()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dia_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>dia_actual<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -220,18 +242,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-getDay">
-                        <h3>05. Metodo getDay</h3>
+                        <h3>06. Metodo getDay</h3>
 
                         <p>Devuelve el dia actual de la semana, estos comprenden desde el Domingo <strong>cuya posicion seria 0</strong> hasta el Sabado <strong>cuya posicion seria 6</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_actual_semana<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getDay()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_actual_semana<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.getDay()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dia_actual_semana<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>dia_actual_semana<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -241,18 +263,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-getMonth">
-                        <h3>06. Metodo getMonth</h3>
+                        <h3>07. Metodo getMonth</h3>
 
                         <p>Devuelve el mes actual del año, estos comprenden desde Enero <strong>cuya posicion seria 0</strong> hasta el Diciembre <strong>cuya posicion seria 11</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> mes_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getMonth()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> mes_actual<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.getMonth()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>mes_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>mes_actual<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -262,18 +284,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-getHours">
-                        <h3>07. Metodo getHours</h3>
+                        <h3>08. Metodo getHours</h3>
 
                         <p>Devuelve la hora actual comprendida entre las <strong>0 a 23 horas</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> hora_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getHours()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> hora_actual<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.getHours()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>hora_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>hora_actual<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -283,18 +305,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-getMinutes">
-                        <h3>08. Metodo getMinutes</h3>
+                        <h3>09. Metodo getMinutes</h3>
 
                         <p>Devuelve el minuto actual comprendido entre <strong>0 a 59 minutos</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> minuto_actual<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getMinutes()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> minuto_actual<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.getMinutes()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>minuto_actual<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>minuto_actual<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -304,18 +326,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-getSeconds">
-                        <h3>09. Metodo getSeconds</h3>
+                        <h3>10. Metodo getSeconds</h3>
 
                         <p>Devuelve el segundo actual comprendido entre <strong>0 a 59 segundos</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> segundos_actuales<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.getSeconds()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> segundos_actuales<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.getSeconds()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>segundos_actuales<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>segundos_actuales<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -325,18 +347,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-toDateString">
-                        <h3>10. Metodo toDateString</h3>
+                        <h3>11. Metodo toDateString</h3>
 
                         <p>Devuelve la fecha actual en formato <strong>dia semana</strong> - <strong>mes</strong> - <strong>dia calendario</strong> - <strong>año</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_fecha<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toDateString()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dia_fecha<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.toDateString()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>dia_fecha<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>dia_fecha<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -346,7 +368,7 @@
                     </section>
 
                     <section class="sect_content" id="metodo-toLocaleString">
-                        <h3>11. Metodo toLocaleString</h3>
+                        <h3>12. Metodo toLocaleString</h3>
 
                         <p>
                             Devuelve la fecha y hora actual en formato <strong>año</strong> - <strong>mes</strong> - <strong>dia calendario</strong> <strong>hora</strong> : <strong>minutos</strong> :
@@ -356,11 +378,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_hora<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toLocaleString()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha_hora<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.toLocaleString()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>fecha_hora<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>fecha_hora<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -370,18 +392,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-toLocaleDateString">
-                        <h3>12. Metodo toLocaleDateString</h3>
+                        <h3>13. Metodo toLocaleDateString</h3>
 
                         <p>Devuelve la fecha actual en formato <strong>año</strong> - <strong>mes</strong> - <strong>dia calendario</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> solo_fecha<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toLocaleDateString()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> solo_fecha<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.toLocaleDateString()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>solo_fecha<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>solo_fecha<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -391,18 +413,18 @@
                     </section>
 
                     <section class="sect_content" id="metodo-toLocaleTimeString">
-                        <h3>13. Metodo toLocaleTimeString</h3>
+                        <h3>14. Metodo toLocaleTimeString</h3>
 
                         <p>Devuelve la hora actual en formato <strong>hora</strong> : <strong>minutos</strong> : <strong>segundos</strong></p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> solo_hora<span class="operator"> = new </span><span class="symbols">Date()</span><span class="methods">.toLocaleTimeString()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> solo_hora<span class="operator"> = </span><span class="keyword">new </span><span class="parenthesis">Date()</span><span class="methods">.toLocaleTimeString()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>solo_hora<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>solo_hora<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

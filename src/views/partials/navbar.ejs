@@ -3,6 +3,16 @@
 -->
 <ul class="menu_nav">
     <!--  
+        tag-li: contenedor de 1 tag-input y 1 tag-svg
+    -->
+    <li>
+        <!--  
+            tag-input: en esta definimos el buscador de elementos
+        -->
+        <input class="input_hidden" type="search" name="search" placeholder="Buscar" autocomplete="off" />
+    </li>
+
+    <!--  
 		:li_dropdown: contenedor de 1tag-a y 1 tag-ul, la clase
 		:li_dropdown se implementa en javascript
 	-->
@@ -266,6 +276,8 @@
         </a>
 
         <ul class="dropdown_menu">
+            <li><a href="/regexp-new">New</a></li>
+
             <li><a href="/regexp-metodos">Metodos</a></li>
 
             <li><a href="/regexp-flags">Flags</a></li>
@@ -369,7 +381,7 @@
 
             <li><a href="/dom-node-elements">Node elements</a></li>
 
-            <li><a href="/dom-classList">ClassList</a></li>
+            <li><a href="/dom-class">Class</a></li>
 
             <li><a href="/dom-attribute">Attribute</a></li>
 
@@ -483,20 +495,20 @@
     <hr class="line_nav" />
 
     <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
+        <a href="#" data-toggle="dropdown">
             Webpack
 
-            <!-- <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24">
                 <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-            </svg> -->
+            </svg>
         </a>
 
-        <!-- <ul class="dropdown_menu">
-            <li><a href="/promesas-definicion">Definicion</a></li>
-            <li><a href="/promesas-async-await">Async - Await</a></li>
-            <li><a href="/promesas-try-catch">Try - Catch</a></li>
-            <li><a href="/promesas-throw-error">Throw error</a></li>
-        </ul> -->
+        <ul class="dropdown_menu">
+            <li><a href="/webpack-install">Install</a></li>
+            <li><a href="/webpack-estructura">Estructura</a></li>
+            <li><a href="/webpack-config">Config</a></li>
+            <li><a href="/webpack-build">Build</a></li>
+        </ul>
     </li>
 
     <li class="li_dropdown">

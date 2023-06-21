@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -60,7 +60,7 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>En este aparatado definiremos las propiedades de las cadenas de caracteres <strong>string</strong> de una sola implementacion.</p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -135,15 +135,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Hola Mundo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Hola Mundo"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> numeroCaracteres<span class="operator"> = </span>frase<span class="functions">.length</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> numeroCaracteres<span class="keyword"> = </span>frase<span class="functions">.length</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La frase Hola Mundo tiene"</span><span class="semi_colon">, </span>numeroCaracteres<span class="semi_colon">, </span><span class="string">"caracteres"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La frase Hola Mundo tiene"</span><span class="semi_colon">, </span>numeroCaracteres<span class="semi_colon">, </span><span class="string">"caracteres"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -163,19 +163,19 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> estudiante<span class="operator"> =</span><span class="boolean"> true</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> estudiante<span class="keyword"> =</span><span class="function"> true</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> tipoDato<span class="operator"> = </span><span class="functions">typeof </span>estudiante<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> tipoDato<span class="keyword"> = </span><span class="functions">typeof </span>estudiante<span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El tipo de dato asignado en la variable estudiante es un:"</span><span class="semi_colon">, </span>tipoDato<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El tipo de dato asignado en la variable estudiante es un:"</span><span class="semi_colon">, </span>tipoDato<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> El tipo de dato asignado en la variable estudiante es un: boolean</pre>
+                                <pre><span>></span> El tipo de dato asignado en la variable estudiante es un: function</pre>
                             </div>
                         </div>
                     </section>
@@ -188,15 +188,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dni<span class="operator"> =</span><span class="number"> 787587965</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> dni<span class="keyword"> =</span><span class="number"> 787587965</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> convertirACadena<span class="operator"> = </span>dni<span class="methods">.toString()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> convertirACadena<span class="keyword"> = </span>dni<span class="methods">.toString()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Convertido de number a"</span><span class="semi_colon">, </span><span class="functions">typeof </span>convertirACadena<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Convertido de number a"</span><span class="semi_colon">, </span><span class="functions">typeof </span>convertirACadena<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -213,15 +213,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Hola Mundo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Hola Mundo"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> convertirEnMayusculas<span class="operator"> = </span>frase<span class="methods">.toUpperCase()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> convertirEnMayusculas<span class="keyword"> = </span>frase<span class="methods">.toUpperCase()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"De Hola Mundo a"</span><span class="semi_colon">, </span>convertirEnMayusculas<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"De Hola Mundo a"</span><span class="semi_colon">, </span>convertirEnMayusculas<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -238,15 +238,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Hola Mundo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Hola Mundo"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> convertirEnMinusculas<span class="operator"> = </span>frase<span class="methods">.toLowerCase()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> convertirEnMinusculas<span class="keyword"> = </span>frase<span class="methods">.toLowerCase()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"De Hola Mundo a"</span><span class="semi_colon">, </span>convertirEnMinusculas<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"De Hola Mundo a"</span><span class="semi_colon">, </span>convertirEnMinusculas<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -263,15 +263,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> oracion<span class="operator"> =</span><span class="string"> "    Aprendiendo Javascript   "</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> oracion<span class="keyword"> =</span><span class="string"> "    Aprendiendo Javascript   "</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> eliminarEspacios<span class="operator"> = </span>oracion<span class="methods">.trim()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> eliminarEspacios<span class="keyword"> = </span>oracion<span class="methods">.trim()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>eliminarEspacios<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>eliminarEspacios<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -288,15 +288,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="operator"> =</span><span class="string"> "PHP"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="keyword"> =</span><span class="string"> "PHP"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> extraerCaracter<span class="operator"> = </span>lenguaje<span class="methods">.charAt(</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> extraerCaracter<span class="keyword"> = </span>lenguaje<span class="methods">.charAt(</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El caracter extraido es"</span><span class="semi_colon">, </span>extraerCaracter<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El caracter extraido es"</span><span class="semi_colon">, </span>extraerCaracter<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -307,15 +307,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="operator"> =</span><span class="string"> "GO"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="keyword"> =</span><span class="string"> "GO"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> extraerUltimoCaracter<span class="operator"> = </span>lenguaje<span class="methods">.codePointAt(</span>lenguaje<span class="functions">.length-</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> extraerUltimoCaracter<span class="keyword"> = </span>lenguaje<span class="methods">.codePointAt(</span>lenguaje<span class="functions">.length-</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El ultimo caracter es"</span><span class="semi_colon">, </span>extraerUltimoCaracter<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El ultimo caracter es"</span><span class="semi_colon">, </span>extraerUltimoCaracter<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -332,15 +332,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="operator"> =</span><span class="string"> "PHP"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="keyword"> =</span><span class="string"> "PHP"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> codigoCaracterExtraido<span class="operator"> = </span>lenguaje<span class="methods">.codePointAt(</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> codigoCaracterExtraido<span class="keyword"> = </span>lenguaje<span class="methods">.codePointAt(</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El codigo del caracter extraido es"</span><span class="semi_colon">, </span>codigoCaracterExtraido<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El codigo del caracter extraido es"</span><span class="semi_colon">, </span>codigoCaracterExtraido<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -351,15 +351,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="operator"> =</span><span class="string"> "GO"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> lenguaje<span class="keyword"> =</span><span class="string"> "GO"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> codigoUltimoCaracterExtraido<span class="operator"> = </span>lenguaje<span class="methods">.codePointAt(</span>lenguaje<span class="functions">.length-</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> codigoUltimoCaracterExtraido<span class="keyword"> = </span>lenguaje<span class="methods">.codePointAt(</span>lenguaje<span class="functions">.length-</span><span class="number">1</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El codigo del ultimo caracter es"</span><span class="semi_colon">, </span>codigoUltimoCaracterExtraido<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El codigo del ultimo caracter es"</span><span class="semi_colon">, </span>codigoUltimoCaracterExtraido<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -376,23 +376,23 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> saludo<span class="operator"> =</span><span class="string"> "Hola "</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> saludo<span class="keyword"> =</span><span class="string"> "Hola "</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> comunidad<span class="operator"> =</span><span class="string"> "Mundo "</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> comunidad<span class="keyword"> =</span><span class="string"> "Mundo "</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> lenguaje<span class="operator"> =</span><span class="string"> "Javascript"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="variable">let</span> lenguaje<span class="keyword"> =</span><span class="string"> "Javascript"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span><span class="variable">let</span> concatenacion<span class="operator"> = </span>saludo<span class="methods">.concat(</span>comunidad<span class="semi_colon">, </span>lenguaje<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="variable">let</span> concatenacion<span class="keyword"> = </span>saludo<span class="methods">.concat(</span>comunidad<span class="semi_colon">, </span>lenguaje<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>concatenacion<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span>concatenacion<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -409,15 +409,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Hola Mundo "</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Hola Mundo "</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> repetirFrase<span class="operator"> = </span>frase<span class="methods">.repeat(</span><span class="number">3</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> repetirFrase<span class="keyword"> = </span>frase<span class="methods">.repeat(</span><span class="number">3</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>repetirFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>repetirFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -434,15 +434,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> alumno<span class="operator"> =</span><span class="string"> '{ "nombre": "Janzi", "apellido": "Londoño", "edad": 12 }</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> alumno<span class="keyword"> =</span><span class="string"> '{ "nombre": "Janzi", "apellido": "Londoño", "edad": 12 }</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">const </span>convertirEnObjecto <span class="operator">= </span>JSON<span class="methods">.parse(</span>alumno<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const </span>convertirEnObjecto <span class="keyword">= </span>JSON<span class="methods">.parse(</span>alumno<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>convertirEnObjecto<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>convertirEnObjecto<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

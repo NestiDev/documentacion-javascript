@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                modal_section y 1 sections_container
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Estructura</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>texto pendiente</p>
+                </section>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#carpeta-src">01. Carpeta src</a></li>
+                                    <li><a href="#index.js">02. Index.html</a></li>
+                                    <li><a href="#style.scss">03. Style.scss</a></li>
+                                    <li><a href="#main.js">04. Main.js</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+                    <section class="sect_content" id="carpeta-src">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Carpeta src</h3>
+
+                        <p>texto pendiente</p>
+
+                        <!--  
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">></span><span class="boolean">node_modules</span></code></pre>
+                            <pre><code><span class="index inner_index">></span><span class="variable">src</span></code></pre>
+                            <pre><code><span class="index inner_index"> </span><span class="console">packaje-lock.json</span></code></pre>
+                            <pre><code><span class="index inner_index"> </span><span class="console">packaje.json</span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">></span><span class="variable">src</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span class="function">assets</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>images</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>icons</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span class="methods">js</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>modules</span></code></pre>
+                            <pre><code><span class="index inner_index">   </span><span class="console">main.js</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span class="keyword">scss</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>auth</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>home</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>views</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>mixins</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>variables</span></code></pre>
+                            <pre><code><span class="index inner_index">   </span><span class="console">style.scss</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span class="functions">views</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>auth</span></code></pre>
+                            <pre><code><span class="index inner_index">  ></span><span>home</span></code></pre>
+                            <pre><code><span class="index inner_index">   </span><span class="console">index.html</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="index.html">
+                        <h3>02. Index.html</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">></span><span class="functions">views</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>auth</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>home</span></code></pre>
+                            <pre><code><span class="index inner_index">  </span><span class="console">index.html</span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="console"><</span><span class="parenthesis">!DOCTYPE </span><span class="functions">html</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">02</span><span class="console"><</span><span class="parenthesis">html </span><span class="functions">lang</span><span class="console">=</span><span class="string">"es"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="console"><</span><span class="parenthesis">head</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_doble_index">04</span><span class="console"><</span><span class="parenthesis">meta </span><span class="functions">http-equiv</span><span class="console">=</span><span class="string">"X-UA-Compatible" </span><span class="functions">content</span><span class="console">=</span><span class="string">"IE=edge"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_doble_index">05</span><span class="console"><</span><span class="parenthesis">meta </span><span class="functions">name</span><span class="console">=</span><span class="string">"viewport" </span><span class="functions">content</span><span class="console">=</span><span class="string">"width=device-width, initial-scale=1.0"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_doble_index">06</span><span class="console"><</span><span class="parenthesis">title</span><span class="console">></span>Webpack<span class="console"><</span><span class="parenthesis">/title</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="console">// not link</span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="console"><</span><span class="parenthesis">/head</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">10</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">11</span><span class="console"><</span><span class="parenthesis">h1</span><span class="console">></span>Hola mundo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">12</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">13</span><span class="console"><</span><span class="parenthesis">img </span><span class="functions">src</span><span class="console">=</span><span class="string">"../assets/images/img.png" </span><span class="functions">alt</span><span class="console">=</span><span class="string">"imagen"</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">14</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">15</span><span class="console">// not script</span></code></pre>
+                            <pre><code><span class="index outer_index">16</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="console"><</span><span class="parenthesis">/html</span><span class="console">></span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="style.scss">
+                        <h3>03. Style.scss</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">></span><span class="keyword">scss</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>auth</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>home</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>views</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>mixins</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>variables</span></code></pre>
+                            <pre><code><span class="index inner_index">  </span><span class="console">style.scss</span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="function">* </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_index">02</span> padding<span class="operator">:</span><span class="number"> 0</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index outer_index">03</span> margin<span class="operator">:</span><span class="number"> 0</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index outer_index">04</span> box-sizing<span class="operator">:</span><span class="parameters"> border-box</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index inner_index">07</span><span class="function">body </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_index">08</span> font-family<span class="operator">: </span><span class="string">"Segoe UI"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">10</span></code></pre>
+
+                            <pre><code><span class="index inner_index">11</span><span class="function">h1 </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_index">12</span> color<span class="operator">:</span><span class="parameters"> white</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index outer_index">13</span> font-size<span class="operator">:</span><span class="number"> 32px</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">14</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">15</span></code></pre>
+
+                            <pre><code><span class="index inner_index">16</span><span class="function">img </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index outer_index">17</span> width<span class="operator">:</span><span class="number"> 32px</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index outer_index">18</span> height<span class="operator">:</span><span class="parameters"> auto</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index inner_index">19</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="main.js">
+                        <h3>04. main.js</h3>
+
+                        <p>texto pendiente</p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">></span><span class="methods">js</span></code></pre>
+                            <pre><code><span class="index inner_index"> ></span><span>modules</span></code></pre>
+                            <pre><code><span class="index inner_index">  </span><span class="console">main.js</span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="functions">import </span><span class="string">"../scss/style.scss"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="functions">import { </span>saludar <span class="functions">} from </span><span class="string">"./saludar.js"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span>saludar<span class="methods">()</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./webpack-install">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./webpack-config">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Estructura - Webpack") %>
+                </div>
+            </main>
+        </div>
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

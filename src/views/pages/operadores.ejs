@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -60,7 +60,7 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>texto pendiente</p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -132,18 +132,18 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> NOMBRE<span class="operator"> =</span><span class="string"> "Arturo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> NOMBRE<span class="keyword"> =</span><span class="string"> "Arturo"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La variables NOMBRE tiene asignado el valor"</span><span class="semi_colon">, </span>NOMBRE<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La variables NOMBRE tiene asignado el valor"</span><span class="semi_colon">, </span>NOMBRE<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
                             -->
                             <div class="output_box">
                                 <pre></pre>
-                                <pre><span>></span> La variables NOMBRE tiene asignado el valor</pre>
+                                <pre><span>></span> La variables NOMBRE tiene asignado el valor Arturo</pre>
                             </div>
                         </div>
                     </section>
@@ -156,15 +156,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> dia_semana<span class="operator"> =</span><span class="string"> "0124567"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> dia_semana<span class="keyword"> =</span><span class="string"> "0124567"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>dia_semana<span class="operator"> ===</span><span class="string"> "Sabado"</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="properties">if<span class="methods">(</span></span>dia_semana<span class="keyword"> ===</span><span class="string"> "Sabado"</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Tanto el valor como el tipo de dato cumplen la condicion"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Tanto el valor como el tipo de dato cumplen la condicion"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -172,7 +172,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El valor o el tipo de dato no cumplen la condicion"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">09</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El valor o el tipo de dato no cumplen la condicion"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">10</span></code></pre>
 
@@ -193,15 +193,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> costoProducto<span class="operator"> =</span><span class="number"> 100</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> costoProducto<span class="keyword"> =</span><span class="number"> 100</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>costoProducto<span class="operator"> >=</span><span class="number"> 50</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="properties">if<span class="methods">(</span></span>costoProducto<span class="keyword"> >=</span><span class="number"> 50</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"100 no es igual a 50 pero si es mayor que 50"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"100 no es igual a 50 pero si es mayor que 50"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -222,15 +222,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> costoProducto<span class="operator"> =</span><span class="number"> 50</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> costoProducto<span class="keyword"> =</span><span class="number"> 50</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="properties">if</span><span class="parenthesis">(</span>costoProducto<span class="operator"> <=</span><span class="number"> 100</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="properties">if<span class="methods">(</span></span>costoProducto<span class="keyword"> <=</span><span class="number"> 100</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"50 no es igual a 100 pero si es menor que 100"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"50 no es igual a 100 pero si es menor que 100"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -251,19 +251,19 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> nombre<span class="operator"> =</span><span class="string"> "Fernando "</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> nombre<span class="keyword"> =</span><span class="string"> "Fernando "</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> apellido<span class="operator"> =</span><span class="string"> "Rodriguez"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> apellido<span class="keyword"> =</span><span class="string"> "Rodriguez"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> usuario<span class="operator"> = </span>nombre <span class="operator">+ </span>apellido<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> usuario<span class="keyword"> = </span>nombre <span class="keyword">+ </span>apellido<span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>usuario<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>usuario<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -280,15 +280,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha<span class="operator"> =</span><span class="string"> "2023-Feb"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> fecha<span class="keyword"> =</span><span class="string"> "2023-Feb"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span>fecha<span class="operator"> +=</span><span class="string"> "-10"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span>fecha<span class="keyword"> +=</span><span class="string"> "-10"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>fecha<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>fecha<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -305,15 +305,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> numero<span class="operator"> =</span><span class="number"> 09</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> numero<span class="keyword"> =</span><span class="number"> 09</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span>numero<span class="operator">++</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span>numero<span class="keyword">++</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>numero<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -330,15 +330,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> numero<span class="operator"> =</span><span class="number"> 10</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> numero<span class="keyword"> =</span><span class="number"> 10</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span>numero<span class="operator">--</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span>numero<span class="keyword">--</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>numero<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>numero<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

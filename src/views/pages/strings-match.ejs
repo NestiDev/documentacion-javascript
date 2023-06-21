@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Nos permite buscar coincidencias dentro de nuestra cadena de caracteres. si las hay este metodo nos retorna un array de lo contrario nos da como resultado un valor
                         <strong>null</strong> Este tambien puede recibir expresiones las cuales ayudan a la normalizacion de la busqueda.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -128,16 +128,16 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Javascript es GRANDIOSO"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Javascript es GRANDIOSO"</span><span class="semi_colon">;</span></code></pre>
                             <pre><code><span class="index">02              012345678901234</span></code></pre>
 
                             <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">04</span><span class="variable">let</span> posicionFrase<span class="operator"> = </span>frase<span class="methods">.match(</span><span class="parenthesis">/</span><span class="string">grandioso</span><span class="parenthesis">/</span>i<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let</span> posicionFrase<span class="keyword"> = </span>frase<span class="methods">.match(</span><span class="parenthesis">/</span><span class="string">grandioso</span><span class="parenthesis">/</span>i<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span>posicionFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -151,15 +151,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Javascript es GRANDIOSO, JAVASCRIPT es genial"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Javascript es GRANDIOSO, JAVASCRIPT es genial"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> buscarFrase<span class="operator"> = </span>frase<span class="methods">.match(</span><span class="parenthesis">/</span><span class="string">javascript</span><span class="parenthesis">/</span>ig<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> buscarFrase<span class="keyword"> = </span>frase<span class="methods">.match(</span><span class="parenthesis">/</span><span class="string">javascript</span><span class="parenthesis">/</span>ig<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>buscarFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>buscarFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -170,15 +170,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Javascript es GRANDIOSO"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Javascript es GRANDIOSO"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> posicionFrase<span class="operator"> = </span>frase<span class="methods">.search(</span><span class="parenthesis">/</span><span class="string">Angular</span><span class="parenthesis">/</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> posicionFrase<span class="keyword"> = </span>frase<span class="methods">.search(</span><span class="parenthesis">/</span><span class="string">Angular</span><span class="parenthesis">/</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La palabra Angular no aparece en la frase"</span><span class="semi_colon">, </span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La palabra Angular no aparece en la frase"</span><span class="semi_colon">, </span>posicionFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

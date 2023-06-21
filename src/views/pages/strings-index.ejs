@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Nos permiten buscar una palabra o letra al inicio o final de una cadena de caracteres, estos metodos retornan la posicion de la primera coincidencia o retornan -1 si no hay la
                         hay. Tambien nos permiten buscar apartir de la primera coincidencia encontrada.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -129,16 +129,16 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="operator"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="keyword"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
                             <pre><code><span class="index">02                    012345</span></code></pre>
 
                             <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionCaracter<span class="operator"> = </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"x"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionCaracter<span class="keyword"> = </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"x"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El primer caracter x esta en la posicion"</span><span class="semi_colon">, </span>posicionCaracter<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El primer caracter x esta en la posicion"</span><span class="semi_colon">, </span>posicionCaracter<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -152,16 +152,16 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="operator"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="keyword"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
                             <pre><code><span class="index">02                    01234567</span></code></pre>
 
                             <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionFrase<span class="operator"> = </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Python"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionFrase<span class="keyword"> = </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Python"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La primera palabra Python aparece en la posicion"</span><span class="semi_colon">, </span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La primera palabra Python aparece en la posicion"</span><span class="semi_colon">, </span>posicionFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -172,15 +172,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="operator"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="keyword"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> posicionFrase<span class="operator"> = </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Angular"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> posicionFrase<span class="keyword"> = </span>lenguajes<span class="methods">.indexOf(</span><span class="string">"Angular"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La palabra Angular inicia no existe"</span><span class="semi_colon">, </span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La palabra Angular inicia no existe"</span><span class="semi_colon">, </span>posicionFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -195,16 +195,16 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="operator"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="keyword"> =</span><span class="string"> "Java x Python x C++"</span><span class="semi_colon">;</span></code></pre>
                             <pre><code><span class="index">02                    012345678901234</span></code></pre>
 
                             <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionCaracter<span class="operator"> = </span>lenguajes<span class="methods">.lastIndexOf(</span><span class="string">"x"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionCaracter<span class="keyword"> = </span>lenguajes<span class="methods">.lastIndexOf(</span><span class="string">"x"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"El ultimo caracter x aparece en la posicion"</span><span class="semi_colon">, </span>posicionCaracter<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"El ultimo caracter x aparece en la posicion"</span><span class="semi_colon">, </span>posicionCaracter<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -215,16 +215,16 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="operator"> =</span><span class="string"> "Java x Python x Java"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="keyword"> =</span><span class="string"> "Java x Python x Java"</span><span class="semi_colon">;</span></code></pre>
                             <pre><code><span class="index">02                    01234567890123456</span></code></pre>
 
                             <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionFrase<span class="operator"> = </span>lenguajes<span class="methods">.lastIndexOf(</span><span class="string">"Java"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="variable">const</span> posicionFrase<span class="keyword"> = </span>lenguajes<span class="methods">.lastIndexOf(</span><span class="string">"Java"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La ultima palabra Java aparece en la posicion"</span><span class="semi_colon">, </span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La ultima palabra Java aparece en la posicion"</span><span class="semi_colon">, </span>posicionFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -235,15 +235,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="operator"> =</span><span class="string"> "Java x Python x Java"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const</span> lenguajes<span class="keyword"> =</span><span class="string"> "Java x Python x Java"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> posicionFrase<span class="operator"> = </span>lenguajes<span class="methods">.lastIndexOf(</span><span class="string">"Angular"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">const</span> posicionFrase<span class="keyword"> = </span>lenguajes<span class="methods">.lastIndexOf(</span><span class="string">"Angular"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"La palabra Angular inicia no existe"</span><span class="semi_colon">, </span>posicionFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"La palabra Angular inicia no existe"</span><span class="semi_colon">, </span>posicionFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

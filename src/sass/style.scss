@@ -8,14 +8,16 @@ $heightFixed: 60px;
 	variables para definir colores
 */
 $colorOne: #f0db4f;
-$colorThree: #fff;
+$colorThree: #ffffffd6;
 $colorFour: #5c5b5b;
 $colorFive: #ccc;
+$colorSix: #d8d8d8;
 
 /*
 	variables para definir color de fondo
 */
 $backgroundColorOne: #242936;
+$backgroundColorTwo: #fff;
 
 /*
 	variables para definir el color
@@ -58,7 +60,85 @@ body {
 
     &.js_dark_mode {
         background-color: $backgroundColorOne;
-        color: #dbd8d8;
+        color: #d8d8d8;
+
+        .header_component {
+            background-color: $backgroundColorOne;
+            border-color: #444857;
+        }
+
+        .components_container .nav_component {
+            background-color: $backgroundColorOne;
+            border-color: #2c303a;
+
+            &::-webkit-scrollbar {
+                background-color: #2c303a;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #444857;
+            }
+        }
+
+        .components_container .nav_component .menu_nav .line_nav {
+            border-color: #444857;
+        }
+
+        .components_container .nav_component .menu_nav .li_dropdown {
+            &:hover > a {
+                color: $colorOne;
+            }
+
+            &:hover svg {
+                fill: $colorOne;
+            }
+        }
+
+        .components_container .nav_component .menu_nav .li_dropdown a {
+            color: #d8d8d8;
+        }
+
+        .components_container .nav_component .menu_nav .li_dropdown a svg {
+            fill: #d8d8d8;
+        }
+
+        .components_container .main_components .modal_section .modal_container .hidden_modal {
+            background-color: #242936f1;
+
+            .content_modal {
+                ul li a {
+                    color: #d8d8d8;
+
+                    &:hover {
+                        color: $colorOne;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 719px) {
+            .components_container .nav_component {
+                background-color: $backgroundColorOne;
+            }
+        }
+
+        input[type="search"] {
+            background-color: #444857;
+            color: $colorSix;
+            border: 2px solid #242933;
+        }
+
+        .components_container .main_components .sections_container .sect_content .code_box {
+            box-shadow: 0 0 8px 0 #232323;
+        }
+
+        .components_container .main_components .section_pagination a {
+            box-shadow: 0 0 8px 0 #232323;
+        }
+
+        .components_container .main_components .section_footer .box_gotop.js_show_gotop {
+            box-shadow: 0 2px 6px 0 #232323;
+        }
     }
 }
 
@@ -97,6 +177,32 @@ svg {
     margin-bottom: 30px;
 }
 
+/*
+    input[type="search"]: definimos outline: none  para 
+    remover el borde que generan los navegadores en los inputs, 
+    tambien un espaciado en el eje-Y para este elemento
+*/
+input[type="search"] {
+    outline: none;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+    color: $colorFour;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    height: 35px;
+    padding: 0 10px;
+
+    /*
+        hacemos uso del pseudo elemento ::palceholder para 
+        modificar el color del texto por defecto
+    */
+    &::placeholder {
+        color: $colorSix;
+    }
+}
+
 /*  
     header_component: definimos position: fixed junto con sus 
 	propiedades top, left, right y z-index para fijar el menu
@@ -108,18 +214,17 @@ svg {
     left: 0;
     right: 0;
     z-index: 9;
-    // background-color: $colorThree;
-    border-bottom: 1px solid $borderOne;
+    background-color: $backgroundColorTwo;
+    border-bottom: 2px solid $borderOne;
     transition: box-shadow 0.2s;
 
     /*
-		js_header_scroll: clase añadida con javascript en "./src/js/main.js"
+		js_header_scroll: clase añadida con javascript
 		definimos una sombra cuando inicia el scroll
 	*/
-    &.js_header_scroll {
-        box-shadow: 0 2px 5px $shadowOne;
-        background-color: $colorThree;
-    }
+    // &.js_header_scroll {
+    //     box-shadow: 0 2px 5px $shadowOne;
+    // }
 
     /*
 		header_container: definimos flexbox con su propiedad
@@ -154,6 +259,7 @@ svg {
                     */
                     span {
                         color: $colorOne;
+                        text-shadow: 0 0 18px rgb(240 218 79 / 70%);
                     }
                 }
             }
@@ -191,23 +297,10 @@ svg {
                     grid-gap: 8px;
 
                     /*
-                        tag-input: definimos outline: none  para remover el borde que 
-                        generan los navegadores en los inputs, tambien un espaciado en
-                        el eje-Y para este elemento, finalmente definimos la propiedad
-                        display: none para remover este elemento de la vista
+                        tag-input: definimos la propiedad display: none para remover este 
+                        elemento de la vista
                     */
                     input {
-                        outline: none;
-                        background-color: transparent;
-                        color: $colorFour;
-                        border: 1px solid $borderOne;
-                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-                        font-size: 17px;
-                        font-weight: 600;
-                        letter-spacing: 0.5px;
-                        height: 35px;
-                        padding: 0 10px;
-                        transition: box-shadow 0.2s;
                         display: none;
 
                         /*
@@ -217,21 +310,6 @@ svg {
                         */
                         &.js_input_hidden {
                             display: block;
-                        }
-
-                        /*
-                            cuando tag-input tiene el foco añadimos una sombra
-                        */
-                        &:focus {
-                            box-shadow: 0 0 8px 0 $shadowOne;
-                        }
-
-                        /*
-                            hacemos uso del pseudo elemento ::palceholder para 
-                            modificar el color del texto por defecto
-                        */
-                        &::placeholder {
-                            color: $iconsColor;
                         }
                     }
 
@@ -252,35 +330,30 @@ svg {
                 cursor: pointer;
 
                 /*  
-                    tag-a
+                    tag-a: definimos un padding derecho 
+                    para generar espaciado en referencia a su contenedor
                 */
                 a {
+                    color: $colorSix;
+                    font-size: 22px;
+                    font-weight: 600;
+                    letter-spacing: 1.1px;
+                    padding-right: 24px;
+
                     /*
-                        dispositivos menores a 719px: definimos display: none 
-                        para ocultar el buscador de la vista en esta medida
+                        dispositivos menores a 719px: modificamos el
+                        padding para esta medida
                     */
                     @media (max-width: 719px) {
-                        display: none;
+                        padding-right: 4px;
                     }
 
                     /*
-                        dispositivos mayores a 720px: definimos un padding derecho 
-                        para generar espaciado en referencia a su contenedor
+                        cuando la tag-a tiene el pseudo elemento :hover modificamos 
+                        su color
                     */
-                    @media (min-width: 720px) {
-                        color: $iconsColor;
-                        font-size: 22px;
-                        font-weight: 600;
-                        letter-spacing: 1.1px;
-                        padding-right: 24px;
-
-                        /*
-                            cuando la tag-a tiene el pseudo elemento :hover modificamos 
-                            su color
-                        */
-                        &:hover {
-                            color: $colorOne;
-                        }
+                    &:hover {
+                        color: $colorOne;
                     }
                 }
 
@@ -328,6 +401,8 @@ svg {
         z-index: 8;
         width: 260px;
         height: 100vh;
+        background-color: $backgroundColorTwo;
+        border-right: 1px solid $borderOne;
         padding: 0 14px 0 28px;
         overflow: auto;
 
@@ -344,7 +419,6 @@ svg {
 			::-webkit-scrollbar-thumb
 		*/
         &::-webkit-scrollbar-thumb {
-            // background-color: #d9d9d9;
             background-color: #c1c1c1;
         }
 
@@ -353,7 +427,6 @@ svg {
 			para desplazar el menu de navegacion ocultandolo de la vista
 		*/
         @media (max-width: 719px) {
-            background-color: $colorThree;
             transform: translateX(-1000px);
             transition: transform 0.3s;
 
@@ -397,13 +470,24 @@ svg {
         .menu_nav {
             padding: 24px 0 70px;
 
+            li input[type="search"] {
+                width: 100%;
+                margin-bottom: 30px;
+
+                /*
+                    dispositivos mayores a 720px: definimos display: none 
+                    para ocultar el buscador de la vista en esta medida
+                */
+                @media (min-width: 720px) {
+                    display: none;
+                }
+            }
+
             /*
-				li_dropdown: definimos un margen en la parte inferior de este 
-				elemento
+				li_dropdown
 			*/
             .li_dropdown {
                 list-style: none;
-                margin-bottom: 18px;
 
                 /*
                     cuando hacemos :hover sobre la tag-li, seleccionamos a 
@@ -445,7 +529,8 @@ svg {
 					tag-a: definimos flexbox con su propiedad
 					justify-content para generar un espaciado entre
 					el enlace y el icono y align-items para centrar de manera
-					vertical los elementos que este contiene 
+					vertical los elementos que este contiene, finalmente 
+                    definimos un margen en la parte inferior de este elemento
 				*/
                 a {
                     display: flex;
@@ -454,13 +539,30 @@ svg {
                     color: $colorFour;
                     font-size: 1.1rem;
                     font-weight: 600;
+                    margin-bottom: 18px;
 
+                    /*  
+                        js_active_link: cuando tag-a tiene esta clase 
+                        modificamos el color de estos elementos
+                    */
                     &.js_active_link {
                         color: $colorOne;
                     }
 
+                    /*  
+                        js_active_link svg: cuando tag-a tiene esta clase 
+                        seleccionamos a tag-svg y modificamos el color del icono
+                    */
                     &.js_active_link svg {
                         fill: $colorOne;
+                    }
+
+                    /*  
+                        js_link_hidden: cuando tag-a tiene esta clase 
+                        definimos display: none para ocultar los elementos
+                    */
+                    &.js_link_hidden {
+                        display: none;
                     }
 
                     /*
@@ -488,11 +590,9 @@ svg {
                     padding: 0 13px;
 
                     /*
-						tag-li: definimos un espaciado en el eje-Y para este elemento
+						tag-li
 					*/
                     li {
-                        padding: 10px 0;
-
                         /*
 							tag-a
 						*/
@@ -519,6 +619,14 @@ svg {
                 border: 1px solid $borderOne;
                 width: 96%;
                 margin-bottom: 18px;
+
+                /*
+                    js_hidden_line_nav: clase añadida con javascript 
+                    definimos display: none para remover este elemento
+                */
+                &.js_hidden_line_nav {
+                    display: none;
+                }
             }
         }
     }
@@ -731,7 +839,7 @@ svg {
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    z-index: 9;
+                    z-index: 99;
                     background-color: #fffffff1;
                     display: none;
                     justify-content: center;
@@ -930,7 +1038,7 @@ svg {
 
                             span.index {
                                 display: inline-block;
-                                margin-bottom: 2px;
+                                margin-bottom: 3px;
                                 color: #4c525d;
                                 user-select: none;
                             }
@@ -951,9 +1059,9 @@ svg {
                                 color: #986dff;
                             }
 
-                            span.operator {
-                                color: #ff66a1;
-                            }
+                            // span.operator {
+                            //     color: #ff66a1;
+                            // }
 
                             span.symbols {
                                 color: #179fff;
@@ -1015,6 +1123,10 @@ svg {
                             span.methods {
                                 color: #ffd173;
                             }
+
+                            span.text {
+                                color: #fff;
+                            }
                         }
                     }
 
@@ -1035,7 +1147,18 @@ svg {
 
                             span {
                                 color: #4c525d;
-                                font-size: 18px;
+                            }
+
+                            span.key {
+                                color: #73d0ff;
+                            }
+
+                            span.text {
+                                color: #fff;
+                            }
+
+                            span.flat {
+                                color: #f783f7;
                             }
                         }
                     }
@@ -1110,7 +1233,7 @@ svg {
                 position: fixed;
                 right: 2%;
                 bottom: 85px;
-                z-index: 99;
+                z-index: 98;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -1166,7 +1289,7 @@ svg {
             */
             h4 {
                 text-align: center;
-                color: $colorFive;
+                color: $colorSix;
                 font-size: 1.2rem;
                 font-weight: 400;
             }

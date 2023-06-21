@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Nos permite reemplazar el valor de una cadena de caracteres por otra, se debe tener presente que este metodo reemplaza la primer coincidencia y que distingue caracteres
                         especiales como tildes, simbolos, mayusculas, minusculas etc.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -130,15 +130,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Me encanta el arroz con PoLLo"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Me encanta el arroz con PoLLo"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="operator"> = </span>frase<span class="methods">.replace(</span><span class="string">"el arroz con PoLLo"</span><span class="semi_colon">, </span><span class="string">"la sopa de verduras"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="keyword"> = </span>frase<span class="methods">.replace(</span><span class="string">"el arroz con PoLLo"</span><span class="semi_colon">, </span><span class="string">"la sopa de verduras"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>nuevaFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>nuevaFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -158,15 +158,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Me encanta el ARROZ con pollo y el ARROZ con verduras"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Me encanta el ARROZ con pollo y el ARROZ con verduras"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="operator"> = </span>frase<span class="methods">.replace(</span><span class="parenthesis">/</span><span class="string">el arroz con</span><span class="parenthesis">/</span>i<span class="semi_colon">, </span><span class="string">"la sopa de"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="keyword"> = </span>frase<span class="methods">.replace(</span><span class="parenthesis">/</span><span class="string">el arroz con</span><span class="parenthesis">/</span>i<span class="semi_colon">, </span><span class="string">"la sopa de"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>nuevaFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>nuevaFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -183,15 +183,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="operator"> =</span><span class="string"> "Me encanta el ARROZ con pollo y el ARROZ con verduras"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> frase<span class="keyword"> =</span><span class="string"> "Me encanta el ARROZ con pollo y el ARROZ con verduras"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="operator"> = </span>frase<span class="methods">.replace(</span><span class="parenthesis">/</span><span class="string">el arroz con</span><span class="parenthesis">/</span>ig<span class="semi_colon">, </span><span class="string">"la sopa de"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> nuevaFrase<span class="keyword"> = </span>frase<span class="methods">.replace(</span><span class="parenthesis">/</span><span class="string">el arroz con</span><span class="parenthesis">/</span>ig<span class="semi_colon">, </span><span class="string">"la sopa de"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>nuevaFrase<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>nuevaFrase<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
