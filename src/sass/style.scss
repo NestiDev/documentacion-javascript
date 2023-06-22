@@ -1090,16 +1090,16 @@ input[type="search"] {
                                 color: #986dff;
                             }
 
-                            // span.operator {
-                            //     color: #ff66a1;
-                            // }
+                            span.numbers {
+                                color: #ffbff4;
+                            }
 
                             span.symbols {
                                 color: #179fff;
                             }
 
-                            span.number {
-                                color: #dfbfff;
+                            span.parameters {
+                                color: #ce9dff;
                             }
 
                             span.string {
@@ -1114,15 +1114,15 @@ input[type="search"] {
                                 color: #84b6f4;
                             }
 
-                            span.parameters {
-                                color: #ecc16a;
-                            }
+                            // span.parameters {
+                            //     color: #ecc16a;
+                            // }
 
-                            span.parameters_out {
-                                color: #ecc16a85;
-                            }
+                            // span.parameters_out {
+                            //     color: #ecc16a85;
+                            // }
 
-                            span.properties,
+                            // span.properties,
                             span.functions {
                                 color: #ffad66;
                             }

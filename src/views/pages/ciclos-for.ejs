@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -64,7 +64,7 @@
                         determina cual sera el fin de su ejecucion y seguido a esto la iteracion. Ya dentro del escope, se define la porsion de codigo que se va a ejecutar mientras la condicion se
                         este cumpliendo. Cabe aclarar que este ciclo <strong>no realiza ninguna ejecucion</strong> si la condicion no se cumple.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -138,11 +138,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>i <span class="operator">= </span><span class="number">10</span><span class="semi_colon">; </span>i <span class="operator">>= </span><span class="number">6</span><span class="semi_colon">; </span>i<span class="operator">--</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">for<span class="methods">(</span></span><span class="variable">let </span>i <span class="keyword">= </span><span class="numbers">10</span><span class="semi_colon">; </span>i <span class="keyword">>= </span><span class="numbers">6</span><span class="semi_colon">; </span>i<span class="keyword">--</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>i<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="methods">.log(</span>i<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
@@ -173,15 +173,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcas <span class="operator">= </span><span class="square">[</span><span class="string">"Nike"</span><span class="semi_colon">, </span><span class="string">"Adidas"</span><span class="semi_colon">, </span><span class="string">"Puma"</span><span class="semi_colon">, </span><span class="string">"Vanz"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcas <span class="keyword">= </span><span class="square">[</span><span class="string">"Nike"</span><span class="semi_colon">, </span><span class="string">"Adidas"</span><span class="semi_colon">, </span><span class="string">"Puma"</span><span class="semi_colon">, </span><span class="string">"Vanz"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">; </span>posiciones <span class="operator">< </span>marcas<span class="operator">.</span><span class="properties">length</span><span class="semi_colon">;</span> posiciones<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="functions">for<span class="methods">(</span></span><span class="variable">let </span>posiciones <span class="keyword">= </span><span class="numbers">0</span><span class="semi_colon">; </span>posiciones <span class="keyword">< </span>marcas<span class="keyword">.</span><span class="functions">length</span><span class="semi_colon">;</span> posiciones<span class="keyword">++</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posiciones<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span>posiciones<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -210,15 +210,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcas <span class="operator">= </span><span class="square">[</span><span class="string">"Nike"</span><span class="semi_colon">, </span><span class="string">"Adidas"</span><span class="semi_colon">, </span><span class="string">"Puma"</span><span class="semi_colon">, </span><span class="string">"Vanz"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>marcas <span class="keyword">= </span><span class="square">[</span><span class="string">"Nike"</span><span class="semi_colon">, </span><span class="string">"Adidas"</span><span class="semi_colon">, </span><span class="string">"Puma"</span><span class="semi_colon">, </span><span class="string">"Vanz"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">; </span>posiciones <span class="operator">< </span>marcas<span class="operator">.</span><span class="properties">length</span><span class="semi_colon">;</span> posiciones<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="functions">for<span class="methods">(</span></span><span class="variable">let </span>posiciones <span class="keyword">= </span><span class="numbers">0</span><span class="semi_colon">; </span>posiciones <span class="keyword">< </span>marcas<span class="keyword">.</span><span class="functions">length</span><span class="semi_colon">;</span> posiciones<span class="keyword">++</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>marcas<span class="square">[</span>posiciones<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span>marcas<span class="square">[</span>posiciones<span class="square">]</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 

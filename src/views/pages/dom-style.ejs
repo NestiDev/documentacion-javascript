@@ -28,14 +28,27 @@
             -->
             <main class="main_components">
                 <!--  
-                    section_banner: contenedor de 1 tag-h2, de 1 tag-hr
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-                    <h2>Style</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Style</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
                     <!--  
                         tag-hr: esta tag la definimos la linea que acompaña
@@ -50,17 +63,63 @@
                         Nos permite agregar o modificar estilos css asignados en los <strong>elementos HTML</strong> para ello basta con seleccionar el elemento y asignarlo a una variable para su
                         posterior implementacion.
                     </p>
-                </section>
+                </div>
+
+                <!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#propiedad-style">01. Propiedad style</a></li>
+                                    <li><a href="#propiedad-length">02. Propiedad length</a></li>
+                                    <li><a href="#asignacion-de-estilos">03. Asignacion de estilos</a></li>
+                                    <li><a href="#valor-de-estilos">04. Valor de estilos</a></li>
+                                    <li><a href="#modificacion-de-estilos">05. Modificacion de estilos</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
                 <!--  
                     sections_container: contenedor de las secciones que componen
                     esta vista
                 -->
                 <div class="sections_container">
+
                     <!--  
 						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-                    <section class="sect_content">
+                    <section class="sect_content" id="propiedad-style">
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
@@ -76,14 +135,44 @@
                         </p>
 
                         <!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/style/s00.png" alt="propiedad style" />
+                            code_box: en esta definimos
+                        -->
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h1 </span><span class="functions">style</span><span class="console">=</span><span class="string">"background-color: darkviolet; color: white;"</span><span class="console">></span>Hola mundo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH1<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> arrayDeStilos<span class="keyword"> = </span>$tagH1<span class="functions">.style</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>arrayDeStilos<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> CSSStyleDeclaration {0: 'background-color', 1: 'color'}</pre>
+                                <pre><code><span class="index inner_index">0:</span><span class="parenthesis">"background-color"</span></code></pre>
+                                <pre><code><span class="index inner_index">1:</span><span class="parenthesis">"color"</span></code></pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
+                    <section class="sect_content" id="propiedad-length">
                         <h3>02. Propiedad length</h3>
 
                         <p>
@@ -91,54 +180,176 @@
                             <strong>elemento HTML</strong> que de no tener ninguno este retornara un valor 0.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/style/s01.png" alt="propiedad length" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">style</span><span class="console">=</span><span class="string">"width: 600px; height: 400px;"</span><span class="console">></span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagDiv<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"div"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> cantidadDeEstilos<span class="keyword"> = </span>$tagDiv<span class="functions">.style.length</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>cantidadDeEstilos<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 2</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>03. Acceso a las propiedades css</h3>
+                    <section class="sect_content" id="asignacion-de-estilos">
+                        <h3>03. Asignacion de estilos</h3>
+
+                        <p>
+                            Retorna la cantidad de estilos css asosicados a un
+                            <strong>elemento HTML</strong> que de no tener ninguno este retornara un valor 0.
+                        </p>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">p</span><span class="console">></span><span class="console"><</span><span class="parenthesis">/p</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagP<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"p"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagP<span class="functions">.style</span>.fontSize <span class="keyword">= </span><span class="string">"48px"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>$tagP<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> p</pre>
+                                <pre><code><span><</span><span class="parenthesis">p </span><span class="functions">style</span><span class="console">=</span><span class="string">"font-size: 48px;"</span><span>></span><span><</span><span class="parenthesis">/p</span><span>></span></code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sect_content" id="valor-de-estilos">
+                        <h3>04. Valor de estilos</h3>
 
                         <p>
                             Nos permite conocer el valor de una propiedad css, si el
-                            <strong>elemento HTML</strong> no tiene un valor definido en dicha propiedad retornara un valor <strong>vacio</strong>
+                            <strong>elemento HTML</strong> no tiene definida dicha propiedad, esta accion no retorna nada.
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/style/s02.png" alt="acceso a las propiedades css" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">div </span><span class="functions">style</span><span class="console">=</span><span class="string">"width: 600px; height: 400px;"</span><span class="console">></span><span class="console"><</span><span class="parenthesis">/div</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
+                        </div>
+
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagDiv<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"div"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let</span> valorDeHeight<span class="keyword"> = </span>$tagDiv<span class="functions">.style</span>.height<span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>valorDeHeight<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>></span> 400px</pre>
+                            </div>
                         </div>
                     </section>
 
-                    <section class="sect_content">
-                        <h3>04. Estilos computados getComputedStyle</h3>
+                    <section class="sect_content" id="modificacion-de-estilos">
+                        <h3>05. Modificacion de estilos</h3>
 
                         <p>
-                            Retorna un <strong>array</strong> todos los estilos proporcionados por css, para ello, este recibe como parametro el <strong>elemento HTML</strong>
-                            a computar.
+                            texto pendiente
                         </p>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/style/s03.png" alt="estilos computados getComputedStyle" />
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="console"><</span><span class="parenthesis">body</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="console"><</span><span class="parenthesis">h1 </span><span class="functions">style</span><span class="console">=</span><span class="string">"background-color: darkviolet;"</span><span class="console">></span>Hola mundo<span class="console"><</span><span class="parenthesis">/h1</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index">11</span></code></pre>
+                            <pre><code><span class="index outer_index">12</span><span class="console"><</span><span class="parenthesis">script </span><span class="functions">type</span><span class="console">=</span><span class="string">"module" </span><span class="functions">src</span><span class="console">=</span><span class="string">"./main.js"</span><span class="console">><</span><span class="parenthesis">/script</span><span class="console">></span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console"><</span><span class="parenthesis">/body</span><span class="console">></span></code></pre>
                         </div>
-                    </section>
 
-                    <section class="sect_content">
-                        <h3>05. Acceso a las propiedades computadas</h3>
+                        <div class="code_box">
+                            <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                        <p>
-                            Nos permite conocer el valor de una propiedad css computada, si el
-                            <strong>elemento HTML</strong> no tiene un valor definido en dicha propiedad retornara un valor <strong>vacio</strong>
-                        </p>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> $tagH1<span class="keyword"> = </span>document<span class="methods">.querySelector(</span><span class="string">"h1"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/DOM/style/s04.png" alt="acceso a las propiedades computadas" />
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span>$tagH1<span class="functions">.style</span>.backgroundColor <span class="keyword">= </span><span class="string">"green"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">04</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>$tagH1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <div class="output_box">
+                                <pre></pre>
+                                <pre><span>▼</span> h1</pre>
+                                <pre><code><span><</span><span class="parenthesis">h1 </span><span class="functions">style</span><span class="console">=</span><span class="string">"background-color: green;"</span><span>></span><span><</span><span class="parenthesis">/h1</span><span>></span></code></pre>
+                            </div>
                         </div>
                     </section>
 
                     <!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-                    <footer class="section_footer">Style - DOM</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./dom-attribute">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./dom-listeners">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Style - DOM") %>
                 </div>
             </main>
         </div>

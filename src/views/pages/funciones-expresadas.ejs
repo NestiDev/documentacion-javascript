@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Nos permiten definir un bloque de codigo el cual solo puede ser ejecutado despues de su invocacion, estas funciones se guardan en variables y reciben parametros como argumentos
                         cuyos valores son definidos en su invocacion.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -128,11 +128,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>descripcion <span class="operator">= </span><span class="functions">function() </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>descripcion <span class="keyword">= </span><span class="functions">function</span><span class="methods">() </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Funcion expresada sin parametros"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Funcion expresada sin parametros"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
@@ -140,7 +140,7 @@
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span>descripcion<span class="functions">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span>descripcion<span class="methods">()</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -158,15 +158,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span>realizarCompra<span class="functions">(<span class="boolean">false</span>)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span>realizarCompra<span class="methods">(<span class="function">false</span>)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>realizarCompra <span class="operator">= </span><span class="functions">function (<span class="parameters">solicitud</span>) </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>realizarCompra <span class="keyword">= </span><span class="functions">function</span><span class="methods">(</span><span class="parameters">solicitud</span><span class="methods">) </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">"Compra cancelada"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Compra cancelada"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -189,15 +189,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="functions">(function</span> <span class="keyword">(<span class="parameters">nombre</span>) </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="keyword">= </span><span class="parenthesis">(</span><span class="functions">function</span><span class="methods">(<span class="parameters">nombre</span>) </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Nombre de usuario: </span><span class="symbols">${</span><span class="parameters">nombre</span><span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="methods">.log(</span><span class="string">`Nombre de usuario: </span><span class="symbols">${</span><span class="parameters">nombre</span><span class="symbols">}</span><span class="string">`</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="functions">)(</span><span class="string">"Andrea"</span><span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="brackets">}</span><span class="parenthesis">)</span><span class="methods">(</span><span class="string">"Andrea"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

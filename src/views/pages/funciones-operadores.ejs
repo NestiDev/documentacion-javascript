@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Nos permiten añadir funcionalidades extra a las funciones las cuales resultan muy utiles al momento de trabajar con
                         <strong>arrays</strong> u <strong>objetos</strong>
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -129,11 +129,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="functions">function</span> vacante<span class="functions">(</span><span class="parameters">cargo</span><span class="semi_colon">, </span><span class="parameters">salario</span><span class="semi_colon">, </span><span class="parameters">...habilidades</span><span class="functions">) </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function</span> <span class="methods">vacante(</span><span class="parameters">cargo</span><span class="semi_colon">, </span><span class="parameters">salario</span><span class="semi_colon">, </span><span class="parameters">...habilidades</span><span class="methods">) </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Cargo: </span><span class="symbols">${</span><span class="parameters">cargo</span><span class="symbols">}</span><span class="string"> Salario: </span><span class="symbols">${</span><span class="parameters">salario</span><span class="symbols">}</span><span class="string"> Habilidades: </span><span class="symbols">${</span><span class="parameters">habilidades</span><span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="console">console</span><span class="methods">.log(</span><span class="string">`Cargo: </span><span class="symbols">${</span><span class="parameters">cargo</span><span class="symbols">}</span><span class="string"> Salario: </span><span class="symbols">${</span><span class="parameters">salario</span><span class="symbols">}</span><span class="string"> Habilidades: </span><span class="symbols">${</span><span class="parameters">habilidades</span><span class="symbols">}</span><span class="string">`</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
@@ -141,7 +141,7 @@
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index inner_index">07</span>vacante<span class="functions">(</span><span class="string">"Desarrollador Web"</span><span class="semi_colon">, </span><span class="number">1200000</span><span class="semi_colon">, </span><span class="string">"Angular"</span><span class="semi_colon">, </span><span class="string">" Node"</span><span class="semi_colon">, </span><span class="string">" Mysql"</span><span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="methods">vacante(</span><span class="string">"Desarrollador Web"</span><span class="semi_colon">, </span><span class="numbers">1200000</span><span class="semi_colon">, </span><span class="string">"Angular"</span><span class="semi_colon">, </span><span class="string">" Node"</span><span class="semi_colon">, </span><span class="string">" Mysql"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -161,15 +161,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>habilidades <span class="operator">= </span><span class="square">[</span><span class="string">"Angular"</span><span class="semi_colon">, </span><span class="string">" Node"</span><span class="semi_colon">, </span><span class="string">" Mysql"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>habilidades <span class="keyword">= </span><span class="square">[</span><span class="string">"Angular"</span><span class="semi_colon">, </span><span class="string">" Node"</span><span class="semi_colon">, </span><span class="string">" Mysql"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="functions">function</span> vacante<span class="functions">(</span><span class="parameters">cargo</span><span class="semi_colon">, </span><span class="parameters">salario</span><span class="semi_colon">, </span><span class="parameters">...habilidades</span><span class="functions">) </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="functions">function</span> <span class="methods">vacante(</span><span class="parameters">cargo</span><span class="semi_colon">, </span><span class="parameters">salario</span><span class="semi_colon">, </span><span class="parameters">...habilidades</span><span class="methods">) </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span><span class="string">`Cargo: </span><span class="symbols">${</span><span class="parameters">cargo</span><span class="symbols">}</span><span class="string"> Salario: </span><span class="symbols">${</span><span class="parameters">salario</span><span class="symbols">}</span><span class="string"> Habilidades: </span><span class="symbols">${</span><span class="parameters">habilidades</span><span class="symbols">}</span><span class="string">`</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span><span class="string">`Cargo: </span><span class="symbols">${</span><span class="parameters">cargo</span><span class="symbols">}</span><span class="string"> Salario: </span><span class="symbols">${</span><span class="parameters">salario</span><span class="symbols">}</span><span class="string"> Habilidades: </span><span class="symbols">${</span><span class="parameters">habilidades</span><span class="symbols">}</span><span class="string">`</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -177,7 +177,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span>vacante<span class="functions">(</span><span class="string">"Desarrollador Web"</span><span class="semi_colon">, </span><span class="number">1200000</span><span class="semi_colon">, </span>...habilidades<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="methods">vacante(</span><span class="string">"Desarrollador Web"</span><span class="semi_colon">, </span><span class="numbers">1200000</span><span class="semi_colon">, </span>...habilidades<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
