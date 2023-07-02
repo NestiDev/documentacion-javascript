@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -64,7 +64,7 @@
                         por medio de la palabra reservada
                         <strong>extends</strong> seguido del nombre del objeto padre.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -128,21 +128,21 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Fia <span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">class </span><span class="objects">Fia</span> <span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span>enteRegulador <span class="operator">= </span><span class="string">"Fia"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span>enteRegulador <span class="keyword">= </span><span class="string">"Fia"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor(</span><span class="number">escuderias</span><span class="semi_colon">, </span><span class="number">directores</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor</span><span class="methods">(</span><span class="parameters">escuderias</span><span class="semi_colon">, </span><span class="parameters">directores</span><span class="methods">) </span><span class="keyword">{</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">07</span><span class="operator">this.</span>escuderia <span class="operator">= </span><span class="number">escuderias</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="symbols">this</span><span class="keyword">.</span>escuderia <span class="keyword">= </span><span class="parameters">escuderias</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">08</span><span class="operator">this.</span>director <span class="operator">= </span><span class="number">directores</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">08</span><span class="symbols">this</span><span class="keyword">.</span>director <span class="keyword">= </span><span class="parameters">directores</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">09</span></code></pre>
 
@@ -154,7 +154,7 @@
 
                             <pre><code><span class="index">13</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">14</span><span class="functions">return</span> <span class="string">`La escuderia </span><span class="symbols">${</span><span class="operator">this.</span>escuderia<span class="symbols">} </span><span class="string">ha sido registrada`</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">14</span><span class="return">return</span> <span class="string">`La escuderia </span><span class="symbols">${this</span><span class="keyword">.</span>escuderia<span class="symbols">} </span><span class="string">ha sido registrada`</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">15</span></code></pre>
 
@@ -174,41 +174,39 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">19</span><span class="variable">class </span>Escuderia <span class="parenthesis">extends </span>Fia <span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="functions">class </span><span class="objects">Escuderia </span><span class="functions">extends </span><span class="objects">Fia</span> <span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">20</span></code></pre>
 
-                            <pre><code><span class="index">21</span></code></pre>
+                            <pre><code><span class="index outer_index">21</span><span class="functions">constructor</span><span class="methods">(</span><span class="parameters">escuderia</span><span class="semi_colon">, </span><span class="parameters">director</span><span class="semi_colon">, </span><span class="parameters">pilotos</span><span class="methods">) </span><span class="keyword">{</span></code></pre>
 
-                            <pre><code><span class="index outer_index">22</span><span class="functions">constructor(</span><span class="number">escuderia</span><span class="semi_colon">, </span><span class="number">director</span><span class="semi_colon">, </span><span class="number">pilotos</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
+                            <pre><code><span class="index">22</span></code></pre>
 
-                            <pre><code><span class="index">23</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">23</span><span class="functions">super</span><span class="methods">(</span><span class="parameters">escuderia</span><span class="semi_colon">, </span><span class="parameters">director</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">24</span><span class="operator">super</span><span class="parenthesis">(</span><span class="number">escuderia</span><span class="semi_colon">, </span><span class="number">director</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index">24</span></code></pre>
 
-                            <pre><code><span class="index">25</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">25</span><span class="symbols">this</span><span class="keyword">.</span>pilotos <span class="keyword">= </span><span class="parameters">pilotos</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">26</span><span class="operator">this.</span>pilotos <span class="operator">= </span><span class="number">pilotos</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index">26</span></code></pre>
 
-                            <pre><code><span class="index">27</span></code></pre>
+                            <pre><code><span class="index outer_index">27</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_index">28</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index">28</span></code></pre>
 
-                            <pre><code><span class="index">29</span></code></pre>
+                            <pre><code><span class="index outer_index">29</span><span class="methods">presentarMonoplaza() </span><span class="keyword">{</span></code></pre>
 
-                            <pre><code><span class="index outer_index">30</span><span class="methods">presentarMonoplaza() </span><span class="keyword">{</span></code></pre>
+                            <pre><code><span class="index">30</span></code></pre>
 
-                            <pre><code><span class="index">31</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">31</span><span class="return">return</span> <span class="string">`El monoplaza sera presentado por el piloto </span><span class="symbols">${this</span><span class="keyword">.</span>pilotos<span class="square">[</span>0<span class="square">]</span><span class="symbols">}</span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">32</span><span class="functions">return</span> <span class="string">`El monoplaza sera presentado por el piloto </span><span class="symbols">${</span><span class="operator">this.</span>pilotos<span class="square">[</span>0<span class="square">]</span><span class="symbols">} </span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index">32</span></code></pre>
 
-                            <pre><code><span class="index">33</span></code></pre>
+                            <pre><code><span class="index outer_index">33</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_index">34</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index">34</span></code></pre>
 
-                            <pre><code><span class="index">35</span></code></pre>
-
-                            <pre><code><span class="index inner_index">36</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">35</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
                         </div>
                     </section>
 
@@ -220,15 +218,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">37</span><span class="variable">const </span>escuderia1 <span class="operator">= </span><span class="operator">new </span>Escuderia<span class="parenthesis">(</span><span class="string">"RedBull"</span><span class="semi_colon">,</span> <span class="string">"Chris Horner"</span><span class="semi_colon">, </span><span class="square">[</span><span class="string">"Max Verstapen"</span><span class="semi_colon">, </span><span class="string">"Sergio Perez"</span><span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">36</span><span class="variable">const </span>escuderia1 <span class="keyword">= </span><span class="return">new </span><span class="objects">Escuderia</span><span class="methods">(</span><span class="string">"RedBull"</span><span class="semi_colon">,</span> <span class="string">"Chris Horner"</span><span class="semi_colon">, </span><span class="square">[</span><span class="string">"Max Verstapen"</span><span class="semi_colon">, </span><span class="string">"Sergio Perez"</span><span class="square">]</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index">38</span></code></pre>
+                            <pre><code><span class="index">37</span></code></pre>
 
-                            <pre><code><span class="index inner_index">39</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>escuderia1<span class="operator">.</span><span class="methods">registrarEscuderia()</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">38</span><span class="console">console</span><span class="methods">.log(</span>escuderia1<span class="keyword">.</span><span class="methods">registrarEscuderia</span><span class="function">()</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index">40</span></code></pre>
+                            <pre><code><span class="index">39</span></code></pre>
 
-                            <pre><code><span class="index inner_index">41</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>escuderia1<span class="operator">.</span><span class="methods">presentarMonoplaza()</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">40</span><span class="console">console</span><span class="methods">.log(</span>escuderia1<span class="keyword">.</span><span class="methods">presentarMonoplaza</span><span class="function">()</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

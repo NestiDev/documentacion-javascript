@@ -132,9 +132,9 @@
 							tag-p: en esta definimos el parrafo de la seccion
 						-->
                         <p>
-                            Nos permiten crear e insertar un nuevo elemento hijo. Para ello, con <strong>createElement</strong> definimos el <strong>elemento HTML</strong> que deseamos crear, a
-                            continuacion con la propiedad <strong>innertHTML</strong> generamos el contenido del elemento y finalmente con <strong>appendChild</strong> realizamos la insercion de este
-                            dentro del elemento padre.
+                            Nos permite crear un <strong>elemento HTML</strong> Para ello, este metodo
+                            requiere un argumento de tipo <strong>node element</strong> con el cual se 
+                            especifica la etiqueta del elemento que se desea crear.
                         </p>
 
                         <div class="code_box">
@@ -160,7 +160,12 @@
                     <section class="sect_content" id="innerHTML">
                         <h3>02. InnerHTML</h3>
 
-                        <p>texto pendiente</p>
+                        <p>
+                            Nos permite insertar o modificar el contenido textual de un 
+                            <strong>elemento HTML</strong> Otras propiedades similares 
+                            son <strong>outerHTML</strong>, <strong>outerText</strong>,
+                            <strong>innerText</strong> y <strong>textContent</strong>
+                        </p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
@@ -186,7 +191,14 @@
                     <section class="sect_content" id="appendChild">
                         <h3>03. AppendChild</h3>
 
-                        <p>texto pendiente</p>
+                        <p>
+                            Nos permite insertar un <strong>elemento HTML</strong> hijo previamente creado. 
+                            Para ello, Este metodo requiere un argumento de tipo <strong>node element</strong> 
+                            con el cual se especifica el elemento que se desea insertar.
+                            Cabe aclarar que para realizar dicha accion, es importante tener 
+                            referenciado un elemento padre. Otro metodo similar es 
+                            <strong>append</strong>
+                        </p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
@@ -232,7 +244,12 @@
                     <section class="sect_content" id="remove">
                         <h3>04. Remove</h3>
 
-                        <p>Nos permite eliminar un elemento padre.</p>
+                        <p>
+                            Nos permite remover un <strong>elemento HTML</strong> padre. 
+                            A diferencia de otros metodos, este no requiere de ningun argumento. 
+                            Cabe aclarar que para realizar dicha accion, es importante tener 
+                            referenciado un elemento padre.
+                        </p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
@@ -273,7 +290,13 @@
                     <section class="sect_content" id="removeChild">
                         <h3>05. RemoveChild</h3>
 
-                        <p>Nos permite eliminar un elemento hijo, para ello este recibe como parametro el <strong>elemento HTML</strong> a eliminar.</p>
+                        <p>
+                            Nos permite remover un <strong>elemento HTML</strong> hijo. Para ello,
+                            este metodo requiere un argumento de tipo <strong>node element</strong>
+                            con el cual se especifica el elemento que se desea remover. Cabe aclarar 
+                            que para realizar dicha accion, es importante tener referenciado 
+                            un elemento padre.
+                        </p>
 
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
@@ -323,9 +346,11 @@
                         <h3>06. ReplaceChild</h3>
 
                         <p>
-                            Nos permite reemplazar un <strong>elemento HTML</strong> existente por un nuevo elemento. Para ello, es importante tener referenciado al elemento padre y al elemento que
-                            deseamos reemplazar, luego debemos crear el nuevo elemento e insertarlo dentro del elemento padre con <strong>replaceChild</strong>
-                            el cual recibe como parametros el elemento que fue creado y el elemento a ser reemplazado.
+                            Nos permite reemplazar un <strong>elemento HTML</strong> hijo por otro. Para ello, 
+                            este metodo requiere dos argumentos de tipo <strong>node element</strong> con 
+                            los cuales se especifica el elemento que va a reemplazar seguido del elemento 
+                            a ser reemplazado. Cabe aclarar que para realizar dicha accion es importante tener 
+                            una referencia de un elemento padre y del elemento que se desea reemplazar.
                         </p>
 
                         <div class="code_box">

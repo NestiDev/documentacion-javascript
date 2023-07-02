@@ -59,18 +59,23 @@ body {
     color: $colorFour;
 
     /*
-			::-webkit-scrollbar: definimos un ancho del
-			scrollbar
-		*/
+        ::-webkit-scrollbar: definimos un ancho del
+        scrollbar
+    */
     &::-webkit-scrollbar {
+        width: 14px;
         background-color: #f1f1f1;
     }
 
     /*
-			::-webkit-scrollbar-thumb
-		*/
+        ::-webkit-scrollbar-thumb
+    */
     &::-webkit-scrollbar-thumb {
         background-color: #c1c1c1;
+    }
+
+    &.js_scroll_hidden {
+        overflow-y: hidden;
     }
 
     &.js_dark_mode {
@@ -134,10 +139,18 @@ body {
         }
 
         .components_container .main_components .modal_section .modal_container .hidden_modal {
-            background-color: #242936f1;
+            background-color: #242936;
 
-            .content_modal {
-                ul li a {
+            .content_modal ul {
+                &::-webkit-scrollbar {
+                    background-color: #2c303a;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #444857;
+                }
+
+                li a {
                     color: #d8d8d8;
 
                     &:hover {
@@ -164,7 +177,12 @@ body {
         }
 
         .components_container .main_components .section_pagination a {
-            box-shadow: 0 0 8px 0 #232323;
+            background-color: #3d4353c1;
+            box-shadow: 0 3px 8px 0 #232323;
+
+            &:hover {
+                background-color: #505461;
+            }
         }
 
         .components_container .main_components .section_footer .box_gotop.js_show_gotop {
@@ -871,7 +889,7 @@ input[type="search"] {
                     right: 0;
                     bottom: 0;
                     z-index: 99;
-                    background-color: #fffffff1;
+                    background-color: $backgroundColorTwo;
                     display: none;
                     justify-content: center;
                     align-items: center;
@@ -905,16 +923,15 @@ input[type="search"] {
                     }
 
                     /*
-                        content_modal: definimos una altura maxima en porcentaje 
-                        con respecto a la altura de su contenedor padre, 
-                        definimos un espaciado en el eje-X y un overflow-y para que 
-                        oculte los valores que sobrepasen la altura, finalmente 
-                        ejecutamos la animacion animationModal
+                        content_modal: definimos un ancho maximo para que este 
+                        elemento no crezca en anchura despues de 700px, tambien
+                        un espaciado en el eje-X y finalmente ejecutamos la animacion 
+                        animationModal
                     */
                     .content_modal {
-                        max-height: 80%;
+                        width: 100%;
+                        max-width: 500px;
                         padding: 0 6%;
-                        overflow-y: auto;
                         animation: animationModal 0.8s;
 
                         /*
@@ -925,9 +942,30 @@ input[type="search"] {
                         }
 
                         /*
-                            tag-ul
+                            tag-ul: definimos una altura junto con un overflow-y 
+                            para que oculte los elementos que sobrepasen la altura
+                            de su contenedor padre
                         */
                         ul {
+                            height: 350px;
+                            overflow-y: auto;
+
+                            /*
+                                ::-webkit-scrollbar: definimos un ancho del
+                                scrollbar
+                            */
+                            &::-webkit-scrollbar {
+                                width: 10px;
+                                background-color: #f1f1f1;
+                            }
+
+                            /*
+                                ::-webkit-scrollbar-thumb
+                            */
+                            &::-webkit-scrollbar-thumb {
+                                background-color: #c1c1c1;
+                            }
+
                             /*
                                 tag-li: definimos un margen superior para generar 
                                 separacion frente a otros elementos 
@@ -1025,7 +1063,7 @@ input[type="search"] {
                     box-shadow: 0 0 8px 0 $shadowTwo;
 
                     /*
-                    	::-webkit-scrollbar: definimos un ancho del
+                    	::-webkit-scrollbar: definimos un alto del
                     	scrollbar
                     */
                     &::-webkit-scrollbar {
@@ -1087,40 +1125,46 @@ input[type="search"] {
                             }
 
                             span.variable {
-                                color: #986dff;
+                                color: #aa87fb;
                             }
 
                             span.numbers {
+                                // color: #ffbfbf;
                                 color: #ffbff4;
                             }
 
                             span.symbols {
-                                color: #179fff;
+                                color: #2da8ff;
                             }
 
                             span.parameters {
-                                color: #ce9dff;
+                                // color: #ada2ff;
+                                color: #94cb82;
                             }
 
                             span.string {
                                 color: #d5ff80;
                             }
 
-                            span.boolean {
-                                color: #578ac2;
-                            }
+                            // span.boolean {
+                            //     color: #578ac2;
+                            // }
 
                             span.function {
-                                color: #84b6f4;
+                                color: #7eb7ff;
+                            }
+
+                            span.objects {
+                                color: #84d5f4;
                             }
 
                             // span.parameters {
                             //     color: #ecc16a;
                             // }
 
-                            // span.parameters_out {
-                            //     color: #ecc16a85;
-                            // }
+                            span.return {
+                                color: #ff66a1;
+                            }
 
                             // span.properties,
                             span.functions {
@@ -1147,9 +1191,9 @@ input[type="search"] {
                                 color: #808080;
                             }
 
-                            span.parenthesis {
-                                color: #84b6f4;
-                            }
+                            // span.parenthesis {
+                            //     color: #84b6f4;
+                            // }
 
                             span.methods {
                                 color: #ffd173;
@@ -1215,7 +1259,7 @@ input[type="search"] {
                 background-color: $backgroundColorOne;
                 border-radius: 5px;
                 padding: 5px;
-                box-shadow: 0 0 8px 0 $shadowTwo;
+                box-shadow: 0 3px 8px 0 $shadowTwo;
 
                 /*
                     cuando la tag-a tiene el pseudo elemento :hover modificamos 

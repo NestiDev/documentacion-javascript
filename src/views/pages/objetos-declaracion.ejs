@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Inicia con la definicion de una variable, el signo de asignacion y finaliza con una llave de apertura y cierre las cuales
                         <strong>delimitan el escope</strong> del objeto, dentro de este se definen las diferentes claves y valores que son separados entre si por dos puntos.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -133,15 +133,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>personaje <span class="operator">= </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>personaje <span class="keyword">= </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span> nombre<span class="operator">:</span><span class="string"> "Giutaro"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span> nombre<span class="keyword">:</span><span class="string"> "Giutaro"</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre><code><span class="index outer_index">04</span> villano<span class="operator">:</span><span class="boolean"> true</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span> villano<span class="keyword">:</span><span class="function"> true</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span> edad<span class="operator">:</span><span class="number"> 32</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span> edad<span class="keyword">:</span><span class="numbers"> 32</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -149,7 +149,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span>personaje<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -173,15 +173,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="functions">function </span>Personaje<span class="functions">(</span><span class="number">nombre</span><span class="semi_colon">, </span><span class="number">villano</span><span class="semi_colon">, </span><span class="number">edad</span><span class="functions">) </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">function </span><span class="methods">Personaje(</span><span class="parameters">nombre</span><span class="semi_colon">, </span><span class="parameters">villano</span><span class="semi_colon">, </span><span class="parameters">edad</span><span class="methods">) </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="operator">this.</span>nombre <span class="operator">= </span><span class="number">nombre</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="symbols">this</span><span class="keyword">.</span>nombre <span class="keyword">= </span><span class="parameters">nombre</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_index">04</span><span class="operator">this.</span>villano <span class="operator">= </span><span class="number">villano</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="symbols">this</span><span class="keyword">.</span>villano <span class="keyword">= </span><span class="parameters">villano</span><span class="semi_colon">;</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="operator">this.</span>edad <span class="operator">= </span><span class="number">edad</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="symbols">this</span><span class="keyword">.</span>edad <span class="keyword">= </span><span class="parameters">edad</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -189,11 +189,11 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="variable">const </span>personaje1 <span class="operator">= new </span>Personaje<span class="parenthesis">(</span><span class="string">"Giutaro"</span><span class="semi_colon">, </span><span class="boolean">true</span><span class="semi_colon">, </span><span class="number">32</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="variable">const </span>personaje1 <span class="keyword">= new </span><span class="methods">Personaje(</span><span class="string">"Giutaro"</span><span class="semi_colon">, </span><span class="function">true</span><span class="semi_colon">, </span><span class="numbers">32</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">10</span></code></pre>
 
-                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>personaje1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="methods">.log(</span>personaje1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

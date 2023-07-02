@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -60,10 +60,13 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Los <strong>arrays</strong> nos permiten almacenar multiples valores dentro de una variable, estos valores pueden ser de tipo <strong>string</strong>, <strong>number</strong> y
-                        <strong>boolean</strong> o almacenar valores como <strong>objetos</strong>, <strong>arrays de objetos</strong> o incluso otros <strong>arrays</strong>
+                        Un <strong>array</strong> nos permite almacenar un conjunto de valores
+                        que puden ser <strong>primitivos</strong> u <strong>objetos</strong> 
+                        dentro de una misma variable. Cabe aclarar que el primer valor almacenado 
+                        en un array toma como posicion el <strong>indice cero</strong> y que 
+                        este incrementa en uno cada que se añade al array un nuevo valor.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -137,11 +140,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="operator">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="number">12548.85428</span><span class="semi_colon">, </span><span class="boolean">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="keyword">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="numbers">12548.85428</span><span class="semi_colon">, </span><span class="function">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>valores<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span>valores<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -161,13 +164,13 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="operator">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="number">12548.85428</span><span class="semi_colon">, </span><span class="boolean">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="keyword">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="numbers">12548.85428</span><span class="semi_colon">, </span><span class="function">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index inner_index">02</span><span class="index">                    0           1         2</span></code></pre>
 
                             <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>valores<span class="square">[</span><span class="number">0</span><span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span>valores<span class="square">[</span><span class="numbers">0</span><span class="square">]</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -184,17 +187,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="operator">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="number">12548.85428</span><span class="semi_colon">, </span><span class="boolean">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="keyword">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="numbers">12548.85428</span><span class="semi_colon">, </span><span class="function">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index inner_index">02</span><span class="index">                    0           1         2</span></code></pre>
 
                             <pre><code><span class="index">03</span></code></pre>
 
-                            <pre><code><span class="index inner_index">04</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">; </span>posiciones <span class="operator">< </span>valores<span class="operator">.</span><span class="properties">length</span><span class="semi_colon">;</span> posiciones<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="functions">for</span><span class="methods">(</span><span class="variable">let </span>posiciones <span class="keyword">= </span><span class="numbers">0</span><span class="semi_colon">; </span>posiciones <span class="keyword">< </span>valores<span class="keyword">.</span><span class="functions">length</span><span class="semi_colon">;</span> posiciones<span class="keyword">++</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>posiciones<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">06</span><span class="console">console</span><span class="methods">.log(</span>posiciones<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">07</span></code></pre>
 
@@ -221,15 +224,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="operator">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="number">12548.85428</span><span class="semi_colon">, </span><span class="boolean">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>valores <span class="keyword">= </span><span class="square">[</span><span class="string">"Colombia"</span><span class="semi_colon">, </span><span class="numbers">12548.85428</span><span class="semi_colon">, </span><span class="function">true</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="function">for</span><span class="parenthesis">(</span><span class="variable">let </span>posiciones <span class="operator">= </span><span class="number">0</span><span class="semi_colon">; </span>posiciones <span class="operator">< </span>valores<span class="operator">.</span><span class="properties">length</span><span class="semi_colon">;</span> posiciones<span class="operator">++</span><span class="parenthesis">)</span><span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="functions">for</span><span class="methods">(</span><span class="variable">let </span>posiciones <span class="keyword">= </span><span class="numbers">0</span><span class="semi_colon">; </span>posiciones <span class="keyword">< </span>valores<span class="keyword">.</span><span class="properties">length</span><span class="semi_colon">;</span> posiciones<span class="keyword">++</span><span class="methods">)</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>valores<span class="square">[</span>posiciones<span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">console</span><span class="methods">.log(</span>valores<span class="square">[</span>posiciones<span class="square">]</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -252,14 +255,14 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>vocalesAnidadas <span class="operator">= </span><span class="square">[</span><span class="string">"a"</span><span class="semi_colon">, </span><span class="keyword">[</span><span class="string">"e"</span><span class="semi_colon">, </span><span class="parenthesis">[</span><span class="string">"i"</span><span class="semi_colon">, </span><span class="string">"o"</span><span class="parenthesis">]</span><span class="semi_colon">, </span><span class="square">[</span><span class="string">"u"</span><span class="square">]</span><span class="keyword">]</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>vocalesAnidadas <span class="keyword">= </span><span class="square">[</span><span class="string">"a"</span><span class="semi_colon">, </span><span class="keyword">[</span><span class="string">"e"</span><span class="semi_colon">, </span><span class="symbols">[</span><span class="string">"i"</span><span class="semi_colon">, </span><span class="string">"o"</span><span class="symbols">]</span><span class="semi_colon">, </span><span class="square">[</span><span class="string">"u"</span><span class="square">]</span><span class="keyword">]</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index inner_index">02</span><span class="index">                        0     1</span></code></pre>
                             <pre><code><span class="index inner_index">03</span><span class="index">                              0        1        2</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>vocalesAnidadas<span class="square">[</span><span class="number">1</span><span class="square">][</span><span class="number">2</span><span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span>vocalesAnidadas<span class="square">[</span><span class="numbers">1</span><span class="square">][</span><span class="numbers">2</span><span class="square">]</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -276,31 +279,31 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>heroes <span class="operator">= </span><span class="square">[</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>heroes <span class="keyword">= </span><span class="square">[</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
                             <pre><code><span class="index outer_index">03</span><span class="brackets">{</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">04</span> nombre<span class="operator">:</span><span class="string"> "Hulk"</span><span class="semi_colon">,</span><span class="index">   0</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">04</span> nombre<span class="keyword">:</span><span class="string"> "Hulk"</span><span class="semi_colon">,</span><span class="index">   0</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">05</span> nivel<span class="operator">:</span><span class="number"> 23</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">05</span> nivel<span class="keyword">:</span><span class="numbers"> 23</span></code></pre>
 
                             <pre><code><span class="index outer_index">06</span><span class="brackets">}</span><span class="semi_colon">,</span></code></pre>
 
                             <pre><code><span class="index outer_index">07</span><span class="brackets">{</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">08</span> nombre<span class="operator">:</span><span class="string"> "Thor"</span><span class="semi_colon">,</span><span class="index">   1</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">08</span> nombre<span class="keyword">:</span><span class="string"> "Thor"</span><span class="semi_colon">,</span><span class="index">   1</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">09</span> nivel<span class="operator">:</span><span class="number"> 19</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">09</span> nivel<span class="keyword">:</span><span class="numbers"> 19</span></code></pre>
 
                             <pre><code><span class="index outer_index">10</span><span class="brackets">}</span><span class="semi_colon">,</span></code></pre>
 
                             <pre><code><span class="index outer_index">11</span><span class="brackets">{</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">12</span> nombre<span class="operator">:</span><span class="string"> "Spider man"</span><span class="semi_colon">,</span><span class="index">   2</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">12</span> nombre<span class="keyword">:</span><span class="string"> "Spider man"</span><span class="semi_colon">,</span><span class="index">   2</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">13</span> indice<span class="operator">:</span><span class="number"> 17</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">13</span> indice<span class="keyword">:</span><span class="numbers"> 17</span></code></pre>
 
                             <pre><code><span class="index outer_index">14</span><span class="brackets">}</span></code></pre>
 
@@ -310,7 +313,7 @@
 
                             <pre><code><span class="index">17</span></code></pre>
 
-                            <pre><code><span class="index inner_index">18</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroes<span class="square">[</span><span class="number">1</span><span class="square">]</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">18</span><span class="console">console</span><span class="methods">.log(</span>heroes<span class="square">[</span><span class="numbers">1</span><span class="square">]</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

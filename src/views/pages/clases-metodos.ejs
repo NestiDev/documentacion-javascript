@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -60,7 +60,7 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>texto pendiente</p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -124,15 +124,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Alumno <span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">class </span><span class="objects">Alumno </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="parenthesis">static </span>grado <span class="operator">= </span><span class="number">8</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="functions">static </span>grado <span class="keyword">= </span><span class="numbers">8</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor</span><span class="methods">() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -140,7 +140,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>Alumno<span class="operator">.</span>grado<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="console">console</span><span class="methods">.log(</span><span class="objects">Alumno</span><span class="keyword">.</span>grado<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -151,19 +151,19 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Alumno <span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">class </span><span class="objects">Alumno </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="functions">constructor() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="functions">constructor</span><span class="methods">() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="parenthesis">static </span><span class="methods">asistir(</span><span class="number">mensaje</span><span class="methods">) </span><span class="keyword">{</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="functions">static </span><span class="methods">asistir(</span><span class="parameters">mensaje</span><span class="methods">) </span><span class="keyword">{</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">07</span><span class="functions">return</span> <span class="number">mensaje</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="return">return</span> <span class="parameters">mensaje</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
@@ -175,7 +175,7 @@
 
                             <pre><code><span class="index">12</span></code></pre>
 
-                            <pre><code><span class="index inner_index">13</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>Alumno<span class="operator">.</span><span class="methods">asistir(</span><span class="string">"El alumno debe asistir puntual a clases"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="console">console</span><span class="methods">(</span><span class="objects">Alumno</span><span class="keyword">.</span><span class="methods">asistir(</span><span class="string">"El alumno debe asistir puntual a clases"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -196,23 +196,23 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Universidad <span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">class </span><span class="objects">Universidad </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span>nombre <span class="operator">= </span><span class="string">"Javascript"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span>nombre <span class="keyword">= </span><span class="string">"Javascript"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor</span><span class="methods">() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index outer_index">07</span><span class="parenthesis">get </span><span class="methods">getNombre() </span><span class="keyword">{</span></code></pre>
+                            <pre><code><span class="index outer_index">07</span><span class="functions">get </span><span class="methods">getNombre() </span><span class="keyword">{</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">09</span><span class="functions">return</span> <span class="operator">this.</span>nombre<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">09</span><span class="return">return </span><span class="symbols">this</span><span class="keyword">.</span>nombre<span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">10</span></code></pre>
 
@@ -224,11 +224,11 @@
 
                             <pre><code><span class="index">14</span></code></pre>
 
-                            <pre><code><span class="index inner_index">15</span><span class="variable">let </span>objUniversidad <span class="operator">= </span><span class="operator">new </span>Universidad<span class="parenthesis">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">15</span><span class="variable">let </span>objUniversidad <span class="keyword">= </span><span class="return">new </span><span class="objects">Universidad</span><span class="methods">()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">16</span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>objUniversidad<span class="operator">.</span><span class="methods">getNombre</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="console">console</span><span class="methods">.log(</span>objUniversidad<span class="keyword">.</span><span class="methods">getNombre</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -249,23 +249,23 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Universidad <span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">class </span><span class="objects">Universidad </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span>nombre <span class="operator">= </span><span class="string">"Javascript"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span>nombre <span class="keyword">= </span><span class="string">"Javascript"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor</span><span class="methods">() </span><span class="keyword">{}</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index outer_index">07</span><span class="parenthesis">set </span><span class="methods">setNombre(<span class="number">nuevoNombre</span>) </span><span class="keyword">{</span></code></pre>
+                            <pre><code><span class="index outer_index">07</span><span class="functions">set </span><span class="methods">setNombre(<span class="parameters">nuevoNombre</span>) </span><span class="keyword">{</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">09</span><span class="operator">this.</span>nombre <span>= </span><span class="number">nuevoNombre </span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">09</span><span class="symbols">this</span><span class="keyword">.</span>nombre <span>= </span><span class="parameters">nuevoNombre</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">10</span></code></pre>
 
@@ -277,15 +277,15 @@
 
                             <pre><code><span class="index">14</span></code></pre>
 
-                            <pre><code><span class="index inner_index">15</span><span class="variable">let </span>objUniversidad <span class="operator">= </span><span class="operator">new </span>Universidad<span class="parenthesis">()</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">15</span><span class="variable">let </span>objUniversidad <span class="keyword">= </span><span class="return">new </span><span class="objects">Universidad</span><span class="methods">()</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">16</span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span>objUniversidad<span class="operator">.</span><span class="methods">setNombre </span><span class="operator">= </span><span class="string">"Autonoma"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span>objUniversidad<span class="keyword">.</span><span class="methods">setNombre </span><span class="keyword">= </span><span class="string">"Autonoma"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">18</span></code></pre>
 
-                            <pre><code><span class="index inner_index">19</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>objUniversidad<span class="operator">.</span>nombre<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="console">console</span><span class="methods">.log(</span>objUniversidad<span class="keyword">.</span>nombre<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

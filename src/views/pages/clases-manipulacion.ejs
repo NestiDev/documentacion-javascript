@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -60,7 +60,7 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>texto pendiente</p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -128,19 +128,19 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">class </span>Heroe<span class="brackets"> {</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="functions">class </span><span class="objects">Heroe</span><span class="brackets"> {</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span>habilidad <span class="operator">= </span><span class="string">"Volar"</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span>habilidad <span class="keyword">= </span><span class="string">"Volar"</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor(</span><span class="number">nombre</span><span class="functions">)</span><span class="keyword"> {</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="functions">constructor</span><span class="methods">(</span><span class="parameters">nombre</span><span class="methods">)</span><span class="keyword"> {</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
-                            <pre><code><span class="index outer_doble_index">07</span><span class="operator">this.</span>nombre <span class="operator">= </span><span class="number">nombre</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="symbols">this</span><span class="keyword">.</span>nombre <span class="keyword">= </span><span class="parameters">nombre</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">08</span></code></pre>
 
@@ -164,11 +164,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">14</span><span class="variable">let </span>heroe1 <span class="operator">= </span><span class="operator">new </span>Heroe<span class="parenthesis">(</span><span class="string">"Super man"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">14</span><span class="variable">let </span>heroe1 <span class="keyword">= </span><span class="return">new </span><span class="objects">Heroe</span><span class="methods">(</span><span class="string">"Super man"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">15</span></code></pre>
 
-                            <pre><code><span class="index inner_index">16</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroe1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">16</span><span class="console">console</span><span class="methods">.log(</span>heroe1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -189,15 +189,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="operator">= </span><span class="operator">new </span>Heroe<span class="parenthesis">(</span><span class="string">"Super man"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="keyword">= </span><span class="return">new </span><span class="objects">Heroe</span><span class="methods">(</span><span class="string">"Super man"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">18</span></code></pre>
 
-                            <pre><code><span class="index inner_index">19</span>heroe1<span class="operator">.</span>habilidad <span class="operator">= </span><span class="brackets">[</span><span class="string">"Volar"</span><span class="semi_colon">; </span><span class="string">"Super fuerza"</span><span class="semi_colon">; </span><span class="string">"Ojos lazer"</span><span class="brackets">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">19</span>heroe1<span class="keyword">.</span>habilidad <span class="keyword">= </span><span class="square">[</span><span class="string">"Volar"</span><span class="semi_colon">; </span><span class="string">"Super fuerza"</span><span class="semi_colon">; </span><span class="string">"Ojos lazer"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">20</span></code></pre>
 
-                            <pre><code><span class="index inner_index">21</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroe1<span class="operator">.</span>habilidad<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">21</span><span class="console">console</span><span class="methods">.log(</span>heroe1<span class="keyword">.</span>habilidad<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -214,17 +214,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="operator">= </span><span class="operator">new </span>Heroe<span class="parenthesis">(</span><span class="string">"Super man"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="keyword">= </span><span class="return">new </span><span class="objects">Heroe</span><span class="methods">(</span><span class="string">"Super man"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">18</span></code></pre>
 
-                            <pre><code><span class="index inner_index">19</span>heroe1<span class="operator">.</span>accesorios <span class="operator">= </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">19</span>heroe1<span class="keyword">.</span>accesorios <span class="keyword">= </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">20</span></code></pre>
 
-                            <pre><code><span class="index outer_index">21</span>vehiculo<span class="operator">: </span><span class="string">"Batimovil"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">21</span>vehiculo<span class="keyword">: </span><span class="string">"Batimovil"</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre><code><span class="index outer_index">22</span>armas<span class="operator">: </span><span class="boolean">false</span></code></pre>
+                            <pre><code><span class="index outer_index">22</span>armas<span class="keyword">: </span><span class="function">false</span></code></pre>
 
                             <pre><code><span class="index">23</span></code></pre>
 
@@ -232,7 +232,7 @@
 
                             <pre><code><span class="index">25</span></code></pre>
 
-                            <pre><code><span class="index inner_index">26</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroe1<span class="operator">.</span>accesorios<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">26</span><span class="console">console</span><span class="methods">.log(</span>heroe1<span class="keyword">.</span>accesorios<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -252,15 +252,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="operator">= </span><span class="operator">new </span>Heroe<span class="parenthesis">(</span><span class="string">"Super man"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="keyword">= </span><span class="return">new </span><span class="objects">Heroe</span><span class="methods">(</span><span class="string">"Super man"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">18</span></code></pre>
 
-                            <pre><code><span class="index inner_index">19</span><span class="functions">delete </span>heroe1<span class="operator">.</span>habilidad<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="functions">delete </span>heroe1<span class="keyword">.</span>habilidad<span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">20</span></code></pre>
 
-                            <pre><code><span class="index inner_index">21</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroe1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">21</span><span class="console">console</span><span class="methods">.log(</span>heroe1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -280,23 +280,23 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="operator">= </span><span class="operator">new </span>Heroe<span class="parenthesis">(</span><span class="string">"Batman"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="keyword">= </span><span class="return">new </span><span class="objects">Heroe</span><span class="methods">(</span><span class="string">"Batman"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">18</span></code></pre>
 
-                            <pre><code><span class="index inner_index">19</span>heroe1<span class="operator">.</span><span class="methods">salvar </span><span class="operator">= </span><span class="functions">function(</span><span class="number">ciudad</span><span class="functions">) </span><span class="keyword">{</span></code></pre>
+                            <pre><code><span class="index inner_index">19</span>heroe1<span class="keyword">.</span><span class="methods">salvar </span><span class="keyword">= </span><span class="functions">function</span><span class="methods">(</span><span class="parameters">ciudad</span><span class="methods">) </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">20</span></code></pre>
 
-                            <pre><code><span class="index outer_index">21</span><span class="functions">return</span> <span class="string">`Soy </span><span class="symbols">${</span><span class="operator">this.</span>nombre<span class="symbols">}</span><span class="string"> y salvare ciudad </span><span class="symbols">${</span><span class="number">ciudad</span><span class="symbols">}</span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">21</span><span class="return">return</span> <span class="string">`Soy </span><span class="symbols">${</span><span class="symbols">this</span><span class="keyword">.</span>nombre<span class="symbols">}</span><span class="string"> y salvare ciudad </span><span class="symbols">${</span><span class="parameters">ciudad</span><span class="symbols">}</span><span class="string">`</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">22</span></code></pre>
 
-                            <pre><code><span class="index inner_index">23</span><span class="keyword">}</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">23</span><span class="brackets">}</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">24</span></code></pre>
 
-                            <pre><code><span class="index inner_index">25</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroe1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">25</span><span class="console">console</span><span class="methods">.log(</span>heroe1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -318,15 +318,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="operator">= </span><span class="operator">new </span>Heroe<span class="parenthesis">(</span><span class="string">"Batman"</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span><span class="variable">let </span>heroe1 <span class="keyword">= </span><span class="return">new </span><span class="objects">Heroe</span><span class="methods">(</span><span class="string">"Batman"</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">18</span></code></pre>
 
-                            <pre><code><span class="index inner_index">19</span><span class="functions">delete </span>heroe1<span class="operator">.</span><span class="methods">saltar</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">19</span><span class="functions">delete </span>heroe1<span class="keyword">.</span><span class="methods">saltar</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">20</span></code></pre>
 
-                            <pre><code><span class="index inner_index">21</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>heroe1<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">21</span><span class="console">console</span><span class="methods">.log(</span>heroe1<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

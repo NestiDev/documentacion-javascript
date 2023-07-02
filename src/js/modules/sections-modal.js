@@ -11,10 +11,15 @@ let $showModal = document.querySelector("#show-modal"),
 let sectionsShowModal = () => {
     /* 
 		seleccionamos $hiddenModal y le añadimos la
-		clase js_show_hidden_modal definida en la
-		hoja d eestilos
+		clase js_show_hidden_modal
 	*/
     $hiddenModal.classList.add("js_show_hidden_modal");
+
+	/* 
+		seleccionamos body y le añadimos la
+		clase js_scroll_hidden 
+	*/
+	document.body.classList.add("js_scroll_hidden");
 };
 
 /*
@@ -23,10 +28,15 @@ let sectionsShowModal = () => {
 let sectionsHiddenModal = () => {
     /* 
 		seleccionamos $hiddenModal y le removemos la
-		clase js_show_hidden_modal definida en la
-		hoja d eestilos
+		clase js_show_hidden_modal
 	*/
     $hiddenModal.classList.remove("js_show_hidden_modal");
+
+	/* 
+		seleccionamos body y le removemos la
+		clase js_scroll_hidden 
+	*/
+	document.body.classList.remove("js_scroll_hidden");
 };
 
 /* 
