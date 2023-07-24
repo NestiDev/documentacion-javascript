@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Nos permiten añadir en los patrones de las expresiones regulares caracterisitcas especiales las cuales hacen que al momento de buscar coincidencias entre estos y una cadena de
                         caracteres la coincidencia tenga que ser exacta.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -136,11 +136,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^</span><span class="string">saludo</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^</span><span class="string">saludo</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"me despedido y luego saludo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"me despedido y luego saludo"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -151,11 +151,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^</span><span class="string">saludo</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^</span><span class="string">saludo</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"saludo y luego me despido"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"saludo y luego me despido"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -172,11 +172,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[^</span><span class="string">saludo</span><span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[^</span><span class="string">saludo</span><span class="functions">]</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"me despedido y luego saludo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"me despedido y luego saludo"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -187,11 +187,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[^</span><span class="string">saludo</span><span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[^</span><span class="string">saludo</span><span class="functions">]</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"saludo y luego me despido"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"saludo y luego me despido"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -208,11 +208,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">LENGUAJE</span><span class="functions">$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">lenguaje</span><span class="functions">$</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Javascript es un gran idioma"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Javascript es un gran idioma"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -223,11 +223,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">LENGUAJE</span><span class="functions">$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">lenguaje</span><span class="functions">$</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Javascript es un gran lenguaje"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Javascript es un gran lenguaje"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -247,11 +247,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Codigo</span><span class="functions">+</span>-col<span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">Codigo</span><span class="functions">+</span>-col<span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Codigo col"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Codigo col"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -262,11 +262,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Codigo</span><span class="functions">+</span>-col<span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">Codigo</span><span class="functions">+</span>-col<span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Codigo-col"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Codigo-col"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -286,11 +286,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>a-d<span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[</span>a-d<span class="functions">]</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Geronimo es mi primo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Geronimo es mi primo"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -301,11 +301,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>a-d<span class="functions">]</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[</span>a-d<span class="functions">]</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Lorieth es mi prima"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Lorieth es mi prima"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -325,11 +325,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>8<span class="functions">}</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"1234567"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"1234567"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -340,11 +340,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>8<span class="functions">}</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"12345678"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"12345678"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -364,11 +364,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Me encanta corre</span><span class="functions">+</span><span class="string">r</span><span class="functions">{</span>1<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">Me encanta corre</span><span class="functions">+</span><span class="string">r</span><span class="functions">{</span>1<span class="functions">}$</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Me encanta correrr"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Me encanta correrr"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -379,11 +379,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Me encanta corre</span><span class="functions">+</span><span class="string">r</span><span class="functions">{</span>1<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">Me encanta corre</span><span class="functions">+</span><span class="string">r</span><span class="functions">{</span>1<span class="functions">}$</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Me encanta correr"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Me encanta correr"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -400,11 +400,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>4,8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>4,8<span class="functions">}</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"456"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"456"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -415,11 +415,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>4,8<span class="functions">}</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[</span>0-9<span class="functions">]</span><span class="functions">{</span>4,8<span class="functions">}</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"45678"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"45678"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -436,11 +436,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Php</span><span class="functions">|</span><span class="string">Angular</span><span class="functions">|</span><span class="string">Pyton</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">Php</span><span class="functions">|</span><span class="string">Angular</span><span class="functions">|</span><span class="string">Pyton</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Java"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Java"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -451,11 +451,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="string">Php</span><span class="functions">|</span><span class="string">Angular</span><span class="functions">|</span><span class="string">Pyton</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> expReg<span class="keyword"> = </span><span class="variable">/</span><span class="string">Php</span><span class="functions">|</span><span class="string">Angular</span><span class="functions">|</span><span class="string">Pyton</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>expReg<span class="methods">.test(</span><span class="string">"Angular"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>expReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Angular"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

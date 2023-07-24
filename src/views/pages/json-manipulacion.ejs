@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Nos permite seleccionar, añadir, editar y/o eliminar valores, tambien nos permite definir arreglos, objetos o metodos lo que hace de <strong>JSON</strong> uno de los formatos
                         mas utilizados cuando se trabaja con grandes cantidades de datos.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -128,13 +128,13 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>camisa <span class="operator">= </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">const </span>camisa <span class="keyword">= </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="string">"talla"</span><span class="operator">: </span><span class="number">10</span><span class="semi_colon">,</span></code></pre>
-                            <pre><code><span class="index outer_index">04</span><span class="string">"color"</span><span class="operator">: </span><span class="string">"Blanca"</span><span class="semi_colon">,</span></code></pre>
-                            <pre><code><span class="index outer_index">05</span><span class="string">"modelo"</span><span class="operator">: </span><span class="string">"Manga corta"</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="string">"talla"</span><span class="keyword">: </span><span class="numbers">10</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="string">"color"</span><span class="keyword">: </span><span class="string">"Blanca"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="string">"modelo"</span><span class="keyword">: </span><span class="string">"Manga corta"</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -150,11 +150,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">08</span>camisa<span class="operator">.</span>color <span class="operator">= </span><span class="brackets">[</span><span class="string">"Azul"</span><span class="semi_colon">, </span><span class="string">"Naranja"</span><span class="semi_colon">, </span><span class="string">"Rojo"</span><span class="brackets">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">08</span>camisa<span class="keyword">.</span>color <span class="keyword">= </span><span class="square">[</span><span class="string">"Azul"</span><span class="semi_colon">, </span><span class="string">"Naranja"</span><span class="semi_colon">, </span><span class="string">"Rojo"</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">09</span></code></pre>
 
-                            <pre><code><span class="index inner_index">10</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>camisa<span class="operator">.</span>color<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">10</span><span class="console">console</span><span class="methods">.log(</span>camisa<span class="keyword">.</span>color<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -171,13 +171,13 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">08</span>camisa<span class="operator">.</span>botones <span class="operator">= </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">08</span>camisa<span class="keyword">.</span>botones <span class="keyword">= </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">09</span></code></pre>
 
-                            <pre><code><span class="index outer_index">10</span><span class="string">"masculinos"</span><span class="operator">: </span><span class="boolean">true</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="string">"masculinos"</span><span class="keyword">: </span><span class="function">true</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre><code><span class="index outer_index">11</span><span class="string">"cantidad"</span><span class="operator">: </span><span class="number">08</span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="string">"cantidad"</span><span class="keyword">: </span><span class="numbers">08</span></code></pre>
 
                             <pre><code><span class="index">12</span></code></pre>
 
@@ -185,7 +185,7 @@
 
                             <pre><code><span class="index">14</span></code></pre>
 
-                            <pre><code><span class="index inner_index">15</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>camisa<span class="operator">.</span>botones<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">15</span><span class="console">console</span><span class="methods">.log(</span>camisa<span class="keyword">.</span>botones<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -205,11 +205,11 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">08</span><span class="functions">delete</span> camisa<span class="operator">.</span>modelo<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">08</span><span class="functions">delete</span> camisa<span class="keyword">.</span>modelo<span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">09</span></code></pre>
 
-                            <pre><code><span class="index inner_index">10</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>camisa<span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">10</span><span class="console">console</span><span class="methods">.log(</span>camisa<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

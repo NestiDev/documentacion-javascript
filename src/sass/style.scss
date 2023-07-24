@@ -532,6 +532,16 @@ input[type="search"] {
                 }
             }
 
+            article {
+                border-bottom: 2px solid #444857;
+                margin-bottom: 18px;
+
+                &:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                }
+            }
+
             /*
 				li_dropdown
 			*/
@@ -1129,7 +1139,6 @@ input[type="search"] {
                             }
 
                             span.numbers {
-                                // color: #ffbfbf;
                                 color: #ffbff4;
                             }
 
@@ -1138,17 +1147,12 @@ input[type="search"] {
                             }
 
                             span.parameters {
-                                // color: #ada2ff;
-                                color: #94cb82;
+                                color: #8cbdd9;
                             }
 
                             span.string {
                                 color: #d5ff80;
                             }
-
-                            // span.boolean {
-                            //     color: #578ac2;
-                            // }
 
                             span.function {
                                 color: #7eb7ff;
@@ -1158,15 +1162,10 @@ input[type="search"] {
                                 color: #84d5f4;
                             }
 
-                            // span.parameters {
-                            //     color: #ecc16a;
-                            // }
-
                             span.return {
                                 color: #ff66a1;
                             }
 
-                            // span.properties,
                             span.functions {
                                 color: #ffad66;
                             }
@@ -1190,10 +1189,6 @@ input[type="search"] {
                             span.semi_colon {
                                 color: #808080;
                             }
-
-                            // span.parenthesis {
-                            //     color: #84b6f4;
-                            // }
 
                             span.methods {
                                 color: #ffd173;

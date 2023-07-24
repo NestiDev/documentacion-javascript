@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Este metodo permite el almacenado local de valores, para ello requiere de dos parametros. EL primer parametro, hace referencia al nombre de la clave con la que se desea
                         realizar el almacenado y el segundo parametro seria el valor a almacenar.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -133,13 +133,13 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>guardarUsuario <span class="operator">= </span><span class="functions">(<span class="number">nombre</span><span class="semi_colon">, </span><span class="number">edad</span><span class="semi_colon">, </span><span class="number">estudiante</span>) => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>guardarUsuario <span class="keyword">= </span><span class="methods">(<span class="parameters">nombre</span><span class="semi_colon">, </span><span class="parameters">edad</span><span class="semi_colon">, </span><span class="parameters">estudiante</span>) </span><span class="keyword">=> </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span><span class="console">localStorage</span><span class="methods">.setItem(</span><span class="string">"usuario"</span><span class="semi_colon">, </span><span class="number">nombre</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index outer_index">04</span><span class="console">localStorage</span><span class="methods">.setItem(</span><span class="string">"edad"</span><span class="semi_colon">, </span><span class="number">edad</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index outer_index">05</span><span class="console">localStorage</span><span class="methods">.setItem(</span><span class="string">"estudiante"</span><span class="semi_colon">, </span><span class="number">estudiante</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="console">localStorage</span><span class="methods">.setItem(</span><span class="string">"usuario"</span><span class="semi_colon">, </span><span class="parameters">nombre</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="console">localStorage</span><span class="methods">.setItem(</span><span class="string">"edad"</span><span class="semi_colon">, </span><span class="parameters">edad</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="console">localStorage</span><span class="methods">.setItem(</span><span class="string">"estudiante"</span><span class="semi_colon">, </span><span class="parameters">estudiante</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -147,7 +147,7 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span>guardarUsuario<span class="functions">(<span class="string">"Mariana"</span><span class="semi_colon">, </span><span class="number">22</span><span class="semi_colon">, </span><span class="boolean">true</span>)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span>guardarUsuario<span class="methods">(<span class="string">"Mariana"</span><span class="semi_colon">, </span><span class="parameters">22</span><span class="semi_colon">, </span><span class="function">true</span>)</span><span class="semi_colon">;</span></code></pre>
                         </div>
                     </section>
 
@@ -169,15 +169,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="keyword">= </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index inner_index">02</span></code></pre>
 
-                            <pre><code><span class="index outer_index">03</span> nombre<span class="operator">:</span><span class="string"> "Sofia"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span> nombre<span class="keyword">:</span><span class="string"> "Sofia"</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre><code><span class="index outer_index">04</span> edad<span class="operator">:</span><span class="number"> 19</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span> edad<span class="keyword">:</span><span class="numbers"> 19</span><span class="semi_colon">,</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span> estudiante<span class="operator">:</span><span class="boolean"> false</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span> estudiante<span class="keyword">:</span><span class="function"> false</span></code></pre>
 
                             <pre><code><span class="index inner_index">06</span></code></pre>
 
@@ -185,11 +185,11 @@
 
                             <pre><code><span class="index inner_index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="variable">let </span>guardarUsuario <span class="operator">= </span><span class="functions">(<span class="number">usuario</span>) => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="variable">let </span>guardarUsuario <span class="keyword">= </span><span class="methods">(<span class="parameters">usuario</span>) </span><span class="keyword">=> </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">10</span></code></pre>
 
-                            <pre><code><span class="index outer_index">11</span><span class="variable">let </span>convertirEnCadena <span class="operator">= </span>JSON<span class="methods">.stringify(</span><span class="number">usuario</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="variable">let </span>convertirEnCadena <span class="keyword">= </span><span class="objects">JSON</span><span class="methods">.stringify(</span><span class="parameters">usuario</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">12</span></code></pre>
 
@@ -201,7 +201,7 @@
 
                             <pre><code><span class="index">16</span></code></pre>
 
-                            <pre><code><span class="index inner_index">17</span>guardarUsuario<span class="functions">(</span>usuario<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">17</span>guardarUsuario<span class="methods">(</span>usuario<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
                         </div>
                     </section>
 
@@ -223,15 +223,15 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="operator">= </span><span class="square">[</span><span class="string">"Andres"</span><span class="semi_colon">, </span><span class="number">33</span><span class="semi_colon">, </span><span class="boolean">false</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>usuario <span class="keyword">= </span><span class="square">[</span><span class="string">"Andres"</span><span class="semi_colon">, </span><span class="numbers">33</span><span class="semi_colon">, </span><span class="function">false</span><span class="square">]</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index inner_index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>guardarUsuario <span class="operator">= </span><span class="functions">(<span class="number">usuario</span>) => </span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>guardarUsuario <span class="keyword">= </span><span class="methods">(<span class="parameters">usuario</span>) </span><span class="keyword">=> </span><span class="brackets">{</span></code></pre>
 
                             <pre><code><span class="index">04</span></code></pre>
 
-                            <pre><code><span class="index outer_index">05</span><span class="variable">let </span>convertirEnCadena <span class="operator">= </span>JSON<span class="methods">.stringify(</span><span class="number">usuario</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="variable">let </span>convertirEnCadena <span class="keyword">= </span><span class="objects">JSON</span><span class="methods">.stringify(</span><span class="parameters">usuario</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">06</span></code></pre>
 
@@ -243,7 +243,7 @@
 
                             <pre><code><span class="index">10</span></code></pre>
 
-                            <pre><code><span class="index inner_index">11</span>guardarUsuario<span class="functions">(</span>usuario<span class="functions">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">11</span>guardarUsuario<span class="methods">(</span>usuario<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
                         </div>
                     </section>
 

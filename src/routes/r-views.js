@@ -541,15 +541,15 @@ router.get("/dom-selectores", (req, res) => {
     });
 });
 
-router.get("/dom-node-elements", (req, res) => {
-    res.render("pages/dom-node-elements", {
-        title: "DOM node elements",
+router.get("/dom-nodes", (req, res) => {
+    res.render("pages/dom-nodes", {
+        title: "DOM nodes",
     });
 });
 
-router.get("/dom-class", (req, res) => {
-    res.render("pages/dom-class", {
-        title: "DOM class",
+router.get("/dom-classList", (req, res) => {
+    res.render("pages/dom-classList", {
+        title: "DOM classList",
     });
 });
 

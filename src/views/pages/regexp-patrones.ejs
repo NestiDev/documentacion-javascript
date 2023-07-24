@@ -31,7 +31,7 @@
                     section_banner: contenedor de 1 index_container, de 1 tag-hr
                     y 1 tag-p
                 -->
-                <section class="section_banner">
+                <div class="section_banner">
                     <!--  
                         index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
@@ -63,7 +63,7 @@
                         Hacen referencia a la composicion de una expresion regular la cual permite determinar la secuencia que debe tener la cadena de caracteres para que puedan existir coincidencias
                         en la busqueda. Estos siguen la estructura <strong>/</strong>patron(es)<strong>/</strong>banderas.
                     </p>
-                </section>
+                </div>
 
                 <!--  
                     modal_section: contenedor de la seccion
@@ -144,17 +144,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> emailExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z<span class="functions">]+[</span>-_.<span class="functions">]?[</span>a-z-0-9<span class="functions">]+@{</span>1<span class="functions">}[</span>a-z<span class="functions">]+\.{</span>1<span class="functions">}[</span>a-z<span class="functions">]{</span>2,3<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> emailExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>a-z<span class="functions">]+[</span>-_.<span class="functions">]?[</span>a-z-0-9<span class="functions">]+@{</span>1<span class="functions">}[</span>a-z<span class="functions">]+\.{</span>1<span class="functions">}[</span>a-z<span class="functions">]{</span>2,3<span class="functions">}$</span><span class="variable">/</span><span class="return">i</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"JuanAndres@hotmail.com"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"maria_gomez@empresa.co"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>emailExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"JuanAndres@hotmail.com"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>emailExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"maria_gomez@empresa.co"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"Lorena-2289gmail.com"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>emailExpReg<span class="methods">.test(</span><span class="string">"gustavo2289@outlookcom"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>emailExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Lorena-2289gmail.com"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span></span>emailExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"gustavo2289@outlookcom"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <!--  
                                 output_box: en esta definimos la salida en respuesta al codigo
@@ -180,17 +180,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> contraseniasExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z-0-9<span class="functions">]+[</span>*-_.<span class="functions">]?[</span>a-z-0-9<span class="functions">]+</span><span class="functions">[</span>*-_.<span class="functions">]</span><span class="functions">$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> contraseniasExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>a-z-0-9<span class="functions">]+[</span>*-_.<span class="functions">]?[</span>a-z-0-9<span class="functions">]+</span><span class="functions">[</span>*-_.<span class="functions">]</span><span class="functions">$</span><span class="variable">/</span><span class="return">i</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"Juan.1258"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"maria*1245"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Juan.1258"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"maria*1245"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"c4m1la$p3r3z"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"1245-.*gustavo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"c4m1la$p3r3z"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"1245-.*gustavo"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -213,17 +213,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> contraseniasExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>A-Z<span class="functions">]+[</span>*-_.<span class="functions">]?</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> contraseniasExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>A-Z<span class="functions">]+[</span>*-_.<span class="functions">]?</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"Juan.Dias"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"CAMILA_PEREZ"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Juan.Dias"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"CAMILA_PEREZ"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"1245Gustavo"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>contraseniasExpReg<span class="methods">.test(</span><span class="string">"maria-estrada"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"1245Gustavo"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span></span>contraseniasExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"maria-estrada"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -243,17 +243,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> longitudExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z-0-9<span class="functions">]{</span>1,8<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> longitudExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>a-z-0-9<span class="functions">]{</span>1,8<span class="functions">}$</span><span class="variable">/</span><span class="return">i</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">"1"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">"carmen10"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>longitudExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"1"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>longitudExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"carmen10"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">""</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>longitudExpReg<span class="methods">.test(</span><span class="string">"Andrea12345678"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>longitudExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">""</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span></span>longitudExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"Andrea12345678"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -273,17 +273,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> sinEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z<span class="functions">]{</span>3,16<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> sinEspaciosExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>a-z<span class="functions">]{</span>3,16<span class="functions">}$</span><span class="variable">/</span><span class="return">i</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"JuanDias"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"anaSOFIA"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"JuanDias"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"anaSOFIA"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">" davidperez"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"maria estrada"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">" davidperez"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"maria estrada"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -306,14 +306,14 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> conEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>a-z\s<span class="functions">]{</span>3,16<span class="functions">}$</span><span class="parenthesis">/</span>i<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> conEspaciosExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>a-z\s<span class="functions">]{</span>3,16<span class="functions">}$</span><span class="variable">/</span><span class="return">i</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"maria estrada"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"JuanDias"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">" davidperez"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"anaSOFIA"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"maria estrada"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"JuanDias"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">" davidperez"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"anaSOFIA"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -333,17 +333,17 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> sinEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>0-9<span class="functions">]{</span>1,16<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> sinEspaciosExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>0-9<span class="functions">]{</span>1,16<span class="functions">}$</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"0"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"12457898"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"0"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"12457898"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">05</span></code></pre>
 
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">" 2565"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>sinEspaciosExpReg<span class="methods">.test(</span><span class="string">"1298 9632"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">" 2565"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">07</span><span class="console">console</span><span class="methods">.log(</span></span>sinEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"1298 9632"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -366,14 +366,14 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> conEspaciosExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">^[</span>0-9\s<span class="functions">]{</span>1,16<span class="functions">}$</span><span class="parenthesis">/</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> conEspaciosExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">^[</span>0-9\s<span class="functions">]{</span>1,16<span class="functions">}$</span><span class="variable">/</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
-                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"5"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"12457898"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">" 2565"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
-                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>conEspaciosExpReg<span class="methods">.test(</span><span class="string">"1298 9632"</span><span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">03</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"5"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">04</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"12457898"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">05</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">" 2565"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="console">console</span><span class="methods">.log(</span></span>conEspaciosExpReg<span class="methods">.test</span><span class="symbols">(</span><span class="string">"1298 9632"</span><span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>
@@ -398,7 +398,7 @@
                         <div class="code_box">
                             <pre><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
 
-                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> datosUsuarios<span class="operator"> = </span><span class="string">`</span></code></pre>
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let</span> datosUsuarios<span class="keyword"> = </span><span class="string">`</span></code></pre>
 
                             <pre><code><span class="index">02</span></code></pre>
 
@@ -412,11 +412,11 @@
 
                             <pre><code><span class="index">08</span></code></pre>
 
-                            <pre><code><span class="index inner_index">09</span><span class="variable">let</span> buscadorExpReg<span class="operator"> = </span><span class="parenthesis">/</span><span class="functions">[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span>\s<span class="functions">?[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span>\s<span class="functions">?[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span><span class="parenthesis">/</span>ig<span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">09</span><span class="variable">let</span> buscadorExpReg<span class="keyword"> = </span><span class="variable">/</span><span class="functions">[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span>\s<span class="functions">?[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span>\s<span class="functions">?[</span>a-z<span class="functions">]{</span>1,<span class="functions">}</span><span class="variable">/</span><span class="return">ig</span><span class="semi_colon">;</span></code></pre>
 
                             <pre><code><span class="index">10</span></code></pre>
 
-                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="keyword">.log</span><span class="parenthesis">(</span>datosUsuario<span class="methods">.match(</span>buscadorExpReg<span class="methods">)</span><span class="parenthesis">)</span><span class="semi_colon">;</span></code></pre>
+                            <pre><code><span class="index inner_index">11</span><span class="console">console</span><span class="methods">.log(</span></span>datosUsuario<span class="methods">.match</span><span class="symbols">(</span>buscadorExpReg<span class="symbols">)</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
 
                             <div class="output_box">
                                 <pre></pre>

@@ -12,88 +12,91 @@
         <input class="input_hidden" type="search" name="search" placeholder="Buscar" autocomplete="off" />
     </li>
 
-    <!--  
-		:li_dropdown: contenedor de 1tag-a y 1 tag-ul, la clase
-		:li_dropdown se implementa en javascript
-	-->
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            Variables
-
-            <!--          
-				tag-svg: en este definimos el icono del del item
-			-->
-            <svg viewBox="0 0 24 24">
-                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-            </svg>
-        </a>
-
+    <!-- 
+        tag-article: contenedor de tags-li
+    -->
+    <article>
         <!--  
-			:dropdown_menu: en esta definimos el menu de 
-			:navegacion interno
-		-->
-        <ul class="dropdown_menu">
-            <li><a href="/variables-var">Var</a></li>
+            :li_dropdown: contenedor de 1tag-a y 1 tag-ul, la clase
+            :li_dropdown se implementa en javascript
+        -->
+        <li class="li_dropdown">
+            <a href="#" data-toggle="dropdown">
+                Variables
 
-            <li><a href="/variables-let">Let</a></li>
+                <!--          
+                    tag-svg: en este definimos el icono del del item
+                -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                </svg>
+            </a>
 
-            <li><a href="/variables-const">Const</a></li>
-        </ul>
-    </li>
+            <!--  
+                :dropdown_menu: en esta definimos el menu de 
+                :navegacion interno
+            -->
+            <ul class="dropdown_menu">
+                <li><a href="/variables-var">Var</a></li>
 
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            Strings
+                <li><a href="/variables-let">Let</a></li>
 
-            <svg viewBox="0 0 24 24">
-                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-            </svg>
-        </a>
+                <li><a href="/variables-const">Const</a></li>
+            </ul>
+        </li>
 
-        <ul class="dropdown_menu">
-            <li><a href="/strings-generales">Generales</a></li>
+        <li class="li_dropdown">
+            <a href="#" data-toggle="dropdown">
+                Strings
 
-            <li><a href="/strings-parse">Parse</a></li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                </svg>
+            </a>
 
-            <li><a href="/strings-slice">Slice</a></li>
+            <ul class="dropdown_menu">
+                <li><a href="/strings-generales">Generales</a></li>
 
-            <li><a href="/strings-replace">Replace</a></li>
+                <li><a href="/strings-parse">Parse</a></li>
 
-            <li><a href="/strings-includes">Includes</a></li>
+                <li><a href="/strings-slice">Slice</a></li>
 
-            <li><a href="/strings-index">Index</a></li>
+                <li><a href="/strings-replace">Replace</a></li>
 
-            <li><a href="/strings-match">Match</a></li>
+                <li><a href="/strings-includes">Includes</a></li>
 
-            <li><a href="/strings-split">Split</a></li>
+                <li><a href="/strings-index">Index</a></li>
 
-            <li><a href="/strings-search">Search</a></li>
+                <li><a href="/strings-match">Match</a></li>
 
-            <li><a href="/strings-starts-ends">Starts - Ends</a></li>
-        </ul>
-    </li>
+                <li><a href="/strings-split">Split</a></li>
 
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown">
-            Numbers
+                <li><a href="/strings-search">Search</a></li>
 
-            <svg viewBox="0 0 24 24">
-                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-            </svg>
-        </a>
+                <li><a href="/strings-starts-ends">Starts - Ends</a></li>
+            </ul>
+        </li>
 
-        <ul class="dropdown_menu">
-            <li><a href="/numbers-generales">Generales</a></li>
+        <li class="li_dropdown">
+            <a href="#" data-toggle="dropdown">
+                Numbers
 
-            <li><a href="/numbers-math">Math</a></li>
-        </ul>
-    </li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                </svg>
+            </a>
 
-    <li class="li_dropdown">
-        <a href="/operadores"> Operadores </a>
-    </li>
+            <ul class="dropdown_menu">
+                <li><a href="/numbers-generales">Generales</a></li>
 
-    <hr class="line_nav" />
+                <li><a href="/numbers-math">Math</a></li>
+            </ul>
+        </li>
+
+        <li class="li_dropdown">
+            <a href="/operadores"> Operadores </a>
+        </li>
+    </article>
 
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
@@ -322,7 +325,7 @@
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/promesas-definicion">Definicion</a></li>
+            <li><a href="/promesas-declaracion">Declaracion</a></li>
             <li><a href="/promesas-async-await">Async - Await</a></li>
             <li><a href="/promesas-try-catch">Try - Catch</a></li>
             <li><a href="/promesas-throw-error">Throw error</a></li>
@@ -379,9 +382,9 @@
 
             <li><a href="/dom-selectores">Selectores</a></li>
 
-            <li><a href="/dom-node-elements">Node elements</a></li>
+            <li><a href="/dom-nodes">Nodes</a></li>
 
-            <li><a href="/dom-class">Class</a></li>
+            <li><a href="/dom-classList">ClassList</a></li>
 
             <li><a href="/dom-attribute">Attribute</a></li>
 
@@ -530,20 +533,22 @@
 
     <hr class="line_nav" />
 
-    <li class="li_dropdown">
-        <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
-            Jest
+    <article>
+        <li class="li_dropdown">
+            <a href="#" data-toggle="dropdown" style="pointer-events: none; color: rgb(223, 225, 228)">
+                Jest
 
-            <!-- <svg viewBox="0 0 24 24">
-                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
-            </svg> -->
-        </a>
+                <!-- <svg viewBox="0 0 24 24">
+                    <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                </svg> -->
+            </a>
 
-        <!-- <ul class="dropdown_menu">
-            <li><a href="/promesas-definicion">Definicion</a></li>
-            <li><a href="/promesas-async-await">Async - Await</a></li>
-            <li><a href="/promesas-try-catch">Try - Catch</a></li>
-            <li><a href="/promesas-throw-error">Throw error</a></li>
-        </ul> -->
-    </li>
+            <!-- <ul class="dropdown_menu">
+                <li><a href="/promesas-definicion">Definicion</a></li>
+                <li><a href="/promesas-async-await">Async - Await</a></li>
+                <li><a href="/promesas-try-catch">Try - Catch</a></li>
+                <li><a href="/promesas-throw-error">Throw error</a></li>
+            </ul> -->
+        </li>
+    </article>
 </ul>
